@@ -1,0 +1,9 @@
+runs/
+reports/
+*.jou
+*.log
+*.str
+*.backup.*
+vivado*.jou
+vivado*.log
+.Xil/
