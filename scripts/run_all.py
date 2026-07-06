@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 import csv
+import json
 import shutil
 import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+CONFIG_PATH = ROOT / "configs" / "ip_matrix.json"
 RUNS_DIR = ROOT / "runs"
 REPORTS_DIR = ROOT / "reports"
 LOG_DIR = RUNS_DIR / "logs"
@@ -47,8 +49,19 @@ def write_report(rows):
         writer.writerows(rows)
 
 
-def run_divider_create():
-    case_id = "divider_u16_u8"
+def load_divider_cases():
+    with CONFIG_PATH.open() as f:
+        config = json.load(f)
+
+    return config["divider_cases"]
+
+
+def run_divider_create(case):
+    case_id = case["case_id"]
+    dividend_width = case["dividend_width"]
+    divisor_width = case["divisor_width"]
+    operand_sign = case["operand_sign"]
+
     run_dir = RUNS_DIR / case_id
     log_path = LOG_DIR / f"{case_id}_create.log"
     jou_path = LOG_DIR / f"{case_id}_create.jou"
@@ -72,7 +85,11 @@ def run_divider_create():
         "-journal", str(jou_path),
         "-log", str(log_path),
         "-source", str(CREATE_DIVIDER_TCL),
-        "-tclargs", str(run_dir),
+        "-tclargs",
+        str(run_dir),
+        str(dividend_width),
+        str(divisor_width),
+        operand_sign,
     ]
 
     print("Running Divider IP creation:")
@@ -139,16 +156,20 @@ def run_divider_create():
 
 
 def main():
-    row = run_divider_create()
-    write_report([row])
+    rows = []
+    for case in load_divider_cases():
+        rows.append(run_divider_create(case))
+
+    write_report(rows)
 
     print("\nReport written to:")
     print(REPORT_PATH)
 
     print("\nResult:")
-    print(",".join(row))
+    for row in rows:
+        print(",".join(row))
 
-    return 0 if row[2] == "PASS" else 1
+    return 0 if all(row[2] == "PASS" for row in rows) else 1
 
 
 if __name__ == "__main__":

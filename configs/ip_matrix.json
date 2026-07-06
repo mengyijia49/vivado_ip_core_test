@@ -1,0 +1,22 @@
+{
+  "divider_cases": [
+    {
+      "case_id": "divider_u16_u8",
+      "dividend_width": 16,
+      "divisor_width": 8,
+      "operand_sign": "Unsigned"
+    },
+    {
+      "case_id": "divider_u32_u16",
+      "dividend_width": 32,
+      "divisor_width": 16,
+      "operand_sign": "Unsigned"
+    },
+    {
+      "case_id": "divider_s16_s8",
+      "dividend_width": 16,
+      "divisor_width": 8,
+      "operand_sign": "Signed"
+    }
+  ]
+}
