@@ -3,6 +3,7 @@ reports/
 *.jou
 *.log
 *.str
+*.pb
 *.backup.*
 vivado*.jou
 vivado*.log
