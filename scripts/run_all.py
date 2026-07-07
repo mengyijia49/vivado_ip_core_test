@@ -14,6 +14,7 @@ LOG_DIR = RUNS_DIR / "logs"
 REPORT_PATH = REPORTS_DIR / "report.csv"
 
 CREATE_DIVIDER_TCL = ROOT / "tcl" / "create_divider_ip.tcl"
+RUN_DEMO_SIM_TCL = ROOT / "tcl" / "run_divider_demo_sim.tcl"
 
 
 def run_cmd(cmd, cwd, timeout_sec):
@@ -155,10 +156,89 @@ def run_divider_create(case):
     ]
 
 
+def run_divider_demo_sim(case):
+    case_id = case["case_id"]
+    run_dir = RUNS_DIR / case_id
+    log_path = LOG_DIR / f"{case_id}_demo_sim.log"
+    jou_path = LOG_DIR / f"{case_id}_demo_sim.jou"
+
+    vivado = shutil.which("vivado")
+    if vivado is None:
+        return [
+            case_id,
+            "sim_demo",
+            "VIVADO_NOT_FOUND",
+            str(run_dir),
+            str(log_path),
+        ]
+
+    LOG_DIR.mkdir(parents=True, exist_ok=True)
+
+    cmd = [
+        vivado,
+        "-mode", "batch",
+        "-journal", str(jou_path),
+        "-log", str(log_path),
+        "-source", str(RUN_DEMO_SIM_TCL),
+        "-tclargs",
+        str(run_dir),
+    ]
+
+    print("Running Divider demo simulation:")
+    print(" ".join(cmd))
+
+    code, output, reason = run_cmd(cmd, cwd=ROOT, timeout_sec=600)
+    print(output)
+
+    if reason == "TIMEOUT":
+        return [
+            case_id,
+            "sim_demo",
+            "TIMEOUT",
+            str(run_dir),
+            str(log_path),
+        ]
+
+    if not log_path.exists():
+        return [
+            case_id,
+            "sim_demo",
+            "LOG_NOT_FOUND",
+            str(run_dir),
+            str(log_path),
+        ]
+
+    log_text = log_path.read_text(errors="ignore")
+    if (
+        code != 0
+        or "SIM_DEMO_STATUS: PASS" not in log_text
+        or "SIM_DEMO_STATUS: FAIL" in log_text
+    ):
+        return [
+            case_id,
+            "sim_demo",
+            "LOG_CHECK_FAILED",
+            str(run_dir),
+            str(log_path),
+        ]
+
+    return [
+        case_id,
+        "sim_demo",
+        "PASS",
+        str(run_dir),
+        str(log_path),
+    ]
+
+
 def main():
     rows = []
     for case in load_divider_cases():
-        rows.append(run_divider_create(case))
+        create_row = run_divider_create(case)
+        rows.append(create_row)
+
+        if case["case_id"] == "divider_u16_u8" and create_row[2] == "PASS":
+            rows.append(run_divider_demo_sim(case))
 
     write_report(rows)
 
