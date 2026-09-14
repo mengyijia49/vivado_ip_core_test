@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vivado-ip-core-test"
+version = "0.1.0"
+description = "面向 AMD Vivado IP 核的可扩展自动测试框架"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "mengyijia49" },
+]
+license = { file = "LICENSE" }
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/mengyijia49/vivado_ip_core_test"
+Documentation = "https://github.com/mengyijia49/vivado_ip_core_test/tree/main/docs"
+
+[project.scripts]
+vivado-ip-test = "vivado_ip_test.application.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"vivado_ip_test.plugins.divider" = ["templates/*.tpl"]
+"vivado_ip_test.plugins.multiplier" = ["templates/*.tpl"]

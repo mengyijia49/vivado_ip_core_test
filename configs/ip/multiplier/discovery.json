@@ -1,0 +1,188 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "hunt_mul_u8_u8_full",
+      "ip_type": "multiplier",
+      "vendor": "xilinx.com",
+      "ip_name": "mult_gen",
+      "parameters": {
+        "a_width": 8,
+        "b_width": 8,
+        "a_type": "Unsigned",
+        "b_type": "Unsigned",
+        "pipeline_stages": 2
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 0,
+        "case_budget": 65536,
+        "coverage_targets": [
+          "boundary_values",
+          "sign_combinations",
+          "systematic_values",
+          "full_precision",
+          "operand_magnitude",
+          "complete_input_space"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "shuffled",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "hunt_mul_s16_u8",
+      "ip_type": "multiplier",
+      "vendor": "xilinx.com",
+      "ip_name": "mult_gen",
+      "parameters": {
+        "a_width": 16,
+        "b_width": 8,
+        "a_type": "Signed",
+        "b_type": "Unsigned",
+        "pipeline_stages": 3
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 0,
+        "case_budget": 65536,
+        "coverage_targets": [
+          "boundary_values",
+          "sign_combinations",
+          "systematic_values",
+          "full_precision",
+          "operand_magnitude"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "shuffled",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "hunt_mul_s8_s8_full",
+      "ip_type": "multiplier",
+      "vendor": "xilinx.com",
+      "ip_name": "mult_gen",
+      "parameters": {
+        "a_width": 8,
+        "b_width": 8,
+        "a_type": "Signed",
+        "b_type": "Signed",
+        "pipeline_stages": 1
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 0,
+        "case_budget": 65536,
+        "coverage_targets": [
+          "boundary_values",
+          "sign_combinations",
+          "systematic_values",
+          "full_precision",
+          "operand_magnitude",
+          "complete_input_space"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "shuffled",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "hunt_mul_u17_s9",
+      "ip_type": "multiplier",
+      "vendor": "xilinx.com",
+      "ip_name": "mult_gen",
+      "parameters": {
+        "a_width": 17,
+        "b_width": 9,
+        "a_type": "Unsigned",
+        "b_type": "Signed",
+        "pipeline_stages": 1
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 0,
+        "case_budget": 65536,
+        "coverage_targets": [
+          "boundary_values",
+          "sign_combinations",
+          "systematic_values",
+          "full_precision",
+          "operand_magnitude"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "shuffled",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "hunt_mul_s32_s32",
+      "ip_type": "multiplier",
+      "vendor": "xilinx.com",
+      "ip_name": "mult_gen",
+      "parameters": {
+        "a_width": 32,
+        "b_width": 32,
+        "a_type": "Signed",
+        "b_type": "Signed",
+        "pipeline_stages": 5
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 0,
+        "case_budget": 65536,
+        "coverage_targets": [
+          "boundary_values",
+          "sign_combinations",
+          "systematic_values",
+          "full_precision",
+          "operand_magnitude"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "shuffled",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    }
+  ]
+}

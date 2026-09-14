@@ -1,0 +1,87 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "divider_u16_u8",
+      "ip_type": "divider",
+      "vendor": "xilinx.com",
+      "ip_name": "div_gen",
+      "parameters": {
+        "dividend_width": 16,
+        "divisor_width": 8,
+        "operand_sign": "Unsigned"
+      },
+      "stages": [
+        "create_ip",
+        "sim_demo",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 20260914,
+        "case_budget": 44,
+        "coverage_targets": [
+          "boundary_values",
+          "sign_combinations",
+          "nonzero_divisor"
+        ]
+      }
+    },
+    {
+      "case_id": "divider_u32_u16",
+      "ip_type": "divider",
+      "vendor": "xilinx.com",
+      "ip_name": "div_gen",
+      "parameters": {
+        "dividend_width": 32,
+        "divisor_width": 16,
+        "operand_sign": "Unsigned"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 20260915,
+        "case_budget": 44,
+        "coverage_targets": [
+          "boundary_values",
+          "nonzero_divisor"
+        ]
+      }
+    },
+    {
+      "case_id": "divider_s16_s8",
+      "ip_type": "divider",
+      "vendor": "xilinx.com",
+      "ip_name": "div_gen",
+      "parameters": {
+        "dividend_width": 16,
+        "divisor_width": 8,
+        "operand_sign": "Signed"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 20260916,
+        "case_budget": 48,
+        "coverage_targets": [
+          "boundary_values",
+          "sign_combinations",
+          "nonzero_divisor"
+        ]
+      }
+    }
+  ]
+}

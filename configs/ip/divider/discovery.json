@@ -1,0 +1,178 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "hunt_div_u16_u8",
+      "ip_type": "divider",
+      "vendor": "xilinx.com",
+      "ip_name": "div_gen",
+      "parameters": {
+        "dividend_width": 16,
+        "divisor_width": 8,
+        "operand_sign": "Unsigned"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 0,
+        "case_budget": 65536,
+        "coverage_targets": [
+          "boundary_values",
+          "sign_combinations",
+          "systematic_values",
+          "nonzero_divisor",
+          "division_relations"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "shuffled",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "hunt_div_u32_u16",
+      "ip_type": "divider",
+      "vendor": "xilinx.com",
+      "ip_name": "div_gen",
+      "parameters": {
+        "dividend_width": 32,
+        "divisor_width": 16,
+        "operand_sign": "Unsigned"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 0,
+        "case_budget": 65536,
+        "coverage_targets": [
+          "boundary_values",
+          "sign_combinations",
+          "systematic_values",
+          "nonzero_divisor",
+          "division_relations"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "shuffled",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "hunt_div_s16_s8",
+      "ip_type": "divider",
+      "vendor": "xilinx.com",
+      "ip_name": "div_gen",
+      "parameters": {
+        "dividend_width": 16,
+        "divisor_width": 8,
+        "operand_sign": "Signed"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 0,
+        "case_budget": 65536,
+        "coverage_targets": [
+          "boundary_values",
+          "sign_combinations",
+          "systematic_values",
+          "nonzero_divisor",
+          "division_relations"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "shuffled",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "hunt_div_u8_u8_full",
+      "ip_type": "divider",
+      "vendor": "xilinx.com",
+      "ip_name": "div_gen",
+      "parameters": {
+        "dividend_width": 8,
+        "divisor_width": 8,
+        "operand_sign": "Unsigned"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 0,
+        "case_budget": 65536,
+        "coverage_targets": [
+          "boundary_values",
+          "sign_combinations",
+          "systematic_values",
+          "nonzero_divisor",
+          "division_relations",
+          "complete_input_space"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "shuffled",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "hunt_div_s8_s8_full",
+      "ip_type": "divider",
+      "vendor": "xilinx.com",
+      "ip_name": "div_gen",
+      "parameters": {
+        "dividend_width": 8,
+        "divisor_width": 8,
+        "operand_sign": "Signed"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 0,
+        "case_budget": 65536,
+        "coverage_targets": [
+          "boundary_values",
+          "sign_combinations",
+          "systematic_values",
+          "nonzero_divisor",
+          "division_relations",
+          "complete_input_space"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "shuffled",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    }
+  ]
+}

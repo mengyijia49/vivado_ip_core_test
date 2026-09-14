@@ -1,8 +1,14 @@
 puts "Checking Divider Generator IP..."
 
+set run_dir [lindex $argv 0]
+if {$run_dir eq ""} {
+    puts "ERROR: run_dir argument is empty."
+    exit 1
+}
+
 set part_name "xc7a35tcsg324-1"
 
-create_project ip_catalog_check runs/ip_catalog_check_proj -part $part_name -force
+create_project ip_catalog_check "$run_dir/proj" -part $part_name -force
 
 set div_ips [get_ipdefs -all *div_gen*]
 

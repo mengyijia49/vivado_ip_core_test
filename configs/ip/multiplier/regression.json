@@ -1,0 +1,92 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "multiplier_u8_u8",
+      "ip_type": "multiplier",
+      "vendor": "xilinx.com",
+      "ip_name": "mult_gen",
+      "parameters": {
+        "a_width": 8,
+        "b_width": 8,
+        "a_type": "Unsigned",
+        "b_type": "Unsigned",
+        "pipeline_stages": 2
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "coverage_guided",
+        "strategy_version": "1.0",
+        "random_seed": 20260917,
+        "case_budget": 41,
+        "coverage_targets": [
+          "boundary_values",
+          "full_precision",
+          "operand_magnitude"
+        ]
+      }
+    },
+    {
+      "case_id": "multiplier_s16_u8",
+      "ip_type": "multiplier",
+      "vendor": "xilinx.com",
+      "ip_name": "mult_gen",
+      "parameters": {
+        "a_width": 16,
+        "b_width": 8,
+        "a_type": "Signed",
+        "b_type": "Unsigned",
+        "pipeline_stages": 3
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 20260918,
+        "case_budget": 45,
+        "coverage_targets": [
+          "boundary_values",
+          "sign_combinations",
+          "full_precision"
+        ]
+      }
+    },
+    {
+      "case_id": "multiplier_u2_u2_exhaustive",
+      "ip_type": "multiplier",
+      "vendor": "xilinx.com",
+      "ip_name": "mult_gen",
+      "parameters": {
+        "a_width": 2,
+        "b_width": 2,
+        "a_type": "Unsigned",
+        "b_type": "Unsigned",
+        "pipeline_stages": 1
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 0,
+        "case_budget": 16,
+        "coverage_targets": [
+          "complete_input_space",
+          "full_precision"
+        ]
+      }
+    }
+  ]
+}

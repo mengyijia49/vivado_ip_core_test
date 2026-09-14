@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "multiplier IP 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "a_width",
+    "b_width",
+    "a_type",
+    "b_type",
+    "pipeline_stages"
+  ],
+  "properties": {
+    "a_width": {
+      "type": "integer",
+      "minimum": 2,
+      "maximum": 64
+    },
+    "b_width": {
+      "type": "integer",
+      "minimum": 2,
+      "maximum": 64
+    },
+    "a_type": {
+      "enum": [
+        "Unsigned",
+        "Signed"
+      ]
+    },
+    "b_type": {
+      "enum": [
+        "Unsigned",
+        "Signed"
+      ]
+    },
+    "pipeline_stages": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 64
+    }
+  }
+}

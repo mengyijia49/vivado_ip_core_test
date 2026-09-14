@@ -1,0 +1,99 @@
+# 目录说明
+
+公共代码按工作内容划分，IP 专属文件按 `ip_type` 划分。
+不同 IP 不共用参数文件；公共入口用 `includes` 引用各自配置。
+
+## 源码和配置
+
+```text
+configs/
+  ip_matrix.json                   默认回归入口
+  bug_discovery.json               缺陷探索入口
+  ip/<ip_type>/                    regression.json、discovery.json
+  schemas/ip_matrix.schema.json    公共格式
+  schemas/ip/<ip_type>/            参数格式
+src/vivado_ip_test/
+  application/                     命令行和流水线
+  configuration/                   配置加载
+  domain/                          数据结构
+  services/                        创建、生成、仿真、记录等公共服务
+  strategies/                      输入选择算法
+  plugins/<ip_type>/               IP 模型、模板和实现
+  adapters/vivado/                 Vivado 调用
+  infrastructure/                  进程、路径、锁等工具
+tcl/
+  run_xsim_batch.tcl               公共仿真入口
+  diagnostics/                    工具诊断
+  ip/<ip_type>/                   IP 创建和专属诊断
+tests/
+  unit/                           公共单元测试
+  unit/plugins/<ip_type>/          IP 单元测试
+  integration/                    集成测试
+  fixtures/ip/<ip_type>/           故障注入模块
+docs/
+  ip/<ip_type>/                   IP 参数、协议和自检说明
+  experiments/                    历史实验记录
+  history/                        早期原型文本
+scripts/
+  run_all.py                      统一入口
+  maintenance/                    维护工具
+```
+
+`tcl/ip/divider/run_demo_sim.tcl` 是保留的早期脚本，正式流水线不再调用它。
+早期 Python 原型保存为 `docs/history/` 下的文本，不提供另一套运行入口。
+
+## 每次运行的文件
+
+运行编号使用本地时间，例如 `2026-09-14_20-55-03_UTC+0800_a1b2c3d4`。
+前半部分是日期、时分秒和 UTC 偏移，后缀用于避免同秒重名。
+同一批的工程、日志和报告使用相同编号。
+
+```text
+runs/
+  batches/<run_id>/<ip_type>/<case_id>/
+    proj/                          完整 Vivado 工程
+    tb/                            生成的自检 testbench
+    vectors/                       输入、期望值和时序映射
+    outputs/                       实际输出，失败时的 failure.json
+    work/<stage>/                  阶段临时文件
+    manifest.json
+  history/<run_id>/
+    source/                        Python、Tcl 和模板快照
+    ip_matrix.json                 本次有效配置
+    configs/<ip_type>/              多 IP 运行的分文件配置
+    cases/<ip_type>/<case_id>/      关键文件副本
+  logs/
+    batches/<run_id>/<ip_type>/<case_id>/
+    history/<run_id>/<ip_type>/<case_id>/<stage>/
+    framework/<用途>/<run_id>/      框架自测日志
+  framework/<用途>/<run_id>/         框架自测产物
+reports/
+  history/<run_id>/
+    report.csv
+    report.json
+    run.json                       状态、哈希和复现命令
+    ip/<ip_type>/                  分 IP 报告
+  latest -> history/<run_id>        最近启动的一批，可能尚未完成
+  maintenance/<run_id>/             维护记录
+```
+
+每次运行都新建目录，不覆盖旧工程。仿真内部日志仍留在 Vivado 要求的位置，
+归档时另存到日志目录。目录名已有时间，里面的文件不必重复加时间。
+
+`reports/latest` 只改链接，不保存第二份无日期报告。
+首次切换时，旧的实体 `latest/` 会移入 `reports/legacy/<run_id>/latest/`。
+新代码不再写 `runs/current/`；已有的旧目录和旧时间编号保持原样。
+所有路径由 `RepositoryLayout` 生成，插件不要自行拼出另一套目录规则。
+
+## 旧版文件
+
+旧散落产物保存在 `runs/legacy/`、`runs/logs/legacy/` 和 `reports/legacy/`。
+维护工具默认预览，只有传入 `--apply` 才移动：
+
+```bash
+python3 scripts/maintenance/archive_legacy_layout.py
+python3 scripts/maintenance/archive_legacy_layout.py --apply
+```
+
+工具核对移动前后的内容哈希，不改写历史归档。旧工程可能嵌有旧绝对路径，
+复现时应从源码快照和配置重新生成，不直接继续运行迁移后的工程。

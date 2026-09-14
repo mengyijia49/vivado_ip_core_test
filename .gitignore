@@ -9,3 +9,8 @@ vivado*.jou
 vivado*.log
 .Xil/
 __pycache__/
+*.egg-info/
+.venv/
+build/
+dist/
+.coverage

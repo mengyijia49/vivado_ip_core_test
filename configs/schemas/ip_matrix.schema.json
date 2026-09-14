@@ -1,0 +1,247 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Vivado IP 测试矩阵",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 2
+    },
+    "exploration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "seeds",
+        "timing_modes"
+      ],
+      "properties": {
+        "seeds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "timing_modes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "continuous",
+              "random_gaps",
+              "bursts"
+            ]
+          }
+        }
+      }
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/test_case"
+      }
+    },
+    "includes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "$defs": {
+    "test_case": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "case_id",
+        "ip_type",
+        "vendor",
+        "ip_name",
+        "parameters",
+        "stages",
+        "verification"
+      ],
+      "properties": {
+        "case_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+        },
+        "ip_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "vendor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ip_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "parameters": {
+          "type": "object"
+        },
+        "stages": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "create_ip",
+              "sim_demo",
+              "generate_testbench",
+              "sim_selfcheck"
+            ]
+          }
+        },
+        "verification": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "strategy",
+            "strategy_version",
+            "random_seed",
+            "case_budget",
+            "coverage_targets"
+          ],
+          "properties": {
+            "boundary_mode": {
+              "enum": [
+                "basic",
+                "systematic"
+              ],
+              "default": "basic"
+            },
+            "input_order": {
+              "enum": [
+                "generated",
+                "shuffled"
+              ],
+              "default": "generated"
+            },
+            "timing_mode": {
+              "enum": [
+                "continuous",
+                "random_gaps",
+                "bursts"
+              ],
+              "default": "continuous"
+            },
+            "max_gap_cycles": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000,
+              "default": 8
+            },
+            "burst_length": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000,
+              "default": 16
+            },
+            "strategy": {
+              "type": "string",
+              "minLength": 1
+            },
+            "strategy_version": {
+              "type": "string",
+              "minLength": 1
+            },
+            "random_seed": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "case_budget": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "coverage_targets": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "ip_type": {
+                "const": "divider"
+              }
+            },
+            "required": [
+              "ip_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "$ref": "ip/divider/parameters.schema.json"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "ip_type": {
+                "const": "multiplier"
+              }
+            },
+            "required": [
+              "ip_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "$ref": "ip/multiplier/parameters.schema.json"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "oneOf": [
+    {
+      "required": [
+        "cases"
+      ],
+      "not": {
+        "required": [
+          "includes"
+        ]
+      }
+    },
+    {
+      "required": [
+        "includes"
+      ],
+      "not": {
+        "required": [
+          "cases"
+        ]
+      }
+    }
+  ]
+}

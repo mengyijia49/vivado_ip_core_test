@@ -1,0 +1,20 @@
+{
+  "$schema": "schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "exploration": {
+    "seeds": [
+      20260914,
+      20260915,
+      20260916
+    ],
+    "timing_modes": [
+      "continuous",
+      "random_gaps",
+      "bursts"
+    ]
+  },
+  "includes": [
+    "ip/divider/discovery.json",
+    "ip/multiplier/discovery.json"
+  ]
+}
