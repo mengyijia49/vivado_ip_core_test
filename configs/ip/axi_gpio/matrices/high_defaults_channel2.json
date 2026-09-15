@@ -1,0 +1,4710 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "gpio_high_ch2_w7_bidirectional_p0",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 7,
+          "mode2": "bidirectional",
+          "default_data2": 127,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w7_bidirectional_p1",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 7,
+          "mode2": "bidirectional",
+          "default_data2": 64,
+          "default_tri2": 63
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w7_bidirectional_p2",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 7,
+          "mode2": "bidirectional",
+          "default_data2": 85,
+          "default_tri2": 42
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w7_bidirectional_p3",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 7,
+          "mode2": "bidirectional",
+          "default_data2": 42,
+          "default_tri2": 85
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w7_output_p0",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 7,
+          "mode2": "output",
+          "default_data2": 127,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w7_output_p1",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 7,
+          "mode2": "output",
+          "default_data2": 64,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w7_output_p2",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 7,
+          "mode2": "output",
+          "default_data2": 85,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w7_output_p3",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 7,
+          "mode2": "output",
+          "default_data2": 42,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w8_bidirectional_p0",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 8,
+          "mode2": "bidirectional",
+          "default_data2": 255,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w8_bidirectional_p1",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 8,
+          "mode2": "bidirectional",
+          "default_data2": 128,
+          "default_tri2": 127
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w8_bidirectional_p2",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 8,
+          "mode2": "bidirectional",
+          "default_data2": 85,
+          "default_tri2": 170
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w8_bidirectional_p3",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 8,
+          "mode2": "bidirectional",
+          "default_data2": 170,
+          "default_tri2": 85
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w8_output_p0",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 8,
+          "mode2": "output",
+          "default_data2": 255,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w8_output_p1",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 8,
+          "mode2": "output",
+          "default_data2": 128,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w8_output_p2",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 8,
+          "mode2": "output",
+          "default_data2": 85,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w8_output_p3",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 8,
+          "mode2": "output",
+          "default_data2": 170,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w15_bidirectional_p0",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 15,
+          "mode2": "bidirectional",
+          "default_data2": 32767,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w15_bidirectional_p1",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 15,
+          "mode2": "bidirectional",
+          "default_data2": 16384,
+          "default_tri2": 16383
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w15_bidirectional_p2",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 15,
+          "mode2": "bidirectional",
+          "default_data2": 21845,
+          "default_tri2": 10922
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w15_bidirectional_p3",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 15,
+          "mode2": "bidirectional",
+          "default_data2": 10922,
+          "default_tri2": 21845
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w15_output_p0",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 15,
+          "mode2": "output",
+          "default_data2": 32767,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w15_output_p1",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 15,
+          "mode2": "output",
+          "default_data2": 16384,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w15_output_p2",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 15,
+          "mode2": "output",
+          "default_data2": 21845,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w15_output_p3",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 15,
+          "mode2": "output",
+          "default_data2": 10922,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w16_bidirectional_p0",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 16,
+          "mode2": "bidirectional",
+          "default_data2": 65535,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w16_bidirectional_p1",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 16,
+          "mode2": "bidirectional",
+          "default_data2": 32768,
+          "default_tri2": 32767
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w16_bidirectional_p2",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 16,
+          "mode2": "bidirectional",
+          "default_data2": 21845,
+          "default_tri2": 43690
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w16_bidirectional_p3",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 16,
+          "mode2": "bidirectional",
+          "default_data2": 43690,
+          "default_tri2": 21845
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w16_output_p0",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 16,
+          "mode2": "output",
+          "default_data2": 65535,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w16_output_p1",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 16,
+          "mode2": "output",
+          "default_data2": 32768,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w16_output_p2",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 16,
+          "mode2": "output",
+          "default_data2": 21845,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w16_output_p3",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 16,
+          "mode2": "output",
+          "default_data2": 43690,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w17_bidirectional_p0",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 17,
+          "mode2": "bidirectional",
+          "default_data2": 131071,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w17_bidirectional_p1",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 17,
+          "mode2": "bidirectional",
+          "default_data2": 65536,
+          "default_tri2": 65535
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w17_bidirectional_p2",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 17,
+          "mode2": "bidirectional",
+          "default_data2": 87381,
+          "default_tri2": 43690
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w17_bidirectional_p3",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 17,
+          "mode2": "bidirectional",
+          "default_data2": 43690,
+          "default_tri2": 87381
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w17_output_p0",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 17,
+          "mode2": "output",
+          "default_data2": 131071,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w17_output_p1",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 17,
+          "mode2": "output",
+          "default_data2": 65536,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w17_output_p2",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 17,
+          "mode2": "output",
+          "default_data2": 87381,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w17_output_p3",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 17,
+          "mode2": "output",
+          "default_data2": 43690,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w31_bidirectional_p0",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 31,
+          "mode2": "bidirectional",
+          "default_data2": 2147483647,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w31_bidirectional_p1",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 31,
+          "mode2": "bidirectional",
+          "default_data2": 1073741824,
+          "default_tri2": 1073741823
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w31_bidirectional_p2",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 31,
+          "mode2": "bidirectional",
+          "default_data2": 1431655765,
+          "default_tri2": 715827882
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w31_bidirectional_p3",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 31,
+          "mode2": "bidirectional",
+          "default_data2": 715827882,
+          "default_tri2": 1431655765
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w31_output_p0",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 31,
+          "mode2": "output",
+          "default_data2": 2147483647,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w31_output_p1",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 31,
+          "mode2": "output",
+          "default_data2": 1073741824,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w31_output_p2",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 31,
+          "mode2": "output",
+          "default_data2": 1431655765,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w31_output_p3",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 31,
+          "mode2": "output",
+          "default_data2": 715827882,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w32_bidirectional_p0",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 32,
+          "mode2": "bidirectional",
+          "default_data2": 4294967295,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w32_bidirectional_p1",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 32,
+          "mode2": "bidirectional",
+          "default_data2": 2147483648,
+          "default_tri2": 2147483647
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w32_bidirectional_p2",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 32,
+          "mode2": "bidirectional",
+          "default_data2": 1431655765,
+          "default_tri2": 2863311530
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w32_bidirectional_p3",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 32,
+          "mode2": "bidirectional",
+          "default_data2": 2863311530,
+          "default_tri2": 1431655765
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w32_output_p0",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 32,
+          "mode2": "output",
+          "default_data2": 4294967295,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w32_output_p1",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 32,
+          "mode2": "output",
+          "default_data2": 2147483648,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w32_output_p2",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 32,
+          "mode2": "output",
+          "default_data2": 1431655765,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_high_ch2_w32_output_p3",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 2,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 0,
+          "width2": 32,
+          "mode2": "output",
+          "default_data2": 2863311530,
+          "default_tri2": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "mode1": [
+          "bidirectional",
+          "input",
+          "output"
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    }
+  ]
+}

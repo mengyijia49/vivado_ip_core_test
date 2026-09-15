@@ -4,6 +4,7 @@ from string import Template
 
 from vivado_ip_test.domain import TestCase, TestbenchArtifacts
 from vivado_ip_test.infrastructure import RepositoryLayout, sha256_file
+from vivado_ip_test.infrastructure.output_layout import binary_output_layout
 from vivado_ip_test.plugins.base import PluginError
 from vivado_ip_test.plugins.multiplier.metadata import (
     MultiplierMetadata,
@@ -107,6 +108,7 @@ class MultiplierTestbenchBackend:
 
         manifest = {
             "schema_version": 1,
+            "output_layout": binary_output_layout((("P", metadata.output_width),)),
             "case_id": case.case_id,
             "ip_type": case.ip_type,
             "vendor": case.vendor,

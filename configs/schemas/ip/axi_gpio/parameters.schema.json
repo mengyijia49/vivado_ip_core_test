@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AXI GPIO 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "channels",
+    "interrupt",
+    "width1",
+    "mode1",
+    "default_data1",
+    "default_tri1",
+    "width2",
+    "mode2",
+    "default_data2",
+    "default_tri2"
+  ],
+  "properties": {
+    "channels": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2
+    },
+    "interrupt": {
+      "type": "boolean"
+    },
+    "width1": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 32
+    },
+    "mode1": {
+      "enum": [
+        "bidirectional",
+        "input",
+        "output"
+      ]
+    },
+    "default_data1": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "default_tri1": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "width2": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 32
+    },
+    "mode2": {
+      "enum": [
+        "bidirectional",
+        "input",
+        "output"
+      ]
+    },
+    "default_data2": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "default_tri2": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    }
+  }
+}

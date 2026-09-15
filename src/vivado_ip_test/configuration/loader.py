@@ -1,9 +1,12 @@
 import json
 import re
+import sqlite3
 from dataclasses import replace
 from pathlib import Path
 
 from vivado_ip_test.domain import Stage, TestCase, VerificationProfile
+from vivado_ip_test.configuration.sweeps import iter_sweep_cases
+from vivado_ip_test.configuration.uniqueness import UniqueKeys
 
 
 class ConfigError(ValueError):
@@ -20,7 +23,7 @@ _REQUIRED_CASE_FIELDS = {
     "stages",
     "verification",
 }
-_ALLOWED_TOP_LEVEL_FIELDS = {"$schema", "schema_version", "cases", "exploration", "includes"}
+_ALLOWED_TOP_LEVEL_FIELDS = {"$schema", "schema_version", "cases", "exploration", "includes", "sweeps"}
 _TIMING_MODES = {"continuous", "random_gaps", "bursts"}
 
 
@@ -155,12 +158,35 @@ def _parse_case(raw_case: object, index: int) -> TestCase:
 
 
 def load_test_cases(path: Path) -> list[TestCase]:
-    return _load_test_cases(path.resolve(), ())
+    return list(iter_test_cases(path))
 
 
-def _load_test_cases(path: Path, ancestors: tuple[Path, ...]) -> list[TestCase]:
-    if path in ancestors:
-        raise ConfigError(f"配置 includes 存在循环引用：{path}")
+def iter_test_cases(path: Path):
+    """逐项读取；只有迭代到末尾，才完成整份配置的校验。"""
+    path = path.resolve()
+    raw_config = _read_config(path)
+    exploration = _parse_exploration(raw_config)
+    try:
+        with UniqueKeys() as base_ids, UniqueKeys() as expanded_ids:
+            for case in _iter_base_cases(path, (), raw_config):
+                if not base_ids.add(case.case_id):
+                    raise ConfigError("case_id 必须唯一")
+                if exploration is None:
+                    yield case
+                    continue
+                seeds, modes = exploration
+                for seed in seeds:
+                    for mode in modes:
+                        expanded = replace(case, case_id=f"{case.case_id}__seed{seed}__{mode}",
+                            verification=replace(case.verification, random_seed=seed, timing_mode=mode))
+                        if not expanded_ids.add(expanded.case_id):
+                            raise ConfigError("展开后的 case_id 必须唯一")
+                        yield expanded
+    except (OSError, sqlite3.Error) as exc:
+        raise ConfigError(f"配置去重临时索引不可用：{exc}") from exc
+
+
+def _read_config(path):
     try:
         raw_config = json.loads(path.read_text())
     except OSError as exc:
@@ -177,15 +203,18 @@ def _load_test_cases(path: Path, ancestors: tuple[Path, ...]) -> list[TestCase]:
     if raw_config.get("schema_version") != 2:
         raise ConfigError("仅支持 schema_version = 2")
 
-    if ("cases" in raw_config) == ("includes" in raw_config):
-        raise ConfigError("配置必须且只能选择 cases 或 includes，公共入口只引用各 IP 配置")
-    raw_cases = raw_config.get("cases", [])
-    if not isinstance(raw_cases, list) or ("cases" in raw_config and not raw_cases):
-        raise ConfigError("cases 必须是非空数组")
+    if sum(name in raw_config for name in ("cases", "includes", "sweeps")) != 1:
+        raise ConfigError("配置必须且只能选择 cases、includes 或 sweeps，公共入口只引用各 IP 配置")
+    return raw_config
 
-    cases = [_parse_case(raw_case, index) for index, raw_case in enumerate(raw_cases)]
-    if len({case.ip_type for case in cases}) > 1:
-        raise ConfigError("同一个配置文件不能混合不同 ip_type，请按 IP 拆分并使用 includes")
+
+def _iter_base_cases(path, ancestors, raw_config=None):
+    if path in ancestors:
+        raise ConfigError(f"配置 includes 存在循环引用：{path}")
+    if raw_config is None:
+        raw_config = _read_config(path)
+    if ancestors and "exploration" in raw_config:
+        raise ConfigError("exploration 只能放在本次加载的顶层入口，不能在 includes 中嵌套展开")
     if "includes" in raw_config:
         includes = raw_config["includes"]
         if (not isinstance(includes, list) or not includes
@@ -193,15 +222,27 @@ def _load_test_cases(path: Path, ancestors: tuple[Path, ...]) -> list[TestCase]:
             raise ConfigError("includes 必须是非空路径数组")
         for relative in includes:
             child = (path.parent / relative).resolve()
-            cases.extend(_load_test_cases(child, (*ancestors, path)))
-    case_ids = [case.case_id for case in cases]
-    if len(set(case_ids)) != len(case_ids):
-        raise ConfigError("case_id 必须唯一")
+            yield from _iter_base_cases(child, (*ancestors, path))
+        return
+    raw_cases = raw_config.get("cases")
+    if "sweeps" not in raw_config and (not isinstance(raw_cases, list) or not raw_cases):
+        raise ConfigError("cases 必须是非空数组")
+    ip_type = None
+    try:
+        values = iter_sweep_cases(raw_config["sweeps"]) if "sweeps" in raw_config else raw_cases
+        for index, raw_case in enumerate(values):
+            case = _parse_case(raw_case, index)
+            if ip_type is not None and case.ip_type != ip_type:
+                raise ConfigError("同一个配置文件不能混合不同 ip_type，请按 IP 拆分并使用 includes")
+            ip_type = case.ip_type
+            yield case
+    except ValueError as exc:
+        raise ConfigError(str(exc)) from exc
 
+
+def _parse_exploration(raw_config):
     if "exploration" not in raw_config:
-        return cases
-    if ancestors:
-        raise ConfigError("exploration 只能放在本次加载的顶层入口，不能在 includes 中嵌套展开")
+        return None
     exploration = raw_config["exploration"]
     if not isinstance(exploration, dict) or set(exploration) != {"seeds", "timing_modes"}:
         raise ConfigError("exploration 必须且只能包含 seeds 和 timing_modes")
@@ -215,11 +256,4 @@ def _load_test_cases(path: Path, ancestors: tuple[Path, ...]) -> list[TestCase]:
             or any(not isinstance(mode, str) or mode not in _TIMING_MODES for mode in modes)
             or len(set(modes)) != len(modes)):
         raise ConfigError("exploration.timing_modes 包含非法或重复模式")
-    expanded = [
-        replace(case, case_id=f"{case.case_id}__seed{seed}__{mode}",
-                verification=replace(case.verification, random_seed=seed, timing_mode=mode))
-        for case in cases for seed in seeds for mode in modes
-    ]
-    if len({case.case_id for case in expanded}) != len(expanded):
-        raise ConfigError("展开后的 case_id 必须唯一")
-    return expanded
+    return seeds, modes

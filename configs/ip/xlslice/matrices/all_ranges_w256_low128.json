@@ -1,0 +1,1862 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "slice_w256_low128",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 128,
+          "low_bit": 128
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low129",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 129,
+          "low_bit": 129
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low130",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 130,
+          "low_bit": 130
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low131",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 131,
+          "low_bit": 131
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low132",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 132,
+          "low_bit": 132
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low133",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 133,
+          "low_bit": 133
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low134",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 134,
+          "low_bit": 134
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low135",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 135,
+          "low_bit": 135
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low136",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 136,
+          "low_bit": 136
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low137",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 137,
+          "low_bit": 137
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low138",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 138,
+          "low_bit": 138
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low139",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 139,
+          "low_bit": 139
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low140",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 140,
+          "low_bit": 140
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low141",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 141,
+          "low_bit": 141
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low142",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 142,
+          "low_bit": 142
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low143",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 143,
+          "low_bit": 143
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low144",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 144,
+          "low_bit": 144
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low145",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 145,
+          "low_bit": 145
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low146",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 146,
+          "low_bit": 146
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low147",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 147,
+          "low_bit": 147
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low148",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 148,
+          "low_bit": 148
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low149",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 149,
+          "low_bit": 149
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low150",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 150,
+          "low_bit": 150
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low151",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 151,
+          "low_bit": 151
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low152",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 152,
+          "low_bit": 152
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low153",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 153,
+          "low_bit": 153
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low154",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 154,
+          "low_bit": 154
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low155",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 155,
+          "low_bit": 155
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low156",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 156,
+          "low_bit": 156
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low157",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 157,
+          "low_bit": 157
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low158",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 158,
+          "low_bit": 158
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low159",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 159,
+          "low_bit": 159
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low160",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 160,
+          "low_bit": 160
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low161",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 161,
+          "low_bit": 161
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low162",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 162,
+          "low_bit": 162
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low163",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 163,
+          "low_bit": 163
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low164",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 164,
+          "low_bit": 164
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low165",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 165,
+          "low_bit": 165
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low166",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 166,
+          "low_bit": 166
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low167",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 167,
+          "low_bit": 167
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low168",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 168,
+          "low_bit": 168
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low169",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 169,
+          "low_bit": 169
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low170",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 170,
+          "low_bit": 170
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low171",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 171,
+          "low_bit": 171
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low172",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 172,
+          "low_bit": 172
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low173",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 173,
+          "low_bit": 173
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low174",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 174,
+          "low_bit": 174
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low175",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 175,
+          "low_bit": 175
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low176",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 176,
+          "low_bit": 176
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low177",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 177,
+          "low_bit": 177
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low178",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 178,
+          "low_bit": 178
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low179",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 179,
+          "low_bit": 179
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low180",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 180,
+          "low_bit": 180
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low181",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 181,
+          "low_bit": 181
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low182",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 182,
+          "low_bit": 182
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low183",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 183,
+          "low_bit": 183
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low184",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 184,
+          "low_bit": 184
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low185",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 185,
+          "low_bit": 185
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low186",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 186,
+          "low_bit": 186
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low187",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 187,
+          "low_bit": 187
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low188",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 188,
+          "low_bit": 188
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low189",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 189,
+          "low_bit": 189
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low190",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 190,
+          "low_bit": 190
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    },
+    {
+      "case_prefix": "slice_w256_low191",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 256,
+          "high_bit": 191,
+          "low_bit": 191
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255]
+      }
+    }
+  ]
+}

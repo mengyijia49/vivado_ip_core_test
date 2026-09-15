@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": [
+    "matrices/standard.json",
+    "matrices/fwft/block_ram.json",
+    "matrices/fwft/distributed_ram.json",
+    "matrices/status.json"
+  ]
+}

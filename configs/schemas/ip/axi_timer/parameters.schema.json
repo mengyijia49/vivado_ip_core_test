@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AXI Timer 参数",
+  "type": "object", "additionalProperties": false,
+  "required": ["count_width", "channels", "trigger0_high", "trigger1_high", "generate0_high", "generate1_high"],
+  "properties": {
+    "count_width": {"type": "integer", "enum": [8, 16, 32]},
+    "channels": {"type": "integer", "enum": [1, 2]},
+    "trigger0_high": {"type": "boolean"}, "trigger1_high": {"type": "boolean"},
+    "generate0_high": {"type": "boolean"}, "generate1_high": {"type": "boolean"}
+  },
+  "allOf": [{
+    "if": {"properties": {"channels": {"const": 1}}},
+    "then": {"properties": {"trigger1_high": {"const": true}, "generate1_high": {"const": true}}}
+  }]
+}

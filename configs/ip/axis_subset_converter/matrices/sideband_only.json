@@ -1,0 +1,559 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "subset_no_data_u1",
+      "template": {
+        "ip_type": "axis_subset_converter",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_subset_converter",
+        "parameters": {
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 1,
+          "output_user_width": 1,
+          "input_id_width": 0,
+          "output_id_width": 0,
+          "input_dest_width": 0,
+          "output_dest_width": 0,
+          "input_has_keep": false,
+          "output_has_keep": false,
+          "input_has_strb": false,
+          "output_has_strb": false,
+          "input_has_last": false,
+          "output_has_last": true,
+          "mapping": "resize",
+          "last_period": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 2,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "input_user_width": [
+          1
+        ],
+        "output_user_width": [
+          1,
+          2,
+          3,
+          7,
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "last_period": [
+          0,
+          1,
+          2,
+          3,
+          7,
+          31,
+          127,
+          128,
+          255,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "subset_no_data_u2",
+      "template": {
+        "ip_type": "axis_subset_converter",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_subset_converter",
+        "parameters": {
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 2,
+          "output_user_width": 1,
+          "input_id_width": 0,
+          "output_id_width": 0,
+          "input_dest_width": 0,
+          "output_dest_width": 0,
+          "input_has_keep": false,
+          "output_has_keep": false,
+          "input_has_strb": false,
+          "output_has_strb": false,
+          "input_has_last": false,
+          "output_has_last": true,
+          "mapping": "resize",
+          "last_period": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "input_user_width": [
+          2
+        ],
+        "output_user_width": [
+          1,
+          2,
+          3,
+          7,
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "last_period": [
+          0,
+          1,
+          2,
+          3,
+          7,
+          31,
+          127,
+          128,
+          255,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "subset_no_data_u3",
+      "template": {
+        "ip_type": "axis_subset_converter",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_subset_converter",
+        "parameters": {
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 3,
+          "output_user_width": 1,
+          "input_id_width": 0,
+          "output_id_width": 0,
+          "input_dest_width": 0,
+          "output_dest_width": 0,
+          "input_has_keep": false,
+          "output_has_keep": false,
+          "input_has_strb": false,
+          "output_has_strb": false,
+          "input_has_last": false,
+          "output_has_last": true,
+          "mapping": "resize",
+          "last_period": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "input_user_width": [
+          3
+        ],
+        "output_user_width": [
+          1,
+          2,
+          3,
+          7,
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "last_period": [
+          0,
+          1,
+          2,
+          3,
+          7,
+          31,
+          127,
+          128,
+          255,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "subset_no_data_u7",
+      "template": {
+        "ip_type": "axis_subset_converter",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_subset_converter",
+        "parameters": {
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 7,
+          "output_user_width": 1,
+          "input_id_width": 0,
+          "output_id_width": 0,
+          "input_dest_width": 0,
+          "output_dest_width": 0,
+          "input_has_keep": false,
+          "output_has_keep": false,
+          "input_has_strb": false,
+          "output_has_strb": false,
+          "input_has_last": false,
+          "output_has_last": true,
+          "mapping": "resize",
+          "last_period": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 128,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "input_user_width": [
+          7
+        ],
+        "output_user_width": [
+          1,
+          2,
+          3,
+          7,
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "last_period": [
+          0,
+          1,
+          2,
+          3,
+          7,
+          31,
+          127,
+          128,
+          255,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "subset_no_data_u8",
+      "template": {
+        "ip_type": "axis_subset_converter",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_subset_converter",
+        "parameters": {
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 8,
+          "output_user_width": 1,
+          "input_id_width": 0,
+          "output_id_width": 0,
+          "input_dest_width": 0,
+          "output_dest_width": 0,
+          "input_has_keep": false,
+          "output_has_keep": false,
+          "input_has_strb": false,
+          "output_has_strb": false,
+          "input_has_last": false,
+          "output_has_last": true,
+          "mapping": "resize",
+          "last_period": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "input_user_width": [
+          8
+        ],
+        "output_user_width": [
+          1,
+          2,
+          3,
+          7,
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "last_period": [
+          0,
+          1,
+          2,
+          3,
+          7,
+          31,
+          127,
+          128,
+          255,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "subset_no_data_u9",
+      "template": {
+        "ip_type": "axis_subset_converter",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_subset_converter",
+        "parameters": {
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 9,
+          "output_user_width": 1,
+          "input_id_width": 0,
+          "output_id_width": 0,
+          "input_dest_width": 0,
+          "output_dest_width": 0,
+          "input_has_keep": false,
+          "output_has_keep": false,
+          "input_has_strb": false,
+          "output_has_strb": false,
+          "input_has_last": false,
+          "output_has_last": true,
+          "mapping": "resize",
+          "last_period": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "input_user_width": [
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "output_user_width": [
+          1,
+          2,
+          3,
+          7,
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "last_period": [
+          0,
+          1,
+          2,
+          3,
+          7,
+          31,
+          127,
+          128,
+          255,
+          256
+        ]
+      }
+    }
+  ]
+}

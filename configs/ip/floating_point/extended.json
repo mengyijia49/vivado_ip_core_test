@@ -1,0 +1,15 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": [
+    "matrices/absolute.json",
+    "matrices/float_to_float.json",
+    "matrices/fixed_to_float.json",
+    "matrices/float_to_fixed.json",
+    "matrices/square_root.json",
+    "matrices/compare.json",
+    "matrices/add_subtract.json",
+    "matrices/multiply.json",
+    "matrices/divide.json"
+  ]
+}

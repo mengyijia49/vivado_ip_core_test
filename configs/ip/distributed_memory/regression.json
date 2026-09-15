@@ -1,0 +1,68 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "memory_dual_depth48",
+      "ip_type": "distributed_memory",
+      "vendor": "xilinx.com",
+      "ip_name": "dist_mem_gen",
+      "parameters": {
+        "width": 9,
+        "depth": 48,
+        "memory_type": "dual_port_ram",
+        "initial_value": 341
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 512,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "memory_single_depth16",
+      "ip_type": "distributed_memory",
+      "vendor": "xilinx.com",
+      "ip_name": "dist_mem_gen",
+      "parameters": {
+        "width": 8,
+        "depth": 16,
+        "memory_type": "single_port_ram",
+        "initial_value": 0
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 512,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    }
+  ]
+}

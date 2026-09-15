@@ -1,0 +1,228 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "block_memory 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "width",
+    "depth",
+    "memory_type",
+    "write_mode_a",
+    "write_mode_b",
+    "output_register",
+    "register_enable",
+    "sync_reset",
+    "reset_memory_latch",
+    "byte_size",
+    "initial_value",
+    "output_reset_value"
+  ],
+  "properties": {
+    "width": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 256
+    },
+    "depth": {
+      "type": "integer",
+      "minimum": 2,
+      "maximum": 4096
+    },
+    "memory_type": {
+      "enum": [
+        "Single_Port_RAM",
+        "Simple_Dual_Port_RAM",
+        "True_Dual_Port_RAM"
+      ]
+    },
+    "write_mode_a": {
+      "enum": [
+        "WRITE_FIRST",
+        "READ_FIRST",
+        "NO_CHANGE"
+      ]
+    },
+    "write_mode_b": {
+      "enum": [
+        "WRITE_FIRST",
+        "READ_FIRST",
+        "NO_CHANGE"
+      ]
+    },
+    "output_register": {
+      "type": "boolean"
+    },
+    "register_enable": {
+      "type": "boolean"
+    },
+    "sync_reset": {
+      "type": "boolean"
+    },
+    "reset_memory_latch": {
+      "type": "boolean"
+    },
+    "byte_size": {
+      "enum": [
+        0,
+        8,
+        9
+      ]
+    },
+    "initial_value": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "output_reset_value": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "register_enable": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "output_register": {
+            "const": true
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "reset_memory_latch": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "output_register": {
+            "const": true
+          },
+          "sync_reset": {
+            "const": true
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "sync_reset": {
+            "const": false
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "output_reset_value": {
+            "const": 0
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "memory_type": {
+            "enum": [
+              "Single_Port_RAM",
+              "Simple_Dual_Port_RAM"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "write_mode_b": {
+            "const": "READ_FIRST"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "memory_type": {
+            "const": "Simple_Dual_Port_RAM"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "write_mode_a": {
+            "const": "READ_FIRST"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "byte_size": {
+            "enum": [
+              8,
+              9
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "write_mode_a": {
+            "enum": [
+              "WRITE_FIRST",
+              "READ_FIRST"
+            ]
+          },
+          "write_mode_b": {
+            "enum": [
+              "WRITE_FIRST",
+              "READ_FIRST"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "byte_size": {
+            "const": 8
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "width": {
+            "multipleOf": 8
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "byte_size": {
+            "const": 9
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "width": {
+            "multipleOf": 9
+          }
+        }
+      }
+    }
+  ]
+}

@@ -40,7 +40,7 @@ class CommandRunnerTests(unittest.TestCase):
         for _ in range(100):
             try:
                 state = Path(f"/proc/{pid}/stat").read_text().split()[2]
-            except FileNotFoundError:
+            except (FileNotFoundError, ProcessLookupError):
                 return
             if state == "Z":
                 return

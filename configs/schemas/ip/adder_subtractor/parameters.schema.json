@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "adder_subtractor 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "a_width",
+    "b_width",
+    "output_width",
+    "a_type",
+    "b_type",
+    "operation",
+    "latency",
+    "clock_enable",
+    "sync_clear",
+    "ce_overrides_reset"
+  ],
+  "properties": {
+    "a_width": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 256
+    },
+    "b_width": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 256
+    },
+    "output_width": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 256
+    },
+    "a_type": {
+      "enum": [
+        "Unsigned",
+        "Signed"
+      ]
+    },
+    "b_type": {
+      "enum": [
+        "Unsigned",
+        "Signed"
+      ]
+    },
+    "operation": {
+      "enum": [
+        "Add",
+        "Subtract",
+        "Add_Subtract"
+      ]
+    },
+    "latency": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "clock_enable": {
+      "type": "boolean"
+    },
+    "sync_clear": {
+      "type": "boolean"
+    },
+    "ce_overrides_reset": {
+      "type": "boolean"
+    }
+  }
+}

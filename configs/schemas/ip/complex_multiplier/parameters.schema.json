@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "a_width",
+    "b_width",
+    "output_width",
+    "multiplier_type",
+    "optimization",
+    "rounding",
+    "latency",
+    "clock_enable",
+    "a_last",
+    "b_last",
+    "ctrl_last",
+    "last_mode",
+    "a_user_width",
+    "b_user_width",
+    "ctrl_user_width"
+  ],
+  "properties": {
+    "a_width": {
+      "type": "integer",
+      "minimum": 8,
+      "maximum": 63
+    },
+    "b_width": {
+      "type": "integer",
+      "minimum": 8,
+      "maximum": 63
+    },
+    "output_width": {
+      "type": "integer",
+      "minimum": 2,
+      "maximum": 127
+    },
+    "latency": {
+      "type": "integer",
+      "minimum": -1,
+      "maximum": 55
+    },
+    "clock_enable": {
+      "type": "boolean"
+    },
+    "a_last": {
+      "type": "boolean"
+    },
+    "b_last": {
+      "type": "boolean"
+    },
+    "ctrl_last": {
+      "type": "boolean"
+    },
+    "a_user_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 256
+    },
+    "b_user_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 256
+    },
+    "ctrl_user_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 256
+    },
+    "multiplier_type": {
+      "enum": [
+        "Use_LUTs",
+        "Use_Mults"
+      ]
+    },
+    "optimization": {
+      "enum": [
+        "Resources",
+        "Performance"
+      ]
+    },
+    "rounding": {
+      "enum": [
+        "Truncate",
+        "Random_Rounding"
+      ]
+    },
+    "last_mode": {
+      "enum": [
+        "Null",
+        "Pass_A_TLAST",
+        "Pass_B_TLAST",
+        "Pass_CTRL_TLAST",
+        "OR_all_TLASTs",
+        "AND_all_TLASTs"
+      ]
+    }
+  }
+}

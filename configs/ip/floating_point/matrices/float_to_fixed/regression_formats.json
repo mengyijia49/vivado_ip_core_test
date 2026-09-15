@@ -1,0 +1,144 @@
+{
+  "$schema": "../../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "fp_float_to_fixed_regression_formats_0",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 5,
+          "input_fraction": 11,
+          "output_exponent": 4,
+          "output_fraction": 0,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_regression_formats_1",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 16,
+          "input_fraction": 64,
+          "output_exponent": 1,
+          "output_fraction": 63,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "axis_reg_default8",
+      "ip_type": "axis_register_slice",
+      "vendor": "xilinx.com",
+      "ip_name": "axis_register_slice",
+      "parameters": {
+        "data_bytes": 1,
+        "id_width": 0,
+        "dest_width": 0,
+        "user_width": 0,
+        "has_last": false,
+        "has_keep": false,
+        "has_strb": false,
+        "register_mode": "Default"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 256,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "axis_reg_full32",
+      "ip_type": "axis_register_slice",
+      "vendor": "xilinx.com",
+      "ip_name": "axis_register_slice",
+      "parameters": {
+        "data_bytes": 4,
+        "id_width": 3,
+        "dest_width": 2,
+        "user_width": 7,
+        "has_last": true,
+        "has_keep": true,
+        "has_strb": true,
+        "register_mode": "Fully_Registered"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 512,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "axis_reg_light16",
+      "ip_type": "axis_register_slice",
+      "vendor": "xilinx.com",
+      "ip_name": "axis_register_slice",
+      "parameters": {
+        "data_bytes": 2,
+        "id_width": 0,
+        "dest_width": 0,
+        "user_width": 0,
+        "has_last": true,
+        "has_keep": false,
+        "has_strb": false,
+        "register_mode": "Light_Weight"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 512,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "axis_reg_bypass16",
+      "ip_type": "axis_register_slice",
+      "vendor": "xilinx.com",
+      "ip_name": "axis_register_slice",
+      "parameters": {
+        "data_bytes": 2,
+        "id_width": 3,
+        "dest_width": 2,
+        "user_width": 7,
+        "has_last": true,
+        "has_keep": true,
+        "has_strb": true,
+        "register_mode": "Bypass"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 512,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    }
+  ]
+}

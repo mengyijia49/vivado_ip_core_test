@@ -1,0 +1,386 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "ip_type": "multiply_adder",
+      "vendor": "xilinx.com",
+      "ip_name": "xbip_multadd",
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      },
+      "case_id": "madd_comb_u8",
+      "parameters": {
+        "a_width": 8,
+        "b_width": 8,
+        "c_width": 16,
+        "a_type": "Unsigned",
+        "b_type": "Unsigned",
+        "c_type": "Unsigned",
+        "output_high": 16,
+        "output_low": 0,
+        "pipelined": false,
+        "use_pcin": false,
+        "ce_overrides_reset": false
+      }
+    },
+    {
+      "ip_type": "multiply_adder",
+      "vendor": "xilinx.com",
+      "ip_name": "xbip_multadd",
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      },
+      "case_id": "madd_comb_mixed",
+      "parameters": {
+        "a_width": 9,
+        "b_width": 8,
+        "c_width": 18,
+        "a_type": "Signed",
+        "b_type": "Unsigned",
+        "c_type": "Signed",
+        "output_high": 18,
+        "output_low": 3,
+        "pipelined": false,
+        "use_pcin": false,
+        "ce_overrides_reset": false
+      }
+    },
+    {
+      "ip_type": "multiply_adder",
+      "vendor": "xilinx.com",
+      "ip_name": "xbip_multadd",
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      },
+      "case_id": "madd_pipe_s16",
+      "parameters": {
+        "a_width": 16,
+        "b_width": 8,
+        "c_width": 32,
+        "a_type": "Signed",
+        "b_type": "Signed",
+        "c_type": "Signed",
+        "output_high": 32,
+        "output_low": 0,
+        "pipelined": true,
+        "use_pcin": false,
+        "ce_overrides_reset": false
+      }
+    },
+    {
+      "ip_type": "multiply_adder",
+      "vendor": "xilinx.com",
+      "ip_name": "xbip_multadd",
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      },
+      "case_id": "madd_pipe_ce_priority",
+      "parameters": {
+        "a_width": 24,
+        "b_width": 17,
+        "c_width": 48,
+        "a_type": "Unsigned",
+        "b_type": "Unsigned",
+        "c_type": "Unsigned",
+        "output_high": 48,
+        "output_low": 4,
+        "pipelined": true,
+        "use_pcin": false,
+        "ce_overrides_reset": true
+      }
+    },
+    {
+      "ip_type": "multiply_adder",
+      "vendor": "xilinx.com",
+      "ip_name": "xbip_multadd",
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      },
+      "case_id": "madd_comb_wide",
+      "parameters": {
+        "a_width": 52,
+        "b_width": 52,
+        "c_width": 105,
+        "a_type": "Unsigned",
+        "b_type": "Unsigned",
+        "c_type": "Unsigned",
+        "output_high": 105,
+        "output_low": 3,
+        "pipelined": false,
+        "use_pcin": false,
+        "ce_overrides_reset": false
+      }
+    },
+    {
+      "ip_type": "multiply_adder",
+      "vendor": "xilinx.com",
+      "ip_name": "xbip_multadd",
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      },
+      "case_id": "madd_pipe_wide",
+      "parameters": {
+        "a_width": 53,
+        "b_width": 53,
+        "c_width": 106,
+        "a_type": "Signed",
+        "b_type": "Signed",
+        "c_type": "Signed",
+        "output_high": 106,
+        "output_low": 0,
+        "pipelined": true,
+        "use_pcin": false,
+        "ce_overrides_reset": false
+      }
+    },
+    {
+      "ip_type": "multiply_adder",
+      "vendor": "xilinx.com",
+      "ip_name": "xbip_multadd",
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      },
+      "case_id": "madd_pcin_comb",
+      "parameters": {
+        "a_width": 8,
+        "b_width": 8,
+        "c_width": 48,
+        "a_type": "Signed",
+        "b_type": "Signed",
+        "c_type": "Signed",
+        "output_high": 47,
+        "output_low": 0,
+        "pipelined": false,
+        "use_pcin": true,
+        "ce_overrides_reset": false
+      }
+    },
+    {
+      "ip_type": "multiply_adder",
+      "vendor": "xilinx.com",
+      "ip_name": "xbip_multadd",
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      },
+      "case_id": "madd_pcin_pipe",
+      "parameters": {
+        "a_width": 8,
+        "b_width": 8,
+        "c_width": 48,
+        "a_type": "Signed",
+        "b_type": "Signed",
+        "c_type": "Signed",
+        "output_high": 47,
+        "output_low": 0,
+        "pipelined": true,
+        "use_pcin": true,
+        "ce_overrides_reset": false
+      }
+    },
+    {
+      "ip_type": "multiply_adder",
+      "vendor": "xilinx.com",
+      "ip_name": "xbip_multadd",
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      },
+      "case_id": "madd_swapped_comb",
+      "parameters": {
+        "a_width": 17,
+        "b_width": 24,
+        "c_width": 47,
+        "a_type": "Unsigned",
+        "b_type": "Unsigned",
+        "c_type": "Unsigned",
+        "output_high": 47,
+        "output_low": 3,
+        "pipelined": false,
+        "use_pcin": false,
+        "ce_overrides_reset": false
+      }
+    },
+    {
+      "ip_type": "multiply_adder",
+      "vendor": "xilinx.com",
+      "ip_name": "xbip_multadd",
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      },
+      "case_id": "madd_swapped_pcin",
+      "parameters": {
+        "a_width": 18,
+        "b_width": 25,
+        "c_width": 48,
+        "a_type": "Signed",
+        "b_type": "Signed",
+        "c_type": "Signed",
+        "output_high": 47,
+        "output_low": 0,
+        "pipelined": true,
+        "use_pcin": true,
+        "ce_overrides_reset": true
+      }
+    }
+  ]
+}

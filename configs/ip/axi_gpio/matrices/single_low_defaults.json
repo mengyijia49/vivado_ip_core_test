@@ -1,0 +1,322 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "gpio_single_bidirectional_d0_t1",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 1,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 0,
+          "default_tri1": 1,
+          "width2": 1,
+          "mode2": "bidirectional",
+          "default_data2": 0,
+          "default_tri2": 1
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_single_bidirectional_d1_t0",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 1,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 1,
+          "default_tri1": 0,
+          "width2": 1,
+          "mode2": "bidirectional",
+          "default_data2": 0,
+          "default_tri2": 1
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_single_bidirectional_d1_t1",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 1,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "bidirectional",
+          "default_data1": 1,
+          "default_tri1": 1,
+          "width2": 1,
+          "mode2": "bidirectional",
+          "default_data2": 0,
+          "default_tri2": 1
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "gpio_single_output_d1_t0",
+      "template": {
+        "ip_type": "axi_gpio",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_gpio",
+        "parameters": {
+          "channels": 1,
+          "interrupt": false,
+          "width1": 1,
+          "mode1": "output",
+          "default_data1": 1,
+          "default_tri1": 0,
+          "width2": 1,
+          "mode2": "bidirectional",
+          "default_data2": 0,
+          "default_tri2": 1
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "interrupt": [
+          false,
+          true
+        ]
+      }
+    }
+  ]
+}

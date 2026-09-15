@@ -1,0 +1,127 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "ram_matrix",
+      "template": {
+        "ip_type": "distributed_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "dist_mem_gen",
+        "parameters": {
+          "width": 8,
+          "depth": 16,
+          "memory_type": "single_port_ram",
+          "initial_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 64,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          1,
+          7,
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          64,
+          128,
+          256
+        ],
+        "depth": [
+          16,
+          32,
+          48,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          4096
+        ],
+        "memory_type": [
+          "single_port_ram",
+          "dual_port_ram"
+        ]
+      }
+    },
+    {
+      "case_prefix": "ram_wide_systematic",
+      "template": {
+        "ip_type": "distributed_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "dist_mem_gen",
+        "parameters": {
+          "width": 16,
+          "depth": 64,
+          "memory_type": "dual_port_ram",
+          "initial_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          16,
+          17,
+          32,
+          33,
+          64,
+          128,
+          256
+        ],
+        "depth": [
+          64,
+          128,
+          256,
+          512
+        ],
+        "initial_value": [
+          1,
+          85,
+          170,
+          255
+        ]
+      }
+    }
+  ]
+}

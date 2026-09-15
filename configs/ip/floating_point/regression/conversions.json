@@ -1,0 +1,825 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "fp_abs8",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Absolute",
+        "input_exponent": 4,
+        "input_fraction": 4,
+        "output_exponent": 4,
+        "output_fraction": 4,
+        "input_unsigned": false,
+        "optimization": "Resources",
+        "has_last": false,
+        "user_width": 0,
+        "has_underflow": false,
+        "has_overflow": false,
+        "has_invalid_op": false
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 256,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_abs16",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Absolute",
+        "input_exponent": 5,
+        "input_fraction": 11,
+        "output_exponent": 5,
+        "output_fraction": 11,
+        "input_unsigned": false,
+        "optimization": "Resources",
+        "has_last": false,
+        "user_width": 0,
+        "has_underflow": false,
+        "has_overflow": false,
+        "has_invalid_op": false
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 65536,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_abs9_padded",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Absolute",
+        "input_exponent": 4,
+        "input_fraction": 5,
+        "output_exponent": 4,
+        "output_fraction": 5,
+        "input_unsigned": false,
+        "optimization": "Resources",
+        "has_last": false,
+        "user_width": 0,
+        "has_underflow": false,
+        "has_overflow": false,
+        "has_invalid_op": false
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 65536,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_abs80_sidebands",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Absolute",
+        "input_exponent": 16,
+        "input_fraction": 64,
+        "output_exponent": 16,
+        "output_fraction": 64,
+        "input_unsigned": false,
+        "optimization": "Performance",
+        "has_last": true,
+        "user_width": 256,
+        "has_underflow": false,
+        "has_overflow": false,
+        "has_invalid_op": false
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 4096,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_f32_to_f16",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Float_to_float",
+        "input_exponent": 8,
+        "input_fraction": 24,
+        "output_exponent": 5,
+        "output_fraction": 11,
+        "input_unsigned": false,
+        "optimization": "Resources",
+        "has_last": false,
+        "user_width": 0,
+        "has_underflow": true,
+        "has_overflow": true,
+        "has_invalid_op": false
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 4096,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_f16_to_f32",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Float_to_float",
+        "input_exponent": 5,
+        "input_fraction": 11,
+        "output_exponent": 8,
+        "output_fraction": 24,
+        "input_unsigned": false,
+        "optimization": "Resources",
+        "has_last": false,
+        "user_width": 0,
+        "has_underflow": true,
+        "has_overflow": true,
+        "has_invalid_op": false
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 65536,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_f32_condition",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Float_to_float",
+        "input_exponent": 8,
+        "input_fraction": 24,
+        "output_exponent": 8,
+        "output_fraction": 24,
+        "input_unsigned": false,
+        "optimization": "Resources",
+        "has_last": true,
+        "user_width": 3,
+        "has_underflow": true,
+        "has_overflow": true,
+        "has_invalid_op": false
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 4096,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_f64_to_f16",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Float_to_float",
+        "input_exponent": 11,
+        "input_fraction": 53,
+        "output_exponent": 5,
+        "output_fraction": 11,
+        "input_unsigned": false,
+        "optimization": "Performance",
+        "has_last": true,
+        "user_width": 1,
+        "has_underflow": false,
+        "has_overflow": true,
+        "has_invalid_op": false
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 4096,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_f80_to_f8",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Float_to_float",
+        "input_exponent": 16,
+        "input_fraction": 64,
+        "output_exponent": 4,
+        "output_fraction": 4,
+        "input_unsigned": false,
+        "optimization": "Resources",
+        "has_last": true,
+        "user_width": 65,
+        "has_underflow": true,
+        "has_overflow": false,
+        "has_invalid_op": false
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 4096,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_f8_to_f80",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Float_to_float",
+        "input_exponent": 4,
+        "input_fraction": 4,
+        "output_exponent": 16,
+        "output_fraction": 64,
+        "input_unsigned": false,
+        "optimization": "Resources",
+        "has_last": false,
+        "user_width": 0,
+        "has_underflow": false,
+        "has_overflow": false,
+        "has_invalid_op": false
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 256,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_f80_to_f20",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Float_to_float",
+        "input_exponent": 16,
+        "input_fraction": 64,
+        "output_exponent": 16,
+        "output_fraction": 4,
+        "input_unsigned": false,
+        "optimization": "Performance",
+        "has_last": true,
+        "user_width": 256,
+        "has_underflow": true,
+        "has_overflow": true,
+        "has_invalid_op": false
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 4096,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_s8_to_f9",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Fixed_to_float",
+        "input_exponent": 8,
+        "input_fraction": 0,
+        "output_exponent": 5,
+        "output_fraction": 4,
+        "input_unsigned": false,
+        "optimization": "Resources",
+        "has_last": false,
+        "user_width": 0,
+        "has_underflow": false,
+        "has_overflow": false,
+        "has_invalid_op": false
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 256,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_s16q8_to_f32",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Fixed_to_float",
+        "input_exponent": 8,
+        "input_fraction": 8,
+        "output_exponent": 8,
+        "output_fraction": 24,
+        "input_unsigned": false,
+        "optimization": "Resources",
+        "has_last": false,
+        "user_width": 0,
+        "has_underflow": false,
+        "has_overflow": false,
+        "has_invalid_op": false
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 65536,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_s64_to_f12",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Fixed_to_float",
+        "input_exponent": 64,
+        "input_fraction": 0,
+        "output_exponent": 8,
+        "output_fraction": 4,
+        "input_unsigned": false,
+        "optimization": "Resources",
+        "has_last": true,
+        "user_width": 32,
+        "has_underflow": false,
+        "has_overflow": false,
+        "has_invalid_op": false
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 4096,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_u64_to_f64",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Fixed_to_float",
+        "input_exponent": 64,
+        "input_fraction": 0,
+        "output_exponent": 11,
+        "output_fraction": 53,
+        "input_unsigned": true,
+        "optimization": "Performance",
+        "has_last": true,
+        "user_width": 256,
+        "has_underflow": false,
+        "has_overflow": false,
+        "has_invalid_op": false
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 4096,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_u32_to_f12",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Fixed_to_float",
+        "input_exponent": 32,
+        "input_fraction": 0,
+        "output_exponent": 8,
+        "output_fraction": 4,
+        "input_unsigned": true,
+        "optimization": "Resources",
+        "has_last": false,
+        "user_width": 0,
+        "has_underflow": false,
+        "has_overflow": false,
+        "has_invalid_op": false
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 4096,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_f32_to_s8",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Float_to_fixed",
+        "input_exponent": 8,
+        "input_fraction": 24,
+        "output_exponent": 8,
+        "output_fraction": 0,
+        "input_unsigned": false,
+        "optimization": "Resources",
+        "has_last": false,
+        "user_width": 0,
+        "has_underflow": false,
+        "has_overflow": true,
+        "has_invalid_op": true
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 4096,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_f16_to_s4",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Float_to_fixed",
+        "input_exponent": 5,
+        "input_fraction": 11,
+        "output_exponent": 4,
+        "output_fraction": 0,
+        "input_unsigned": false,
+        "optimization": "Resources",
+        "has_last": false,
+        "user_width": 0,
+        "has_underflow": false,
+        "has_overflow": true,
+        "has_invalid_op": true
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 65536,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_f32_to_s17q9",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Float_to_fixed",
+        "input_exponent": 8,
+        "input_fraction": 24,
+        "output_exponent": 8,
+        "output_fraction": 9,
+        "input_unsigned": false,
+        "optimization": "Performance",
+        "has_last": true,
+        "user_width": 3,
+        "has_underflow": false,
+        "has_overflow": true,
+        "has_invalid_op": true
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 4096,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_f64_to_s64",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Float_to_fixed",
+        "input_exponent": 11,
+        "input_fraction": 53,
+        "output_exponent": 64,
+        "output_fraction": 0,
+        "input_unsigned": false,
+        "optimization": "Resources",
+        "has_last": false,
+        "user_width": 0,
+        "has_underflow": false,
+        "has_overflow": true,
+        "has_invalid_op": false
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 4096,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_f80_to_s64q63",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Float_to_fixed",
+        "input_exponent": 16,
+        "input_fraction": 64,
+        "output_exponent": 1,
+        "output_fraction": 63,
+        "input_unsigned": false,
+        "optimization": "Resources",
+        "has_last": true,
+        "user_width": 256,
+        "has_underflow": false,
+        "has_overflow": false,
+        "has_invalid_op": true
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 4096,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    }
+  ]
+}

@@ -13,6 +13,30 @@ from vivado_ip_test.configuration import load_test_cases
 
 
 class RunRecorderTests(unittest.TestCase):
+    def test_archives_block_design_and_behavioral_hdl_with_hashes(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            layout = RepositoryLayout(root)
+            case = replace(make_case(), ip_type="ilconcat")
+            run = layout.case_run_dir(case)
+            relative_paths = ("proj/ip_test.srcs/sources_1/bd/dut_0/dut_0.bd",
+                              "proj/ip_test.gen/sources_1/bd/dut_0/sim/dut_0.v")
+            result = StageResult(case.case_id, Stage.CREATE_IP, Status.PASS, run,
+                                 layout.stage_log_path(case, Stage.CREATE_IP))
+            with RunRecorder(layout, [case]) as recorder:
+                for relative in relative_paths:
+                    path = run / relative
+                    path.parent.mkdir(parents=True)
+                    path.write_text("original " + relative)
+                recorder.capture(result)
+            for relative in relative_paths:
+                original = run / relative
+                archived = recorder.artifact_dir / "cases" / case.ip_type / case.case_id / relative
+                self.assertEqual(original.read_bytes(), archived.read_bytes())
+                self.assertEqual(recorder.hashes[str(archived.relative_to(root))], sha256_file(original))
+                original.write_text("later changes")
+                self.assertTrue(archived.read_text().startswith("original"))
+
     def test_multi_ip_archive_preserves_order_without_mixing_parameters(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

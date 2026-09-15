@@ -1,0 +1,342 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "ip_type": "complex_multiplier",
+      "vendor": "xilinx.com",
+      "ip_name": "cmpy",
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      },
+      "case_id": "cmul_full16",
+      "parameters": {
+        "a_width": 16,
+        "b_width": 16,
+        "output_width": 33,
+        "multiplier_type": "Use_Mults",
+        "optimization": "Resources",
+        "rounding": "Truncate",
+        "latency": -1,
+        "clock_enable": false,
+        "a_last": false,
+        "b_last": false,
+        "ctrl_last": false,
+        "last_mode": "Null",
+        "a_user_width": 0,
+        "b_user_width": 0,
+        "ctrl_user_width": 0
+      }
+    },
+    {
+      "ip_type": "complex_multiplier",
+      "vendor": "xilinx.com",
+      "ip_name": "cmpy",
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      },
+      "case_id": "cmul_comb_pad11",
+      "parameters": {
+        "a_width": 11,
+        "b_width": 9,
+        "output_width": 13,
+        "multiplier_type": "Use_LUTs",
+        "optimization": "Resources",
+        "rounding": "Truncate",
+        "latency": 0,
+        "clock_enable": false,
+        "a_last": false,
+        "b_last": false,
+        "ctrl_last": false,
+        "last_mode": "Null",
+        "a_user_width": 0,
+        "b_user_width": 0,
+        "ctrl_user_width": 0
+      }
+    },
+    {
+      "ip_type": "complex_multiplier",
+      "vendor": "xilinx.com",
+      "ip_name": "cmpy",
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      },
+      "case_id": "cmul_round8",
+      "parameters": {
+        "a_width": 8,
+        "b_width": 8,
+        "output_width": 8,
+        "multiplier_type": "Use_Mults",
+        "optimization": "Resources",
+        "rounding": "Random_Rounding",
+        "latency": -1,
+        "clock_enable": false,
+        "a_last": true,
+        "b_last": true,
+        "ctrl_last": false,
+        "last_mode": "OR_all_TLASTs",
+        "a_user_width": 3,
+        "b_user_width": 5,
+        "ctrl_user_width": 0
+      }
+    },
+    {
+      "ip_type": "complex_multiplier",
+      "vendor": "xilinx.com",
+      "ip_name": "cmpy",
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      },
+      "case_id": "cmul_pipe_perf25",
+      "parameters": {
+        "a_width": 25,
+        "b_width": 18,
+        "output_width": 32,
+        "multiplier_type": "Use_Mults",
+        "optimization": "Performance",
+        "rounding": "Truncate",
+        "latency": -1,
+        "clock_enable": true,
+        "a_last": false,
+        "b_last": false,
+        "ctrl_last": false,
+        "last_mode": "Null",
+        "a_user_width": 0,
+        "b_user_width": 0,
+        "ctrl_user_width": 0
+      }
+    },
+    {
+      "ip_type": "complex_multiplier",
+      "vendor": "xilinx.com",
+      "ip_name": "cmpy",
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      },
+      "case_id": "cmul_wide63",
+      "parameters": {
+        "a_width": 63,
+        "b_width": 63,
+        "output_width": 127,
+        "multiplier_type": "Use_Mults",
+        "optimization": "Resources",
+        "rounding": "Truncate",
+        "latency": -1,
+        "clock_enable": true,
+        "a_last": false,
+        "b_last": false,
+        "ctrl_last": false,
+        "last_mode": "Null",
+        "a_user_width": 0,
+        "b_user_width": 0,
+        "ctrl_user_width": 0
+      }
+    },
+    {
+      "ip_type": "complex_multiplier",
+      "vendor": "xilinx.com",
+      "ip_name": "cmpy",
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      },
+      "case_id": "cmul_lut_round",
+      "parameters": {
+        "a_width": 11,
+        "b_width": 9,
+        "output_width": 2,
+        "multiplier_type": "Use_LUTs",
+        "optimization": "Resources",
+        "rounding": "Random_Rounding",
+        "latency": 1,
+        "clock_enable": false,
+        "a_last": false,
+        "b_last": false,
+        "ctrl_last": true,
+        "last_mode": "Pass_CTRL_TLAST",
+        "a_user_width": 3,
+        "b_user_width": 5,
+        "ctrl_user_width": 7
+      }
+    },
+    {
+      "ip_type": "complex_multiplier",
+      "vendor": "xilinx.com",
+      "ip_name": "cmpy",
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      },
+      "case_id": "cmul_long_pipe",
+      "parameters": {
+        "a_width": 8,
+        "b_width": 8,
+        "output_width": 16,
+        "multiplier_type": "Use_Mults",
+        "optimization": "Performance",
+        "rounding": "Truncate",
+        "latency": 55,
+        "clock_enable": true,
+        "a_last": true,
+        "b_last": true,
+        "ctrl_last": false,
+        "last_mode": "AND_all_TLASTs",
+        "a_user_width": 1,
+        "b_user_width": 256,
+        "ctrl_user_width": 0
+      }
+    },
+    {
+      "ip_type": "complex_multiplier",
+      "vendor": "xilinx.com",
+      "ip_name": "cmpy",
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      },
+      "case_id": "cmul_comb_round",
+      "parameters": {
+        "a_width": 8,
+        "b_width": 8,
+        "output_width": 8,
+        "multiplier_type": "Use_Mults",
+        "optimization": "Performance",
+        "rounding": "Random_Rounding",
+        "latency": 0,
+        "clock_enable": false,
+        "a_last": true,
+        "b_last": false,
+        "ctrl_last": false,
+        "last_mode": "Pass_A_TLAST",
+        "a_user_width": 0,
+        "b_user_width": 0,
+        "ctrl_user_width": 0
+      }
+    }
+  ]
+}

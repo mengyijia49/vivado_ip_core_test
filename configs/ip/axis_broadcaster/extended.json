@@ -1,0 +1,13 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": [
+    "matrices/data_replicate.json",
+    "matrices/data_rotate_bytes.json",
+    "matrices/data_reverse_alternate.json",
+    "matrices/data_constant_tag.json",
+    "matrices/split.json",
+    "matrices/sideband_only.json",
+    "matrices/full_sideband.json"
+  ]
+}

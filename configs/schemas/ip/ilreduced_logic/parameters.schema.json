@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ilreduced_logic parameters",
+  "type": "object",
+  "required": [
+    "width",
+    "operation"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "width": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 65536
+    },
+    "operation": {
+      "enum": [
+        "and",
+        "or",
+        "xor"
+      ]
+    }
+  }
+}

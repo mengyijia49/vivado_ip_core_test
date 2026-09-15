@@ -1,0 +1,8 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": [
+    "compare/fixed.json",
+    "compare/programmable.json"
+  ]
+}

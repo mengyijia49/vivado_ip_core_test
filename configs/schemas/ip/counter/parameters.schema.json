@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "counter 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "width",
+    "increment",
+    "direction",
+    "clock_enable",
+    "sync_clear",
+    "ce_overrides_reset"
+  ],
+  "properties": {
+    "width": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 256
+    },
+    "increment": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "direction": {
+      "enum": [
+        "UP",
+        "DOWN",
+        "UPDOWN"
+      ]
+    },
+    "clock_enable": {
+      "type": "boolean"
+    },
+    "sync_clear": {
+      "type": "boolean"
+    },
+    "ce_overrides_reset": {
+      "type": "boolean"
+    }
+  }
+}

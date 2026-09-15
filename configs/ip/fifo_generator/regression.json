@@ -1,0 +1,5 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": ["regression/standard.json", "regression/fwft.json", "regression/status.json"]
+}

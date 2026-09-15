@@ -115,6 +115,11 @@ class RunRecorder:
         if result.stage is Stage.CREATE_IP and result.passed:
             for source in result.run_dir.glob("proj/**/*.xci"):
                 self._copy(source, case_dir / source.relative_to(result.run_dir))
+            for source in result.run_dir.glob("proj/*.srcs/sources_1/bd/*/*.bd"):
+                self._copy(source, case_dir / source.relative_to(result.run_dir))
+            for source in result.run_dir.glob("proj/*.gen/sources_1/bd/*/sim/*"):
+                if source.is_file() and source.suffix in {".v", ".sv", ".vhd"}:
+                    self._copy(source, case_dir / source.relative_to(result.run_dir))
         elif result.stage is Stage.GENERATE_TESTBENCH and result.passed:
             for name in ("manifest.json", "tb", "vectors"):
                 self._copy_tree(result.run_dir / name, case_dir / name)

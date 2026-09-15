@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AXI-Stream 交换器参数",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "inputs": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 16
+    },
+    "outputs": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 16
+    },
+    "data_bytes": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 512
+    },
+    "user_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4096
+    },
+    "id_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 32
+    },
+    "dest_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 32
+    },
+    "arbitrate_transfers": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1024
+    },
+    "arbitrate_cycles": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1024
+    },
+    "has_keep": {
+      "type": "boolean"
+    },
+    "has_strb": {
+      "type": "boolean"
+    },
+    "has_last": {
+      "type": "boolean"
+    },
+    "decoder_reg": {
+      "type": "boolean"
+    },
+    "output_reg": {
+      "type": "boolean"
+    },
+    "arbitrate_last": {
+      "type": "boolean"
+    },
+    "arbiter": {
+      "enum": [
+        "round_robin",
+        "fixed_priority",
+        "true_round_robin"
+      ]
+    },
+    "routing": {
+      "enum": [
+        "balanced",
+        "reversed",
+        "singletons",
+        "gapped"
+      ]
+    }
+  },
+  "required": [
+    "inputs",
+    "outputs",
+    "data_bytes",
+    "user_width",
+    "id_width",
+    "dest_width",
+    "has_keep",
+    "has_strb",
+    "has_last",
+    "decoder_reg",
+    "output_reg",
+    "arbiter",
+    "arbitrate_transfers",
+    "arbitrate_cycles",
+    "arbitrate_last",
+    "routing"
+  ]
+}

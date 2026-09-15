@@ -1,0 +1,511 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "intc_rising31_direct",
+      "template": {
+        "ip_type": "axi_intc",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_intc",
+        "parameters": {
+          "input_modes": [
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising"
+          ],
+          "software_interrupts": 0,
+          "async_mask": 0,
+          "synchronizer_stages": 2,
+          "irq_active_high": true,
+          "has_ipr": true,
+          "has_sie": true,
+          "has_cie": true,
+          "has_ivr": true,
+          "has_ilr": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "timing_mode": "random_gaps",
+          "input_order": "shuffled",
+          "max_gap_cycles": 64,
+          "burst_length": 32
+        }
+      },
+      "axes": {
+        "software_interrupts": [
+          0,
+          1
+        ],
+        "irq_active_high": [
+          false,
+          true
+        ],
+        "has_ipr": [
+          false,
+          true
+        ],
+        "has_sie": [
+          false,
+          true
+        ],
+        "has_cie": [
+          false,
+          true
+        ],
+        "has_ivr": [
+          false,
+          true
+        ],
+        "has_ilr": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "intc_rising31_ff0",
+      "template": {
+        "ip_type": "axi_intc",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_intc",
+        "parameters": {
+          "input_modes": [
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising"
+          ],
+          "software_interrupts": 0,
+          "async_mask": 2147483647,
+          "synchronizer_stages": 0,
+          "irq_active_high": true,
+          "has_ipr": true,
+          "has_sie": true,
+          "has_cie": true,
+          "has_ivr": true,
+          "has_ilr": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "timing_mode": "random_gaps",
+          "input_order": "shuffled",
+          "max_gap_cycles": 64,
+          "burst_length": 32
+        }
+      },
+      "axes": {
+        "software_interrupts": [
+          0,
+          1
+        ],
+        "irq_active_high": [
+          false,
+          true
+        ],
+        "has_ipr": [
+          false,
+          true
+        ],
+        "has_sie": [
+          false,
+          true
+        ],
+        "has_cie": [
+          false,
+          true
+        ],
+        "has_ivr": [
+          false,
+          true
+        ],
+        "has_ilr": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "intc_rising31_ff2",
+      "template": {
+        "ip_type": "axi_intc",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_intc",
+        "parameters": {
+          "input_modes": [
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising"
+          ],
+          "software_interrupts": 0,
+          "async_mask": 2147483647,
+          "synchronizer_stages": 2,
+          "irq_active_high": true,
+          "has_ipr": true,
+          "has_sie": true,
+          "has_cie": true,
+          "has_ivr": true,
+          "has_ilr": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "timing_mode": "random_gaps",
+          "input_order": "shuffled",
+          "max_gap_cycles": 64,
+          "burst_length": 32
+        }
+      },
+      "axes": {
+        "software_interrupts": [
+          0,
+          1
+        ],
+        "irq_active_high": [
+          false,
+          true
+        ],
+        "has_ipr": [
+          false,
+          true
+        ],
+        "has_sie": [
+          false,
+          true
+        ],
+        "has_cie": [
+          false,
+          true
+        ],
+        "has_ivr": [
+          false,
+          true
+        ],
+        "has_ilr": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "intc_rising31_ff7",
+      "template": {
+        "ip_type": "axi_intc",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_intc",
+        "parameters": {
+          "input_modes": [
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising"
+          ],
+          "software_interrupts": 0,
+          "async_mask": 2147483647,
+          "synchronizer_stages": 7,
+          "irq_active_high": true,
+          "has_ipr": true,
+          "has_sie": true,
+          "has_cie": true,
+          "has_ivr": true,
+          "has_ilr": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "timing_mode": "random_gaps",
+          "input_order": "shuffled",
+          "max_gap_cycles": 64,
+          "burst_length": 32
+        }
+      },
+      "axes": {
+        "software_interrupts": [
+          0,
+          1
+        ],
+        "irq_active_high": [
+          false,
+          true
+        ],
+        "has_ipr": [
+          false,
+          true
+        ],
+        "has_sie": [
+          false,
+          true
+        ],
+        "has_cie": [
+          false,
+          true
+        ],
+        "has_ivr": [
+          false,
+          true
+        ],
+        "has_ilr": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "intc_rising31_alternate",
+      "template": {
+        "ip_type": "axi_intc",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_intc",
+        "parameters": {
+          "input_modes": [
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising",
+            "rising"
+          ],
+          "software_interrupts": 0,
+          "async_mask": 1431655765,
+          "synchronizer_stages": 3,
+          "irq_active_high": true,
+          "has_ipr": true,
+          "has_sie": true,
+          "has_cie": true,
+          "has_ivr": true,
+          "has_ilr": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "timing_mode": "random_gaps",
+          "input_order": "shuffled",
+          "max_gap_cycles": 64,
+          "burst_length": 32
+        }
+      },
+      "axes": {
+        "software_interrupts": [
+          0,
+          1
+        ],
+        "irq_active_high": [
+          false,
+          true
+        ],
+        "has_ipr": [
+          false,
+          true
+        ],
+        "has_sie": [
+          false,
+          true
+        ],
+        "has_cie": [
+          false,
+          true
+        ],
+        "has_ivr": [
+          false,
+          true
+        ],
+        "has_ilr": [
+          false,
+          true
+        ]
+      }
+    }
+  ]
+}

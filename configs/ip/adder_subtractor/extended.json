@@ -1,0 +1,1787 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "add_w8",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "output_width": 8,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          7,
+          8
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_w9",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 9,
+          "b_width": 9,
+          "output_width": 9,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          8,
+          9
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_w15",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 15,
+          "b_width": 15,
+          "output_width": 15,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          14,
+          15
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_w16",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 16,
+          "b_width": 16,
+          "output_width": 16,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          15,
+          16
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_w17",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 17,
+          "b_width": 17,
+          "output_width": 17,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          16,
+          17
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_w31",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 31,
+          "b_width": 31,
+          "output_width": 31,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          30,
+          31
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_w32",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 32,
+          "b_width": 32,
+          "output_width": 32,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          31,
+          32
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_w33",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 33,
+          "b_width": 33,
+          "output_width": 33,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          32,
+          33
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_w47",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 47,
+          "b_width": 47,
+          "output_width": 47,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          46,
+          47
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_w48",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 48,
+          "b_width": 48,
+          "output_width": 48,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          47,
+          48
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_w49",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 49,
+          "b_width": 49,
+          "output_width": 49,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          48,
+          49
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_w63",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 63,
+          "b_width": 63,
+          "output_width": 63,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          62,
+          63
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_w64",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 64,
+          "b_width": 64,
+          "output_width": 64,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          63,
+          64
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_w65",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 65,
+          "b_width": 65,
+          "output_width": 65,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          64,
+          65
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_w127",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 127,
+          "b_width": 127,
+          "output_width": 127,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          126,
+          127
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_w128",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 128,
+          "b_width": 128,
+          "output_width": 128,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          127,
+          128
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_w129",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 129,
+          "b_width": 129,
+          "output_width": 129,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          128,
+          129
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_w255",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 255,
+          "b_width": 255,
+          "output_width": 255,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          254,
+          255
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_w256",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 256,
+          "b_width": 256,
+          "output_width": 256,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          255,
+          256
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_edge8",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "output_width": 8,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          7,
+          8
+        ],
+        "output_width": [
+          8,
+          9
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_edge16",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 16,
+          "b_width": 16,
+          "output_width": 16,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          15,
+          16
+        ],
+        "output_width": [
+          16,
+          17
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_edge32",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 32,
+          "b_width": 32,
+          "output_width": 32,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          31,
+          32
+        ],
+        "output_width": [
+          32,
+          33
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_edge64",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 64,
+          "b_width": 64,
+          "output_width": 64,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          63,
+          64
+        ],
+        "output_width": [
+          64,
+          65
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_comb8",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "output_width": 8,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 0,
+          "clock_enable": false,
+          "sync_clear": false,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          7,
+          8
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_comb9",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 9,
+          "b_width": 9,
+          "output_width": 9,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 0,
+          "clock_enable": false,
+          "sync_clear": false,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          8,
+          9
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_comb16",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 16,
+          "b_width": 16,
+          "output_width": 16,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 0,
+          "clock_enable": false,
+          "sync_clear": false,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          15,
+          16
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_comb17",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 17,
+          "b_width": 17,
+          "output_width": 17,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 0,
+          "clock_enable": false,
+          "sync_clear": false,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          16,
+          17
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_comb32",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 32,
+          "b_width": 32,
+          "output_width": 32,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 0,
+          "clock_enable": false,
+          "sync_clear": false,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          31,
+          32
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_comb33",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 33,
+          "b_width": 33,
+          "output_width": 33,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 0,
+          "clock_enable": false,
+          "sync_clear": false,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          32,
+          33
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_comb64",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 64,
+          "b_width": 64,
+          "output_width": 64,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 0,
+          "clock_enable": false,
+          "sync_clear": false,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          63,
+          64
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    },
+    {
+      "case_prefix": "add_small",
+      "template": {
+        "ip_type": "adder_subtractor",
+        "vendor": "xilinx.com",
+        "ip_name": "c_addsub",
+        "parameters": {
+          "a_width": 2,
+          "b_width": 2,
+          "output_width": 3,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "operation": "Add_Subtract",
+          "latency": 1,
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 128,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": [
+    "divide/e04.json",
+    "divide/e05.json",
+    "divide/e06.json",
+    "divide/e07.json",
+    "divide/e08.json",
+    "divide/e09.json",
+    "divide/e10.json",
+    "divide/e11.json",
+    "divide/e12.json",
+    "divide/e13.json",
+    "divide/e14.json",
+    "divide/e15.json",
+    "divide/e16.json"
+  ]
+}

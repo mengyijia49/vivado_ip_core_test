@@ -59,14 +59,78 @@
         "type": "string",
         "minLength": 1
       }
+    },
+    "sweeps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/parameter_sweep"
+      }
     }
   },
   "$defs": {
     "test_case": {
+      "$ref": "#/$defs/case_fields",
+      "required": [
+        "case_id"
+      ]
+    },
+    "parameter_sweep": {
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "case_id",
+        "case_prefix",
+        "template",
+        "axes"
+      ],
+      "properties": {
+        "case_prefix": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+        },
+        "template": {
+          "$ref": "#/$defs/case_fields",
+          "not": {
+            "required": [
+              "case_id"
+            ]
+          }
+        },
+        "axes": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "oneOf": [
+                {"type": ["integer", "string", "boolean"]},
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["label", "value"],
+                  "properties": {
+                    "label": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"},
+                    "value": {
+                      "oneOf": [
+                        {"type": ["integer", "string", "boolean"]},
+                        {"type": "array", "minItems": 1,
+                         "items": {"type": ["integer", "string", "boolean"]}}
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "case_fields": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
         "ip_type",
         "vendor",
         "ip_name",
@@ -218,6 +282,247 @@
               }
             }
           }
+        },
+        {
+          "if": {
+            "properties": {
+              "ip_type": {
+                "const": "adder_subtractor"
+              }
+            },
+            "required": [
+              "ip_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "$ref": "ip/adder_subtractor/parameters.schema.json"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "ip_type": {
+                "const": "accumulator"
+              }
+            },
+            "required": [
+              "ip_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "$ref": "ip/accumulator/parameters.schema.json"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "ip_type": {
+                "const": "counter"
+              }
+            },
+            "required": [
+              "ip_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "$ref": "ip/counter/parameters.schema.json"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "ip_type": {
+                "const": "shift_register"
+              }
+            },
+            "required": [
+              "ip_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "$ref": "ip/shift_register/parameters.schema.json"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "ip_type": {
+                "const": "distributed_memory"
+              }
+            },
+            "required": [
+              "ip_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "$ref": "ip/distributed_memory/parameters.schema.json"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "ip_type": {
+                "const": "vector_logic"
+              }
+            },
+            "required": [
+              "ip_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "$ref": "ip/vector_logic/parameters.schema.json"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "ip_type": {
+                "const": "reduced_logic"
+              }
+            },
+            "required": [
+              "ip_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "$ref": "ip/reduced_logic/parameters.schema.json"
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axis_register_slice"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axis_register_slice/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axis_data_fifo"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axis_data_fifo/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axis_clock_converter"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axis_clock_converter/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "block_memory"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/block_memory/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "fifo_generator"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/fifo_generator/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "multiply_adder"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/multiply_adder/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "complex_multiplier"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/complex_multiplier/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "tmr_voter"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/tmr_voter/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "tmr_comparator"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/tmr_comparator/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axis_dwidth_converter"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axis_dwidth_converter/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axis_subset_converter"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axis_subset_converter/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axis_broadcaster"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axis_broadcaster/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axis_combiner"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axis_combiner/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axis_switch"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axis_switch/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axi_gpio"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axi_gpio/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axi_timer"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axi_timer/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axi_intc"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axi_intc/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "xlconcat"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/xlconcat/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "xlslice"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/xlslice/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "xlconstant"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/xlconstant/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "ilconcat"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/ilconcat/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "ilslice"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/ilslice/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "ilconstant"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/ilconstant/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "ilvector_logic"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/ilvector_logic/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "ilreduced_logic"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/ilreduced_logic/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "cordic"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/cordic/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "floating_point"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/floating_point/parameters.schema.json"}}}
         }
       ]
     }
@@ -228,8 +533,17 @@
         "cases"
       ],
       "not": {
-        "required": [
-          "includes"
+        "anyOf": [
+          {
+            "required": [
+              "includes"
+            ]
+          },
+          {
+            "required": [
+              "sweeps"
+            ]
+          }
         ]
       }
     },
@@ -238,8 +552,36 @@
         "includes"
       ],
       "not": {
-        "required": [
-          "cases"
+        "anyOf": [
+          {
+            "required": [
+              "cases"
+            ]
+          },
+          {
+            "required": [
+              "sweeps"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "required": [
+        "sweeps"
+      ],
+      "not": {
+        "anyOf": [
+          {
+            "required": [
+              "cases"
+            ]
+          },
+          {
+            "required": [
+              "includes"
+            ]
+          }
         ]
       }
     }

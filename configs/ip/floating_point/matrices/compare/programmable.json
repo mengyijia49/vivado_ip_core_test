@@ -1,0 +1,29 @@
+{
+  "$schema": "../../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": [
+    "programmable/e04_p04_05.json",
+    "programmable/e05_p04_13.json",
+    "programmable/e06_p04_29.json",
+    "programmable/e07_p04_42.json",
+    "programmable/e07_p43_61.json",
+    "programmable/e08_p04_42.json",
+    "programmable/e08_p43_64.json",
+    "programmable/e09_p04_42.json",
+    "programmable/e09_p43_64.json",
+    "programmable/e10_p04_42.json",
+    "programmable/e10_p43_64.json",
+    "programmable/e11_p04_42.json",
+    "programmable/e11_p43_64.json",
+    "programmable/e12_p04_42.json",
+    "programmable/e12_p43_64.json",
+    "programmable/e13_p04_42.json",
+    "programmable/e13_p43_64.json",
+    "programmable/e14_p04_42.json",
+    "programmable/e14_p43_64.json",
+    "programmable/e15_p04_42.json",
+    "programmable/e15_p43_64.json",
+    "programmable/e16_p04_42.json",
+    "programmable/e16_p43_64.json"
+  ]
+}

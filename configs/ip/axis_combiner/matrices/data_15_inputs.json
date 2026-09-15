@@ -1,0 +1,91 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "combine_data_n15",
+      "template": {
+        "ip_type": "axis_combiner",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_combiner",
+        "parameters": {
+          "inputs": 15,
+          "data_bytes": 1,
+          "user_width": 0,
+          "id_width": 0,
+          "dest_width": 0,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "primary_input": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "data_bytes": [
+          1,
+          2,
+          3,
+          7,
+          8,
+          15,
+          16,
+          31,
+          32,
+          33,
+          34
+        ],
+        "user_width": [
+          0,
+          1,
+          9,
+          32,
+          129
+        ],
+        "primary_input": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "has_keep": [
+          false,
+          true
+        ],
+        "has_strb": [
+          false,
+          true
+        ]
+      }
+    }
+  ]
+}

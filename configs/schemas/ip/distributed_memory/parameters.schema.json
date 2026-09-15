@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "distributed_memory 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "width",
+    "depth",
+    "memory_type",
+    "initial_value"
+  ],
+  "properties": {
+    "width": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 256
+    },
+    "depth": {
+      "type": "integer",
+      "minimum": 16,
+      "maximum": 4096,
+      "multipleOf": 16
+    },
+    "memory_type": {
+      "enum": [
+        "single_port_ram",
+        "dual_port_ram"
+      ]
+    },
+    "initial_value": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": [
+    "status/counts/standard.json",
+    "status/single/standard_d16.json",
+    "status/hysteresis/standard_full_pairs_e2n3.json",
+    "status/hysteresis/standard_empty_pairs_f4n3.json",
+    "status/hysteresis/standard_full_pairs_e6n9.json",
+    "status/hysteresis/standard_empty_pairs_f9n7.json",
+    "status/hysteresis/standard_full_pairs_e12n13.json",
+    "status/hysteresis/standard_empty_pairs_f14n13.json",
+    "status/single/standard_deep.json",
+    "status/hysteresis/standard_deep.json",
+    "status/counts/fwft.json",
+    "status/single/fwft_d16.json",
+    "status/hysteresis/fwft_full_pairs_e4n5.json",
+    "status/hysteresis/fwft_empty_pairs_f6n5.json",
+    "status/hysteresis/fwft_full_pairs_e8n11.json",
+    "status/hysteresis/fwft_empty_pairs_f11n9.json",
+    "status/hysteresis/fwft_full_pairs_e14n15.json",
+    "status/hysteresis/fwft_empty_pairs_f15n14.json",
+    "status/single/fwft_deep.json",
+    "status/hysteresis/fwft_deep.json"
+  ]
+}

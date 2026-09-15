@@ -1,0 +1,123 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "axis_fifo_sync32",
+      "ip_type": "axis_data_fifo",
+      "vendor": "xilinx.com",
+      "ip_name": "axis_data_fifo",
+      "parameters": {
+        "data_bytes": 4,
+        "id_width": 3,
+        "dest_width": 2,
+        "user_width": 7,
+        "has_last": true,
+        "has_keep": true,
+        "has_strb": true,
+        "depth": 16,
+        "packet_mode": false,
+        "independent_clocks": false,
+        "memory_type": "distributed",
+        "synchronization_stages": 3
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 512,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "axis_fifo_packet16",
+      "ip_type": "axis_data_fifo",
+      "vendor": "xilinx.com",
+      "ip_name": "axis_data_fifo",
+      "parameters": {
+        "data_bytes": 2,
+        "id_width": 3,
+        "dest_width": 2,
+        "user_width": 7,
+        "has_last": true,
+        "has_keep": true,
+        "has_strb": true,
+        "depth": 32,
+        "packet_mode": true,
+        "independent_clocks": false,
+        "memory_type": "block",
+        "synchronization_stages": 3
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "axis_fifo_async16",
+      "ip_type": "axis_data_fifo",
+      "vendor": "xilinx.com",
+      "ip_name": "axis_data_fifo",
+      "parameters": {
+        "data_bytes": 2,
+        "id_width": 3,
+        "dest_width": 2,
+        "user_width": 7,
+        "has_last": true,
+        "has_keep": true,
+        "has_strb": true,
+        "depth": 64,
+        "packet_mode": true,
+        "independent_clocks": true,
+        "memory_type": "block",
+        "synchronization_stages": 4
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    }
+  ]
+}

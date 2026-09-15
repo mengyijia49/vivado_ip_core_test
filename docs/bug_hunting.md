@@ -2,19 +2,28 @@
 
 一次失败先作为待查问题，不直接记为 IP bug。
 环境、参数、testbench 和 Python 参考模型都可能导致失败。
+已有线索及证据强弱见[待确认问题](experiments/bug_candidates.md)，不要按失败行数统计 bug。
 
 ## 找到出错位置
 
 1. 在本批 `report.csv` 找到失败配置和阶段。
 2. 打开该行的日志。创建失败先查参数、工具和许可证；仿真失败再查编译、展开和运行日志。
-3. 自检失败时查看 `outputs/failure.json`，其中记录首个差异、缺失/额外输出或未知位，状态为 `UNTRIAGED`。
+3. 自检失败时查看 `outputs/failure.json`，先看首条差异，再看 `difference_summary.groups` 的后续分组。
 4. 如果数值文件没有差异，继续查时序断言和超时，不能据此排除故障。
 
 输出序号从 0 开始。启用输入乱序或保持后，不能把输出序号直接当原始输入编号：
 要通过 `vectors/schedule.json` 的 `transaction_vector_indices`
 查到 `vectors/vectors.json` 中的输入。`failure.json` 会保存可用的映射。
 
-testbench 在停止前写出首个错误值，保留 X、U 等未知状态，不把它们转成零。
+不要看完第一条就结束排查。例如 INTC 的 ISR 写入差异和后面的 ME 清零异常，
+出现在同一批输出中。分组可按阶段和字段找代表位置，但一个问题可能影响多组，
+同一组也可能混有多个原因，不能把组数当作 bug 数。
+先看 `all_rows_visited` 和 `groups_truncated`，确认扫描是否完整、组列表是否截断。
+旧清单缺字段布局时只能标记整体输出。字段解释见[报告格式](report_format.md)。
+
+testbench 保留 X、U 等未知状态，不把它们转成零。
+AXI-Lite 后端记录数值差异后继续运行；其他后端可能在首条差异时结束。
+Python 只分析已经生成的文件，不能补出停止之后的实际输出。
 Vivado 自身日志缺失时，检查同名 `.process.log` 和 `.invocation.json`。
 
 ## 复现和确认

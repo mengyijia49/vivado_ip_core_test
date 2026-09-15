@@ -1,0 +1,1746 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "bcast_side_u1",
+      "template": {
+        "ip_type": "axis_broadcaster",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_broadcaster",
+        "parameters": {
+          "branches": 2,
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 1,
+          "output_user_width": 1,
+          "id_width": 0,
+          "dest_width": 0,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "data_mapping": "replicate",
+          "user_mapping": "replicate"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 2,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "branches": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "output_user_width": [
+          1,
+          7,
+          8,
+          9,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "user_mapping": [
+          "replicate",
+          "rotate_bits",
+          "constant_tag"
+        ]
+      }
+    },
+    {
+      "case_prefix": "bcast_side_u7",
+      "template": {
+        "ip_type": "axis_broadcaster",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_broadcaster",
+        "parameters": {
+          "branches": 2,
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 7,
+          "output_user_width": 1,
+          "id_width": 0,
+          "dest_width": 0,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "data_mapping": "replicate",
+          "user_mapping": "replicate"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 128,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "branches": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "output_user_width": [
+          1,
+          7,
+          8,
+          9,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "user_mapping": [
+          "replicate",
+          "rotate_bits",
+          "constant_tag"
+        ]
+      }
+    },
+    {
+      "case_prefix": "bcast_side_u8",
+      "template": {
+        "ip_type": "axis_broadcaster",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_broadcaster",
+        "parameters": {
+          "branches": 2,
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 8,
+          "output_user_width": 1,
+          "id_width": 0,
+          "dest_width": 0,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "data_mapping": "replicate",
+          "user_mapping": "replicate"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "branches": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "output_user_width": [
+          1,
+          7,
+          8,
+          9,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "user_mapping": [
+          "replicate",
+          "rotate_bits",
+          "constant_tag"
+        ]
+      }
+    },
+    {
+      "case_prefix": "bcast_side_u9",
+      "template": {
+        "ip_type": "axis_broadcaster",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_broadcaster",
+        "parameters": {
+          "branches": 2,
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 9,
+          "output_user_width": 1,
+          "id_width": 0,
+          "dest_width": 0,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "data_mapping": "replicate",
+          "user_mapping": "replicate"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "branches": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "output_user_width": [
+          1,
+          7,
+          8,
+          9,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "user_mapping": [
+          "replicate",
+          "rotate_bits",
+          "constant_tag"
+        ]
+      }
+    },
+    {
+      "case_prefix": "bcast_side_u31",
+      "template": {
+        "ip_type": "axis_broadcaster",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_broadcaster",
+        "parameters": {
+          "branches": 2,
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 31,
+          "output_user_width": 1,
+          "id_width": 0,
+          "dest_width": 0,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "data_mapping": "replicate",
+          "user_mapping": "replicate"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "branches": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "output_user_width": [
+          1,
+          7,
+          8,
+          9,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "user_mapping": [
+          "replicate",
+          "rotate_bits",
+          "constant_tag"
+        ]
+      }
+    },
+    {
+      "case_prefix": "bcast_side_u32",
+      "template": {
+        "ip_type": "axis_broadcaster",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_broadcaster",
+        "parameters": {
+          "branches": 2,
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 32,
+          "output_user_width": 1,
+          "id_width": 0,
+          "dest_width": 0,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "data_mapping": "replicate",
+          "user_mapping": "replicate"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "branches": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "output_user_width": [
+          1,
+          7,
+          8,
+          9,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "user_mapping": [
+          "replicate",
+          "rotate_bits",
+          "constant_tag"
+        ]
+      }
+    },
+    {
+      "case_prefix": "bcast_side_u33",
+      "template": {
+        "ip_type": "axis_broadcaster",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_broadcaster",
+        "parameters": {
+          "branches": 2,
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 33,
+          "output_user_width": 1,
+          "id_width": 0,
+          "dest_width": 0,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "data_mapping": "replicate",
+          "user_mapping": "replicate"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "branches": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "output_user_width": [
+          1,
+          7,
+          8,
+          9,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "user_mapping": [
+          "replicate",
+          "rotate_bits",
+          "constant_tag"
+        ]
+      }
+    },
+    {
+      "case_prefix": "bcast_side_u63",
+      "template": {
+        "ip_type": "axis_broadcaster",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_broadcaster",
+        "parameters": {
+          "branches": 2,
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 63,
+          "output_user_width": 1,
+          "id_width": 0,
+          "dest_width": 0,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "data_mapping": "replicate",
+          "user_mapping": "replicate"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "branches": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "output_user_width": [
+          1,
+          7,
+          8,
+          9,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "user_mapping": [
+          "replicate",
+          "rotate_bits",
+          "constant_tag"
+        ]
+      }
+    },
+    {
+      "case_prefix": "bcast_side_u64",
+      "template": {
+        "ip_type": "axis_broadcaster",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_broadcaster",
+        "parameters": {
+          "branches": 2,
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 64,
+          "output_user_width": 1,
+          "id_width": 0,
+          "dest_width": 0,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "data_mapping": "replicate",
+          "user_mapping": "replicate"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "branches": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "output_user_width": [
+          1,
+          7,
+          8,
+          9,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "user_mapping": [
+          "replicate",
+          "rotate_bits",
+          "constant_tag"
+        ]
+      }
+    },
+    {
+      "case_prefix": "bcast_side_u65",
+      "template": {
+        "ip_type": "axis_broadcaster",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_broadcaster",
+        "parameters": {
+          "branches": 2,
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 65,
+          "output_user_width": 1,
+          "id_width": 0,
+          "dest_width": 0,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "data_mapping": "replicate",
+          "user_mapping": "replicate"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "branches": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "output_user_width": [
+          1,
+          7,
+          8,
+          9,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "user_mapping": [
+          "replicate",
+          "rotate_bits",
+          "constant_tag"
+        ]
+      }
+    },
+    {
+      "case_prefix": "bcast_side_u127",
+      "template": {
+        "ip_type": "axis_broadcaster",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_broadcaster",
+        "parameters": {
+          "branches": 2,
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 127,
+          "output_user_width": 1,
+          "id_width": 0,
+          "dest_width": 0,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "data_mapping": "replicate",
+          "user_mapping": "replicate"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "branches": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "output_user_width": [
+          1,
+          7,
+          8,
+          9,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "user_mapping": [
+          "replicate",
+          "rotate_bits",
+          "constant_tag"
+        ]
+      }
+    },
+    {
+      "case_prefix": "bcast_side_u128",
+      "template": {
+        "ip_type": "axis_broadcaster",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_broadcaster",
+        "parameters": {
+          "branches": 2,
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 128,
+          "output_user_width": 1,
+          "id_width": 0,
+          "dest_width": 0,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "data_mapping": "replicate",
+          "user_mapping": "replicate"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "branches": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "output_user_width": [
+          1,
+          7,
+          8,
+          9,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "user_mapping": [
+          "replicate",
+          "rotate_bits",
+          "constant_tag"
+        ]
+      }
+    },
+    {
+      "case_prefix": "bcast_side_u129",
+      "template": {
+        "ip_type": "axis_broadcaster",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_broadcaster",
+        "parameters": {
+          "branches": 2,
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 129,
+          "output_user_width": 1,
+          "id_width": 0,
+          "dest_width": 0,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "data_mapping": "replicate",
+          "user_mapping": "replicate"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "branches": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "output_user_width": [
+          1,
+          7,
+          8,
+          9,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "user_mapping": [
+          "replicate",
+          "rotate_bits",
+          "constant_tag"
+        ]
+      }
+    },
+    {
+      "case_prefix": "bcast_side_u255",
+      "template": {
+        "ip_type": "axis_broadcaster",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_broadcaster",
+        "parameters": {
+          "branches": 2,
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 255,
+          "output_user_width": 1,
+          "id_width": 0,
+          "dest_width": 0,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "data_mapping": "replicate",
+          "user_mapping": "replicate"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "branches": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "output_user_width": [
+          1,
+          7,
+          8,
+          9,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "user_mapping": [
+          "replicate",
+          "rotate_bits",
+          "constant_tag"
+        ]
+      }
+    },
+    {
+      "case_prefix": "bcast_side_u256",
+      "template": {
+        "ip_type": "axis_broadcaster",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_broadcaster",
+        "parameters": {
+          "branches": 2,
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 256,
+          "output_user_width": 1,
+          "id_width": 0,
+          "dest_width": 0,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "data_mapping": "replicate",
+          "user_mapping": "replicate"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "branches": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "output_user_width": [
+          1,
+          7,
+          8,
+          9,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "user_mapping": [
+          "replicate",
+          "rotate_bits",
+          "constant_tag"
+        ]
+      }
+    },
+    {
+      "case_prefix": "bcast_side_u257",
+      "template": {
+        "ip_type": "axis_broadcaster",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_broadcaster",
+        "parameters": {
+          "branches": 2,
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 257,
+          "output_user_width": 1,
+          "id_width": 0,
+          "dest_width": 0,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "data_mapping": "replicate",
+          "user_mapping": "replicate"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "branches": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "output_user_width": [
+          1,
+          7,
+          8,
+          9,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "user_mapping": [
+          "replicate",
+          "rotate_bits",
+          "constant_tag"
+        ]
+      }
+    },
+    {
+      "case_prefix": "bcast_side_u1023",
+      "template": {
+        "ip_type": "axis_broadcaster",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_broadcaster",
+        "parameters": {
+          "branches": 2,
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 1023,
+          "output_user_width": 1,
+          "id_width": 0,
+          "dest_width": 0,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "data_mapping": "replicate",
+          "user_mapping": "replicate"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "branches": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "output_user_width": [
+          1,
+          7,
+          8,
+          9,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "user_mapping": [
+          "replicate",
+          "rotate_bits",
+          "constant_tag"
+        ]
+      }
+    },
+    {
+      "case_prefix": "bcast_side_u1024",
+      "template": {
+        "ip_type": "axis_broadcaster",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_broadcaster",
+        "parameters": {
+          "branches": 2,
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 1024,
+          "output_user_width": 1,
+          "id_width": 0,
+          "dest_width": 0,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "data_mapping": "replicate",
+          "user_mapping": "replicate"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "branches": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "output_user_width": [
+          1,
+          7,
+          8,
+          9,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "user_mapping": [
+          "replicate",
+          "rotate_bits",
+          "constant_tag"
+        ]
+      }
+    },
+    {
+      "case_prefix": "bcast_side_u4095",
+      "template": {
+        "ip_type": "axis_broadcaster",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_broadcaster",
+        "parameters": {
+          "branches": 2,
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 4095,
+          "output_user_width": 1,
+          "id_width": 0,
+          "dest_width": 0,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "data_mapping": "replicate",
+          "user_mapping": "replicate"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "branches": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "output_user_width": [
+          1,
+          7,
+          8,
+          9,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "user_mapping": [
+          "replicate",
+          "rotate_bits",
+          "constant_tag"
+        ]
+      }
+    },
+    {
+      "case_prefix": "bcast_side_u4096",
+      "template": {
+        "ip_type": "axis_broadcaster",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_broadcaster",
+        "parameters": {
+          "branches": 2,
+          "input_bytes": 0,
+          "output_bytes": 0,
+          "input_user_width": 4096,
+          "output_user_width": 1,
+          "id_width": 0,
+          "dest_width": 0,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "data_mapping": "replicate",
+          "user_mapping": "replicate"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "branches": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "output_user_width": [
+          1,
+          7,
+          8,
+          9,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257,
+          1023,
+          1024,
+          4095,
+          4096
+        ],
+        "user_mapping": [
+          "replicate",
+          "rotate_bits",
+          "constant_tag"
+        ]
+      }
+    }
+  ]
+}

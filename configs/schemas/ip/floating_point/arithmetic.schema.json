@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Floating Point Arithmetic Parameters",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "operation", "input_exponent", "input_fraction", "optimization", "architecture", "mult_usage",
+    "a_user_width", "b_user_width", "operation_user_width",
+    "has_a_last", "has_b_last", "has_operation_last", "last_mode",
+    "has_underflow", "has_overflow", "has_invalid_op"
+  ],
+  "properties": {
+    "operation": {"enum": ["Add_Subtract", "Multiply"]},
+    "add_sub_value": {"enum": ["Add", "Subtract", "Both"]},
+    "input_exponent": {"type": "integer", "minimum": 4, "maximum": 16},
+    "input_fraction": {"type": "integer", "minimum": 4, "maximum": 64},
+    "optimization": {"enum": ["Resources", "Performance"]},
+    "architecture": {"enum": ["Speed_Optimized", "Low_Latency"]},
+    "mult_usage": {"enum": ["No_Usage", "Medium_Usage", "Full_Usage", "Max_Usage"]},
+    "a_user_width": {"type": "integer", "minimum": 0, "maximum": 256},
+    "b_user_width": {"type": "integer", "minimum": 0, "maximum": 256},
+    "operation_user_width": {"type": "integer", "minimum": 0, "maximum": 256},
+    "has_a_last": {"type": "boolean"},
+    "has_b_last": {"type": "boolean"},
+    "has_operation_last": {"type": "boolean"},
+    "last_mode": {"enum": ["None", "A", "B", "Operation", "Or", "And"]},
+    "has_underflow": {"type": "boolean"},
+    "has_overflow": {"type": "boolean"},
+    "has_invalid_op": {"type": "boolean"}
+  },
+  "if": {"properties": {"operation": {"const": "Add_Subtract"}}},
+  "then": {"required": ["add_sub_value"]},
+  "else": {"not": {"required": ["add_sub_value"]}}
+}

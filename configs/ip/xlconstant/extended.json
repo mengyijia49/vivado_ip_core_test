@@ -1,0 +1,5 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": ["matrices/zero_one.json","matrices/high_and_all_1.json","matrices/high_and_all_2.json","matrices/high_and_all_3.json","matrices/high_and_all_4.json","matrices/high_and_all_5.json","matrices/high_and_all_6.json","matrices/high_and_all_7.json","matrices/high_and_all_8.json","matrices/word_boundaries.json"]
+}

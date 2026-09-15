@@ -1,4 +1,5 @@
 import random
+from vivado_ip_test.domain.counts import count_for_report
 
 from vivado_ip_test.strategies.base import (
     CaseSpace,
@@ -19,7 +20,7 @@ class DirectedRandomStrategy:
         if profile.case_budget > space.total_case_count:
             raise StrategyError(
                 f"用例预算 {profile.case_budget} 超过输入空间大小 "
-                f"{space.total_case_count}"
+                f"{count_for_report(space.total_case_count)}"
             )
 
         seen = set(cases)

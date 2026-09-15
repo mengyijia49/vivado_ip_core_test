@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": [
+    "regression/conversions.json",
+    "regression/square_root.json",
+    "regression/compare.json",
+    "regression/add_subtract.json",
+    "regression/multiply.json",
+    "regression/divide.json"
+  ]
+}

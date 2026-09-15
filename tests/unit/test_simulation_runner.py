@@ -1,6 +1,8 @@
+import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from vivado_ip_test.domain import (
     SimulationRequest,
@@ -9,9 +11,10 @@ from vivado_ip_test.domain import (
     TestCase as DomainTestCase,
     VerificationProfile,
 )
-from vivado_ip_test.infrastructure import CommandResult, RepositoryLayout
+from vivado_ip_test.infrastructure import CommandResult, RepositoryLayout, sha256_file
+from vivado_ip_test.infrastructure.output_layout import binary_output_layout
 from vivado_ip_test.plugins import PluginRegistry
-from vivado_ip_test.services import SimulationRunner
+from vivado_ip_test.services import RunRecorder, SimulationRunner
 
 
 class FakePlugin:
@@ -80,6 +83,58 @@ class SimulationRunnerTests(unittest.TestCase):
         registry.register(plugin)
         return SimulationRunner(registry, layout, vivado), plugin
 
+    def test_full_difference_groups_are_archived_but_report_metrics_are_compact(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            runner, plugin = self.make_runner(root,
+                FakeVivado(CommandResult(1, ""), "XSIM_STAGE_STATUS: FAIL\n"))
+            case = make_case()
+            run_dir = plugin.layout.case_run_dir(case)
+            with RunRecorder(plugin.layout, [case]) as recorder:
+                (run_dir / "vectors").mkdir(parents=True)
+                (run_dir / "outputs").mkdir()
+                (run_dir / "vectors/expected_output.txt").write_text("00\n00\n")
+                (run_dir / "outputs/actual_output.txt").write_text("10\n01\n")
+                (run_dir / "manifest.json").write_text(json.dumps({
+                    "output_layout": binary_output_layout((("irq", 1), ("data", 1)))}))
+                result = runner.run(case, Stage.SIM_SELFCHECK)
+                recorder.capture(result)
+            self.assertEqual(result.status, Status.SIMULATION_FAILED)
+            compact = result.metrics["failure_evidence"]["difference_summary"]
+            self.assertNotIn("groups", compact)
+            self.assertEqual(compact["retained_group_count"], 2)
+            report = json.loads((recorder.report_dir / "report.json").read_text())[0]
+            failure = Path(report["run_dir"]) / report["metrics"]["failure_detail_file"]
+            self.assertEqual(sha256_file(failure), report["metrics"]["failure_detail_sha256"])
+            self.assertEqual(recorder.hashes[str(failure.relative_to(root))], sha256_file(failure))
+            full = json.loads(failure.read_text())
+            self.assertEqual(full["output_index"], 0)
+            self.assertEqual([group["output_field"] for group in full["difference_summary"]["groups"]],
+                             ["irq", "data"])
+            self.assertEqual({key: value for key, value in full["difference_summary"].items()
+                              if key != "groups"}, compact)
+
+    def test_matching_numeric_output_does_not_override_protocol_failure(self):
+        with tempfile.TemporaryDirectory() as directory:
+            vivado = FakeVivado(CommandResult(1, ""), "XSIM_STAGE_STATUS: FAIL\n")
+            runner, plugin = self.make_runner(Path(directory), vivado)
+            run_dir = plugin.layout.case_run_dir(make_case())
+            (run_dir / "vectors").mkdir(parents=True)
+            (run_dir / "outputs").mkdir()
+            (run_dir / "vectors/expected_output.txt").write_text("01\n")
+            (run_dir / "outputs/actual_output.txt").write_text("01\n")
+            result = runner.run(make_case(), Stage.SIM_SELFCHECK)
+            self.assertEqual(result.status, Status.SIMULATION_FAILED)
+            self.assertEqual(result.metrics["failure_evidence"]["kind"], "no_numeric_difference")
+            self.assertEqual(result.metrics["failure_evidence"]["difference_summary"]["difference_rows"], 0)
+            self.assertTrue((run_dir / "outputs/failure.json").exists())
+            vivado.result, vivado.log_text = CommandResult(0, ""), "XSIM_STAGE_STATUS: PASS\n"
+            result = runner.run(make_case(), Stage.SIM_SELFCHECK)
+            self.assertEqual(result.status, Status.PASS)
+            self.assertFalse((run_dir / "outputs/failure.json").exists())
+            self.assertNotIn("failure_evidence", result.metrics)
+            self.assertNotIn("failure_detail_file", result.metrics)
+
     def test_runs_generic_tcl_and_verifies_successful_output(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             vivado = FakeVivado(
@@ -139,6 +194,24 @@ class SimulationRunnerTests(unittest.TestCase):
             self.assertEqual(result.metrics["elapsed_seconds"], 3.5)
             self.assertEqual(result.metrics["returncode"], 1)
             self.assertIn("actual_output_sha256", result.metrics)
+
+    def test_output_count_does_not_load_the_whole_file(self):
+        with tempfile.TemporaryDirectory() as directory:
+            runner, plugin = self.make_runner(Path(directory),
+                FakeVivado(CommandResult(0, ""), "XSIM_STAGE_STATUS: PASS\n"))
+            actual = plugin.layout.case_run_dir(make_case()) / "outputs/actual_output.txt"
+            actual.parent.mkdir(parents=True)
+            actual.write_text("0" * 150000 + "\n" + "1" * 150000)
+            original = Path.read_text
+
+            def guarded_read(path, *args, **kwargs):
+                self.assertNotEqual(path, actual, "输出计数不应整文件读入内存")
+                return original(path, *args, **kwargs)
+
+            with patch.object(Path, "read_text", guarded_read):
+                result = runner.run(make_case(), Stage.SIM_SELFCHECK)
+            self.assertEqual(result.metrics["output_count"], 2)
+            self.assertIs(result.status, Status.PASS)
 
     def test_preserves_post_simulation_verification_failure(self):
         with tempfile.TemporaryDirectory() as temp_dir:

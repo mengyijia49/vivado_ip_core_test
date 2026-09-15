@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "xlslice 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "input_width",
+    "high_bit",
+    "low_bit"
+  ],
+  "properties": {
+    "input_width": {
+      "type": "integer",
+      "minimum": 2,
+      "maximum": 4096
+    },
+    "high_bit": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255
+    },
+    "low_bit": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255
+    }
+  }
+}

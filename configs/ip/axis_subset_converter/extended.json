@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": [
+    "matrices/data_mapping.json",
+    "matrices/packetization.json",
+    "matrices/sideband_mapping.json",
+    "matrices/sideband_only.json"
+  ]
+}

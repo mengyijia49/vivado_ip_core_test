@@ -1,0 +1,2781 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "madd_c16_comb",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 16,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Unsigned",
+          "output_high": 16,
+          "output_low": 0,
+          "pipelined": false,
+          "use_pcin": false,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8
+        ],
+        "b_width": [
+          2,
+          8
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "c_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          7
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_c32_comb",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 32,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Unsigned",
+          "output_high": 32,
+          "output_low": 0,
+          "pipelined": false,
+          "use_pcin": false,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          16
+        ],
+        "b_width": [
+          2,
+          8,
+          16
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "c_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          7
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_c48_comb",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 48,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Unsigned",
+          "output_high": 48,
+          "output_low": 0,
+          "pipelined": false,
+          "use_pcin": false,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17,
+          24
+        ],
+        "b_width": [
+          2,
+          8,
+          17,
+          24
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "c_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          7
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_c64_comb",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 64,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Unsigned",
+          "output_high": 64,
+          "output_low": 0,
+          "pipelined": false,
+          "use_pcin": false,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17,
+          18,
+          24,
+          25,
+          32
+        ],
+        "b_width": [
+          2,
+          8,
+          17,
+          18,
+          24,
+          25,
+          32
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "c_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          7
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_c105_comb",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 105,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Unsigned",
+          "output_high": 105,
+          "output_low": 0,
+          "pipelined": false,
+          "use_pcin": false,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17,
+          18,
+          24,
+          25,
+          32,
+          52
+        ],
+        "b_width": [
+          2,
+          8,
+          17,
+          18,
+          24,
+          25,
+          32,
+          52
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "c_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          7
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_signed106_comb",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 106,
+          "a_type": "Signed",
+          "b_type": "Signed",
+          "c_type": "Signed",
+          "output_high": 106,
+          "output_low": 0,
+          "pipelined": false,
+          "use_pcin": false,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17,
+          18,
+          24,
+          25,
+          32,
+          53
+        ],
+        "b_width": [
+          2,
+          8,
+          17,
+          18,
+          24,
+          25,
+          32,
+          53
+        ],
+        "output_low": [
+          0,
+          1,
+          7
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_bit_comb",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 1,
+          "b_width": 1,
+          "c_width": 1,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Unsigned",
+          "output_high": 2,
+          "output_low": 0,
+          "pipelined": false,
+          "use_pcin": false,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "output_low": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_comb",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 48,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": false,
+          "use_pcin": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17,
+          24
+        ],
+        "b_width": [
+          2,
+          8,
+          17
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_a25_comb",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 25,
+          "b_width": 8,
+          "c_width": 48,
+          "a_type": "Signed",
+          "b_type": "Unsigned",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": false,
+          "use_pcin": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          8,
+          17
+        ],
+        "b_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_b18_comb",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 18,
+          "c_width": 48,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": false,
+          "use_pcin": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17,
+          24
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_edge_comb",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 25,
+          "b_width": 18,
+          "c_width": 48,
+          "a_type": "Signed",
+          "b_type": "Signed",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": false,
+          "use_pcin": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_c16_pipe",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 16,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Unsigned",
+          "output_high": 16,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": false,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8
+        ],
+        "b_width": [
+          2,
+          8
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "c_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          7
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_c32_pipe",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 32,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Unsigned",
+          "output_high": 32,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": false,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          16
+        ],
+        "b_width": [
+          2,
+          8,
+          16
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "c_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          7
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_c48_pipe",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 48,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Unsigned",
+          "output_high": 48,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": false,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17,
+          24
+        ],
+        "b_width": [
+          2,
+          8,
+          17,
+          24
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "c_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          7
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_c64_pipe",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 64,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Unsigned",
+          "output_high": 64,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": false,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17,
+          18,
+          24,
+          25,
+          32
+        ],
+        "b_width": [
+          2,
+          8,
+          17,
+          18,
+          24,
+          25,
+          32
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "c_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          7
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_c105_pipe",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 105,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Unsigned",
+          "output_high": 105,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": false,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17,
+          18,
+          24,
+          25,
+          32,
+          52
+        ],
+        "b_width": [
+          2,
+          8,
+          17,
+          18,
+          24,
+          25,
+          32,
+          52
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "c_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          7
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_signed106_pipe",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 106,
+          "a_type": "Signed",
+          "b_type": "Signed",
+          "c_type": "Signed",
+          "output_high": 106,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": false,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17,
+          18,
+          24,
+          25,
+          32,
+          53
+        ],
+        "b_width": [
+          2,
+          8,
+          17,
+          18,
+          24,
+          25,
+          32,
+          53
+        ],
+        "output_low": [
+          0,
+          1,
+          7
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_bit_pipe",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 1,
+          "b_width": 1,
+          "c_width": 1,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Unsigned",
+          "output_high": 2,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": false,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 64,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "output_low": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_pipe",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 48,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17,
+          24
+        ],
+        "b_width": [
+          2,
+          8,
+          17
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_a25_pipe",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 25,
+          "b_width": 8,
+          "c_width": 48,
+          "a_type": "Signed",
+          "b_type": "Unsigned",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          8,
+          17
+        ],
+        "b_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_b18_pipe",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 18,
+          "c_width": 48,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17,
+          24
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_edge_pipe",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 25,
+          "b_width": 18,
+          "c_width": 48,
+          "a_type": "Signed",
+          "b_type": "Signed",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_c16_pipe_ce",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 16,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Unsigned",
+          "output_high": 16,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": false,
+          "ce_overrides_reset": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8
+        ],
+        "b_width": [
+          2,
+          8
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "c_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          7
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_c32_pipe_ce",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 32,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Unsigned",
+          "output_high": 32,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": false,
+          "ce_overrides_reset": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          16
+        ],
+        "b_width": [
+          2,
+          8,
+          16
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "c_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          7
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_c48_pipe_ce",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 48,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Unsigned",
+          "output_high": 48,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": false,
+          "ce_overrides_reset": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17,
+          24
+        ],
+        "b_width": [
+          2,
+          8,
+          17,
+          24
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "c_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          7
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_c64_pipe_ce",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 64,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Unsigned",
+          "output_high": 64,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": false,
+          "ce_overrides_reset": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17,
+          18,
+          24,
+          25,
+          32
+        ],
+        "b_width": [
+          2,
+          8,
+          17,
+          18,
+          24,
+          25,
+          32
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "c_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          7
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_c105_pipe_ce",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 105,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Unsigned",
+          "output_high": 105,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": false,
+          "ce_overrides_reset": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17,
+          18,
+          24,
+          25,
+          32,
+          52
+        ],
+        "b_width": [
+          2,
+          8,
+          17,
+          18,
+          24,
+          25,
+          32,
+          52
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "c_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          7
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_signed106_pipe_ce",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 106,
+          "a_type": "Signed",
+          "b_type": "Signed",
+          "c_type": "Signed",
+          "output_high": 106,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": false,
+          "ce_overrides_reset": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17,
+          18,
+          24,
+          25,
+          32,
+          53
+        ],
+        "b_width": [
+          2,
+          8,
+          17,
+          18,
+          24,
+          25,
+          32,
+          53
+        ],
+        "output_low": [
+          0,
+          1,
+          7
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_bit_pipe_ce",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 1,
+          "b_width": 1,
+          "c_width": 1,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Unsigned",
+          "output_high": 2,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": false,
+          "ce_overrides_reset": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 64,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "output_low": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_pipe_ce",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 48,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": true,
+          "ce_overrides_reset": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17,
+          24
+        ],
+        "b_width": [
+          2,
+          8,
+          17
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_a25_pipe_ce",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 25,
+          "b_width": 8,
+          "c_width": 48,
+          "a_type": "Signed",
+          "b_type": "Unsigned",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": true,
+          "ce_overrides_reset": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          2,
+          8,
+          17
+        ],
+        "b_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_b18_pipe_ce",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 18,
+          "c_width": 48,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": true,
+          "ce_overrides_reset": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17,
+          24
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_edge_pipe_ce",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 25,
+          "b_width": 18,
+          "c_width": 48,
+          "a_type": "Signed",
+          "b_type": "Signed",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": true,
+          "ce_overrides_reset": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_swapped_u_comb",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 48,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": false,
+          "use_pcin": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_width": [
+          18,
+          24
+        ],
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_swapped_s_comb",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 48,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": false,
+          "use_pcin": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_width": [
+          24,
+          25
+        ],
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_swapped_edge_u_comb",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 18,
+          "b_width": 8,
+          "c_width": 48,
+          "a_type": "Signed",
+          "b_type": "Unsigned",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": false,
+          "use_pcin": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          18,
+          24
+        ],
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_swapped_edge_s_comb",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 18,
+          "b_width": 8,
+          "c_width": 48,
+          "a_type": "Signed",
+          "b_type": "Signed",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": false,
+          "use_pcin": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          24,
+          25
+        ],
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_swapped_u_pipe",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 48,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_width": [
+          18,
+          24
+        ],
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_swapped_s_pipe",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 48,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_width": [
+          24,
+          25
+        ],
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_swapped_edge_u_pipe",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 18,
+          "b_width": 8,
+          "c_width": 48,
+          "a_type": "Signed",
+          "b_type": "Unsigned",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          18,
+          24
+        ],
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_swapped_edge_s_pipe",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 18,
+          "b_width": 8,
+          "c_width": 48,
+          "a_type": "Signed",
+          "b_type": "Signed",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": true,
+          "ce_overrides_reset": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          24,
+          25
+        ],
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_swapped_u_pipe_ce",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 48,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": true,
+          "ce_overrides_reset": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_width": [
+          18,
+          24
+        ],
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_swapped_s_pipe_ce",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "c_width": 48,
+          "a_type": "Unsigned",
+          "b_type": "Signed",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": true,
+          "ce_overrides_reset": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          8,
+          17
+        ],
+        "a_type": [
+          "Signed",
+          "Unsigned"
+        ],
+        "b_width": [
+          24,
+          25
+        ],
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_swapped_edge_u_pipe_ce",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 18,
+          "b_width": 8,
+          "c_width": 48,
+          "a_type": "Signed",
+          "b_type": "Unsigned",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": true,
+          "ce_overrides_reset": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          18,
+          24
+        ],
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    },
+    {
+      "case_prefix": "madd_pcin_swapped_edge_s_pipe_ce",
+      "template": {
+        "ip_type": "multiply_adder",
+        "vendor": "xilinx.com",
+        "ip_name": "xbip_multadd",
+        "parameters": {
+          "a_width": 18,
+          "b_width": 8,
+          "c_width": 48,
+          "a_type": "Signed",
+          "b_type": "Signed",
+          "c_type": "Signed",
+          "output_high": 47,
+          "output_low": 0,
+          "pipelined": true,
+          "use_pcin": true,
+          "ce_overrides_reset": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "b_width": [
+          24,
+          25
+        ],
+        "output_low": [
+          0,
+          1,
+          24
+        ]
+      }
+    }
+  ]
+}

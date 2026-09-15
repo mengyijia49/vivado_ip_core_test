@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AXI-Stream 广播器参数",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "branches": {
+      "type": "integer",
+      "minimum": 2,
+      "maximum": 16
+    },
+    "input_bytes": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 512
+    },
+    "output_bytes": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 512
+    },
+    "input_user_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4096
+    },
+    "output_user_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4096
+    },
+    "id_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 32
+    },
+    "dest_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 32
+    },
+    "has_keep": {
+      "type": "boolean"
+    },
+    "has_strb": {
+      "type": "boolean"
+    },
+    "has_last": {
+      "type": "boolean"
+    },
+    "data_mapping": {
+      "enum": [
+        "replicate",
+        "rotate_bytes",
+        "reverse_alternate",
+        "split",
+        "constant_tag"
+      ]
+    },
+    "user_mapping": {
+      "enum": [
+        "replicate",
+        "rotate_bits",
+        "split",
+        "constant_tag"
+      ]
+    }
+  },
+  "required": [
+    "branches",
+    "input_bytes",
+    "output_bytes",
+    "input_user_width",
+    "output_user_width",
+    "id_width",
+    "dest_width",
+    "has_keep",
+    "has_strb",
+    "has_last",
+    "data_mapping",
+    "user_mapping"
+  ]
+}

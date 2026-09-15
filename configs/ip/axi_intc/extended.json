@@ -1,0 +1,11 @@
+{
+  "schema_version": 2,
+  "includes": [
+    "extended/single.json",
+    "extended/mixed4.json",
+    "extended/mixed8.json",
+    "extended/mixed16.json",
+    "extended/rising31.json",
+    "extended/mixed32.json"
+  ]
+}

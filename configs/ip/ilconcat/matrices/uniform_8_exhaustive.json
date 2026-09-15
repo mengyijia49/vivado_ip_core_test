@@ -1,0 +1,16 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "ilconcat",
+      "template": {"ip_type":"ilconcat","vendor":"xilinx.com","ip_name":"ilconcat","parameters":{"input_widths":[1]},"stages":["create_ip","generate_testbench","sim_selfcheck"],"verification":{"strategy":"exhaustive","strategy_version":"1.0","random_seed":2026,"case_budget":8,"coverage_targets":["complete_input_space"],"boundary_mode":"basic","input_order":"generated","timing_mode":"continuous","max_gap_cycles":8,"burst_length":16}},
+      "axes": {
+        "input_widths": [
+          {"label":"n1_w3","value":[3]},
+          {"label":"n3_w1","value":[1,1,1]}
+        ]
+      }
+    }
+  ]
+}

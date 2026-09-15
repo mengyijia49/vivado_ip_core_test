@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "tmr_voter 离散接口参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "width",
+    "triple",
+    "disable_port",
+    "comparator",
+    "input_register",
+    "voter_check",
+    "include_mask"
+  ],
+  "properties": {
+    "width": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1024
+    },
+    "triple": {
+      "type": "boolean"
+    },
+    "disable_port": {
+      "type": "boolean"
+    },
+    "comparator": {
+      "type": "boolean"
+    },
+    "input_register": {
+      "type": "boolean"
+    },
+    "voter_check": {
+      "type": "boolean"
+    },
+    "include_mask": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 18446744073709551615
+    }
+  }
+}

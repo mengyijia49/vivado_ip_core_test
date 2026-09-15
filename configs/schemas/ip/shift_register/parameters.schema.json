@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "shift_register 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "width",
+    "depth",
+    "clock_enable"
+  ],
+  "properties": {
+    "width": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 256
+    },
+    "depth": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1024
+    },
+    "clock_enable": {
+      "type": "boolean"
+    }
+  }
+}

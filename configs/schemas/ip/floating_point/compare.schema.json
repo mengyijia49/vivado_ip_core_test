@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Floating Point Compare Parameters",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "operation", "compare_operation", "input_exponent", "input_fraction", "optimization",
+    "a_user_width", "b_user_width", "operation_user_width",
+    "has_a_last", "has_b_last", "has_operation_last", "last_mode"
+  ],
+  "properties": {
+    "operation": {"const": "Compare"},
+    "compare_operation": {"enum": [
+      "Unordered", "Less_Than", "Equal", "Less_Than_Or_Equal", "Greater_Than",
+      "Not_Equal", "Greater_Than_Or_Equal", "Condition_Code", "Programmable"
+    ]},
+    "input_exponent": {"type": "integer", "minimum": 4, "maximum": 16},
+    "input_fraction": {"type": "integer", "minimum": 4, "maximum": 64},
+    "optimization": {"enum": ["Resources", "Performance"]},
+    "a_user_width": {"type": "integer", "minimum": 0, "maximum": 256},
+    "b_user_width": {"type": "integer", "minimum": 0, "maximum": 256},
+    "operation_user_width": {"type": "integer", "minimum": 0, "maximum": 256},
+    "has_a_last": {"type": "boolean"},
+    "has_b_last": {"type": "boolean"},
+    "has_operation_last": {"type": "boolean"},
+    "last_mode": {"enum": ["None", "A", "B", "Operation", "Or", "And"]}
+  }
+}

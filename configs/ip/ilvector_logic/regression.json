@@ -1,0 +1,267 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "ilvector_logic_and1",
+      "ip_type": "ilvector_logic",
+      "vendor": "xilinx.com",
+      "ip_name": "ilvector_logic",
+      "parameters": {
+        "width": 1,
+        "operation": "and"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 4,
+        "coverage_targets": [
+          "complete_input_space"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "ilvector_logic_or1",
+      "ip_type": "ilvector_logic",
+      "vendor": "xilinx.com",
+      "ip_name": "ilvector_logic",
+      "parameters": {
+        "width": 1,
+        "operation": "or"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 4,
+        "coverage_targets": [
+          "complete_input_space"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "ilvector_logic_xor1",
+      "ip_type": "ilvector_logic",
+      "vendor": "xilinx.com",
+      "ip_name": "ilvector_logic",
+      "parameters": {
+        "width": 1,
+        "operation": "xor"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 4,
+        "coverage_targets": [
+          "complete_input_space"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "ilvector_logic_not1",
+      "ip_type": "ilvector_logic",
+      "vendor": "xilinx.com",
+      "ip_name": "ilvector_logic",
+      "parameters": {
+        "width": 1,
+        "operation": "not"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 2,
+        "coverage_targets": [
+          "complete_input_space"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "ilvector_logic_xor4",
+      "ip_type": "ilvector_logic",
+      "vendor": "xilinx.com",
+      "ip_name": "ilvector_logic",
+      "parameters": {
+        "width": 4,
+        "operation": "xor"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 256,
+        "coverage_targets": [
+          "complete_input_space"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "ilvector_logic_and33",
+      "ip_type": "ilvector_logic",
+      "vendor": "xilinx.com",
+      "ip_name": "ilvector_logic",
+      "parameters": {
+        "width": 33,
+        "operation": "and"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 256,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "ilvector_logic_or65",
+      "ip_type": "ilvector_logic",
+      "vendor": "xilinx.com",
+      "ip_name": "ilvector_logic",
+      "parameters": {
+        "width": 65,
+        "operation": "or"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 256,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "ilvector_logic_xor4096",
+      "ip_type": "ilvector_logic",
+      "vendor": "xilinx.com",
+      "ip_name": "ilvector_logic",
+      "parameters": {
+        "width": 4096,
+        "operation": "xor"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 256,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "ilvector_logic_not65536",
+      "ip_type": "ilvector_logic",
+      "vendor": "xilinx.com",
+      "ip_name": "ilvector_logic",
+      "parameters": {
+        "width": 65536,
+        "operation": "not"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 256,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    }
+  ]
+}

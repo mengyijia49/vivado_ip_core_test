@@ -1,0 +1,8 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": [
+    "matrices/square_root/integer.json",
+    "matrices/square_root/fractional.json"
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "compare_truth1",
+      "ip_type": "tmr_comparator",
+      "vendor": "xilinx.com",
+      "ip_name": "tmr_comparator",
+      "parameters": {
+        "width": 1,
+        "triple": true,
+        "disable_port": false,
+        "input_register": false,
+        "voter_check": true,
+        "include_mask": 18446744073709551615
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 16,
+        "coverage_targets": [
+          "port_boundaries",
+          "complete_input_space"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "compare_plain3",
+      "ip_type": "tmr_comparator",
+      "vendor": "xilinx.com",
+      "ip_name": "tmr_comparator",
+      "parameters": {
+        "width": 3,
+        "triple": true,
+        "disable_port": false,
+        "input_register": false,
+        "voter_check": false,
+        "include_mask": 18446744073709551615
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 512,
+        "coverage_targets": [
+          "port_boundaries",
+          "complete_input_space"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "compare_reg_disable8",
+      "ip_type": "tmr_comparator",
+      "vendor": "xilinx.com",
+      "ip_name": "tmr_comparator",
+      "parameters": {
+        "width": 8,
+        "triple": true,
+        "disable_port": true,
+        "input_register": true,
+        "voter_check": true,
+        "include_mask": 18446744073709551615
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "compare_mask65",
+      "ip_type": "tmr_comparator",
+      "vendor": "xilinx.com",
+      "ip_name": "tmr_comparator",
+      "parameters": {
+        "width": 65,
+        "triple": true,
+        "disable_port": false,
+        "input_register": false,
+        "voter_check": true,
+        "include_mask": 0
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "compare_lockstep1",
+      "ip_type": "tmr_comparator",
+      "vendor": "xilinx.com",
+      "ip_name": "tmr_comparator",
+      "parameters": {
+        "width": 1,
+        "triple": false,
+        "disable_port": false,
+        "input_register": false,
+        "voter_check": false,
+        "include_mask": 18446744073709551615
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 4,
+        "coverage_targets": [
+          "port_boundaries",
+          "complete_input_space"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "compare_lockstep_reg129",
+      "ip_type": "tmr_comparator",
+      "vendor": "xilinx.com",
+      "ip_name": "tmr_comparator",
+      "parameters": {
+        "width": 129,
+        "triple": false,
+        "disable_port": false,
+        "input_register": true,
+        "voter_check": false,
+        "include_mask": 12297829382473034410
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": [
+    "matrices/data_2_inputs.json",
+    "matrices/data_3_inputs.json",
+    "matrices/data_4_inputs.json",
+    "matrices/data_5_inputs.json",
+    "matrices/data_6_inputs.json",
+    "matrices/data_7_inputs.json",
+    "matrices/data_8_inputs.json",
+    "matrices/data_9_inputs.json",
+    "matrices/data_10_inputs.json",
+    "matrices/data_11_inputs.json",
+    "matrices/data_12_inputs.json",
+    "matrices/data_13_inputs.json",
+    "matrices/data_14_inputs.json",
+    "matrices/data_15_inputs.json",
+    "matrices/data_16_inputs.json",
+    "matrices/side_user.json",
+    "matrices/side_id.json",
+    "matrices/side_dest.json",
+    "matrices/side_full.json"
+  ]
+}

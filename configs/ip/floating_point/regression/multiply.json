@@ -1,0 +1,307 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "fp_mul8_all",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Multiply",
+        "input_exponent": 4,
+        "input_fraction": 4,
+        "optimization": "Resources",
+        "architecture": "Speed_Optimized",
+        "mult_usage": "No_Usage",
+        "a_user_width": 0,
+        "b_user_width": 0,
+        "operation_user_width": 0,
+        "has_a_last": false,
+        "has_b_last": false,
+        "has_operation_last": false,
+        "last_mode": "None",
+        "has_underflow": true,
+        "has_overflow": true,
+        "has_invalid_op": true
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 20260915,
+        "case_budget": 65536,
+        "coverage_targets": [
+          "complete_input_space"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "shuffled",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_mul9_pad",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Multiply",
+        "input_exponent": 4,
+        "input_fraction": 5,
+        "optimization": "Performance",
+        "architecture": "Speed_Optimized",
+        "mult_usage": "Full_Usage",
+        "a_user_width": 3,
+        "b_user_width": 5,
+        "operation_user_width": 0,
+        "has_a_last": true,
+        "has_b_last": true,
+        "has_operation_last": false,
+        "last_mode": "Or",
+        "has_underflow": true,
+        "has_overflow": true,
+        "has_invalid_op": true
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 20260915,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "shuffled",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_mul16_full",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Multiply",
+        "input_exponent": 5,
+        "input_fraction": 11,
+        "optimization": "Resources",
+        "architecture": "Speed_Optimized",
+        "mult_usage": "Full_Usage",
+        "a_user_width": 0,
+        "b_user_width": 0,
+        "operation_user_width": 0,
+        "has_a_last": false,
+        "has_b_last": false,
+        "has_operation_last": false,
+        "last_mode": "None",
+        "has_underflow": false,
+        "has_overflow": false,
+        "has_invalid_op": false
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 20260915,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "shuffled",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_mul32_max",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Multiply",
+        "input_exponent": 8,
+        "input_fraction": 24,
+        "optimization": "Resources",
+        "architecture": "Speed_Optimized",
+        "mult_usage": "Max_Usage",
+        "a_user_width": 3,
+        "b_user_width": 5,
+        "operation_user_width": 0,
+        "has_a_last": true,
+        "has_b_last": false,
+        "has_operation_last": false,
+        "last_mode": "A",
+        "has_underflow": false,
+        "has_overflow": false,
+        "has_invalid_op": true
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 20260915,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "shuffled",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_mul64_medium",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Multiply",
+        "input_exponent": 11,
+        "input_fraction": 53,
+        "optimization": "Resources",
+        "architecture": "Speed_Optimized",
+        "mult_usage": "Medium_Usage",
+        "a_user_width": 0,
+        "b_user_width": 0,
+        "operation_user_width": 0,
+        "has_a_last": false,
+        "has_b_last": true,
+        "has_operation_last": false,
+        "last_mode": "B",
+        "has_underflow": false,
+        "has_overflow": true,
+        "has_invalid_op": false
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 20260915,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "shuffled",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_mul64_low",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Multiply",
+        "input_exponent": 11,
+        "input_fraction": 53,
+        "optimization": "Performance",
+        "architecture": "Low_Latency",
+        "mult_usage": "Max_Usage",
+        "a_user_width": 7,
+        "b_user_width": 9,
+        "operation_user_width": 0,
+        "has_a_last": true,
+        "has_b_last": true,
+        "has_operation_last": false,
+        "last_mode": "And",
+        "has_underflow": true,
+        "has_overflow": true,
+        "has_invalid_op": true
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 20260915,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "shuffled",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_mul80_full",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "Multiply",
+        "input_exponent": 16,
+        "input_fraction": 64,
+        "optimization": "Resources",
+        "architecture": "Speed_Optimized",
+        "mult_usage": "Full_Usage",
+        "a_user_width": 256,
+        "b_user_width": 256,
+        "operation_user_width": 0,
+        "has_a_last": true,
+        "has_b_last": true,
+        "has_operation_last": false,
+        "last_mode": "And",
+        "has_underflow": true,
+        "has_overflow": true,
+        "has_invalid_op": true
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 20260915,
+        "case_budget": 1024,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "shuffled",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    }
+  ]
+}

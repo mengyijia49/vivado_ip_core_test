@@ -1,0 +1,6246 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "switch_side_user_n1_w1",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 1,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 1,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": false,
+          "arbiter": "round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 2,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n1_w8",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 1,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 8,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": false,
+          "arbiter": "round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n1_w32",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 1,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 32,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": false,
+          "arbiter": "round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n1_w33",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 1,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 33,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": false,
+          "arbiter": "round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n1_w129",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 1,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 129,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": false,
+          "arbiter": "round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n1_w4096",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 1,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 4096,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": false,
+          "arbiter": "round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n2_w2",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 2,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 2,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n2_w8",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 2,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 8,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n2_w32",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 2,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 32,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n2_w33",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 2,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 33,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n2_w129",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 2,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 129,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n2_w4096",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 2,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 4096,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n3_w3",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 3,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 3,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n3_w8",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 3,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 8,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n3_w32",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 3,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 32,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n3_w33",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 3,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 33,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n3_w129",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 3,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 129,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n3_w4096",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 3,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 4096,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n4_w3",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 4,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 3,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n4_w8",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 4,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 8,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n4_w32",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 4,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 32,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n4_w33",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 4,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 33,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n4_w129",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 4,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 129,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n4_w4096",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 4,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 4096,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n5_w4",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 5,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 4,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 32,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n5_w8",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 5,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 8,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n5_w32",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 5,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 32,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n5_w33",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 5,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 33,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n5_w129",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 5,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 129,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n5_w4096",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 5,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 4096,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n6_w4",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 6,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 4,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 64,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n6_w8",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 6,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 8,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n6_w32",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 6,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 32,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n6_w33",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 6,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 33,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n6_w129",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 6,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 129,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n6_w4096",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 6,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 4096,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n7_w4",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 7,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 4,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 128,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n7_w8",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 7,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 8,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n7_w32",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 7,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 32,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n7_w33",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 7,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 33,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n7_w129",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 7,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 129,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n7_w4096",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 7,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 4096,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n8_w4",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 8,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 4,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n8_w8",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 8,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 8,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n8_w32",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 8,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 32,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n8_w33",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 8,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 33,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n8_w129",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 8,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 129,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n8_w4096",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 8,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 4096,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n9_w5",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 9,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 5,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n9_w8",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 9,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 8,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n9_w32",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 9,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 32,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n9_w33",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 9,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 33,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n9_w129",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 9,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 129,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n9_w4096",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 9,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 4096,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n10_w5",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 10,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 5,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n10_w8",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 10,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 8,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n10_w32",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 10,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 32,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n10_w33",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 10,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 33,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n10_w129",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 10,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 129,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n10_w4096",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 10,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 4096,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n11_w5",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 11,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 5,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n11_w8",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 11,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 8,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n11_w32",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 11,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 32,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n11_w33",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 11,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 33,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n11_w129",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 11,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 129,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n11_w4096",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 11,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 4096,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n12_w5",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 12,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 5,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n12_w8",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 12,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 8,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n12_w32",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 12,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 32,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n12_w33",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 12,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 33,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n12_w129",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 12,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 129,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n12_w4096",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 12,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 4096,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n13_w5",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 13,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 5,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n13_w8",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 13,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 8,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n13_w32",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 13,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 32,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n13_w33",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 13,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 33,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n13_w129",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 13,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 129,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n13_w4096",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 13,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 4096,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n14_w5",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 14,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 5,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n14_w8",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 14,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 8,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n14_w32",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 14,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 32,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n14_w33",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 14,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 33,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n14_w129",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 14,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 129,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n14_w4096",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 14,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 4096,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n15_w5",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 15,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 5,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n15_w8",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 15,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 8,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n15_w32",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 15,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 32,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n15_w33",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 15,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 33,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n15_w129",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 15,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 129,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n15_w4096",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 15,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 4096,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n16_w5",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 16,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 5,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n16_w8",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 16,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 8,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n16_w32",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 16,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 32,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n16_w33",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 16,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 33,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n16_w129",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 16,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 129,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "switch_side_user_n16_w4096",
+      "template": {
+        "ip_type": "axis_switch",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_switch",
+        "parameters": {
+          "inputs": 16,
+          "outputs": 3,
+          "data_bytes": 0,
+          "user_width": 4096,
+          "id_width": 0,
+          "dest_width": 3,
+          "has_keep": false,
+          "has_strb": false,
+          "has_last": true,
+          "decoder_reg": true,
+          "output_reg": true,
+          "arbiter": "true_round_robin",
+          "arbitrate_transfers": 1,
+          "arbitrate_cycles": 0,
+          "arbitrate_last": false,
+          "routing": "balanced"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "basic",
+          "input_order": "shuffled",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "outputs": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "decoder_reg": [
+          false,
+          true
+        ],
+        "routing": [
+          "balanced",
+          "reversed"
+        ],
+        "has_last": [
+          false,
+          true
+        ]
+      }
+    }
+  ]
+}

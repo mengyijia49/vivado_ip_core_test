@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "axis_register_slice 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "data_bytes",
+    "id_width",
+    "dest_width",
+    "user_width",
+    "has_last",
+    "has_keep",
+    "has_strb",
+    "register_mode"
+  ],
+  "properties": {
+    "data_bytes": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 64
+    },
+    "id_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 16
+    },
+    "dest_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 16
+    },
+    "user_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 64
+    },
+    "has_last": {
+      "type": "boolean"
+    },
+    "has_keep": {
+      "type": "boolean"
+    },
+    "has_strb": {
+      "type": "boolean"
+    },
+    "register_mode": {
+      "enum": [
+        "Default",
+        "Bypass",
+        "Fully_Registered",
+        "Light_Weight"
+      ]
+    }
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "mul_matrix",
+      "template": {
+        "ip_type": "multiplier",
+        "vendor": "xilinx.com",
+        "ip_name": "mult_gen",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "pipeline_stages": 1
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 65536,
+          "coverage_targets": [
+            "boundary_values",
+            "sign_combinations",
+            "systematic_values",
+            "full_precision",
+            "operand_magnitude"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          8,
+          9,
+          16,
+          17,
+          24,
+          25
+        ],
+        "b_width": [
+          8,
+          9,
+          16,
+          17,
+          24,
+          25,
+          32,
+          33,
+          64
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "pipeline_stages": [
+          1,
+          2,
+          3,
+          5,
+          8
+        ]
+      }
+    },
+    {
+      "case_prefix": "mul_wide",
+      "template": {
+        "ip_type": "multiplier",
+        "vendor": "xilinx.com",
+        "ip_name": "mult_gen",
+        "parameters": {
+          "a_width": 8,
+          "b_width": 8,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "pipeline_stages": 1
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 262144,
+          "coverage_targets": [
+            "boundary_values",
+            "sign_combinations",
+            "systematic_values",
+            "full_precision",
+            "operand_magnitude"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          31,
+          32,
+          33,
+          47,
+          48,
+          49,
+          63,
+          64
+        ],
+        "b_width": [
+          8,
+          9,
+          16,
+          17,
+          24,
+          25,
+          32,
+          33,
+          64
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "pipeline_stages": [
+          1,
+          2,
+          3,
+          5,
+          8
+        ]
+      }
+    },
+    {
+      "case_prefix": "mul_small",
+      "template": {
+        "ip_type": "multiplier",
+        "vendor": "xilinx.com",
+        "ip_name": "mult_gen",
+        "parameters": {
+          "a_width": 2,
+          "b_width": 2,
+          "a_type": "Unsigned",
+          "b_type": "Unsigned",
+          "pipeline_stages": 1
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": [
+            "boundary_values",
+            "sign_combinations",
+            "systematic_values",
+            "full_precision",
+            "operand_magnitude",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "a_width": [
+          2,
+          3,
+          4
+        ],
+        "b_width": [
+          2,
+          3,
+          4
+        ],
+        "a_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "b_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "pipeline_stages": [
+          1,
+          3
+        ]
+      }
+    }
+  ]
+}

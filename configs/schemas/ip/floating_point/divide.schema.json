@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Floating Point Divide Parameters",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "operation", "input_exponent", "input_fraction", "cycles_per_operation", "optimization",
+    "a_user_width", "b_user_width", "operation_user_width",
+    "has_a_last", "has_b_last", "has_operation_last", "last_mode",
+    "has_underflow", "has_overflow", "has_invalid_op", "has_divide_by_zero"
+  ],
+  "properties": {
+    "operation": {"const": "Divide"},
+    "input_exponent": {"type": "integer", "minimum": 4, "maximum": 16},
+    "input_fraction": {"type": "integer", "minimum": 4, "maximum": 64},
+    "cycles_per_operation": {"type": "integer", "minimum": 1, "maximum": 66},
+    "optimization": {"enum": ["Resources", "Performance"]},
+    "a_user_width": {"type": "integer", "minimum": 0, "maximum": 256},
+    "b_user_width": {"type": "integer", "minimum": 0, "maximum": 256},
+    "operation_user_width": {"const": 0},
+    "has_a_last": {"type": "boolean"},
+    "has_b_last": {"type": "boolean"},
+    "has_operation_last": {"const": false},
+    "last_mode": {"enum": ["None", "A", "B", "Or", "And"]},
+    "has_underflow": {"type": "boolean"},
+    "has_overflow": {"type": "boolean"},
+    "has_invalid_op": {"type": "boolean"},
+    "has_divide_by_zero": {"type": "boolean"}
+  }
+}

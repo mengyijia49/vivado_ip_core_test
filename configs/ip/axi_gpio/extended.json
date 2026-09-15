@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": [
+    "matrices/single_zero.json",
+    "matrices/single_low_defaults.json",
+    "matrices/dual_zero.json",
+    "matrices/dual_bidirectional_bidirectional_defaults_1.json",
+    "matrices/dual_bidirectional_bidirectional_defaults_2.json",
+    "matrices/dual_bidirectional_input_defaults_1.json",
+    "matrices/dual_bidirectional_output_defaults_1.json",
+    "matrices/dual_input_bidirectional_defaults_1.json",
+    "matrices/dual_input_output_defaults_1.json",
+    "matrices/dual_output_bidirectional_defaults_1.json",
+    "matrices/dual_output_input_defaults_1.json",
+    "matrices/dual_output_output_defaults_1.json",
+    "matrices/high_defaults_channel1.json",
+    "matrices/high_defaults_channel2.json"
+  ]
+}

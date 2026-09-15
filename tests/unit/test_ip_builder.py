@@ -1,4 +1,5 @@
 import tempfile
+from dataclasses import replace
 import unittest
 from pathlib import Path
 
@@ -109,6 +110,23 @@ class IpBuilderTests(unittest.TestCase):
             result = builder.build(make_case())
 
             self.assertEqual(result.status, Status.XCI_NOT_FOUND)
+
+    def test_uses_explicit_block_design_artifact_and_missing_status(self):
+        class InlinePlugin(FakePlugin):
+            def build_request(self, case):
+                return replace(super().build_request(case), artifact_glob="**/dut_0.bd",
+                               missing_artifact_status=Status.BLOCK_DESIGN_NOT_FOUND)
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            layout = RepositoryLayout(root)
+            registry = PluginRegistry()
+            registry.register(InlinePlugin(layout))
+            builder = IpBuilder(registry, layout, FakeVivado(CommandResult(0, ""), "FAKE_BUILD_STATUS: PASS\n", True))
+            self.assertEqual(builder.build(make_case()).status, Status.BLOCK_DESIGN_NOT_FOUND)
+            bd = layout.case_run_dir(make_case()) / "proj/dut_0.bd"
+            bd.write_text("{}")
+            self.assertEqual(builder.build(make_case()).status, Status.PASS)
 
     def test_classifies_vivado_failure(self):
         with tempfile.TemporaryDirectory() as temp_dir:

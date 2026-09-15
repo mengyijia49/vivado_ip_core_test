@@ -1,0 +1,4582 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "voter_lock_plain_g0w1_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 1,
+          "triple": false,
+          "disable_port": false,
+          "comparator": false,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          1
+        ],
+        "include_mask": [
+          18446744073709551615
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_plain_g0w1_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 1,
+          "triple": true,
+          "disable_port": false,
+          "comparator": false,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          1
+        ],
+        "include_mask": [
+          18446744073709551615
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_plain_g0w1_comb_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 1,
+          "triple": true,
+          "disable_port": true,
+          "comparator": false,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          1
+        ],
+        "include_mask": [
+          18446744073709551615
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_lock_compare_g0w1_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 1,
+          "triple": false,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          1
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_lock_compare_g0w1_reg_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 1,
+          "triple": false,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          1
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g0w1_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 1,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          1
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g0w1_comb_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 1,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          1
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g0w1_reg_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 1,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          1
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g0w1_reg_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 1,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          1
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g0w1_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 1,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          1
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g0w1_comb_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 1,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          1
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g0w1_reg_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 1,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          1
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g0w1_reg_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 1,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          1
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_lock_plain_g1w2_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 2,
+          "triple": false,
+          "disable_port": false,
+          "comparator": false,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          2
+        ],
+        "include_mask": [
+          18446744073709551615
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_plain_g1w2_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 2,
+          "triple": true,
+          "disable_port": false,
+          "comparator": false,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 64,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          2
+        ],
+        "include_mask": [
+          18446744073709551615
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_plain_g1w2_comb_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 2,
+          "triple": true,
+          "disable_port": true,
+          "comparator": false,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 128,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          2
+        ],
+        "include_mask": [
+          18446744073709551615
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_lock_compare_g1w2_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 2,
+          "triple": false,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          2
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_lock_compare_g1w2_reg_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 2,
+          "triple": false,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          2
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g1w2_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 2,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 64,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          2
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g1w2_comb_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 2,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 128,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          2
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g1w2_reg_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 2,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 64,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          2
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g1w2_reg_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 2,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 128,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          2
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g1w2_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 2,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 64,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          2
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g1w2_comb_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 2,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 128,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          2
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g1w2_reg_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 2,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 64,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          2
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g1w2_reg_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 2,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 128,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          2
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_lock_plain_g2w3_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 3,
+          "triple": false,
+          "disable_port": false,
+          "comparator": false,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 64,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          3
+        ],
+        "include_mask": [
+          18446744073709551615
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_lock_plain_g2w4_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 4,
+          "triple": false,
+          "disable_port": false,
+          "comparator": false,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          4
+        ],
+        "include_mask": [
+          18446744073709551615
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_plain_g2w3_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 3,
+          "triple": true,
+          "disable_port": false,
+          "comparator": false,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          3
+        ],
+        "include_mask": [
+          18446744073709551615
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_plain_g2w4_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 4,
+          "triple": true,
+          "disable_port": false,
+          "comparator": false,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          4
+        ],
+        "include_mask": [
+          18446744073709551615
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_plain_g2w3_comb_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 3,
+          "triple": true,
+          "disable_port": true,
+          "comparator": false,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          3
+        ],
+        "include_mask": [
+          18446744073709551615
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_plain_g2w4_comb_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 4,
+          "triple": true,
+          "disable_port": true,
+          "comparator": false,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          4
+        ],
+        "include_mask": [
+          18446744073709551615
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_lock_compare_g2w3_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 3,
+          "triple": false,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 64,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          3
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_lock_compare_g2w4_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 4,
+          "triple": false,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          4
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_lock_compare_g2w3_reg_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 3,
+          "triple": false,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 64,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          3
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_lock_compare_g2w4_reg_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 4,
+          "triple": false,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          4
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g2w3_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 3,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          3
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g2w4_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 4,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          4
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g2w3_comb_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 3,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          3
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g2w4_comb_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 4,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          4
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g2w3_reg_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 3,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          3
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g2w4_reg_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 4,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          4
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g2w3_reg_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 3,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          3
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g2w4_reg_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 4,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          4
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g2w3_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 3,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          3
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g2w4_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 4,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          4
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g2w3_comb_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 3,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          3
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g2w4_comb_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 4,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          4
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g2w3_reg_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 3,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          3
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g2w4_reg_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 4,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          4
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g2w3_reg_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 3,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          3
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g2w4_reg_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 4,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          4
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_lock_plain_g3_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 7,
+          "triple": false,
+          "disable_port": false,
+          "comparator": false,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          7,
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          63
+        ],
+        "include_mask": [
+          18446744073709551615
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_plain_g3_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 7,
+          "triple": true,
+          "disable_port": false,
+          "comparator": false,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          7,
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          63
+        ],
+        "include_mask": [
+          18446744073709551615
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_plain_g3_comb_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 7,
+          "triple": true,
+          "disable_port": true,
+          "comparator": false,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          7,
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          63
+        ],
+        "include_mask": [
+          18446744073709551615
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_lock_compare_g3_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 7,
+          "triple": false,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          7,
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          63
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_lock_compare_g3_reg_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 7,
+          "triple": false,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          7,
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          63
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g3_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 7,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          7,
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          63
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g3_comb_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 7,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          7,
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          63
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g3_reg_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 7,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          7,
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          63
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g3_reg_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 7,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          7,
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          63
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g3_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 7,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          7,
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          63
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g3_comb_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 7,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          7,
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          63
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g3_reg_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 7,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          7,
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          63
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g3_reg_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 7,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          7,
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          63
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_lock_plain_g4_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 64,
+          "triple": false,
+          "disable_port": false,
+          "comparator": false,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257
+        ],
+        "include_mask": [
+          18446744073709551615
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_plain_g4_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 64,
+          "triple": true,
+          "disable_port": false,
+          "comparator": false,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257
+        ],
+        "include_mask": [
+          18446744073709551615
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_plain_g4_comb_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 64,
+          "triple": true,
+          "disable_port": true,
+          "comparator": false,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257
+        ],
+        "include_mask": [
+          18446744073709551615
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_lock_compare_g4_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 64,
+          "triple": false,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          9223372036854775808,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_lock_compare_g4_reg_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 64,
+          "triple": false,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          9223372036854775808,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g4_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 64,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          9223372036854775808,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g4_comb_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 64,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          9223372036854775808,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g4_reg_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 64,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          9223372036854775808,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g4_reg_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 64,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          9223372036854775808,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g4_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 64,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          9223372036854775808,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g4_comb_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 64,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          9223372036854775808,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g4_reg_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 64,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          9223372036854775808,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g4_reg_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 64,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256,
+          257
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          9223372036854775808,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_lock_plain_g5_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 511,
+          "triple": false,
+          "disable_port": false,
+          "comparator": false,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 65536,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          511,
+          512,
+          513,
+          1023,
+          1024
+        ],
+        "include_mask": [
+          18446744073709551615
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_plain_g5_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 511,
+          "triple": true,
+          "disable_port": false,
+          "comparator": false,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 65536,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          511,
+          512,
+          513,
+          1023,
+          1024
+        ],
+        "include_mask": [
+          18446744073709551615
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_plain_g5_comb_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 511,
+          "triple": true,
+          "disable_port": true,
+          "comparator": false,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 65536,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          511,
+          512,
+          513,
+          1023,
+          1024
+        ],
+        "include_mask": [
+          18446744073709551615
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_lock_compare_g5_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 511,
+          "triple": false,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 65536,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          511,
+          512,
+          513,
+          1023,
+          1024
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          9223372036854775808,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_lock_compare_g5_reg_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 511,
+          "triple": false,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 65536,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          511,
+          512,
+          513,
+          1023,
+          1024
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          9223372036854775808,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g5_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 511,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 65536,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          511,
+          512,
+          513,
+          1023,
+          1024
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          9223372036854775808,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g5_comb_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 511,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 65536,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          511,
+          512,
+          513,
+          1023,
+          1024
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          9223372036854775808,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g5_reg_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 511,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 65536,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          511,
+          512,
+          513,
+          1023,
+          1024
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          9223372036854775808,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_compare_g5_reg_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 511,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": false,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 65536,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          511,
+          512,
+          513,
+          1023,
+          1024
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          9223372036854775808,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g5_comb_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 511,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 65536,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          511,
+          512,
+          513,
+          1023,
+          1024
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          9223372036854775808,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g5_comb_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 511,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": false,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 65536,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          511,
+          512,
+          513,
+          1023,
+          1024
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          9223372036854775808,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g5_reg_normal",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 511,
+          "triple": true,
+          "disable_port": false,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 65536,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          511,
+          512,
+          513,
+          1023,
+          1024
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          9223372036854775808,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    },
+    {
+      "case_prefix": "voter_triple_checked_g5_reg_disable",
+      "template": {
+        "ip_type": "tmr_voter",
+        "vendor": "xilinx.com",
+        "ip_name": "tmr_voter",
+        "parameters": {
+          "width": 511,
+          "triple": true,
+          "disable_port": true,
+          "comparator": true,
+          "input_register": true,
+          "voter_check": true,
+          "include_mask": 18446744073709551615
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 65536,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          511,
+          512,
+          513,
+          1023,
+          1024
+        ],
+        "include_mask": [
+          18446744073709551615,
+          0,
+          1,
+          9223372036854775808,
+          12297829382473034410,
+          6148914691236517205
+        ]
+      }
+    }
+  ]
+}

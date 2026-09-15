@@ -1,0 +1,72 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "counter_updown_control",
+      "ip_type": "counter",
+      "vendor": "xilinx.com",
+      "ip_name": "c_counter_binary",
+      "parameters": {
+        "width": 8,
+        "increment": 3,
+        "direction": "UPDOWN",
+        "clock_enable": true,
+        "sync_clear": true,
+        "ce_overrides_reset": false
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 512,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "counter_down_wrap",
+      "ip_type": "counter",
+      "vendor": "xilinx.com",
+      "ip_name": "c_counter_binary",
+      "parameters": {
+        "width": 9,
+        "increment": 1,
+        "direction": "DOWN",
+        "clock_enable": false,
+        "sync_clear": false,
+        "ce_overrides_reset": false
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 512,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    }
+  ]
+}

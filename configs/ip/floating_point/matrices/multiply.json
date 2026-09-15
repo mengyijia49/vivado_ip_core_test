@@ -1,0 +1,10 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": [
+    "multiply/no_usage.json",
+    "multiply/full_usage.json",
+    "multiply/max_usage.json",
+    "multiply/double_special.json"
+  ]
+}

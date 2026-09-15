@@ -1,0 +1,3062 @@
+{
+  "$schema": "../../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "cordic_sqrt_int08_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 8,
+          "output_width": 5,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int08_1",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 8,
+          "output_width": 5,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 512,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          1
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int08_2",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 8,
+          "output_width": 5,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 2048,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          3
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int08_3",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 8,
+          "output_width": 5,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int09_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 9,
+          "output_width": 5,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int10_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 10,
+          "output_width": 6,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int11_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 11,
+          "output_width": 6,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int12_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 12,
+          "output_width": 7,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int13_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 13,
+          "output_width": 7,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int14_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 14,
+          "output_width": 8,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int15_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 15,
+          "output_width": 8,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int16_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 16,
+          "output_width": 9,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int17_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 17,
+          "output_width": 9,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int18_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 18,
+          "output_width": 10,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int19_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 19,
+          "output_width": 10,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int20_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 20,
+          "output_width": 11,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int21_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 21,
+          "output_width": 11,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int22_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 22,
+          "output_width": 12,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int23_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 23,
+          "output_width": 12,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int24_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 24,
+          "output_width": 13,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int25_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 25,
+          "output_width": 13,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int26_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 26,
+          "output_width": 14,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int27_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 27,
+          "output_width": 14,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int28_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 28,
+          "output_width": 15,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int29_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 29,
+          "output_width": 15,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int30_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 30,
+          "output_width": 16,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int31_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 31,
+          "output_width": 16,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int32_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 32,
+          "output_width": 17,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int33_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 33,
+          "output_width": 17,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int34_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 34,
+          "output_width": 18,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int35_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 35,
+          "output_width": 18,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int36_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 36,
+          "output_width": 19,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int37_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 37,
+          "output_width": 19,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int38_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 38,
+          "output_width": 20,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int39_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 39,
+          "output_width": 20,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int40_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 40,
+          "output_width": 21,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int41_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 41,
+          "output_width": 21,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int42_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 42,
+          "output_width": 22,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int43_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 43,
+          "output_width": 22,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int44_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 44,
+          "output_width": 23,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int45_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 45,
+          "output_width": 23,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int46_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 46,
+          "output_width": 24,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int47_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 47,
+          "output_width": 24,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "cordic_sqrt_int48_0",
+      "template": {
+        "ip_type": "cordic",
+        "vendor": "xilinx.com",
+        "ip_name": "cordic",
+        "parameters": {
+          "function": "Square_Root",
+          "architecture": "Parallel",
+          "data_format": "UnsignedInteger",
+          "input_width": 48,
+          "output_width": 25,
+          "rounding": "Truncate",
+          "pipelining": "Maximum",
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "rounding": [
+          "Truncate",
+          "Round_Pos_Inf",
+          "Round_Pos_Neg_Inf",
+          "Nearest_Even"
+        ],
+        "pipelining": [
+          "No_Pipelining",
+          "Optimal",
+          "Maximum"
+        ],
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ]
+      }
+    }
+  ]
+}

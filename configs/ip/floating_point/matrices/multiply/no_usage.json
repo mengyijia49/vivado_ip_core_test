@@ -1,0 +1,19 @@
+{
+  "$schema": "../../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": [
+    "no_usage/e04.json",
+    "no_usage/e05.json",
+    "no_usage/e06.json",
+    "no_usage/e07.json",
+    "no_usage/e08.json",
+    "no_usage/e09.json",
+    "no_usage/e10.json",
+    "no_usage/e11.json",
+    "no_usage/e12.json",
+    "no_usage/e13.json",
+    "no_usage/e14.json",
+    "no_usage/e15.json",
+    "no_usage/e16.json"
+  ]
+}

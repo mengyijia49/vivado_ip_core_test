@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AXI-Stream 汇合器参数",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "inputs": {
+      "type": "integer",
+      "minimum": 2,
+      "maximum": 16
+    },
+    "data_bytes": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 512
+    },
+    "user_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4096
+    },
+    "id_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 32
+    },
+    "dest_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 32
+    },
+    "primary_input": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 15
+    },
+    "has_keep": {
+      "type": "boolean"
+    },
+    "has_strb": {
+      "type": "boolean"
+    },
+    "has_last": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "inputs",
+    "data_bytes",
+    "user_width",
+    "id_width",
+    "dest_width",
+    "has_keep",
+    "has_strb",
+    "has_last",
+    "primary_input"
+  ]
+}

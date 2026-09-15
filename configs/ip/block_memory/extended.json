@@ -1,0 +1,1923 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "bram_sp_b0_latch",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 8,
+          "depth": 16,
+          "memory_type": "Single_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": false,
+          "register_enable": false,
+          "sync_reset": false,
+          "reset_memory_latch": false,
+          "byte_size": 0,
+          "initial_value": 1,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          8,
+          9,
+          16,
+          18,
+          32,
+          36,
+          64,
+          72,
+          128,
+          144,
+          256
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "write_mode_a": [
+          "READ_FIRST",
+          "WRITE_FIRST",
+          "NO_CHANGE"
+        ],
+        "sync_reset": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_sp_b0_reg",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 8,
+          "depth": 16,
+          "memory_type": "Single_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": true,
+          "register_enable": false,
+          "sync_reset": false,
+          "reset_memory_latch": false,
+          "byte_size": 0,
+          "initial_value": 1,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          8,
+          9,
+          16,
+          18,
+          32,
+          36,
+          64,
+          72,
+          128,
+          144,
+          256
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "write_mode_a": [
+          "READ_FIRST",
+          "WRITE_FIRST",
+          "NO_CHANGE"
+        ],
+        "register_enable": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_sp_b0_reg_reset",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 8,
+          "depth": 16,
+          "memory_type": "Single_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": true,
+          "register_enable": false,
+          "sync_reset": true,
+          "reset_memory_latch": false,
+          "byte_size": 0,
+          "initial_value": 1,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          8,
+          9,
+          16,
+          18,
+          32,
+          36,
+          64,
+          72,
+          128,
+          144,
+          256
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "write_mode_a": [
+          "READ_FIRST",
+          "WRITE_FIRST",
+          "NO_CHANGE"
+        ],
+        "register_enable": [
+          false,
+          true
+        ],
+        "reset_memory_latch": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_sp_b8_latch",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 8,
+          "depth": 16,
+          "memory_type": "Single_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": false,
+          "register_enable": false,
+          "sync_reset": false,
+          "reset_memory_latch": false,
+          "byte_size": 8,
+          "initial_value": 85,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "write_mode_a": [
+          "READ_FIRST",
+          "WRITE_FIRST"
+        ],
+        "sync_reset": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_sp_b8_reg",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 8,
+          "depth": 16,
+          "memory_type": "Single_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": true,
+          "register_enable": false,
+          "sync_reset": false,
+          "reset_memory_latch": false,
+          "byte_size": 8,
+          "initial_value": 85,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "write_mode_a": [
+          "READ_FIRST",
+          "WRITE_FIRST"
+        ],
+        "register_enable": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_sp_b8_reg_reset",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 8,
+          "depth": 16,
+          "memory_type": "Single_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": true,
+          "register_enable": false,
+          "sync_reset": true,
+          "reset_memory_latch": false,
+          "byte_size": 8,
+          "initial_value": 85,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "write_mode_a": [
+          "READ_FIRST",
+          "WRITE_FIRST"
+        ],
+        "register_enable": [
+          false,
+          true
+        ],
+        "reset_memory_latch": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_sp_b9_latch",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 9,
+          "depth": 16,
+          "memory_type": "Single_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": false,
+          "register_enable": false,
+          "sync_reset": false,
+          "reset_memory_latch": false,
+          "byte_size": 9,
+          "initial_value": 341,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          9,
+          18,
+          36,
+          72,
+          144
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "write_mode_a": [
+          "READ_FIRST",
+          "WRITE_FIRST"
+        ],
+        "sync_reset": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_sp_b9_reg",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 9,
+          "depth": 16,
+          "memory_type": "Single_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": true,
+          "register_enable": false,
+          "sync_reset": false,
+          "reset_memory_latch": false,
+          "byte_size": 9,
+          "initial_value": 341,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          9,
+          18,
+          36,
+          72,
+          144
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "write_mode_a": [
+          "READ_FIRST",
+          "WRITE_FIRST"
+        ],
+        "register_enable": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_sp_b9_reg_reset",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 9,
+          "depth": 16,
+          "memory_type": "Single_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": true,
+          "register_enable": false,
+          "sync_reset": true,
+          "reset_memory_latch": false,
+          "byte_size": 9,
+          "initial_value": 341,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          9,
+          18,
+          36,
+          72,
+          144
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "write_mode_a": [
+          "READ_FIRST",
+          "WRITE_FIRST"
+        ],
+        "register_enable": [
+          false,
+          true
+        ],
+        "reset_memory_latch": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_sdp_b0_latch",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 8,
+          "depth": 16,
+          "memory_type": "Simple_Dual_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": false,
+          "register_enable": false,
+          "sync_reset": false,
+          "reset_memory_latch": false,
+          "byte_size": 0,
+          "initial_value": 1,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          8,
+          9,
+          16,
+          18,
+          32,
+          36,
+          64,
+          72,
+          128,
+          144,
+          256
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "sync_reset": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_sdp_b0_reg",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 8,
+          "depth": 16,
+          "memory_type": "Simple_Dual_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": true,
+          "register_enable": false,
+          "sync_reset": false,
+          "reset_memory_latch": false,
+          "byte_size": 0,
+          "initial_value": 1,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          8,
+          9,
+          16,
+          18,
+          32,
+          36,
+          64,
+          72,
+          128,
+          144,
+          256
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "register_enable": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_sdp_b0_reg_reset",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 8,
+          "depth": 16,
+          "memory_type": "Simple_Dual_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": true,
+          "register_enable": false,
+          "sync_reset": true,
+          "reset_memory_latch": false,
+          "byte_size": 0,
+          "initial_value": 1,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          8,
+          9,
+          16,
+          18,
+          32,
+          36,
+          64,
+          72,
+          128,
+          144,
+          256
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "register_enable": [
+          false,
+          true
+        ],
+        "reset_memory_latch": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_sdp_b8_latch",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 8,
+          "depth": 16,
+          "memory_type": "Simple_Dual_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": false,
+          "register_enable": false,
+          "sync_reset": false,
+          "reset_memory_latch": false,
+          "byte_size": 8,
+          "initial_value": 85,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "sync_reset": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_sdp_b8_reg",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 8,
+          "depth": 16,
+          "memory_type": "Simple_Dual_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": true,
+          "register_enable": false,
+          "sync_reset": false,
+          "reset_memory_latch": false,
+          "byte_size": 8,
+          "initial_value": 85,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "register_enable": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_sdp_b8_reg_reset",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 8,
+          "depth": 16,
+          "memory_type": "Simple_Dual_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": true,
+          "register_enable": false,
+          "sync_reset": true,
+          "reset_memory_latch": false,
+          "byte_size": 8,
+          "initial_value": 85,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "register_enable": [
+          false,
+          true
+        ],
+        "reset_memory_latch": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_sdp_b9_latch",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 9,
+          "depth": 16,
+          "memory_type": "Simple_Dual_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": false,
+          "register_enable": false,
+          "sync_reset": false,
+          "reset_memory_latch": false,
+          "byte_size": 9,
+          "initial_value": 341,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          9,
+          18,
+          36,
+          72,
+          144
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "sync_reset": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_sdp_b9_reg",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 9,
+          "depth": 16,
+          "memory_type": "Simple_Dual_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": true,
+          "register_enable": false,
+          "sync_reset": false,
+          "reset_memory_latch": false,
+          "byte_size": 9,
+          "initial_value": 341,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          9,
+          18,
+          36,
+          72,
+          144
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "register_enable": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_sdp_b9_reg_reset",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 9,
+          "depth": 16,
+          "memory_type": "Simple_Dual_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": true,
+          "register_enable": false,
+          "sync_reset": true,
+          "reset_memory_latch": false,
+          "byte_size": 9,
+          "initial_value": 341,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          9,
+          18,
+          36,
+          72,
+          144
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "register_enable": [
+          false,
+          true
+        ],
+        "reset_memory_latch": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_tdp_b0_latch",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 8,
+          "depth": 16,
+          "memory_type": "True_Dual_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": false,
+          "register_enable": false,
+          "sync_reset": false,
+          "reset_memory_latch": false,
+          "byte_size": 0,
+          "initial_value": 1,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 32768,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          8,
+          9,
+          16,
+          18,
+          32,
+          36,
+          64,
+          72,
+          128,
+          144,
+          256
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "write_mode_a": [
+          "READ_FIRST",
+          "WRITE_FIRST",
+          "NO_CHANGE"
+        ],
+        "write_mode_b": [
+          "READ_FIRST",
+          "WRITE_FIRST",
+          "NO_CHANGE"
+        ],
+        "sync_reset": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_tdp_b0_reg",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 8,
+          "depth": 16,
+          "memory_type": "True_Dual_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": true,
+          "register_enable": false,
+          "sync_reset": false,
+          "reset_memory_latch": false,
+          "byte_size": 0,
+          "initial_value": 1,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 32768,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          8,
+          9,
+          16,
+          18,
+          32,
+          36,
+          64,
+          72,
+          128,
+          144,
+          256
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "write_mode_a": [
+          "READ_FIRST",
+          "WRITE_FIRST",
+          "NO_CHANGE"
+        ],
+        "write_mode_b": [
+          "READ_FIRST",
+          "WRITE_FIRST",
+          "NO_CHANGE"
+        ],
+        "register_enable": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_tdp_b0_reg_reset",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 8,
+          "depth": 16,
+          "memory_type": "True_Dual_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": true,
+          "register_enable": false,
+          "sync_reset": true,
+          "reset_memory_latch": false,
+          "byte_size": 0,
+          "initial_value": 1,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 32768,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          8,
+          9,
+          16,
+          18,
+          32,
+          36,
+          64,
+          72,
+          128,
+          144,
+          256
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "write_mode_a": [
+          "READ_FIRST",
+          "WRITE_FIRST",
+          "NO_CHANGE"
+        ],
+        "write_mode_b": [
+          "READ_FIRST",
+          "WRITE_FIRST",
+          "NO_CHANGE"
+        ],
+        "register_enable": [
+          false,
+          true
+        ],
+        "reset_memory_latch": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_tdp_b8_latch",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 8,
+          "depth": 16,
+          "memory_type": "True_Dual_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": false,
+          "register_enable": false,
+          "sync_reset": false,
+          "reset_memory_latch": false,
+          "byte_size": 8,
+          "initial_value": 85,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 32768,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "write_mode_a": [
+          "READ_FIRST",
+          "WRITE_FIRST"
+        ],
+        "write_mode_b": [
+          "READ_FIRST",
+          "WRITE_FIRST"
+        ],
+        "sync_reset": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_tdp_b8_reg",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 8,
+          "depth": 16,
+          "memory_type": "True_Dual_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": true,
+          "register_enable": false,
+          "sync_reset": false,
+          "reset_memory_latch": false,
+          "byte_size": 8,
+          "initial_value": 85,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 32768,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "write_mode_a": [
+          "READ_FIRST",
+          "WRITE_FIRST"
+        ],
+        "write_mode_b": [
+          "READ_FIRST",
+          "WRITE_FIRST"
+        ],
+        "register_enable": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_tdp_b8_reg_reset",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 8,
+          "depth": 16,
+          "memory_type": "True_Dual_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": true,
+          "register_enable": false,
+          "sync_reset": true,
+          "reset_memory_latch": false,
+          "byte_size": 8,
+          "initial_value": 85,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 32768,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "write_mode_a": [
+          "READ_FIRST",
+          "WRITE_FIRST"
+        ],
+        "write_mode_b": [
+          "READ_FIRST",
+          "WRITE_FIRST"
+        ],
+        "register_enable": [
+          false,
+          true
+        ],
+        "reset_memory_latch": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_tdp_b9_latch",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 9,
+          "depth": 16,
+          "memory_type": "True_Dual_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": false,
+          "register_enable": false,
+          "sync_reset": false,
+          "reset_memory_latch": false,
+          "byte_size": 9,
+          "initial_value": 341,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 32768,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          9,
+          18,
+          36,
+          72,
+          144
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "write_mode_a": [
+          "READ_FIRST",
+          "WRITE_FIRST"
+        ],
+        "write_mode_b": [
+          "READ_FIRST",
+          "WRITE_FIRST"
+        ],
+        "sync_reset": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_tdp_b9_reg",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 9,
+          "depth": 16,
+          "memory_type": "True_Dual_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": true,
+          "register_enable": false,
+          "sync_reset": false,
+          "reset_memory_latch": false,
+          "byte_size": 9,
+          "initial_value": 341,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 32768,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          9,
+          18,
+          36,
+          72,
+          144
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "write_mode_a": [
+          "READ_FIRST",
+          "WRITE_FIRST"
+        ],
+        "write_mode_b": [
+          "READ_FIRST",
+          "WRITE_FIRST"
+        ],
+        "register_enable": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "bram_tdp_b9_reg_reset",
+      "template": {
+        "ip_type": "block_memory",
+        "vendor": "xilinx.com",
+        "ip_name": "blk_mem_gen",
+        "parameters": {
+          "width": 9,
+          "depth": 16,
+          "memory_type": "True_Dual_Port_RAM",
+          "write_mode_a": "READ_FIRST",
+          "write_mode_b": "READ_FIRST",
+          "output_register": true,
+          "register_enable": false,
+          "sync_reset": true,
+          "reset_memory_latch": false,
+          "byte_size": 9,
+          "initial_value": 341,
+          "output_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 32768,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          9,
+          18,
+          36,
+          72,
+          144
+        ],
+        "depth": [
+          16,
+          17,
+          32,
+          64,
+          256,
+          1024,
+          4096
+        ],
+        "write_mode_a": [
+          "READ_FIRST",
+          "WRITE_FIRST"
+        ],
+        "write_mode_b": [
+          "READ_FIRST",
+          "WRITE_FIRST"
+        ],
+        "register_enable": [
+          false,
+          true
+        ],
+        "reset_memory_latch": [
+          false,
+          true
+        ]
+      }
+    }
+  ]
+}

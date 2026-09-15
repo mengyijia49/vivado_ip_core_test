@@ -1,0 +1,98 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "concat",
+      "template": {
+        "ip_type": "xlconcat",
+        "vendor": "xilinx.com",
+        "ip_name": "xlconcat",
+        "parameters": {
+          "input_widths": [1]
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16,
+          "coverage_targets": ["complete_input_space"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "input_widths": [
+          {"label":"n3_lane0_w2","value":[2,1,1]},
+          {"label":"n3_lane1_w2","value":[1,2,1]},
+          {"label":"n3_lane2_w2","value":[1,1,2]}
+        ]
+      }
+    },
+    {
+      "case_prefix": "concat",
+      "template": {
+        "ip_type": "xlconcat",
+        "vendor": "xilinx.com",
+        "ip_name": "xlconcat",
+        "parameters": {
+          "input_widths": [1]
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "input_widths": [
+          {"label":"n3_lane0_w63","value":[63,1,1]},
+          {"label":"n3_lane0_w64","value":[64,1,1]},
+          {"label":"n3_lane0_w65","value":[65,1,1]},
+          {"label":"n3_lane0_w127","value":[127,1,1]},
+          {"label":"n3_lane0_w128","value":[128,1,1]},
+          {"label":"n3_lane0_w129","value":[129,1,1]},
+          {"label":"n3_lane0_w256","value":[256,1,1]},
+          {"label":"n3_lane0_w257","value":[257,1,1]},
+          {"label":"n3_lane0_w1023","value":[1023,1,1]},
+          {"label":"n3_lane0_w1024","value":[1024,1,1]},
+          {"label":"n3_lane0_w4095","value":[4095,1,1]},
+          {"label":"n3_lane1_w63","value":[1,63,1]},
+          {"label":"n3_lane1_w64","value":[1,64,1]},
+          {"label":"n3_lane1_w65","value":[1,65,1]},
+          {"label":"n3_lane1_w127","value":[1,127,1]},
+          {"label":"n3_lane1_w128","value":[1,128,1]},
+          {"label":"n3_lane1_w129","value":[1,129,1]},
+          {"label":"n3_lane1_w256","value":[1,256,1]},
+          {"label":"n3_lane1_w257","value":[1,257,1]},
+          {"label":"n3_lane1_w1023","value":[1,1023,1]},
+          {"label":"n3_lane1_w1024","value":[1,1024,1]},
+          {"label":"n3_lane1_w4095","value":[1,4095,1]},
+          {"label":"n3_lane2_w63","value":[1,1,63]},
+          {"label":"n3_lane2_w64","value":[1,1,64]},
+          {"label":"n3_lane2_w65","value":[1,1,65]},
+          {"label":"n3_lane2_w127","value":[1,1,127]},
+          {"label":"n3_lane2_w128","value":[1,1,128]},
+          {"label":"n3_lane2_w129","value":[1,1,129]},
+          {"label":"n3_lane2_w256","value":[1,1,256]},
+          {"label":"n3_lane2_w257","value":[1,1,257]},
+          {"label":"n3_lane2_w1023","value":[1,1,1023]},
+          {"label":"n3_lane2_w1024","value":[1,1,1024]},
+          {"label":"n3_lane2_w4095","value":[1,1,4095]}
+        ]
+      }
+    }
+  ]
+}

@@ -43,7 +43,7 @@ class IpBuilder:
         elif request.success_marker not in request.log_path.read_text(errors="ignore"):
             status = Status.LOG_CHECK_FAILED
         elif not list(run_dir.glob(request.artifact_glob)):
-            status = Status.XCI_NOT_FOUND
+            status = request.missing_artifact_status
         else:
             status = Status.PASS
 

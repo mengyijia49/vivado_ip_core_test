@@ -1,0 +1,19 @@
+{
+  "$schema": "../../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": [
+    "max_usage/e04.json",
+    "max_usage/e05.json",
+    "max_usage/e06.json",
+    "max_usage/e07.json",
+    "max_usage/e08.json",
+    "max_usage/e09.json",
+    "max_usage/e10.json",
+    "max_usage/e11.json",
+    "max_usage/e12.json",
+    "max_usage/e13.json",
+    "max_usage/e14.json",
+    "max_usage/e15.json",
+    "max_usage/e16.json"
+  ]
+}

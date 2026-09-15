@@ -1,6 +1,7 @@
 """以完整配置和归档证据匹配为条件跳过已完成配置，不复用中间工程状态。"""
 
 import json
+from collections import defaultdict
 from pathlib import Path
 
 from vivado_ip_test.configuration import ConfigError, load_test_cases
@@ -9,7 +10,12 @@ from vivado_ip_test.infrastructure.source_inventory import source_inventory
 
 
 def remaining_cases(layout: RepositoryLayout, cases, records: list[Path]):
-    completed = []
+    completed = load_completed_cases(layout, records)
+    return [case for case in cases if case not in completed.get(case.case_id, ())]
+
+
+def load_completed_cases(layout: RepositoryLayout, records: list[Path]):
+    completed = defaultdict(list)
     sources = source_inventory(layout.source_root or layout.root)
     for record_path in records:
         try:
@@ -28,10 +34,13 @@ def remaining_cases(layout: RepositoryLayout, cases, records: list[Path]):
                     raise ConfigError(f"续跑证据哈希不匹配：{relative}")
             old_cases = load_test_cases(config_path)
             results = json.loads(record_path.with_name("report.json").read_text())
+            observed_by_case = defaultdict(list)
+            for result in results:
+                observed_by_case[result["case_id"]].append((result["stage"], result["status"]))
             for case in old_cases:
-                observed = [(r["stage"], r["status"]) for r in results if r["case_id"] == case.case_id]
+                observed = observed_by_case[case.case_id]
                 if observed == [(stage.value, "PASS") for stage in case.stages]:
-                    completed.append(case)
+                    completed[case.case_id].append(case)
         except (OSError, ValueError, KeyError, TypeError) as exc:
             raise ConfigError(f"不能使用续跑记录 {record_path}：{exc}") from exc
-    return [case for case in cases if case not in completed]
+    return dict(completed)

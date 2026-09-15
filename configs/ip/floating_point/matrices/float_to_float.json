@@ -1,0 +1,33 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": [
+    "float_to_float/to_single/e04.json",
+    "float_to_float/from_single/e04.json",
+    "float_to_float/to_single/e05.json",
+    "float_to_float/from_single/e05.json",
+    "float_to_float/to_single/e06.json",
+    "float_to_float/from_single/e06.json",
+    "float_to_float/to_single/e07.json",
+    "float_to_float/from_single/e07.json",
+    "float_to_float/to_single/e08.json",
+    "float_to_float/from_single/e08.json",
+    "float_to_float/to_single/e09.json",
+    "float_to_float/from_single/e09.json",
+    "float_to_float/to_single/e10.json",
+    "float_to_float/from_single/e10.json",
+    "float_to_float/to_single/e11.json",
+    "float_to_float/from_single/e11.json",
+    "float_to_float/to_single/e12.json",
+    "float_to_float/from_single/e12.json",
+    "float_to_float/to_single/e13.json",
+    "float_to_float/from_single/e13.json",
+    "float_to_float/to_single/e14.json",
+    "float_to_float/from_single/e14.json",
+    "float_to_float/to_single/e15.json",
+    "float_to_float/from_single/e15.json",
+    "float_to_float/to_single/e16.json",
+    "float_to_float/from_single/e16.json",
+    "float_to_float/anchors.json"
+  ]
+}

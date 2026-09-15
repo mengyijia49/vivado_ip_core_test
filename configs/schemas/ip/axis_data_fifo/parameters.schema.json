@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "axis_data_fifo 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "data_bytes",
+    "id_width",
+    "dest_width",
+    "user_width",
+    "has_last",
+    "has_keep",
+    "has_strb",
+    "depth",
+    "packet_mode",
+    "independent_clocks",
+    "memory_type",
+    "synchronization_stages"
+  ],
+  "properties": {
+    "data_bytes": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 64
+    },
+    "id_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 16
+    },
+    "dest_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 16
+    },
+    "user_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 64
+    },
+    "has_last": {
+      "type": "boolean"
+    },
+    "has_keep": {
+      "type": "boolean"
+    },
+    "has_strb": {
+      "type": "boolean"
+    },
+    "depth": {
+      "enum": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096
+      ]
+    },
+    "packet_mode": {
+      "type": "boolean"
+    },
+    "independent_clocks": {
+      "type": "boolean"
+    },
+    "memory_type": {
+      "enum": [
+        "auto",
+        "block",
+        "distributed"
+      ]
+    },
+    "synchronization_stages": {
+      "type": "integer",
+      "minimum": 2,
+      "maximum": 8
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"independent_clocks": {"const": false}}},
+      "then": {"properties": {"synchronization_stages": {"const": 3}}}
+    },
+    {
+      "if": {
+        "properties": {
+          "packet_mode": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "has_last": {
+            "const": true
+          }
+        }
+      }
+    }
+  ]
+}

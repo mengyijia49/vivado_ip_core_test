@@ -1,0 +1,1 @@
+from vivado_ip_test.plugins.floating_point.multi_input.testbench import render_testbench

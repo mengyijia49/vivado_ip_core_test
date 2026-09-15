@@ -19,6 +19,7 @@ class Status(str, Enum):
     LOG_NOT_FOUND = "LOG_NOT_FOUND"
     LOG_CHECK_FAILED = "LOG_CHECK_FAILED"
     XCI_NOT_FOUND = "XCI_NOT_FOUND"
+    BLOCK_DESIGN_NOT_FOUND = "BLOCK_DESIGN_NOT_FOUND"
     TESTBENCH_GENERATION_FAILED = "TESTBENCH_GENERATION_FAILED"
     SIMULATION_FAILED = "SIMULATION_FAILED"
     VERIFICATION_FAILED = "VERIFICATION_FAILED"
@@ -84,6 +85,7 @@ class BuildRequest:
     journal_path: Path
     success_marker: str
     artifact_glob: str
+    missing_artifact_status: Status = Status.XCI_NOT_FOUND
 
 
 @dataclass(frozen=True)

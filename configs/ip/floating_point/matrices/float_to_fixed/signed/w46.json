@@ -1,0 +1,6354 @@
+{
+  "$schema": "../../../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_0",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 46,
+          "output_fraction": 0,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_1",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 46,
+          "output_fraction": 0,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_2",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 45,
+          "output_fraction": 1,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_3",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 45,
+          "output_fraction": 1,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_4",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 44,
+          "output_fraction": 2,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_5",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 44,
+          "output_fraction": 2,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_6",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 43,
+          "output_fraction": 3,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_7",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 43,
+          "output_fraction": 3,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_8",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 42,
+          "output_fraction": 4,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_9",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 42,
+          "output_fraction": 4,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_10",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 41,
+          "output_fraction": 5,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_11",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 41,
+          "output_fraction": 5,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_12",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 40,
+          "output_fraction": 6,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_13",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 40,
+          "output_fraction": 6,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_14",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 39,
+          "output_fraction": 7,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_15",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 39,
+          "output_fraction": 7,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_16",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 38,
+          "output_fraction": 8,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_17",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 38,
+          "output_fraction": 8,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_18",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 37,
+          "output_fraction": 9,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_19",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 37,
+          "output_fraction": 9,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_20",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 36,
+          "output_fraction": 10,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_21",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 36,
+          "output_fraction": 10,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_22",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 35,
+          "output_fraction": 11,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_23",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 35,
+          "output_fraction": 11,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_24",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 34,
+          "output_fraction": 12,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_25",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 34,
+          "output_fraction": 12,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_26",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 33,
+          "output_fraction": 13,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_27",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 33,
+          "output_fraction": 13,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_28",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 32,
+          "output_fraction": 14,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_29",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 32,
+          "output_fraction": 14,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_30",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 31,
+          "output_fraction": 15,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_31",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 31,
+          "output_fraction": 15,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_32",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 30,
+          "output_fraction": 16,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_33",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 30,
+          "output_fraction": 16,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_34",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 29,
+          "output_fraction": 17,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_35",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 29,
+          "output_fraction": 17,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_36",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 28,
+          "output_fraction": 18,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_37",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 28,
+          "output_fraction": 18,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_38",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 27,
+          "output_fraction": 19,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_39",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 27,
+          "output_fraction": 19,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_40",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 26,
+          "output_fraction": 20,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_41",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 26,
+          "output_fraction": 20,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_42",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 25,
+          "output_fraction": 21,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_43",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 25,
+          "output_fraction": 21,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_44",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 24,
+          "output_fraction": 22,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_45",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 24,
+          "output_fraction": 22,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_46",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 23,
+          "output_fraction": 23,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_47",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 23,
+          "output_fraction": 23,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_48",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 22,
+          "output_fraction": 24,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_49",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 22,
+          "output_fraction": 24,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_50",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 21,
+          "output_fraction": 25,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_51",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 21,
+          "output_fraction": 25,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_52",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 20,
+          "output_fraction": 26,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_53",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 20,
+          "output_fraction": 26,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_54",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 19,
+          "output_fraction": 27,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_55",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 19,
+          "output_fraction": 27,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_56",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 18,
+          "output_fraction": 28,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_57",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 18,
+          "output_fraction": 28,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_58",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 17,
+          "output_fraction": 29,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_59",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 17,
+          "output_fraction": 29,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_60",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 16,
+          "output_fraction": 30,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_61",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 16,
+          "output_fraction": 30,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_62",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 15,
+          "output_fraction": 31,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_63",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 15,
+          "output_fraction": 31,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_64",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 14,
+          "output_fraction": 32,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_65",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 14,
+          "output_fraction": 32,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_66",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 13,
+          "output_fraction": 33,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_67",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 13,
+          "output_fraction": 33,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_68",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 12,
+          "output_fraction": 34,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_69",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 12,
+          "output_fraction": 34,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_70",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 11,
+          "output_fraction": 35,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_71",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 11,
+          "output_fraction": 35,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_72",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 10,
+          "output_fraction": 36,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_73",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 10,
+          "output_fraction": 36,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_74",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 9,
+          "output_fraction": 37,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_75",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 9,
+          "output_fraction": 37,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_76",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 8,
+          "output_fraction": 38,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_77",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 8,
+          "output_fraction": 38,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_78",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 7,
+          "output_fraction": 39,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_79",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 7,
+          "output_fraction": 39,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_80",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 6,
+          "output_fraction": 40,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_81",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 6,
+          "output_fraction": 40,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_82",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 5,
+          "output_fraction": 41,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_83",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 5,
+          "output_fraction": 41,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_84",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 4,
+          "output_fraction": 42,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_85",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 4,
+          "output_fraction": 42,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_86",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 3,
+          "output_fraction": 43,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_87",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 3,
+          "output_fraction": 43,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_88",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 2,
+          "output_fraction": 44,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_89",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 2,
+          "output_fraction": 44,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_90",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 8,
+          "input_fraction": 24,
+          "output_exponent": 1,
+          "output_fraction": 45,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "fp_float_to_fixed_signed_w46_91",
+      "template": {
+        "ip_type": "floating_point",
+        "vendor": "xilinx.com",
+        "ip_name": "floating_point",
+        "parameters": {
+          "operation": "Float_to_fixed",
+          "input_exponent": 11,
+          "input_fraction": 53,
+          "output_exponent": 1,
+          "output_fraction": 45,
+          "input_unsigned": false,
+          "optimization": "Resources",
+          "has_last": false,
+          "user_width": 0,
+          "has_underflow": false,
+          "has_overflow": false,
+          "has_invalid_op": false
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": [
+          "Resources",
+          "Performance"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "user_width": [
+          0,
+          1,
+          3,
+          8,
+          17,
+          32,
+          65,
+          256
+        ],
+        "has_overflow": [
+          false,
+          true
+        ],
+        "has_invalid_op": [
+          false,
+          true
+        ]
+      }
+    }
+  ]
+}

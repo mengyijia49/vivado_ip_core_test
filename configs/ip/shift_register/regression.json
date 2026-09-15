@@ -1,0 +1,68 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "shift_depth17_enable",
+      "ip_type": "shift_register",
+      "vendor": "xilinx.com",
+      "ip_name": "c_shift_ram",
+      "parameters": {
+        "width": 8,
+        "depth": 17,
+        "clock_enable": true
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 512,
+        "coverage_targets": [
+          "port_boundaries",
+          "complete_input_space"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "shift_depth1_bit",
+      "ip_type": "shift_register",
+      "vendor": "xilinx.com",
+      "ip_name": "c_shift_ram",
+      "parameters": {
+        "width": 1,
+        "depth": 1,
+        "clock_enable": false
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 2,
+        "coverage_targets": [
+          "port_boundaries",
+          "complete_input_space"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    }
+  ]
+}

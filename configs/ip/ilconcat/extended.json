@@ -1,0 +1,26 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": [
+    "matrices/uniform_2_exhaustive.json",
+    "matrices/uniform_4_exhaustive.json",
+    "matrices/uniform_8_exhaustive.json",
+    "matrices/uniform_16_exhaustive.json",
+    "matrices/uniform_128_exhaustive.json",
+    "matrices/uniform_256_exhaustive.json",
+    "matrices/uniform_256_directed_random.json",
+    "matrices/uniform_64_exhaustive.json",
+    "matrices/uniform_32_exhaustive.json",
+    "matrices/uniform_512_directed_random.json",
+    "matrices/uniform_1024_directed_random.json",
+    "matrices/uniform_2048_directed_random.json",
+    "matrices/outlier_8_exhaustive.json",
+    "matrices/outlier_256_exhaustive.json",
+    "matrices/outlier_256_directed_random.json",
+    "matrices/outlier_16_exhaustive.json",
+    "matrices/outlier_512_directed_random.json",
+    "matrices/outlier_1024_directed_random.json",
+    "matrices/outlier_2048_directed_random.json",
+    "matrices/mixed_256_directed_random.json"
+  ]
+}

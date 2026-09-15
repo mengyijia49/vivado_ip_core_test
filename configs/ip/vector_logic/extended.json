@@ -1,0 +1,154 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "vector_binary",
+      "template": {
+        "ip_type": "vector_logic",
+        "vendor": "xilinx.com",
+        "ip_name": "util_vector_logic",
+        "parameters": {
+          "width": 8,
+          "operation": "and"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          47,
+          48,
+          49,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256
+        ],
+        "operation": [
+          "and",
+          "or",
+          "xor"
+        ]
+      }
+    },
+    {
+      "case_prefix": "vector_not",
+      "template": {
+        "ip_type": "vector_logic",
+        "vendor": "xilinx.com",
+        "ip_name": "util_vector_logic",
+        "parameters": {
+          "width": 16,
+          "operation": "not"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          16,
+          17,
+          31,
+          32,
+          33,
+          64,
+          128,
+          256
+        ]
+      }
+    },
+    {
+      "case_prefix": "vector_small",
+      "template": {
+        "ip_type": "vector_logic",
+        "vendor": "xilinx.com",
+        "ip_name": "util_vector_logic",
+        "parameters": {
+          "width": 1,
+          "operation": "xor"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": [
+            "port_boundaries",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "operation": [
+          "and",
+          "or",
+          "xor",
+          "not"
+        ]
+      }
+    }
+  ]
+}

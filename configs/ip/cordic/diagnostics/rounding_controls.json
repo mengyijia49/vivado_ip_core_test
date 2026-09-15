@@ -1,0 +1,117 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "cordic_sqrt_f16_truncate_control",
+      "ip_type": "cordic",
+      "vendor": "xilinx.com",
+      "ip_name": "cordic",
+      "parameters": {
+        "function": "Square_Root",
+        "input_width": 16,
+        "output_width": 16,
+        "data_format": "UnsignedFraction",
+        "rounding": "Truncate",
+        "architecture": "Parallel",
+        "pipelining": "Maximum",
+        "optimization": "Resources",
+        "has_last": false,
+        "user_width": 0
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 65536,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "cordic_sqrt_f16_round_up_control",
+      "ip_type": "cordic",
+      "vendor": "xilinx.com",
+      "ip_name": "cordic",
+      "parameters": {
+        "function": "Square_Root",
+        "input_width": 16,
+        "output_width": 16,
+        "data_format": "UnsignedFraction",
+        "rounding": "Round_Pos_Inf",
+        "architecture": "Parallel",
+        "pipelining": "Maximum",
+        "optimization": "Resources",
+        "has_last": false,
+        "user_width": 0
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 65536,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "cordic_sqrt_f48_truncate_control",
+      "ip_type": "cordic",
+      "vendor": "xilinx.com",
+      "ip_name": "cordic",
+      "parameters": {
+        "function": "Square_Root",
+        "input_width": 48,
+        "output_width": 48,
+        "data_format": "UnsignedFraction",
+        "rounding": "Truncate",
+        "architecture": "Parallel",
+        "pipelining": "Maximum",
+        "optimization": "Performance",
+        "has_last": true,
+        "user_width": 256
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 4096,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    }
+  ]
+}

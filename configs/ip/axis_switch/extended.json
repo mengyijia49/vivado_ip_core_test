@@ -1,0 +1,27 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": [
+    "matrices/router_balanced.json",
+    "matrices/router_reversed.json",
+    "matrices/router_singletons.json",
+    "matrices/router_gapped.json",
+    "matrices/arbiter_transfer_low.json",
+    "matrices/arbiter_transfer_high.json",
+    "matrices/arbiter_quota_low.json",
+    "matrices/arbiter_quota_high.json",
+    "matrices/arbiter_packet_low.json",
+    "matrices/arbiter_packet_high.json",
+    "matrices/mesh_2_inputs.json",
+    "matrices/mesh_3_inputs.json",
+    "matrices/mesh_4_inputs.json",
+    "matrices/mesh_5_inputs.json",
+    "matrices/mesh_7_inputs.json",
+    "matrices/mesh_8_inputs.json",
+    "matrices/mesh_15_inputs.json",
+    "matrices/mesh_16_inputs.json",
+    "matrices/sideband_user.json",
+    "matrices/sideband_id.json",
+    "matrices/qualifiers.json"
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "acc_wide",
+      "template": {
+        "ip_type": "accumulator",
+        "vendor": "xilinx.com",
+        "ip_name": "c_accum",
+        "parameters": {
+          "input_width": 8,
+          "output_width": 256,
+          "input_type": "Signed",
+          "operation": "Add_Subtract",
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false,
+          "bypass": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "input_width": [
+          16,
+          17,
+          31,
+          32,
+          33,
+          63,
+          64,
+          65,
+          127,
+          128,
+          129,
+          255,
+          256
+        ],
+        "input_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ],
+        "bypass": [
+          false,
+          true
+        ],
+        "ce_overrides_reset": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "acc_wrap8",
+      "template": {
+        "ip_type": "accumulator",
+        "vendor": "xilinx.com",
+        "ip_name": "c_accum",
+        "parameters": {
+          "input_width": 8,
+          "output_width": 8,
+          "input_type": "Signed",
+          "operation": "Add_Subtract",
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false,
+          "bypass": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "input_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ],
+        "clock_enable": [
+          false,
+          true
+        ],
+        "sync_clear": [
+          false,
+          true
+        ],
+        "bypass": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "acc_wrap16",
+      "template": {
+        "ip_type": "accumulator",
+        "vendor": "xilinx.com",
+        "ip_name": "c_accum",
+        "parameters": {
+          "input_width": 16,
+          "output_width": 16,
+          "input_type": "Signed",
+          "operation": "Add_Subtract",
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false,
+          "bypass": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "input_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ],
+        "clock_enable": [
+          false,
+          true
+        ],
+        "sync_clear": [
+          false,
+          true
+        ],
+        "bypass": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "acc_wrap32",
+      "template": {
+        "ip_type": "accumulator",
+        "vendor": "xilinx.com",
+        "ip_name": "c_accum",
+        "parameters": {
+          "input_width": 32,
+          "output_width": 32,
+          "input_type": "Signed",
+          "operation": "Add_Subtract",
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false,
+          "bypass": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "input_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ],
+        "clock_enable": [
+          false,
+          true
+        ],
+        "sync_clear": [
+          false,
+          true
+        ],
+        "bypass": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "acc_wrap64",
+      "template": {
+        "ip_type": "accumulator",
+        "vendor": "xilinx.com",
+        "ip_name": "c_accum",
+        "parameters": {
+          "input_width": 64,
+          "output_width": 64,
+          "input_type": "Signed",
+          "operation": "Add_Subtract",
+          "clock_enable": true,
+          "sync_clear": true,
+          "ce_overrides_reset": false,
+          "bypass": true
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 8192,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "input_type": [
+          "Unsigned",
+          "Signed"
+        ],
+        "operation": [
+          "Add",
+          "Subtract",
+          "Add_Subtract"
+        ],
+        "clock_enable": [
+          false,
+          true
+        ],
+        "sync_clear": [
+          false,
+          true
+        ],
+        "bypass": [
+          false,
+          true
+        ]
+      }
+    }
+  ]
+}

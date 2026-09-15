@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Floating Point Unary Parameters",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "operation",
+    "input_exponent",
+    "input_fraction",
+    "output_exponent",
+    "output_fraction",
+    "input_unsigned",
+    "optimization",
+    "has_last",
+    "user_width",
+    "has_underflow",
+    "has_overflow",
+    "has_invalid_op"
+  ],
+  "properties": {
+    "operation": {
+      "enum": [
+        "Absolute",
+        "Float_to_float",
+        "Fixed_to_float",
+        "Float_to_fixed",
+        "Square_root"
+      ]
+    },
+    "input_exponent": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 64
+    },
+    "input_fraction": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 64
+    },
+    "output_exponent": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 64
+    },
+    "output_fraction": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 64
+    },
+    "input_unsigned": {
+      "type": "boolean"
+    },
+    "cycles_per_operation": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 65,
+      "default": 1
+    },
+    "optimization": {
+      "enum": [
+        "Resources",
+        "Performance"
+      ]
+    },
+    "has_last": {
+      "type": "boolean"
+    },
+    "user_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 256
+    },
+    "has_underflow": {
+      "type": "boolean"
+    },
+    "has_overflow": {
+      "type": "boolean"
+    },
+    "has_invalid_op": {
+      "type": "boolean"
+    }
+  }
+}

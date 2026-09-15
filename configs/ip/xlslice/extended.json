@@ -1,0 +1,5 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": ["matrices/small_all_ranges.json","matrices/all_ranges_w33.json","matrices/all_ranges_w65.json","matrices/all_ranges_w129.json","matrices/all_ranges_w256_low0.json","matrices/all_ranges_w256_low64.json","matrices/all_ranges_w256_low128.json","matrices/all_ranges_w256_low192.json","matrices/wide_boundary_ranges.json","matrices/width_scan_1.json","matrices/width_scan_2.json","matrices/width_scan_3.json","matrices/width_scan_4.json","matrices/width_scan_5.json"]
+}

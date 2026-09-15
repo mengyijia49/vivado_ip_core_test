@@ -1,0 +1,2906 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "slice_w4045_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4045,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4045_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4045,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4046_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4046,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4046_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4046,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4047_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4047,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4047_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4047,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4048_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4048,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4048_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4048,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4049_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4049,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4049_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4049,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4050_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4050,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4050_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4050,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4051_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4051,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4051_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4051,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4052_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4052,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4052_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4052,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4053_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4053,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4053_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4053,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4054_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4054,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4054_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4054,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4055_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4055,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4055_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4055,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4056_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4056,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4056_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4056,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4057_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4057,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4057_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4057,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4058_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4058,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4058_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4058,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4059_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4059,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4059_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4059,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4060_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4060,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4060_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4060,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4061_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4061,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4061_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4061,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4062_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4062,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4062_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4062,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4063_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4063,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4063_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4063,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4064_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4064,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4064_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4064,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4065_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4065,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4065_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4065,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4066_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4066,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4066_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4066,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4067_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4067,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4067_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4067,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4068_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4068,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4068_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4068,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4069_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4069,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4069_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4069,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4070_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4070,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4070_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4070,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4071_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4071,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4071_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4071,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4072_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4072,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4072_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4072,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4073_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4073,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4073_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4073,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4074_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4074,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4074_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4074,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4075_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4075,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4075_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4075,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4076_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4076,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4076_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4076,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4077_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4077,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4077_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4077,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4078_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4078,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4078_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4078,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4079_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4079,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4079_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4079,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4080_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4080,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4080_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4080,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4081_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4081,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4081_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4081,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4082_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4082,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4082_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4082,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4083_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4083,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4083_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4083,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4084_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4084,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4084_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4084,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4085_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4085,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4085_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4085,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4086_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4086,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4086_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4086,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4087_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4087,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4087_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4087,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4088_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4088,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4088_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4088,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4089_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4089,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4089_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4089,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4090_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4090,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4090_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4090,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4091_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4091,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4091_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4091,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4092_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4092,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4092_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4092,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4093_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4093,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4093_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4093,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    },
+    {
+      "case_prefix": "slice_w4094_low0",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4094,
+          "high_bit": 0,
+          "low_bit": 0
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [0]
+      }
+    },
+    {
+      "case_prefix": "slice_w4094_low255",
+      "template": {
+        "ip_type": "xlslice",
+        "vendor": "xilinx.com",
+        "ip_name": "xlslice",
+        "parameters": {
+          "input_width": 4094,
+          "high_bit": 255,
+          "low_bit": 255
+        },
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "basic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "high_bit": [255]
+      }
+    }
+  ]
+}

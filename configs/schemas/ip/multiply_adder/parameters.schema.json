@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "multiply_adder 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "a_width",
+    "b_width",
+    "c_width",
+    "a_type",
+    "b_type",
+    "c_type",
+    "output_high",
+    "output_low",
+    "pipelined",
+    "use_pcin",
+    "ce_overrides_reset"
+  ],
+  "properties": {
+    "a_width": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 53
+    },
+    "b_width": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 53
+    },
+    "c_width": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 106
+    },
+    "a_type": {
+      "enum": [
+        "Signed",
+        "Unsigned"
+      ]
+    },
+    "b_type": {
+      "enum": [
+        "Signed",
+        "Unsigned"
+      ]
+    },
+    "c_type": {
+      "enum": [
+        "Signed",
+        "Unsigned"
+      ]
+    },
+    "output_high": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 106
+    },
+    "output_low": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 106
+    },
+    "pipelined": {
+      "type": "boolean"
+    },
+    "use_pcin": {
+      "type": "boolean"
+    },
+    "ce_overrides_reset": {
+      "type": "boolean"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "a_type": {
+            "const": "Signed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "a_width": {
+            "type": "integer",
+            "minimum": 2,
+            "maximum": 53
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "a_width": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 52
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "b_type": {
+            "const": "Signed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "b_width": {
+            "type": "integer",
+            "minimum": 2,
+            "maximum": 53
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "b_width": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 52
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "c_type": {
+            "const": "Signed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "c_width": {
+            "type": "integer",
+            "minimum": 2,
+            "maximum": 106
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "c_width": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 105
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "pipelined": {
+            "const": false
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "ce_overrides_reset": {
+            "const": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "use_pcin": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "c_width": {
+            "const": 48
+          },
+          "c_type": {
+            "const": "Signed"
+          },
+          "output_high": {
+            "maximum": 47
+          }
+        }
+      }
+    }
+  ]
+}

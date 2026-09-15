@@ -1,0 +1,142 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "axis_reg",
+      "template": {
+        "ip_type": "axis_register_slice",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_register_slice",
+        "parameters": {
+          "data_bytes": 2,
+          "id_width": 0,
+          "dest_width": 0,
+          "user_width": 0,
+          "has_last": true,
+          "has_keep": false,
+          "has_strb": false,
+          "register_mode": "Light_Weight"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16384,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "data_bytes": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          16,
+          32,
+          64
+        ],
+        "register_mode": [
+          "Default",
+          "Bypass",
+          "Fully_Registered",
+          "Light_Weight"
+        ],
+        "id_width": [
+          0,
+          3
+        ],
+        "dest_width": [
+          0,
+          2
+        ],
+        "user_width": [
+          0,
+          7
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "has_keep": [
+          false,
+          true
+        ],
+        "has_strb": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "case_prefix": "axis_reg_byte",
+      "template": {
+        "ip_type": "axis_register_slice",
+        "vendor": "xilinx.com",
+        "ip_name": "axis_register_slice",
+        "parameters": {
+          "data_bytes": 1,
+          "id_width": 0,
+          "dest_width": 0,
+          "user_width": 0,
+          "has_last": false,
+          "has_keep": false,
+          "has_strb": false,
+          "register_mode": "Default"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 256,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "register_mode": [
+          "Default",
+          "Bypass",
+          "Fully_Registered",
+          "Light_Weight"
+        ],
+        "has_last": [
+          false,
+          true
+        ],
+        "has_keep": [
+          false,
+          true
+        ],
+        "has_strb": [
+          false,
+          true
+        ]
+      }
+    }
+  ]
+}

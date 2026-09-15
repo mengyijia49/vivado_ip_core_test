@@ -1,0 +1,299 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "fifo_w1",
+      "template": {
+        "ip_type": "fifo_generator",
+        "vendor": "xilinx.com",
+        "ip_name": "fifo_generator",
+        "parameters": {
+          "width": 1,
+          "depth": 16,
+          "memory_type": "Block_RAM",
+          "active_low_flags": false,
+          "dout_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 16,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          1
+        ],
+        "depth": [
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048,
+          4096
+        ],
+        "memory_type": [
+          "Block_RAM",
+          "Distributed_RAM"
+        ],
+        "active_low_flags": [
+          false,
+          true
+        ],
+        "dout_reset_value": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "case_prefix": "fifo_w2",
+      "template": {
+        "ip_type": "fifo_generator",
+        "vendor": "xilinx.com",
+        "ip_name": "fifo_generator",
+        "parameters": {
+          "width": 2,
+          "depth": 16,
+          "memory_type": "Block_RAM",
+          "active_low_flags": false,
+          "dout_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 32,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          2
+        ],
+        "depth": [
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048,
+          4096
+        ],
+        "memory_type": [
+          "Block_RAM",
+          "Distributed_RAM"
+        ],
+        "active_low_flags": [
+          false,
+          true
+        ],
+        "dout_reset_value": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "case_prefix": "fifo_w4",
+      "template": {
+        "ip_type": "fifo_generator",
+        "vendor": "xilinx.com",
+        "ip_name": "fifo_generator",
+        "parameters": {
+          "width": 4,
+          "depth": 16,
+          "memory_type": "Block_RAM",
+          "active_low_flags": false,
+          "dout_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 128,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          4
+        ],
+        "depth": [
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048,
+          4096
+        ],
+        "memory_type": [
+          "Block_RAM",
+          "Distributed_RAM"
+        ],
+        "active_low_flags": [
+          false,
+          true
+        ],
+        "dout_reset_value": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "case_prefix": "fifo_w256",
+      "template": {
+        "ip_type": "fifo_generator",
+        "vendor": "xilinx.com",
+        "ip_name": "fifo_generator",
+        "parameters": {
+          "width": 256,
+          "depth": 16,
+          "memory_type": "Block_RAM",
+          "active_low_flags": false,
+          "dout_reset_value": 0
+        },
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "depth": [16, 32, 64, 128, 256, 512, 1024, 2048, 4096],
+        "memory_type": ["Block_RAM", "Distributed_RAM"],
+        "active_low_flags": [false, true],
+        "dout_reset_value": [0, 1]
+      }
+    },
+    {
+      "case_prefix": "fifo_wide",
+      "template": {
+        "ip_type": "fifo_generator",
+        "vendor": "xilinx.com",
+        "ip_name": "fifo_generator",
+        "parameters": {
+          "width": 8,
+          "depth": 16,
+          "memory_type": "Block_RAM",
+          "active_low_flags": false,
+          "dout_reset_value": 0
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 2048,
+          "coverage_targets": [
+            "port_boundaries"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "width": [
+          8,
+          9,
+          16,
+          17,
+          18,
+          31,
+          32,
+          36,
+          64,
+          72,
+          128,
+          144
+        ],
+        "depth": [
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048,
+          4096
+        ],
+        "memory_type": [
+          "Block_RAM",
+          "Distributed_RAM"
+        ],
+        "active_low_flags": [
+          false,
+          true
+        ],
+        "dout_reset_value": [
+          0,
+          1
+        ]
+      }
+    }
+  ]
+}

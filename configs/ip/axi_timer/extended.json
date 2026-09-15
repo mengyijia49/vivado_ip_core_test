@@ -1,0 +1,35 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "timer_single",
+      "template": {
+        "ip_type": "axi_timer", "vendor": "xilinx.com", "ip_name": "axi_timer",
+        "parameters": {"count_width": 8, "channels": 1,
+          "trigger0_high": true, "trigger1_high": true, "generate0_high": true, "generate1_high": true},
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {"strategy": "directed_random", "strategy_version": "1.0",
+          "random_seed": 2026, "case_budget": 4096, "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "systematic", "timing_mode": "random_gaps", "input_order": "shuffled",
+          "max_gap_cycles": 64, "burst_length": 32}
+      },
+      "axes": {"count_width": [8, 16, 32], "trigger0_high": [false, true], "generate0_high": [false, true]}
+    },
+    {
+      "case_prefix": "timer_dual",
+      "template": {
+        "ip_type": "axi_timer", "vendor": "xilinx.com", "ip_name": "axi_timer",
+        "parameters": {"count_width": 8, "channels": 2,
+          "trigger0_high": true, "trigger1_high": true, "generate0_high": true, "generate1_high": true},
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {"strategy": "directed_random", "strategy_version": "1.0",
+          "random_seed": 2026, "case_budget": 4096, "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "systematic", "timing_mode": "random_gaps", "input_order": "shuffled",
+          "max_gap_cycles": 64, "burst_length": 32}
+      },
+      "axes": {"count_width": [8, 16, 32], "trigger0_high": [false, true], "trigger1_high": [false, true],
+        "generate0_high": [false, true], "generate1_high": [false, true]}
+    }
+  ]
+}

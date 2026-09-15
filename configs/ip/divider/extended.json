@@ -1,0 +1,268 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "div_16",
+      "template": {
+        "ip_type": "divider",
+        "vendor": "xilinx.com",
+        "ip_name": "div_gen",
+        "parameters": {
+          "dividend_width": 16,
+          "divisor_width": 8,
+          "operand_sign": "Unsigned"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 524288,
+          "coverage_targets": [
+            "boundary_values",
+            "sign_combinations",
+            "systematic_values",
+            "nonzero_divisor",
+            "division_relations"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "divisor_width": [
+          8,
+          9,
+          15,
+          16
+        ],
+        "operand_sign": [
+          "Unsigned",
+          "Signed"
+        ]
+      }
+    },
+    {
+      "case_prefix": "div_32",
+      "template": {
+        "ip_type": "divider",
+        "vendor": "xilinx.com",
+        "ip_name": "div_gen",
+        "parameters": {
+          "dividend_width": 32,
+          "divisor_width": 8,
+          "operand_sign": "Unsigned"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 524288,
+          "coverage_targets": [
+            "boundary_values",
+            "sign_combinations",
+            "systematic_values",
+            "nonzero_divisor",
+            "division_relations"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "divisor_width": [
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32
+        ],
+        "operand_sign": [
+          "Unsigned",
+          "Signed"
+        ]
+      }
+    },
+    {
+      "case_prefix": "div_64",
+      "template": {
+        "ip_type": "divider",
+        "vendor": "xilinx.com",
+        "ip_name": "div_gen",
+        "parameters": {
+          "dividend_width": 64,
+          "divisor_width": 8,
+          "operand_sign": "Unsigned"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 524288,
+          "coverage_targets": [
+            "boundary_values",
+            "sign_combinations",
+            "systematic_values",
+            "nonzero_divisor",
+            "division_relations"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "divisor_width": [
+          8,
+          9,
+          15,
+          16,
+          17,
+          31,
+          32,
+          33,
+          63,
+          64
+        ],
+        "operand_sign": [
+          "Unsigned",
+          "Signed"
+        ]
+      }
+    },
+    {
+      "case_prefix": "div_alignment",
+      "template": {
+        "ip_type": "divider",
+        "vendor": "xilinx.com",
+        "ip_name": "div_gen",
+        "parameters": {
+          "dividend_width": 8,
+          "divisor_width": 8,
+          "operand_sign": "Unsigned"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 64512,
+          "coverage_targets": [
+            "boundary_values",
+            "sign_combinations",
+            "systematic_values",
+            "nonzero_divisor",
+            "division_relations"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "dividend_width": [
+          9,
+          15,
+          17,
+          31,
+          33,
+          63
+        ],
+        "divisor_width": [
+          7,
+          8,
+          9
+        ],
+        "operand_sign": [
+          "Unsigned",
+          "Signed"
+        ]
+      }
+    },
+    {
+      "case_prefix": "div_small",
+      "template": {
+        "ip_type": "divider",
+        "vendor": "xilinx.com",
+        "ip_name": "div_gen",
+        "parameters": {
+          "dividend_width": 2,
+          "divisor_width": 2,
+          "operand_sign": "Unsigned"
+        },
+        "stages": [
+          "create_ip",
+          "generate_testbench",
+          "sim_selfcheck"
+        ],
+        "verification": {
+          "strategy": "exhaustive",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 1024,
+          "coverage_targets": [
+            "boundary_values",
+            "sign_combinations",
+            "systematic_values",
+            "nonzero_divisor",
+            "division_relations",
+            "complete_input_space"
+          ],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "continuous",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "dividend_width": [
+          2,
+          3,
+          4,
+          5,
+          7,
+          8
+        ],
+        "divisor_width": [
+          2
+        ],
+        "operand_sign": [
+          "Unsigned",
+          "Signed"
+        ]
+      }
+    }
+  ]
+}

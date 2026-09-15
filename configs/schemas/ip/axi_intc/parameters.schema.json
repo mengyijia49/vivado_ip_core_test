@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AXI INTC 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "input_modes",
+    "software_interrupts",
+    "async_mask",
+    "synchronizer_stages",
+    "irq_active_high",
+    "has_ipr",
+    "has_sie",
+    "has_cie",
+    "has_ivr",
+    "has_ilr"
+  ],
+  "properties": {
+    "input_modes": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 32,
+      "items": {
+        "enum": [
+          "rising",
+          "falling",
+          "high",
+          "low"
+        ]
+      }
+    },
+    "software_interrupts": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 31
+    },
+    "async_mask": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "synchronizer_stages": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 7
+    },
+    "irq_active_high": {
+      "type": "boolean"
+    },
+    "has_ipr": {
+      "type": "boolean"
+    },
+    "has_sie": {
+      "type": "boolean"
+    },
+    "has_cie": {
+      "type": "boolean"
+    },
+    "has_ivr": {
+      "type": "boolean"
+    },
+    "has_ilr": {
+      "type": "boolean"
+    }
+  }
+}

@@ -64,13 +64,17 @@ class SimulationRunner:
                 / "actual_output.txt"
             )
             if actual_path.exists():
-                metrics["output_count"] = len(actual_path.read_text().splitlines())
+                with actual_path.open() as output:
+                    metrics["output_count"] = sum(1 for _ in output)
                 metrics["actual_output_sha256"] = sha256_file(actual_path)
             if status is not Status.PASS:
                 evidence = analyze_outputs(run_dir)
-                metrics["failure_evidence"] = evidence
+                metrics["failure_evidence"] = {**evidence, "difference_summary": {
+                    key: value for key, value in evidence["difference_summary"].items() if key != "groups"}}
                 failure_path.parent.mkdir(parents=True, exist_ok=True)
                 failure_path.write_text(json.dumps(evidence, indent=2, ensure_ascii=False) + "\n")
+                metrics["failure_detail_file"] = "outputs/failure.json"
+                metrics["failure_detail_sha256"] = sha256_file(failure_path)
 
         return StageResult(
             case_id=case.case_id,

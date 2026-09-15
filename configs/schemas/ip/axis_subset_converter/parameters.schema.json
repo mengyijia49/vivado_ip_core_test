@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AXI-Stream 子集转换器参数",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "input_bytes": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 512
+    },
+    "input_user_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4096
+    },
+    "input_id_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 32
+    },
+    "input_dest_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 32
+    },
+    "input_has_keep": {
+      "type": "boolean"
+    },
+    "input_has_strb": {
+      "type": "boolean"
+    },
+    "input_has_last": {
+      "type": "boolean"
+    },
+    "output_bytes": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 512
+    },
+    "output_user_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4096
+    },
+    "output_id_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 32
+    },
+    "output_dest_width": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 32
+    },
+    "output_has_keep": {
+      "type": "boolean"
+    },
+    "output_has_strb": {
+      "type": "boolean"
+    },
+    "output_has_last": {
+      "type": "boolean"
+    },
+    "mapping": {
+      "enum": [
+        "resize",
+        "reverse_bytes",
+        "reverse_bits",
+        "rotate_bytes",
+        "repeat_low_byte",
+        "user_to_data",
+        "data_user_swap"
+      ]
+    },
+    "last_period": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 256
+    },
+    "remap": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tdata": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100000
+        },
+        "tstrb": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100000
+        },
+        "tkeep": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100000
+        },
+        "tlast": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100000
+        },
+        "tid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100000
+        },
+        "tdest": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100000
+        },
+        "tuser": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100000
+        }
+      }
+    }
+  },
+  "required": [
+    "input_bytes",
+    "input_user_width",
+    "input_id_width",
+    "input_dest_width",
+    "input_has_keep",
+    "input_has_strb",
+    "input_has_last",
+    "output_bytes",
+    "output_user_width",
+    "output_id_width",
+    "output_dest_width",
+    "output_has_keep",
+    "output_has_strb",
+    "output_has_last",
+    "mapping",
+    "last_period"
+  ]
+}

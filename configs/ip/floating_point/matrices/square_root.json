@@ -1,0 +1,19 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": [
+    "square_root/e04.json",
+    "square_root/e05.json",
+    "square_root/e06.json",
+    "square_root/e07.json",
+    "square_root/e08.json",
+    "square_root/e09.json",
+    "square_root/e10.json",
+    "square_root/e11.json",
+    "square_root/e12.json",
+    "square_root/e13.json",
+    "square_root/e14.json",
+    "square_root/e15.json",
+    "square_root/e16.json"
+  ]
+}

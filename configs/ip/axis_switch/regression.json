@@ -1,0 +1,436 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "switch_route1to3",
+      "ip_type": "axis_switch",
+      "vendor": "xilinx.com",
+      "ip_name": "axis_switch",
+      "parameters": {
+        "inputs": 1,
+        "outputs": 3,
+        "data_bytes": 3,
+        "user_width": 9,
+        "id_width": 3,
+        "dest_width": 3,
+        "has_keep": true,
+        "has_strb": true,
+        "has_last": true,
+        "decoder_reg": true,
+        "output_reg": false,
+        "arbiter": "round_robin",
+        "arbitrate_transfers": 1,
+        "arbitrate_cycles": 0,
+        "arbitrate_last": false,
+        "routing": "balanced"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 512,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "shuffled",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "switch_arb3to1",
+      "ip_type": "axis_switch",
+      "vendor": "xilinx.com",
+      "ip_name": "axis_switch",
+      "parameters": {
+        "inputs": 3,
+        "outputs": 1,
+        "data_bytes": 1,
+        "user_width": 0,
+        "id_width": 0,
+        "dest_width": 0,
+        "has_keep": false,
+        "has_strb": false,
+        "has_last": true,
+        "decoder_reg": false,
+        "output_reg": true,
+        "arbiter": "fixed_priority",
+        "arbitrate_transfers": 1,
+        "arbitrate_cycles": 0,
+        "arbitrate_last": false,
+        "routing": "balanced"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 512,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "shuffled",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "switch_cross3to3",
+      "ip_type": "axis_switch",
+      "vendor": "xilinx.com",
+      "ip_name": "axis_switch",
+      "parameters": {
+        "inputs": 3,
+        "outputs": 3,
+        "data_bytes": 3,
+        "user_width": 9,
+        "id_width": 3,
+        "dest_width": 3,
+        "has_keep": true,
+        "has_strb": true,
+        "has_last": true,
+        "decoder_reg": true,
+        "output_reg": true,
+        "arbiter": "true_round_robin",
+        "arbitrate_transfers": 1,
+        "arbitrate_cycles": 0,
+        "arbitrate_last": false,
+        "routing": "balanced"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 512,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "shuffled",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "switch_packet5to2",
+      "ip_type": "axis_switch",
+      "vendor": "xilinx.com",
+      "ip_name": "axis_switch",
+      "parameters": {
+        "inputs": 5,
+        "outputs": 2,
+        "data_bytes": 7,
+        "user_width": 13,
+        "id_width": 5,
+        "dest_width": 3,
+        "has_keep": true,
+        "has_strb": true,
+        "has_last": true,
+        "decoder_reg": false,
+        "output_reg": false,
+        "arbiter": "round_robin",
+        "arbitrate_transfers": 0,
+        "arbitrate_cycles": 0,
+        "arbitrate_last": true,
+        "routing": "balanced"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 512,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "shuffled",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "switch_quota7to1",
+      "ip_type": "axis_switch",
+      "vendor": "xilinx.com",
+      "ip_name": "axis_switch",
+      "parameters": {
+        "inputs": 7,
+        "outputs": 1,
+        "data_bytes": 1,
+        "user_width": 9,
+        "id_width": 3,
+        "dest_width": 0,
+        "has_keep": false,
+        "has_strb": false,
+        "has_last": false,
+        "decoder_reg": false,
+        "output_reg": true,
+        "arbiter": "round_robin",
+        "arbitrate_transfers": 8,
+        "arbitrate_cycles": 0,
+        "arbitrate_last": false,
+        "routing": "balanced"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 512,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "shuffled",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "switch_idle4to3",
+      "ip_type": "axis_switch",
+      "vendor": "xilinx.com",
+      "ip_name": "axis_switch",
+      "parameters": {
+        "inputs": 4,
+        "outputs": 3,
+        "data_bytes": 4,
+        "user_width": 0,
+        "id_width": 0,
+        "dest_width": 4,
+        "has_keep": true,
+        "has_strb": true,
+        "has_last": false,
+        "decoder_reg": true,
+        "output_reg": false,
+        "arbiter": "true_round_robin",
+        "arbitrate_transfers": 7,
+        "arbitrate_cycles": 3,
+        "arbitrate_last": false,
+        "routing": "gapped"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 512,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "shuffled",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "switch_route1to16_dest32",
+      "ip_type": "axis_switch",
+      "vendor": "xilinx.com",
+      "ip_name": "axis_switch",
+      "parameters": {
+        "inputs": 1,
+        "outputs": 16,
+        "data_bytes": 1,
+        "user_width": 33,
+        "id_width": 32,
+        "dest_width": 32,
+        "has_keep": false,
+        "has_strb": false,
+        "has_last": true,
+        "decoder_reg": false,
+        "output_reg": false,
+        "arbiter": "round_robin",
+        "arbitrate_transfers": 1,
+        "arbitrate_cycles": 0,
+        "arbitrate_last": false,
+        "routing": "reversed"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 512,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "shuffled",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "switch_cross16to16",
+      "ip_type": "axis_switch",
+      "vendor": "xilinx.com",
+      "ip_name": "axis_switch",
+      "parameters": {
+        "inputs": 16,
+        "outputs": 16,
+        "data_bytes": 1,
+        "user_width": 0,
+        "id_width": 0,
+        "dest_width": 4,
+        "has_keep": false,
+        "has_strb": false,
+        "has_last": true,
+        "decoder_reg": true,
+        "output_reg": true,
+        "arbiter": "true_round_robin",
+        "arbitrate_transfers": 1,
+        "arbitrate_cycles": 0,
+        "arbitrate_last": false,
+        "routing": "balanced"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 512,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "shuffled",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "switch_side3to2",
+      "ip_type": "axis_switch",
+      "vendor": "xilinx.com",
+      "ip_name": "axis_switch",
+      "parameters": {
+        "inputs": 3,
+        "outputs": 2,
+        "data_bytes": 0,
+        "user_width": 5,
+        "id_width": 0,
+        "dest_width": 2,
+        "has_keep": false,
+        "has_strb": false,
+        "has_last": true,
+        "decoder_reg": true,
+        "output_reg": true,
+        "arbiter": "true_round_robin",
+        "arbitrate_transfers": 0,
+        "arbitrate_cycles": 0,
+        "arbitrate_last": true,
+        "routing": "balanced"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 512,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "shuffled",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "switch_id2to1",
+      "ip_type": "axis_switch",
+      "vendor": "xilinx.com",
+      "ip_name": "axis_switch",
+      "parameters": {
+        "inputs": 2,
+        "outputs": 1,
+        "data_bytes": 0,
+        "user_width": 0,
+        "id_width": 3,
+        "dest_width": 0,
+        "has_keep": false,
+        "has_strb": false,
+        "has_last": false,
+        "decoder_reg": false,
+        "output_reg": true,
+        "arbiter": "round_robin",
+        "arbitrate_transfers": 1,
+        "arbitrate_cycles": 0,
+        "arbitrate_last": false,
+        "routing": "balanced"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 16,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "shuffled",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    }
+  ]
+}

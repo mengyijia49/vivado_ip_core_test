@@ -1,0 +1,32 @@
+{
+  "$schema": "../../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "includes": [
+    "e06/p04.json",
+    "e06/p05.json",
+    "e06/p06.json",
+    "e06/p07.json",
+    "e06/p08.json",
+    "e06/p09.json",
+    "e06/p10.json",
+    "e06/p11.json",
+    "e06/p12.json",
+    "e06/p13.json",
+    "e06/p14.json",
+    "e06/p15.json",
+    "e06/p16.json",
+    "e06/p17.json",
+    "e06/p18.json",
+    "e06/p19.json",
+    "e06/p20.json",
+    "e06/p21.json",
+    "e06/p22.json",
+    "e06/p23.json",
+    "e06/p24.json",
+    "e06/p25.json",
+    "e06/p26.json",
+    "e06/p27.json",
+    "e06/p28.json",
+    "e06/p29.json"
+  ]
+}

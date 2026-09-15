@@ -1,0 +1,296 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "ilreduced_logic_and1",
+      "ip_type": "ilreduced_logic",
+      "vendor": "xilinx.com",
+      "ip_name": "ilreduced_logic",
+      "parameters": {
+        "width": 1,
+        "operation": "and"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 2,
+        "coverage_targets": [
+          "complete_input_space"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "ilreduced_logic_or1",
+      "ip_type": "ilreduced_logic",
+      "vendor": "xilinx.com",
+      "ip_name": "ilreduced_logic",
+      "parameters": {
+        "width": 1,
+        "operation": "or"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 2,
+        "coverage_targets": [
+          "complete_input_space"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "ilreduced_logic_xor1",
+      "ip_type": "ilreduced_logic",
+      "vendor": "xilinx.com",
+      "ip_name": "ilreduced_logic",
+      "parameters": {
+        "width": 1,
+        "operation": "xor"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 2,
+        "coverage_targets": [
+          "complete_input_space"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "ilreduced_logic_and7",
+      "ip_type": "ilreduced_logic",
+      "vendor": "xilinx.com",
+      "ip_name": "ilreduced_logic",
+      "parameters": {
+        "width": 7,
+        "operation": "and"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 128,
+        "coverage_targets": [
+          "complete_input_space"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "ilreduced_logic_or8",
+      "ip_type": "ilreduced_logic",
+      "vendor": "xilinx.com",
+      "ip_name": "ilreduced_logic",
+      "parameters": {
+        "width": 8,
+        "operation": "or"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 256,
+        "coverage_targets": [
+          "complete_input_space"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "ilreduced_logic_xor7",
+      "ip_type": "ilreduced_logic",
+      "vendor": "xilinx.com",
+      "ip_name": "ilreduced_logic",
+      "parameters": {
+        "width": 7,
+        "operation": "xor"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 128,
+        "coverage_targets": [
+          "complete_input_space"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "ilreduced_logic_and4096",
+      "ip_type": "ilreduced_logic",
+      "vendor": "xilinx.com",
+      "ip_name": "ilreduced_logic",
+      "parameters": {
+        "width": 4096,
+        "operation": "and"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 256,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "ilreduced_logic_or4096",
+      "ip_type": "ilreduced_logic",
+      "vendor": "xilinx.com",
+      "ip_name": "ilreduced_logic",
+      "parameters": {
+        "width": 4096,
+        "operation": "or"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 256,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "ilreduced_logic_xor4095",
+      "ip_type": "ilreduced_logic",
+      "vendor": "xilinx.com",
+      "ip_name": "ilreduced_logic",
+      "parameters": {
+        "width": 4095,
+        "operation": "xor"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 256,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "ilreduced_logic_xor8193",
+      "ip_type": "ilreduced_logic",
+      "vendor": "xilinx.com",
+      "ip_name": "ilreduced_logic",
+      "parameters": {
+        "width": 8193,
+        "operation": "xor"
+      },
+      "stages": [
+        "create_ip",
+        "generate_testbench",
+        "sim_selfcheck"
+      ],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 256,
+        "coverage_targets": [
+          "port_boundaries"
+        ],
+        "boundary_mode": "basic",
+        "input_order": "generated",
+        "timing_mode": "continuous",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    }
+  ]
+}
