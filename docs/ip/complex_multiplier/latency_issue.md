@@ -28,9 +28,9 @@ XCI 中 `C_LATENCY=55`，没有被工具改成其他延迟。
 Failure: CMPY_LATENCY_PROBE: FAIL cycle=80 expected=00000000 actual=00000001
 ```
 
-日志：`runs/logs/framework/latency_probe/<编号>/complex_multiplier/simulate.log`。
-testbench：[tb_latency_55_probe.vhd](../../../tests/fixtures/ip/complex_multiplier/tb_latency_55_probe.vhd)。
-可提交的小证据包：[evidence/complex_multiplier/latency](../../../evidence/complex_multiplier/latency/README.md)。
+[首次运行](../../../evidence/complex_multiplier/latency/2026-09-15_00-10-17_UTC+0800_10049d3a/)保留失败摘要、输入、期望、实际输出、报告和日志。
+[独立复现](../../../evidence/complex_multiplier/latency/2026-09-15_00-15-45_UTC+0800_b0ac4b41/)保留 testbench、日志和 XCI 参数。
+[完整证据包](../../../evidence/complex_multiplier/latency/README.md)。
 
 在仓库根目录重现，不覆盖旧目录：
 

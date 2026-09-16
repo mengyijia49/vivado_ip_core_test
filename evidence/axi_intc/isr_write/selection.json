@@ -7,6 +7,11 @@
   },
   "files": [
     {
+      "source": "reports/framework/intc_source_review/2026-09-15_11-10-40_UTC+0800_4c47298b/summary.json",
+      "target": "2026-09-15_11-10-40_UTC+0800_4c47298b/source_review_summary.json",
+      "mode": "json"
+    },
+    {
       "source": "reports/framework/isr_write_probe/2026-09-15_11-05-17_UTC+0800_0d434122/summary.json",
       "target": "2026-09-15_11-05-17_UTC+0800_0d434122/summary.json",
       "mode": "json"

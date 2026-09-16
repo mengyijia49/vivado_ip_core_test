@@ -39,13 +39,14 @@ VHDL 不调用 Python 数值模型，并在边沿采样后才等待计数信号�
 
 五个差异是同类输入的缩放和符号变化，不算五个独立 bug。异常标志均与期望一致。
 13:00 至 13:02 的第一次独立运行也得到相同结果；表中是完善边沿采样后的重跑。
-各批的 `reports/framework/floating_multiply_probe/<批次>/summary.json` 保存全部观察、
-实际 XCI 参数及哈希；工程和源码位于 `runs/framework/floating_multiply_probe/<批次>/floating_point/`，
-日志位于 `runs/logs/framework/floating_multiply_probe/<批次>/floating_point/`。
-可提交的小证据包：[evidence/floating_point/multiply_rounding](../../../evidence/floating_point/multiply_rounding/README.md)。
+[首次运行](../../../evidence/floating_point/multiply_rounding/2026-09-15_12-54-17_UTC+0800_f23eb1d7/)保留失败摘要、输入、期望、实际输出、报告和日志。
+[低延迟独立复现](../../../evidence/floating_point/multiply_rounding/2026-09-15_13-03-11_UTC+0800_ceadf6b0/)和
+[速度优化对照](../../../evidence/floating_point/multiply_rounding/2026-09-15_13-03-35_UTC+0800_747a3c9e/)
+保留观察摘要、固定 VHDL、日志和 XCI 参数。
+[完整证据包](../../../evidence/floating_point/multiply_rounding/README.md)。
 
 厂商随安装提供的 C 数值模型也做了对照：`xip_fpo_mul_d` 对同样 16 例的结果和异常位
-全部符合期望。记录为 `reports/framework/floating_multiply_cmodel/2026-09-15_13-26-17_UTC+0800_209c333a/summary.json`。
+全部符合期望。结果见[C 模型对照报告](../../../evidence/floating_point/multiply_rounding/2026-09-15_13-26-17_UTC+0800_209c333a/cmodel_summary.json)。
 该接口不区分 Low_Latency 和 Speed_Optimized，只作数值佐证，没有替代框架的独立参考。
 
 ## 复现

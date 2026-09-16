@@ -1,0 +1,9 @@
+{
+  "run_id": "2026-09-15_11-10-40_UTC+0800_4c47298b",
+  "source_url": "https://raw.githubusercontent.com/Xilinx/embeddedsw/bb2b3f9fe65a74d458ab21f1006cb52820981520/XilinxProcessorIPLib/drivers/intc/src/xintc.c",
+  "commit": "bb2b3f9fe65a74d458ab21f1006cb52820981520",
+  "commit_date": "2026-05-12T09:29:15Z",
+  "sha256": "59df34d206508583b2e4ece0598bde08a1e5ff9939efce136af0c860a311f4cb",
+  "source_path": "runs/framework/intc_source_review/2026-09-15_11-10-40_UTC+0800_4c47298b/xintc.c",
+  "purpose": "Review software-interrupt writes; not running driver or changing DUT"
+}

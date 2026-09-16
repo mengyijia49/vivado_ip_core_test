@@ -34,10 +34,10 @@ VIVADO_INTEGRATION=1 PYTHONPATH=src:tests python3 -m unittest \
 | 旧版 128 路，直接编译附带源模型 | 2026-09-15_05-11-31_UTC+0800_32ec8e45 | 与预编译库相同 |
 | Inline HDL 128 路 | 2026-09-15_05-08-45_UTC+0800_5a21256b | 六次观察均匹配 |
 
-参数、独立 testbench 哈希和逐次观察保存在：
-`runs/framework/port_boundary_probe/<编号>/<IP>/n<路数>/observations.json`。
-日志在对应 `runs/logs/framework/port_boundary_probe/`。
-可提交的小证据包：[evidence/xlconcat/port_128](../../../evidence/xlconcat/port_128/README.md)。
+[首次运行](../../../evidence/xlconcat/port_128/2026-09-15_04-59-48_UTC+0800_453f0aae/)保留两组失败摘要、报告和日志。
+[独立复现](../../../evidence/xlconcat/port_128/2026-09-15_05-11-31_UTC+0800_32ec8e45/)保留逐次观察、testbench、日志和 XCI 参数。
+[127 路对照](../../../evidence/xlconcat/port_128/2026-09-15_05-13-44_UTC+0800_ba9f6aed/)保留正常观察结果。
+[完整证据包](../../../evidence/xlconcat/port_128/README.md)。
 
 ## 当前判断
 

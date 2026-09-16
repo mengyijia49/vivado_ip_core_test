@@ -1,0 +1,160 @@
+{
+  "run_id": "2026-09-15_13-26-17_UTC+0800_209c333a",
+  "api": "xip_fpo_mul_d(double *, double, double)",
+  "version": "7.1",
+  "archive_sha256": "aec072b7c1c70f95663f7ed9a5ea6809713dffcacdf1593c74a6201a7f91a881",
+  "testbench_sha256": "37b2e2895e3c43987d416bcae7fe3d67b1d462aa75aab24d9bced0b2886777bf",
+  "observations": [
+    {
+      "index": 0,
+      "input_a": "3FEFFFFFFFFFFFFE",
+      "input_b": "3C80000000000001",
+      "expected": "3C80000000000000",
+      "actual": "3C80000000000000",
+      "flags": 0,
+      "expected_flags": 0
+    },
+    {
+      "index": 1,
+      "input_a": "3FEFFFFFFFFFFFFE",
+      "input_b": "3FF0000000000001",
+      "expected": "3FF0000000000000",
+      "actual": "3FF0000000000000",
+      "flags": 0,
+      "expected_flags": 0
+    },
+    {
+      "index": 2,
+      "input_a": "3FF0000000000000",
+      "input_b": "3FF0000000000000",
+      "expected": "3FF0000000000000",
+      "actual": "3FF0000000000000",
+      "flags": 0,
+      "expected_flags": 0
+    },
+    {
+      "index": 3,
+      "input_a": "4000000000000000",
+      "input_b": "3FE0000000000000",
+      "expected": "3FF0000000000000",
+      "actual": "3FF0000000000000",
+      "flags": 0,
+      "expected_flags": 0
+    },
+    {
+      "index": 4,
+      "input_a": "3FEFFFFFFFFFFFFE",
+      "input_b": "3FF0000000000000",
+      "expected": "3FEFFFFFFFFFFFFE",
+      "actual": "3FEFFFFFFFFFFFFE",
+      "flags": 0,
+      "expected_flags": 0
+    },
+    {
+      "index": 5,
+      "input_a": "3FEFFFFFFFFFFFFF",
+      "input_b": "3FF0000000000001",
+      "expected": "3FF0000000000000",
+      "actual": "3FF0000000000000",
+      "flags": 0,
+      "expected_flags": 0
+    },
+    {
+      "index": 6,
+      "input_a": "3FEFFFFFFFFFFFFD",
+      "input_b": "3FF0000000000001",
+      "expected": "3FEFFFFFFFFFFFFF",
+      "actual": "3FEFFFFFFFFFFFFF",
+      "flags": 0,
+      "expected_flags": 0
+    },
+    {
+      "index": 7,
+      "input_a": "3FEFFFFFFFFFFFFE",
+      "input_b": "3FEFFFFFFFFFFFFF",
+      "expected": "3FEFFFFFFFFFFFFD",
+      "actual": "3FEFFFFFFFFFFFFD",
+      "flags": 0,
+      "expected_flags": 0
+    },
+    {
+      "index": 8,
+      "input_a": "BFEFFFFFFFFFFFFE",
+      "input_b": "3FF0000000000001",
+      "expected": "BFF0000000000000",
+      "actual": "BFF0000000000000",
+      "flags": 0,
+      "expected_flags": 0
+    },
+    {
+      "index": 9,
+      "input_a": "3FEFFFFFFFFFFFFE",
+      "input_b": "BFF0000000000001",
+      "expected": "BFF0000000000000",
+      "actual": "BFF0000000000000",
+      "flags": 0,
+      "expected_flags": 0
+    },
+    {
+      "index": 10,
+      "input_a": "BFEFFFFFFFFFFFFE",
+      "input_b": "BFF0000000000001",
+      "expected": "3FF0000000000000",
+      "actual": "3FF0000000000000",
+      "flags": 0,
+      "expected_flags": 0
+    },
+    {
+      "index": 11,
+      "input_a": "0000000000000000",
+      "input_b": "7FF0000000000000",
+      "expected": "7FF8000000000000",
+      "actual": "7FF8000000000000",
+      "flags": 4,
+      "expected_flags": 4
+    },
+    {
+      "index": 12,
+      "input_a": "7FEFFFFFFFFFFFFF",
+      "input_b": "4000000000000000",
+      "expected": "7FF0000000000000",
+      "actual": "7FF0000000000000",
+      "flags": 2,
+      "expected_flags": 2
+    },
+    {
+      "index": 13,
+      "input_a": "0010000000000000",
+      "input_b": "3FE0000000000000",
+      "expected": "0000000000000000",
+      "actual": "0000000000000000",
+      "flags": 1,
+      "expected_flags": 1
+    },
+    {
+      "index": 14,
+      "input_a": "7FF8000000000001",
+      "input_b": "3FF0000000000000",
+      "expected": "7FF8000000000000",
+      "actual": "7FF8000000000000",
+      "flags": 0,
+      "expected_flags": 0
+    },
+    {
+      "index": 15,
+      "input_a": "3FF0000000000001",
+      "input_b": "3FF0000000000001",
+      "expected": "3FF0000000000002",
+      "actual": "3FF0000000000002",
+      "flags": 0,
+      "expected_flags": 0
+    }
+  ],
+  "matches": 16,
+  "library_sha256": {
+    "libmpfr.so.4": "40c08390e859020c38fdb99d2bd2d269356f6ffbad73e05b3799e8460cdec4f1",
+    "libIp_floating_point_v7_1_bitacc_cmodel.so": "9c9604ef979b3e20a994aebed74e5d77deac9c7d745808b89abd81f98164ed30",
+    "libgmp.so.11": "4127e20e0403b888d5262dd78d57a4142584f2a87e11c57346e8d0bef6243f34"
+  },
+  "note": "vendor numerical model cross-check only; not used as framework golden and no architecture argument"
+}

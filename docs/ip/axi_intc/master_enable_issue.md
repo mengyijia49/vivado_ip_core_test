@@ -44,11 +44,12 @@ VIVADO_INTEGRATION=1 PYTHONPATH=src python3 -m unittest discover \
 - 预编译库：`2026-09-15_11-41-11_UTC+0800_7f4ee548`。
 - 直接编译原始 HDL：`2026-09-15_11-41-29_UTC+0800_8f3d1c77`。
 
-13 项观察完全一致。产物、日志、摘要分别位于 `runs/framework/master_enable_probe/`、
-`runs/logs/framework/master_enable_probe/`、`reports/framework/master_enable_probe/` 的编号目录。
+13 项观察完全一致。[预编译库记录](../../../evidence/axi_intc/master_enable/2026-09-15_11-41-11_UTC+0800_7f4ee548/)
+和[原始 HDL 对照](../../../evidence/axi_intc/master_enable/2026-09-15_11-41-29_UTC+0800_8f3d1c77/)
+均保留摘要和仿真日志。
 摘要保存配置、修订号、期望与实测值，以及 testbench、XCI 和源码的哈希。
 原始 HDL 对照的 xvhdl.log 和 xsim.ini 确认 IPIF、INTC 被编译到工程本地库。
-可提交的小证据包：[evidence/axi_intc/master_enable](../../../evidence/axi_intc/master_enable/README.md)。
+[完整证据包](../../../evidence/axi_intc/master_enable/README.md)还包含固定 VHDL、最终复核日志和 XCI 参数。
 
 ## 判断和疑点
 

@@ -1,12 +1,48 @@
 {
   "schema_version": 1,
   "issue": "fir_compiler.full_precision",
-  "selection_sha256": "9da77568d395ae338db79283551cf47d5735945284fb47c6788de14a572070c2",
+  "selection_sha256": "01f53ce28be94e6f4fc8460a3d32637a365e63f770621f8b91063f2f46ad97ad",
   "path_replacements": {
     "/home/dpc/vivado_ip_auto_test": "<REPOSITORY_ROOT>",
     "/data/Xilinx/2025.2": "<VIVADO_2025.2>"
   },
   "files": [
+    {
+      "path": "2026-09-15_14-55-59_UTC+0800_3afbed91/cmodel_summary.json",
+      "sha256": "e81cf1f8305b14de093a5b3fd13e5d2ab5daad2f3f4eaa22b490274d33c58ea8",
+      "bytes": 14948,
+      "source": "reports/framework/fir_cmodel_probe/2026-09-15_14-55-59_UTC+0800_3afbed91/summary.json",
+      "source_sha256": "4c4b3727b5389c206c8f63a75fff70149f23dce71371519e7ef78b098b952754",
+      "source_bytes": 15012,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-15_15-00-51_UTC+0800_e38d91c5/validation_summary.json",
+      "sha256": "9a6f1b16a46d9bb899b10de89b59dbfc526f3ef6a0ef8d57bcc9b95cd986c699",
+      "bytes": 1727,
+      "source": "reports/framework/fir_probe_validation/2026-09-15_15-00-51_UTC+0800_e38d91c5/summary.json",
+      "source_sha256": "946bd45d8bb46f85eeff91b18cdf6ecfc4fd5670f0434908999f77e40815744c",
+      "source_bytes": 1775,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-15_15-02-31_UTC+0800_8ce4942b/probe_audit_summary.json",
+      "sha256": "b348ea331f09d84c02467322d3fbb55891d3052a3fc69aa3c922c1043b88f3a9",
+      "bytes": 16504,
+      "source": "reports/framework/fir_probe_audit/2026-09-15_15-02-31_UTC+0800_8ce4942b/summary.json",
+      "source_sha256": "b348ea331f09d84c02467322d3fbb55891d3052a3fc69aa3c922c1043b88f3a9",
+      "source_bytes": 16504,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-15_15-33-13_UTC+0800_9144c772/closeout_audit_summary.json",
+      "sha256": "17fc26d4e58a6ebae8ddd1df82085d6cecc81e2abfc3485a8da5f42240cd5008",
+      "bytes": 2755,
+      "source": "reports/framework/fir_closeout_audit/2026-09-15_15-33-13_UTC+0800_9144c772/summary.json",
+      "source_sha256": "17fc26d4e58a6ebae8ddd1df82085d6cecc81e2abfc3485a8da5f42240cd5008",
+      "source_bytes": 2755,
+      "mode": "json"
+    },
     {
       "path": "2026-09-15_14-57-48_UTC+0800_ad593e51/summary.json",
       "sha256": "5a412014afe065dd02270da98809cb60162acaefa38d30c277556696df576370",

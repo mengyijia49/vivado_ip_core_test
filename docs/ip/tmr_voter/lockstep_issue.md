@@ -18,7 +18,7 @@ ERROR: [VRFC 10-9565] expression has 4 elements; formal 'compare' expects 1
 
 框架批次：`2026-09-15_00-45-00_UTC+0800_af5554c4`。
 配置：`voter_lockstep1`、`voter_lockstep_reg17`。
-日志：`runs/logs/batches/<批次>/tmr_voter/<配置>/sim_selfcheck.log`。
+[首次运行证据](../../../evidence/tmr_voter/lockstep/2026-09-15_00-45-00_UTC+0800_af5554c4/)包含失败摘要、报告、运行清单和日志。
 
 ## 独立复现
 
@@ -26,8 +26,8 @@ ERROR: [VRFC 10-9565] expression has 4 elements; formal 'compare' expects 1
 直接连接一位 Discrete 输入、输出和四位 Compare，不使用 Python 参考文件。
 编号 `2026-09-15_00-46-39_UTC+0800_5eeb6a01`，仍在同一厂商连接处报相同错误。
 该 VHDL 的 SHA-256：`ed9f5d3b79859bd9acaf42c7f608312bb4e44865e9de445e070c1ec6878d915b`。
-日志：`runs/logs/framework/lockstep_probe/<编号>/tmr_voter/simulate.log`。
-可提交的小证据包：[evidence/tmr_voter/lockstep](../../../evidence/tmr_voter/lockstep/README.md)。
+[独立复现证据](../../../evidence/tmr_voter/lockstep/2026-09-15_00-46-39_UTC+0800_5eeb6a01/)包含固定 VHDL、日志和 XCI 参数。
+[完整证据包](../../../evidence/tmr_voter/lockstep/README.md)。
 
 在仓库根目录复现，不覆盖旧文件：
 

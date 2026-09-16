@@ -7,6 +7,26 @@
   },
   "files": [
     {
+      "source": "reports/framework/fir_cmodel_probe/2026-09-15_14-55-59_UTC+0800_3afbed91/summary.json",
+      "target": "2026-09-15_14-55-59_UTC+0800_3afbed91/cmodel_summary.json",
+      "mode": "json"
+    },
+    {
+      "source": "reports/framework/fir_probe_validation/2026-09-15_15-00-51_UTC+0800_e38d91c5/summary.json",
+      "target": "2026-09-15_15-00-51_UTC+0800_e38d91c5/validation_summary.json",
+      "mode": "json"
+    },
+    {
+      "source": "reports/framework/fir_probe_audit/2026-09-15_15-02-31_UTC+0800_8ce4942b/summary.json",
+      "target": "2026-09-15_15-02-31_UTC+0800_8ce4942b/probe_audit_summary.json",
+      "mode": "json"
+    },
+    {
+      "source": "reports/framework/fir_closeout_audit/2026-09-15_15-33-13_UTC+0800_9144c772/summary.json",
+      "target": "2026-09-15_15-33-13_UTC+0800_9144c772/closeout_audit_summary.json",
+      "mode": "json"
+    },
+    {
       "source": "reports/framework/fir_full_precision_probe/2026-09-15_14-57-48_UTC+0800_ad593e51/summary.json",
       "target": "2026-09-15_14-57-48_UTC+0800_ad593e51/summary.json",
       "mode": "json"

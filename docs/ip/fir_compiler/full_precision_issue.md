@@ -51,13 +51,14 @@ TLAST 每四笔一次，不重置卷积历史。负系数测试继续收完 16 �
 
 更早的 14:45、14:46 两次 Systolic 测试也复现同样差异。
 14:57 至 14:59 使用补齐日志哈希的最终程序重跑六项，仍为四项数值失败、两项正常对照通过。
-报告位于 `reports/framework/fir_full_precision_probe/<批次>/summary.json`；
-工程和源码位于 `runs/framework/fir_full_precision_probe/<批次>/fir_compiler/`，
-日志位于 `runs/logs/framework/fir_full_precision_probe/<批次>/fir_compiler/`。
-可提交的小证据包：[evidence/fir_compiler/full_precision](../../../evidence/fir_compiler/full_precision/README.md)。
+[负系数独立复现](../../../evidence/fir_compiler/full_precision/2026-09-15_14-57-48_UTC+0800_ad593e51/)
+保留完整观察摘要、固定 VHDL、日志和 XCI 参数；
+[正系数对照](../../../evidence/fir_compiler/full_precision/2026-09-15_14-59-12_UTC+0800_d8713599/)
+和[C 模型对照](../../../evidence/fir_compiler/full_precision/2026-09-15_14-57-48_UTC+0800_349f332b/)也已归档。
+[完整证据包](../../../evidence/fir_compiler/full_precision/README.md)。
 
 厂商 C 模型 7.2.1 也跑了三组系数，每组比较自动位宽和足够位宽，共 96 个结果，均符合固定期望。
-首份成功记录为 `reports/framework/fir_cmodel_probe/2026-09-15_14-55-59_UTC+0800_3afbed91/summary.json`。
+首份成功记录见[C 模型对照报告](../../../evidence/fir_compiler/full_precision/2026-09-15_14-55-59_UTC+0800_3afbed91/cmodel_summary.json)。
 但自动模式仍报告 11/10 位，同时用 `double` 返回 1024/512；它没有提供对应的 AXI 位向量。
 所以这份对照只支持数学结果，不证明 C 模型的位宽声明正确，也不检查架构和握手。
 手动增大 C 模型的累加器位宽不是已经验证的 Vivado IP 修复办法。
@@ -88,14 +89,14 @@ FIR 尚未接入 `--ip-type` 常规流水线，目前使用以上专用命令。
 
 `py_compile` 通过；完整 unittest 共 663 项，其中 477 项通过、186 项真实集成测试默认跳过。
 检查包含 9472890 组可选参数的合法性和去重，耗时约 1246 秒，峰值内存约 12.24 GiB。
-记录：`reports/framework/fir_probe_validation/2026-09-15_15-00-51_UTC+0800_e38d91c5/summary.json`。
+记录见[验证摘要](../../../evidence/fir_compiler/full_precision/2026-09-15_15-00-51_UTC+0800_e38d91c5/validation_summary.json)。
 FIR 的四项真实数值失败由专用集成命令单独记录，不包含在上述通过数量中。
 
 默认批次 `2026-09-15_15-21-37_UTC+0800_4dfd8ebf` 的六组 IP、19 个阶段全通过。
 18 份输入、期望和实际输出与上一批一致，292 份源码、530 份归档文件哈希核对通过。
 完整检查后源码、测试和配置没有变化；收尾只补文档。
-记录：`reports/framework/fir_closeout_audit/2026-09-15_15-33-13_UTC+0800_9144c772/summary.json`。
+记录见[收尾审计](../../../evidence/fir_compiler/full_precision/2026-09-15_15-33-13_UTC+0800_9144c772/closeout_audit_summary.json)。
 
 14 次 VHDL 复现及两次 C 对照的已有哈希核对通过；生成的系数文件与请求值一致。
-记录：`reports/framework/fir_probe_audit/2026-09-15_15-02-31_UTC+0800_8ce4942b/summary.json`。
+记录见[复现审计](../../../evidence/fir_compiler/full_precision/2026-09-15_15-02-31_UTC+0800_8ce4942b/probe_audit_summary.json)。
 没有修改历史 Vivado 生成文件，没有把临时配置错误和编译告警计作 IP bug。

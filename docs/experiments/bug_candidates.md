@@ -22,8 +22,8 @@ INTC、浮点乘法和 FIR 的独立 VHDL 复现不依赖 Python 参考模型。
 
 ## 公开证据
 
-`runs/` 和 `reports/` 不提交到仓库。较小的公开证据包放在 `evidence/`，
-每个包都有来源、哈希和可读摘要：
+`runs/` 和 `reports/` 不整体提交。完整证据包放在 `evidence/`，
+包含支撑现有结论的首次运行、独立复现、报告、日志、输入输出和文件哈希：
 
 - [复数乘法器](../../evidence/complex_multiplier/latency/README.md)
 - [旧版 xlconcat](../../evidence/xlconcat/port_128/README.md)

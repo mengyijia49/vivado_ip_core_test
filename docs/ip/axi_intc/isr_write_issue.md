@@ -41,12 +41,13 @@ HIE=1 的检查只写合法的软件中断位，不尝试修改硬件中断位�
 | 直接编译附带 HDL | 2026-09-15_11-07-35_UTC+0800_50b362d1 | 相同四项差异 |
 | 预编译库重复检查 | 2026-09-15_11-07-58_UTC+0800_54e17d14 | 相同四项差异 |
 
-完整工程和快照在 `runs/framework/isr_write_probe/<编号>/axi_intc/`，
-日志在对应的 `runs/logs/framework/isr_write_probe/`，
-参数、原始读数、期望值及哈希在 `reports/framework/isr_write_probe/<编号>/summary.json`。
+[首次隔离](../../../evidence/axi_intc/isr_write/2026-09-15_11-05-17_UTC+0800_0d434122/)、
+[原始 HDL 对照](../../../evidence/axi_intc/isr_write/2026-09-15_11-07-35_UTC+0800_50b362d1/)和
+[预编译库重复检查](../../../evidence/axi_intc/isr_write/2026-09-15_11-07-58_UTC+0800_54e17d14/)
+均保留参数、原始读数、期望值、哈希和仿真日志。
 后两批的源码、脚本、testbench 和 XCI 哈希均已复核，14 项观察逐项一致。
 纯源工程的 `xvhdl.log` 和 `xsim.ini` 确认 INTC、AXI-Lite IPIF 都使用本次编译的本地库。
-可提交的小证据包：[evidence/axi_intc/isr_write](../../../evidence/axi_intc/isr_write/README.md)。
+[完整证据包](../../../evidence/axi_intc/isr_write/README.md)还包含固定 VHDL、最终复核日志和 XCI 参数。
 
 附带 HDL 的 ISR 更新使用写入值直接赋值，与实测一致；没有修改厂商文件。
 本机 change log 未找到该语义的修正说明，但这不能证明不存在官方已知问题记录。
@@ -57,7 +58,7 @@ HIE=1 的检查只写合法的软件中断位，不尝试修改硬件中断位�
 也是向 ISR 写入一个位掩码，没有先读回已有状态。
 据此推测，在前一个软件中断尚未确认时触发另一个，可能丢失前者。
 这里只核对了驱动源码，没有运行 CPU 软件或证明板上存在同样现象。
-源码检查记录为 `2026-09-15_11-10-40_UTC+0800_4c47298b`，位于 `reports/framework/intc_source_review/`。
+源码检查见[公开记录](../../../evidence/axi_intc/isr_write/2026-09-15_11-10-40_UTC+0800_4c47298b/source_review_summary.json)。
 
 下一步核查其他 Vivado 版本及官方说明，确认应修改 IP 实现还是手册。
 本机当前只有 Vivado 2025.2，尚未做跨版本对照。

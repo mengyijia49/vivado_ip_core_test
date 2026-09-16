@@ -15,9 +15,8 @@ VIVADO_INTEGRATION=1 PYTHONPATH=src:tests python3 -m unittest integration.ip.axi
 ```
 
 本次编号 `2026-09-15_04-14-59_UTC+0800_a1d65faf`。
-`runs/framework/register_probe/<编号>/axi_gpio/observations.json` 保存参数、观测值和 VHDL 哈希。
-完整命令、日志位于对应 `runs/logs/framework/register_probe/`。
-可提交的小证据包：[evidence/axi_gpio/registers](../../../evidence/axi_gpio/registers/README.md)。
+[独立复现证据](../../../evidence/axi_gpio/registers/2026-09-15_04-14-59_UTC+0800_a1d65faf/)保存参数、观测值、VHDL、日志和 XCI 参数。
+[完整证据包](../../../evidence/axi_gpio/registers/README.md)。
 测试通过只表示读写和正向对照正常、观察过程完成，不代表已证明下面的规范解释。
 
 ## 方向切换后的数据

@@ -1,12 +1,21 @@
 {
   "schema_version": 1,
   "issue": "floating_point.multiply_rounding",
-  "selection_sha256": "c082741e6ca1b00d7ae3cff2b055fb0dd1d060dc545effb424e13d3fdefc3449",
+  "selection_sha256": "9dc1ffeae5f2d5b794e5d56b920137d450b26e4ebf6ea5c558070322a6e7be7f",
   "path_replacements": {
     "/home/dpc/vivado_ip_auto_test": "<REPOSITORY_ROOT>",
     "/data/Xilinx/2025.2": "<VIVADO_2025.2>"
   },
   "files": [
+    {
+      "path": "2026-09-15_13-26-17_UTC+0800_209c333a/cmodel_summary.json",
+      "sha256": "9c4340729af724beb9cc04bdcbbef415a22df796583acac70d65ae9ec070d93b",
+      "bytes": 4353,
+      "source": "reports/framework/floating_multiply_cmodel/2026-09-15_13-26-17_UTC+0800_209c333a/summary.json",
+      "source_sha256": "9c4340729af724beb9cc04bdcbbef415a22df796583acac70d65ae9ec070d93b",
+      "source_bytes": 4353,
+      "mode": "json"
+    },
     {
       "path": "2026-09-15_12-54-17_UTC+0800_f23eb1d7/failure.json",
       "sha256": "6e889883dc6634b0c8a6d620edb0d95b064bbdd8522f262670e4ea8dfaf701ee",
