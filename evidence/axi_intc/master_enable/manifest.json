@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "issue": "axi_intc.master_enable",
+  "selection_sha256": "2a94df974646bb51be0573769ece60890dfa88d1c848f5d962a1a619e416cbed",
+  "path_replacements": {
+    "/home/dpc/vivado_ip_auto_test": "<REPOSITORY_ROOT>",
+    "/data/Xilinx/2025.2": "<VIVADO_2025.2>"
+  },
+  "files": [
+    {
+      "path": "2026-09-15_11-54-49_UTC+0800_a3a04739/summary.json",
+      "sha256": "c0ce58b8ff3dae64d71134af78a6877bb943f6f16e965280249d5c7c833f5bd0",
+      "bytes": 3099,
+      "source": "reports/framework/master_enable_probe/2026-09-15_11-54-49_UTC+0800_a3a04739/summary.json",
+      "source_sha256": "c0ce58b8ff3dae64d71134af78a6877bb943f6f16e965280249d5c7c833f5bd0",
+      "source_bytes": 3099,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-15_11-54-49_UTC+0800_a3a04739/tb_master_enable_probe.vhd",
+      "sha256": "f5e255e454e60b0277cccb40e4c4eeadbbbbd14ec269c2a0e6535025deeb4ec2",
+      "bytes": 5557,
+      "source": "tests/fixtures/ip/axi_intc/tb_master_enable_probe.vhd",
+      "source_sha256": "f5e255e454e60b0277cccb40e4c4eeadbbbbd14ec269c2a0e6535025deeb4ec2",
+      "source_bytes": 5557,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-15_11-54-49_UTC+0800_a3a04739/simulate.log",
+      "sha256": "84027943b6673adee2abec0a3f1810a5290ce005636fb922f190daed196c1df7",
+      "bytes": 30434,
+      "source": "runs/logs/framework/master_enable_probe/2026-09-15_11-54-49_UTC+0800_a3a04739/axi_intc/simulate.log",
+      "source_sha256": "a617250e4db0a3aa2d33bd0680d00b234291c9461952fd132c346fb6c8fe7cc5",
+      "source_bytes": 30986,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-15_11-54-49_UTC+0800_a3a04739/xci_metadata.json",
+      "sha256": "e4fed409efe753accac36979f9bd751ddaf1f51705da6fe8b76351a47959f6d9",
+      "bytes": 36759,
+      "source": "runs/framework/master_enable_probe/2026-09-15_11-54-49_UTC+0800_a3a04739/axi_intc/proj/ip_probe.srcs/sources_1/ip/probe_0/probe_0.xci",
+      "source_sha256": "e66b96d296f97f185460574fb302be3dd8731ebc701ef837dd5fb6e5bb0d3fec",
+      "source_bytes": 26916,
+      "mode": "xci_metadata"
+    }
+  ]
+}

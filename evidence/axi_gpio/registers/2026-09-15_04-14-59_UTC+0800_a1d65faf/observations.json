@@ -1,0 +1,52 @@
+{
+  "classification": "UNTRIAGED",
+  "completion_is_not_a_bug_confirmation": true,
+  "parameters": {
+    "CONFIG.C_IS_DUAL": "0",
+    "CONFIG.C_INTERRUPT_PRESENT": "0",
+    "CONFIG.C_GPIO_WIDTH": "8",
+    "CONFIG.C_ALL_INPUTS": "0",
+    "CONFIG.C_ALL_OUTPUTS": "0",
+    "CONFIG.C_DOUT_DEFAULT": "0x00000000",
+    "CONFIG.C_TRI_DEFAULT": "0x000000FF"
+  },
+  "fixture_sha256": "4c47bff6d6dea79a76cbb33017d855abf1417b54f89a4338abf709193c411e3e",
+  "observations": {
+    "initial_tri": {
+      "read": 255,
+      "pins": 0,
+      "tri": 255
+    },
+    "disabled_channel_tri": {
+      "read": 4294967295,
+      "pins": 0,
+      "tri": 255
+    },
+    "output_read_control": {
+      "read": 165,
+      "pins": 165,
+      "tri": 0
+    },
+    "input_read_control": {
+      "read": 0,
+      "pins": 60,
+      "tri": 255
+    },
+    "after_input_write": {
+      "read": 60,
+      "pins": 60,
+      "tri": 0
+    },
+    "disabled_irq_read": {
+      "read": 165,
+      "pins": 165,
+      "tri": 0
+    },
+    "after_disabled_irq_write": {
+      "read": 165,
+      "pins": 165,
+      "tri": 0
+    }
+  },
+  "returncode": 0
+}

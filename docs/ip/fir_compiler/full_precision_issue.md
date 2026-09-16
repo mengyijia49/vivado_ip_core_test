@@ -54,6 +54,7 @@ TLAST 每四笔一次，不重置卷积历史。负系数测试继续收完 16 �
 报告位于 `reports/framework/fir_full_precision_probe/<批次>/summary.json`；
 工程和源码位于 `runs/framework/fir_full_precision_probe/<批次>/fir_compiler/`，
 日志位于 `runs/logs/framework/fir_full_precision_probe/<批次>/fir_compiler/`。
+可提交的小证据包：[evidence/fir_compiler/full_precision](../../../evidence/fir_compiler/full_precision/README.md)。
 
 厂商 C 模型 7.2.1 也跑了三组系数，每组比较自动位宽和足够位宽，共 96 个结果，均符合固定期望。
 首份成功记录为 `reports/framework/fir_cmodel_probe/2026-09-15_14-55-59_UTC+0800_3afbed91/summary.json`。

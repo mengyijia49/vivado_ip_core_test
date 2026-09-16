@@ -30,6 +30,7 @@ Failure: CMPY_LATENCY_PROBE: FAIL cycle=80 expected=00000000 actual=00000001
 
 日志：`runs/logs/framework/latency_probe/<编号>/complex_multiplier/simulate.log`。
 testbench：[tb_latency_55_probe.vhd](../../../tests/fixtures/ip/complex_multiplier/tb_latency_55_probe.vhd)。
+可提交的小证据包：[evidence/complex_multiplier/latency](../../../evidence/complex_multiplier/latency/README.md)。
 
 在仓库根目录重现，不覆盖旧目录：
 

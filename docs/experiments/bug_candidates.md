@@ -20,6 +20,21 @@ INTC、浮点乘法和 FIR 的独立 VHDL 复现不依赖 Python 参考模型。
 同一问题在多个位宽、延迟或种子下触发，只扩大影响范围，不增加 bug 数量。
 本机复现也不能证明问题首次发现、尚未修复，或硬件实现必然有同样缺陷。
 
+## 公开证据
+
+`runs/` 和 `reports/` 不提交到仓库。较小的公开证据包放在 `evidence/`，
+每个包都有来源、哈希和可读摘要：
+
+- [复数乘法器](../../evidence/complex_multiplier/latency/README.md)
+- [旧版 xlconcat](../../evidence/xlconcat/port_128/README.md)
+- [TMR 投票器](../../evidence/tmr_voter/lockstep/README.md)
+- [AXI GPIO](../../evidence/axi_gpio/registers/README.md)
+- [AXI INTC ISR](../../evidence/axi_intc/isr_write/README.md)
+- [AXI INTC ME](../../evidence/axi_intc/master_enable/README.md)
+- [浮点乘法](../../evidence/floating_point/multiply_rounding/README.md)
+- [FIR 全精度](../../evidence/fir_compiler/full_precision/README.md)
+- [累加器](../../evidence/accumulator/ce_bypass/README.md)
+
 ## 不计入的情况
 
 - Timer 捕获回绕脉冲的遗漏是 Python 参考模型错误，已修复。

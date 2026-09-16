@@ -37,6 +37,7 @@ VIVADO_INTEGRATION=1 PYTHONPATH=src:tests python3 -m unittest \
 参数、独立 testbench 哈希和逐次观察保存在：
 `runs/framework/port_boundary_probe/<编号>/<IP>/n<路数>/observations.json`。
 日志在对应 `runs/logs/framework/port_boundary_probe/`。
+可提交的小证据包：[evidence/xlconcat/port_128](../../../evidence/xlconcat/port_128/README.md)。
 
 ## 当前判断
 

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "issue": "axi_intc.master_enable",
+  "path_replacements": {
+    "/home/dpc/vivado_ip_auto_test": "<REPOSITORY_ROOT>",
+    "/data/Xilinx/2025.2": "<VIVADO_2025.2>"
+  },
+  "files": [
+    {
+      "source": "reports/framework/master_enable_probe/2026-09-15_11-54-49_UTC+0800_a3a04739/summary.json",
+      "target": "2026-09-15_11-54-49_UTC+0800_a3a04739/summary.json",
+      "mode": "json"
+    },
+    {
+      "source": "tests/fixtures/ip/axi_intc/tb_master_enable_probe.vhd",
+      "target": "2026-09-15_11-54-49_UTC+0800_a3a04739/tb_master_enable_probe.vhd",
+      "mode": "text"
+    },
+    {
+      "source": "runs/logs/framework/master_enable_probe/2026-09-15_11-54-49_UTC+0800_a3a04739/axi_intc/simulate.log",
+      "target": "2026-09-15_11-54-49_UTC+0800_a3a04739/simulate.log",
+      "mode": "text"
+    },
+    {
+      "source": "runs/framework/master_enable_probe/2026-09-15_11-54-49_UTC+0800_a3a04739/axi_intc/proj/ip_probe.srcs/sources_1/ip/probe_0/probe_0.xci",
+      "target": "2026-09-15_11-54-49_UTC+0800_a3a04739/xci_metadata.json",
+      "mode": "xci_metadata"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "issue": "floating_point.multiply_rounding",
+  "selection_sha256": "9c7aa7ccbc19fbf8e7028e07c7d45cae7d132ba7a7954af933dbe4c38684c371",
+  "path_replacements": {
+    "/home/dpc/vivado_ip_auto_test": "<REPOSITORY_ROOT>",
+    "/data/Xilinx/2025.2": "<VIVADO_2025.2>"
+  },
+  "files": [
+    {
+      "path": "2026-09-15_13-03-11_UTC+0800_ceadf6b0/summary.json",
+      "sha256": "258a9224e2618e47fca6af4aa8bbac038e5d896b82d7e8d1778128f99fe01618",
+      "bytes": 46257,
+      "source": "reports/framework/floating_multiply_probe/2026-09-15_13-03-11_UTC+0800_ceadf6b0/summary.json",
+      "source_sha256": "258a9224e2618e47fca6af4aa8bbac038e5d896b82d7e8d1778128f99fe01618",
+      "source_bytes": 46257,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-15_13-03-35_UTC+0800_747a3c9e/speed_optimized_summary.json",
+      "sha256": "0c292be3e7410911e9789d37fc28ee11a8f4a474de3fee0d6bcac6f1f34238ef",
+      "bytes": 45458,
+      "source": "reports/framework/floating_multiply_probe/2026-09-15_13-03-35_UTC+0800_747a3c9e/summary.json",
+      "source_sha256": "0c292be3e7410911e9789d37fc28ee11a8f4a474de3fee0d6bcac6f1f34238ef",
+      "source_bytes": 45458,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-15_13-03-11_UTC+0800_ceadf6b0/multiply_rounding_probe.vhd",
+      "sha256": "37b2e2895e3c43987d416bcae7fe3d67b1d462aa75aab24d9bced0b2886777bf",
+      "bytes": 4981,
+      "source": "tests/fixtures/ip/floating_point/arithmetic/multiply_rounding_probe.vhd",
+      "source_sha256": "37b2e2895e3c43987d416bcae7fe3d67b1d462aa75aab24d9bced0b2886777bf",
+      "source_bytes": 4981,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-15_13-03-11_UTC+0800_ceadf6b0/simulate.log",
+      "sha256": "2d2b8e2c757172dad5ab47df5d4108d8c4473050812e153afba701fd36866128",
+      "bytes": 42144,
+      "source": "runs/logs/framework/floating_multiply_probe/2026-09-15_13-03-11_UTC+0800_ceadf6b0/floating_point/simulate.log",
+      "source_sha256": "b55c438332aea89e200e756edf8466f7dca31874d997f359ab2a2af55e9711a0",
+      "source_bytes": 42740,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-15_13-03-11_UTC+0800_ceadf6b0/xci_metadata.json",
+      "sha256": "eda8a10b07d9167e550d1f08ef29d15676d891da5497c1fea085ba44b2544ac5",
+      "bytes": 41211,
+      "source": "runs/framework/floating_multiply_probe/2026-09-15_13-03-11_UTC+0800_ceadf6b0/floating_point/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci",
+      "source_sha256": "c988e8a0deef4bfaab12fce741b0c4910d4618fcb10ee6e3324bd30be51c8fa1",
+      "source_bytes": 26973,
+      "mode": "xci_metadata"
+    }
+  ]
+}

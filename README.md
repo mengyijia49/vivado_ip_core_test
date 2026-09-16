@@ -45,6 +45,7 @@ python3 scripts/run_all.py --config configs/extended_discovery.json --ip-type co
 同一参数、输入和时序不必反复测试。分批运行或重现异常时再用历史记录，
 方法见 [复现和续跑](docs/reproducibility.md)。
 已有异常的复现证据和剩余疑点见[待确认问题](docs/experiments/bug_candidates.md)。
+可提交到 GitHub 的小证据包见[公开证据](evidence/README.md)。
 其中 INTC 已接入寄存器、中断状态和握手自检，ISR 与 ME 的异常另有独立复现。
 `--all` 会保留已接入 IP 的失败结果，不会自动跳过或改成 PASS。
 

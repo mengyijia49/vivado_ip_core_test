@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "issue": "tmr_voter.lockstep",
+  "selection_sha256": "ebb0417ba5975d106a53a77723881517bec10dc5a2ff6719cea71c1c90141f16",
+  "path_replacements": {
+    "/home/dpc/vivado_ip_auto_test": "<REPOSITORY_ROOT>",
+    "/data/Xilinx/2025.2": "<VIVADO_2025.2>"
+  },
+  "files": [
+    {
+      "path": "2026-09-15_00-46-39_UTC+0800_5eeb6a01/tb_lockstep_probe.vhd",
+      "sha256": "ed9f5d3b79859bd9acaf42c7f608312bb4e44865e9de445e070c1ec6878d915b",
+      "bytes": 617,
+      "source": "tests/fixtures/ip/tmr_voter/tb_lockstep_probe.vhd",
+      "source_sha256": "ed9f5d3b79859bd9acaf42c7f608312bb4e44865e9de445e070c1ec6878d915b",
+      "source_bytes": 617,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-15_00-46-39_UTC+0800_5eeb6a01/simulate.log",
+      "sha256": "b664ac5a2e15a330c144670f222cbe04a9f7ff68f88e38d346538a90f73a3174",
+      "bytes": 19274,
+      "source": "runs/logs/framework/lockstep_probe/2026-09-15_00-46-39_UTC+0800_5eeb6a01/tmr_voter/simulate.log",
+      "source_sha256": "e3903202785a69a7360a230a101d6b940215f2e088d99532e38f5a93e3b93986",
+      "source_bytes": 19630,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-15_00-46-39_UTC+0800_5eeb6a01/xci_metadata.json",
+      "sha256": "1d77140d3b22cfae6856ffd045dc1959278324551a273a6485c8870106dd39e9",
+      "bytes": 17916,
+      "source": "runs/framework/lockstep_probe/2026-09-15_00-46-39_UTC+0800_5eeb6a01/tmr_voter/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci",
+      "source_sha256": "6ded60c8c9b107c1a55ffebe9b13b08d8566ebdea9a2ef75ff6a74729c9f8669",
+      "source_bytes": 11902,
+      "mode": "xci_metadata"
+    }
+  ]
+}

@@ -32,6 +32,7 @@ python3 scripts/run_all.py --all --case acc_signed_control
 - 报告：`reports/history/<run_id>/report.csv`。
 - 证据：`runs/history/<run_id>/cases/accumulator/acc_signed_control/`。
 - 日志：`runs/logs/history/<run_id>/accumulator/acc_signed_control/sim_selfcheck/`。
+- 可提交的小证据包：[evidence/accumulator/ce_bypass](../../../evidence/accumulator/ce_bypass/README.md)。
 
 归档中有 XCI、源码、testbench、完整输入、期望值、实际输出及 `failure.json`。
 下一步应核对厂商对 BYPASS/CE 优先级的说明，再用另一版本 Vivado 的行为模型对照。

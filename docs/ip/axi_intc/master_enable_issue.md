@@ -48,6 +48,7 @@ VIVADO_INTEGRATION=1 PYTHONPATH=src python3 -m unittest discover \
 `runs/logs/framework/master_enable_probe/`、`reports/framework/master_enable_probe/` 的编号目录。
 摘要保存配置、修订号、期望与实测值，以及 testbench、XCI 和源码的哈希。
 原始 HDL 对照的 xvhdl.log 和 xsim.ini 确认 IPIF、INTC 被编译到工程本地库。
+可提交的小证据包：[evidence/axi_intc/master_enable](../../../evidence/axi_intc/master_enable/README.md)。
 
 ## 判断和疑点
 

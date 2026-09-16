@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "issue": "complex_multiplier.latency",
+  "selection_sha256": "cc85c284a9606e7d1dbe6b2b3fe82764d70d43f1475a1eb58fb9d39719938f3d",
+  "path_replacements": {
+    "/home/dpc/vivado_ip_auto_test": "<REPOSITORY_ROOT>",
+    "/data/Xilinx/2025.2": "<VIVADO_2025.2>"
+  },
+  "files": [
+    {
+      "path": "2026-09-15_00-15-45_UTC+0800_b0ac4b41/tb_latency_55_probe.vhd",
+      "sha256": "d62b5c8ad9cd400b76eaed4d385bf255ea25762e92752190e4c814e4ad1186bf",
+      "bytes": 1544,
+      "source": "tests/fixtures/ip/complex_multiplier/tb_latency_55_probe.vhd",
+      "source_sha256": "d62b5c8ad9cd400b76eaed4d385bf255ea25762e92752190e4c814e4ad1186bf",
+      "source_bytes": 1544,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-15_00-15-45_UTC+0800_b0ac4b41/simulate.log",
+      "sha256": "f6d76e111e20033ef9ed2ab35ed3c872db6d744556784963cb08427987612018",
+      "bytes": 24201,
+      "source": "runs/logs/framework/latency_probe/2026-09-15_00-15-45_UTC+0800_b0ac4b41/complex_multiplier/simulate.log",
+      "source_sha256": "d3ac5565acb6c4029278bb5dbac4756f850f7903eddd4651fd83a7dcca16dd3b",
+      "source_bytes": 24605,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-15_00-15-45_UTC+0800_b0ac4b41/xci_metadata.json",
+      "sha256": "eae73403092d77b50672d217b0356337ed718d4582aec4d8e28d9a779096e1cb",
+      "bytes": 28420,
+      "source": "runs/framework/latency_probe/2026-09-15_00-15-45_UTC+0800_b0ac4b41/complex_multiplier/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci",
+      "source_sha256": "e67378ed39e080a5d144065f8b8ae28e8e8f0232bb2d62c1e4f2cefdb0c0138c",
+      "source_bytes": 18580,
+      "mode": "xci_metadata"
+    }
+  ]
+}

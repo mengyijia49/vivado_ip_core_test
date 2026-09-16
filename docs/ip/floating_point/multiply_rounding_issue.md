@@ -42,6 +42,7 @@ VHDL 不调用 Python 数值模型，并在边沿采样后才等待计数信号�
 各批的 `reports/framework/floating_multiply_probe/<批次>/summary.json` 保存全部观察、
 实际 XCI 参数及哈希；工程和源码位于 `runs/framework/floating_multiply_probe/<批次>/floating_point/`，
 日志位于 `runs/logs/framework/floating_multiply_probe/<批次>/floating_point/`。
+可提交的小证据包：[evidence/floating_point/multiply_rounding](../../../evidence/floating_point/multiply_rounding/README.md)。
 
 厂商随安装提供的 C 数值模型也做了对照：`xip_fpo_mul_d` 对同样 16 例的结果和异常位
 全部符合期望。记录为 `reports/framework/floating_multiply_cmodel/2026-09-15_13-26-17_UTC+0800_209c333a/summary.json`。

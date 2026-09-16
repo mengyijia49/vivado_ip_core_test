@@ -46,6 +46,7 @@ HIE=1 的检查只写合法的软件中断位，不尝试修改硬件中断位�
 参数、原始读数、期望值及哈希在 `reports/framework/isr_write_probe/<编号>/summary.json`。
 后两批的源码、脚本、testbench 和 XCI 哈希均已复核，14 项观察逐项一致。
 纯源工程的 `xvhdl.log` 和 `xsim.ini` 确认 INTC、AXI-Lite IPIF 都使用本次编译的本地库。
+可提交的小证据包：[evidence/axi_intc/isr_write](../../../evidence/axi_intc/isr_write/README.md)。
 
 附带 HDL 的 ISR 更新使用写入值直接赋值，与实测一致；没有修改厂商文件。
 本机 change log 未找到该语义的修正说明，但这不能证明不存在官方已知问题记录。

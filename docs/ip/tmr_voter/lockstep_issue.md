@@ -27,6 +27,7 @@ ERROR: [VRFC 10-9565] expression has 4 elements; formal 'compare' expects 1
 编号 `2026-09-15_00-46-39_UTC+0800_5eeb6a01`，仍在同一厂商连接处报相同错误。
 该 VHDL 的 SHA-256：`ed9f5d3b79859bd9acaf42c7f608312bb4e44865e9de445e070c1ec6878d915b`。
 日志：`runs/logs/framework/lockstep_probe/<编号>/tmr_voter/simulate.log`。
+可提交的小证据包：[evidence/tmr_voter/lockstep](../../../evidence/tmr_voter/lockstep/README.md)。
 
 在仓库根目录复现，不覆盖旧文件：
 
