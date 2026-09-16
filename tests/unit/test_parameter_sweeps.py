@@ -1,5 +1,7 @@
 from copy import deepcopy
 from collections import Counter
+from math import prod
+import os
 from pathlib import Path
 import tempfile
 import json
@@ -88,6 +90,55 @@ class SweepTests(unittest.TestCase):
             with self.assertRaisesRegex(ConfigError, "只能选择"):
                 load_test_cases(path)
 
+    def test_shipped_regression_matrix_validates_without_vivado(self):
+        root = Path(__file__).resolve().parents[2]
+        registry = create_plugin_registry(RepositoryLayout(root), create_default_strategy_registry())
+        regression = load_test_cases(root / "configs/extended_regression.json")
+        counts = Counter()
+        with UniqueKeys() as parameters:
+            for case in regression:
+                with self.subTest(case=case.case_id):
+                    self.assertTrue(parameters.add(json.dumps(
+                        [case.ip_type, dict(case.parameters)], sort_keys=True)))
+                    registry.resolve(case.ip_type).validate_case(case)
+                counts[case.ip_type] += 1
+        self.assertEqual(len(counts), 36)
+        self.assertEqual(len(regression), 323)
+        self.assertEqual(sum(len(case.stages) for case in regression), 970)
+
+    def test_extended_discovery_entry_has_expected_static_size(self):
+        root = Path(__file__).resolve().parents[2]
+        entry = root / "configs/extended_discovery.json"
+
+        def count(path, ancestors=()):
+            path = path.resolve()
+            self.assertNotIn(path, ancestors)
+            raw = json.loads(path.read_text())
+            self.assertEqual(raw.get("schema_version"), 2)
+            formats = [name for name in ("cases", "includes", "sweeps") if name in raw]
+            self.assertEqual(len(formats), 1)
+            if "includes" in raw:
+                total = sum(count(path.parent / child, (*ancestors, path))
+                            for child in raw["includes"])
+            elif "cases" in raw:
+                total = len(raw["cases"])
+            else:
+                total = sum(prod(len(values) for values in sweep["axes"].values())
+                            for sweep in raw["sweeps"])
+            exploration = raw.get("exploration")
+            if exploration:
+                total *= len(exploration["seeds"]) * len(exploration["timing_modes"])
+            return total
+
+        raw_entry = json.loads(entry.read_text())
+        self.assertEqual(len(raw_entry["includes"]), 36)
+        self.assertEqual(len(set(raw_entry["includes"])), 36)
+        self.assertEqual(count(entry), 9472890)
+
+    @unittest.skipUnless(
+        os.environ.get("VIVADO_FULL_MATRIX_AUDIT") == "1",
+        "九百多万配置的完整审计需显式设置 VIVADO_FULL_MATRIX_AUDIT=1",
+    )
     def test_all_shipped_matrices_validate_without_vivado(self):
         root = Path(__file__).resolve().parents[2]
         registry = create_plugin_registry(RepositoryLayout(root), create_default_strategy_registry())
@@ -101,9 +152,6 @@ class SweepTests(unittest.TestCase):
                 counts[case.ip_type] += 1
         self.assertEqual(len(counts), 36)
         self.assertEqual(sum(counts.values()), 9472890)
-        regression = load_test_cases(root / "configs/extended_regression.json")
-        self.assertEqual(len(regression), 323)
-        self.assertEqual(sum(len(case.stages) for case in regression), 970)
 
     def test_arithmetic_matrix_budgets_cover_directed_inputs_without_generating_random_data(self):
         root = Path(__file__).resolve().parents[2]

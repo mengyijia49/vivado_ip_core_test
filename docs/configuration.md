@@ -88,6 +88,15 @@
 大矩阵仍建议用 `--config` 指向某个 IP 的叶文件，减少扫描时间。
 不设置 `--limit` 时，所有待执行配置仍会保留；它不是无限内存的全量运行方式。
 
+普通单元测试会完整校验 323 组常用回归，并快速核对大矩阵入口、36 类 IP 和静态展开数量。
+逐项校验大矩阵的 9472890 组参数耗时长、占用内存高，不放在每次 GitHub Actions 中运行。
+需要完整审计时使用：
+
+```bash
+VIVADO_FULL_MATRIX_AUDIT=1 PYTHONPATH=src python3 -m unittest \
+  unit.test_parameter_sweeps.SweepTests.test_all_shipped_matrices_validate_without_vivado -v
+```
+
 超过 8192 个名称后，去重使用临时 SQLite 索引，比较完整名称，不使用概率过滤器。
 临时索引位于系统临时目录，目录名含时间，正常结束、校验失败和可处理的中断都会删除。
 它不作为运行证据，也不会在下次加载时复用；磁盘空间不足按配置错误退出。
