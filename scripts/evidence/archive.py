@@ -194,7 +194,7 @@ def verify(root, originals=False):
         if actual != expected:
             raise ValueError(f"SHA256SUMS does not cover the package: {base}")
         public = {str(p.relative_to(base)) for p in base.rglob("*") if p.is_file()}
-        if public != set(expected) | {"README.md", "SHA256SUMS"}:
+        if public != set(expected) | {"SHA256SUMS"}:
             raise ValueError(f"Unlisted or missing evidence file: {base}")
         issue_count += 1
     print(f"Verified {issue_count} issues, {file_count} evidence files, {total_bytes} bytes."

@@ -49,7 +49,6 @@ VIVADO_INTEGRATION=1 PYTHONPATH=src python3 -m unittest discover \
 均保留摘要和仿真日志。
 摘要保存配置、修订号、期望与实测值，以及 testbench、XCI 和源码的哈希。
 原始 HDL 对照的 xvhdl.log 和 xsim.ini 确认 IPIF、INTC 被编译到工程本地库。
-[完整证据包](../../../evidence/axi_intc/master_enable/README.md)还包含固定 VHDL、最终复核日志和 XCI 参数。
 
 ## 判断和疑点
 

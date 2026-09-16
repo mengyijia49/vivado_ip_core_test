@@ -22,18 +22,18 @@ INTC、浮点乘法和 FIR 的独立 VHDL 复现不依赖 Python 参考模型。
 
 ## 公开证据
 
-`runs/` 和 `reports/` 不整体提交。完整证据包放在 `evidence/`，
+`runs/` 和 `reports/` 不整体提交。公开证据放在 `evidence/`，
 包含支撑现有结论的首次运行、独立复现、报告、日志、输入输出和文件哈希：
 
-- [复数乘法器](../../evidence/complex_multiplier/latency/README.md)
-- [旧版 xlconcat](../../evidence/xlconcat/port_128/README.md)
-- [TMR 投票器](../../evidence/tmr_voter/lockstep/README.md)
-- [AXI GPIO](../../evidence/axi_gpio/registers/README.md)
-- [AXI INTC ISR](../../evidence/axi_intc/isr_write/README.md)
-- [AXI INTC ME](../../evidence/axi_intc/master_enable/README.md)
-- [浮点乘法](../../evidence/floating_point/multiply_rounding/README.md)
-- [FIR 全精度](../../evidence/fir_compiler/full_precision/README.md)
-- [累加器](../../evidence/accumulator/ce_bypass/README.md)
+- [复数乘法器](../../evidence/complex_multiplier/latency/)
+- [旧版 xlconcat](../../evidence/xlconcat/port_128/)
+- [TMR 投票器](../../evidence/tmr_voter/lockstep/)
+- [AXI GPIO](../../evidence/axi_gpio/registers/)
+- [AXI INTC ISR](../../evidence/axi_intc/isr_write/)
+- [AXI INTC ME](../../evidence/axi_intc/master_enable/)
+- [浮点乘法](../../evidence/floating_point/multiply_rounding/)
+- [FIR 全精度](../../evidence/fir_compiler/full_precision/)
+- [累加器](../../evidence/accumulator/ce_bypass/)
 
 ## 不计入的情况
 

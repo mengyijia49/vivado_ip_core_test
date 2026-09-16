@@ -30,7 +30,6 @@ Failure: CMPY_LATENCY_PROBE: FAIL cycle=80 expected=00000000 actual=00000001
 
 [首次运行](../../../evidence/complex_multiplier/latency/2026-09-15_00-10-17_UTC+0800_10049d3a/)保留失败摘要、输入、期望、实际输出、报告和日志。
 [独立复现](../../../evidence/complex_multiplier/latency/2026-09-15_00-15-45_UTC+0800_b0ac4b41/)保留 testbench、日志和 XCI 参数。
-[完整证据包](../../../evidence/complex_multiplier/latency/README.md)。
 
 在仓库根目录重现，不覆盖旧目录：
 

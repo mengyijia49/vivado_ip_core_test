@@ -37,7 +37,6 @@ VIVADO_INTEGRATION=1 PYTHONPATH=src:tests python3 -m unittest \
 [首次运行](../../../evidence/xlconcat/port_128/2026-09-15_04-59-48_UTC+0800_453f0aae/)保留两组失败摘要、报告和日志。
 [独立复现](../../../evidence/xlconcat/port_128/2026-09-15_05-11-31_UTC+0800_32ec8e45/)保留逐次观察、testbench、日志和 XCI 参数。
 [127 路对照](../../../evidence/xlconcat/port_128/2026-09-15_05-13-44_UTC+0800_ba9f6aed/)保留正常观察结果。
-[完整证据包](../../../evidence/xlconcat/port_128/README.md)。
 
 ## 当前判断
 

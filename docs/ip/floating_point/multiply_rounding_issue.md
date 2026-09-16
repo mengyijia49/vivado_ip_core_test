@@ -43,7 +43,6 @@ VHDL 不调用 Python 数值模型，并在边沿采样后才等待计数信号�
 [低延迟独立复现](../../../evidence/floating_point/multiply_rounding/2026-09-15_13-03-11_UTC+0800_ceadf6b0/)和
 [速度优化对照](../../../evidence/floating_point/multiply_rounding/2026-09-15_13-03-35_UTC+0800_747a3c9e/)
 保留观察摘要、固定 VHDL、日志和 XCI 参数。
-[完整证据包](../../../evidence/floating_point/multiply_rounding/README.md)。
 
 厂商随安装提供的 C 数值模型也做了对照：`xip_fpo_mul_d` 对同样 16 例的结果和异常位
 全部符合期望。结果见[C 模型对照报告](../../../evidence/floating_point/multiply_rounding/2026-09-15_13-26-17_UTC+0800_209c333a/cmodel_summary.json)。

@@ -29,7 +29,6 @@ python3 scripts/run_all.py --all --case acc_signed_control
 
 - [首次运行](../../../evidence/accumulator/ce_bypass/2026-09-14_21-52-45_UTC+0800_49f75f89/)：失败摘要、报告行、实际输出、运行清单和日志。
 - [两周期复现](../../../evidence/accumulator/ce_bypass/2026-09-14_22-02-51_UTC+0800_04f9f225/)：输入、期望、实际输出、testbench、报告、日志和 XCI 参数。
-- [完整证据包](../../../evidence/accumulator/ce_bypass/README.md)。
 
 归档中有 XCI、源码、testbench、完整输入、期望值、实际输出及 `failure.json`。
 下一步应核对厂商对 BYPASS/CE 优先级的说明，再用另一版本 Vivado 的行为模型对照。
