@@ -1,12 +1,66 @@
 {
   "schema_version": 1,
   "issue": "axi_intc.isr_write",
-  "selection_sha256": "38bf39734e0b750d4f2d53669b7b95009a264d650e5dcdc743748799a83051ac",
+  "selection_sha256": "d37b1839ea0ee0f2aafe3522d19ee081611ead9ac774b4ada9785a94c35adbe6",
   "path_replacements": {
     "/home/dpc/vivado_ip_auto_test": "<REPOSITORY_ROOT>",
     "/data/Xilinx/2025.2": "<VIVADO_2025.2>"
   },
   "files": [
+    {
+      "path": "2026-09-15_11-05-17_UTC+0800_0d434122/summary.json",
+      "sha256": "1a34ec48bf14c7a0d1a2d32d1124f68081407cbdbd001b27f79f0f09b638e4f9",
+      "bytes": 2175,
+      "source": "reports/framework/isr_write_probe/2026-09-15_11-05-17_UTC+0800_0d434122/summary.json",
+      "source_sha256": "1a34ec48bf14c7a0d1a2d32d1124f68081407cbdbd001b27f79f0f09b638e4f9",
+      "source_bytes": 2175,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-15_11-05-17_UTC+0800_0d434122/simulate.log",
+      "sha256": "51fec16517c5eaff6aa4d004312151943c37475b69433684129a228707001ffd",
+      "bytes": 34167,
+      "source": "runs/logs/framework/isr_write_probe/2026-09-15_11-05-17_UTC+0800_0d434122/axi_intc/simulate.log",
+      "source_sha256": "fa3eaabfde7498c1da77439c903505a558849d43f3b562f0a16203fc1bbd461c",
+      "source_bytes": 34991,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-15_11-07-35_UTC+0800_50b362d1/summary.json",
+      "sha256": "267eb13e2ec1348f052feab5dc001b5ccf94ae1fcb1efc34452c7b1c48a48910",
+      "bytes": 2952,
+      "source": "reports/framework/isr_write_probe/2026-09-15_11-07-35_UTC+0800_50b362d1/summary.json",
+      "source_sha256": "267eb13e2ec1348f052feab5dc001b5ccf94ae1fcb1efc34452c7b1c48a48910",
+      "source_bytes": 2952,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-15_11-07-35_UTC+0800_50b362d1/simulate.log",
+      "sha256": "0d9589783b646c84ea21f3923d6868a5c3ce297fcbb8c521cf53645048f2021b",
+      "bytes": 34619,
+      "source": "runs/logs/framework/isr_write_probe/2026-09-15_11-07-35_UTC+0800_50b362d1/axi_intc/simulate.log",
+      "source_sha256": "ff3a4de627e9d2e700e22010864bd3578aed084a8cd6d61192174004f348b98d",
+      "source_bytes": 35459,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-15_11-07-58_UTC+0800_54e17d14/summary.json",
+      "sha256": "c4edbc95add14eef847f4ac80d4edd8497da402e0c16458fc743e6ae8e1eb7fa",
+      "bytes": 2953,
+      "source": "reports/framework/isr_write_probe/2026-09-15_11-07-58_UTC+0800_54e17d14/summary.json",
+      "source_sha256": "c4edbc95add14eef847f4ac80d4edd8497da402e0c16458fc743e6ae8e1eb7fa",
+      "source_bytes": 2953,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-15_11-07-58_UTC+0800_54e17d14/simulate.log",
+      "sha256": "ca620a245a17d4cd84cae4e64a0d96dff4cf7bb48b9083e2f5d009c314d00d59",
+      "bytes": 34331,
+      "source": "runs/logs/framework/isr_write_probe/2026-09-15_11-07-58_UTC+0800_54e17d14/axi_intc/simulate.log",
+      "source_sha256": "9aef543ab41366c86b642e04e24aaaffe3bf3c1b4019a8ffa4ddc339aac1834b",
+      "source_bytes": 35155,
+      "mode": "text"
+    },
     {
       "path": "2026-09-15_11-53-50_UTC+0800_b4122164/summary.json",
       "sha256": "ec32cdb332e401989bd972bf5ba56acb21484667983b3245ebb4ce1fef0a1bb4",

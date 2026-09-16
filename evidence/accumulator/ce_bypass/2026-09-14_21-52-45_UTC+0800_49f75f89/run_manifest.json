@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "case_id": "acc_signed_control",
+  "ip_type": "accumulator",
+  "vendor": "xilinx.com",
+  "ip_name": "c_accum",
+  "configured_parameters": {
+    "input_width": 8,
+    "output_width": 16,
+    "input_type": "Signed",
+    "operation": "Add_Subtract",
+    "clock_enable": true,
+    "sync_clear": true,
+    "ce_overrides_reset": false,
+    "bypass": true
+  },
+  "verification": {
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": 2026,
+    "case_budget": 512,
+    "coverage_targets": [
+      "port_boundaries"
+    ],
+    "boundary_mode": "basic",
+    "timing_mode": "continuous",
+    "max_gap_cycles": 8,
+    "burst_length": 16,
+    "input_order": "generated",
+    "total_vectors": 532,
+    "generation": {
+      "strategy": "directed_random",
+      "strategy_version": "1.0",
+      "directed_count": 28,
+      "generated_count": 512,
+      "covered_targets": [
+        "port_boundaries"
+      ],
+      "missing_targets": [],
+      "coverage_model": "input_bins:1.0",
+      "unique_count": 512,
+      "input_space_size": 4096,
+      "input_space_fraction": 0.125,
+      "target_coverage": {
+        "port_boundaries": {
+          "hit_bins": [
+            "ADD:0",
+            "ADD:1",
+            "B:0",
+            "B:1",
+            "B:127",
+            "B:254",
+            "B:255",
+            "BYPASS:0",
+            "BYPASS:1",
+            "CE:0",
+            "CE:1",
+            "SCLR:0",
+            "SCLR:1"
+          ],
+          "missing_bins": [],
+          "hit_count": 13,
+          "total_count": 13,
+          "fraction": 1.0
+        }
+      }
+    },
+    "schedule": {
+      "strategy": "directed_random",
+      "strategy_version": "1.0",
+      "directed_count": 28,
+      "generated_count": 512,
+      "covered_targets": [
+        "port_boundaries"
+      ],
+      "missing_targets": [],
+      "coverage_model": "input_bins:1.0",
+      "unique_count": 512,
+      "input_space_size": 4096,
+      "input_space_fraction": 0.125,
+      "target_coverage": {
+        "port_boundaries": {
+          "hit_bins": [
+            "ADD:0",
+            "ADD:1",
+            "B:0",
+            "B:1",
+            "B:127",
+            "B:254",
+            "B:255",
+            "BYPASS:0",
+            "BYPASS:1",
+            "CE:0",
+            "CE:1",
+            "SCLR:0",
+            "SCLR:1"
+          ],
+          "missing_bins": [],
+          "hit_count": 13,
+          "total_count": 13,
+          "fraction": 1.0
+        }
+      },
+      "schedule_version": "1.0",
+      "input_cycles": 532,
+      "checked_transaction_count": 532,
+      "gap_cycles": 0,
+      "max_observed_gap": 0,
+      "directed_sequence_cycles": 19,
+      "flush_cycles": 1,
+      "comparison_kind": "post_edge_cycle",
+      "sequence_coverage": "not_measured"
+    }
+  },
+  "generated_ip": {
+    "component_reference": "xilinx.com:ip:c_accum:12.0",
+    "ports": {
+      "B": [
+        {
+          "direction": "in",
+          "size_left": "7",
+          "size_right": "0",
+          "driver_value": "0"
+        }
+      ],
+      "CLK": [
+        {
+          "direction": "in",
+          "driver_value": "0x0"
+        }
+      ],
+      "ADD": [
+        {
+          "direction": "in",
+          "driver_value": "0x1"
+        }
+      ],
+      "CE": [
+        {
+          "direction": "in",
+          "driver_value": "0x1"
+        }
+      ],
+      "BYPASS": [
+        {
+          "direction": "in",
+          "driver_value": "0x0"
+        }
+      ],
+      "SCLR": [
+        {
+          "direction": "in",
+          "driver_value": "0x0"
+        }
+      ],
+      "Q": [
+        {
+          "direction": "out",
+          "size_left": "15",
+          "size_right": "0",
+          "driver_value": "0"
+        }
+      ]
+    },
+    "model_parameters": {
+      "C_XDEVICEFAMILY": "artix7",
+      "C_IMPLEMENTATION": "0",
+      "C_VERBOSITY": "0",
+      "C_B_WIDTH": "8",
+      "C_OUT_WIDTH": "16",
+      "C_B_TYPE": "0",
+      "C_CE_OVERRIDES_SCLR": "0",
+      "C_ADD_MODE": "2",
+      "C_HAS_C_IN": "0",
+      "C_HAS_CE": "1",
+      "C_HAS_BYPASS": "1",
+      "C_HAS_SCLR": "1",
+      "C_LATENCY": "1",
+      "C_SCALE": "0",
+      "C_AINIT_VAL": "0",
+      "C_SINIT_VAL": "0",
+      "C_BYPASS_LOW": "0",
+      "C_SCLR_OVERRIDES_SSET": "1",
+      "C_HAS_SSET": "0",
+      "C_HAS_SINIT": "0"
+    }
+  },
+  "artifacts": {
+    "input_vectors": "<REPOSITORY_ROOT>/runs/batches/2026-09-14_21-52-45_UTC+0800_49f75f89/accumulator/acc_signed_control/vectors/input_vectors.txt",
+    "expected_output": "<REPOSITORY_ROOT>/runs/batches/2026-09-14_21-52-45_UTC+0800_49f75f89/accumulator/acc_signed_control/vectors/expected_output.txt",
+    "actual_output": "<REPOSITORY_ROOT>/runs/batches/2026-09-14_21-52-45_UTC+0800_49f75f89/accumulator/acc_signed_control/outputs/actual_output.txt",
+    "vectors": "<REPOSITORY_ROOT>/runs/batches/2026-09-14_21-52-45_UTC+0800_49f75f89/accumulator/acc_signed_control/vectors/vectors.json",
+    "cycles": "<REPOSITORY_ROOT>/runs/batches/2026-09-14_21-52-45_UTC+0800_49f75f89/accumulator/acc_signed_control/vectors/cycles.json",
+    "schedule": "<REPOSITORY_ROOT>/runs/batches/2026-09-14_21-52-45_UTC+0800_49f75f89/accumulator/acc_signed_control/vectors/schedule.json",
+    "testbench": "<REPOSITORY_ROOT>/runs/batches/2026-09-14_21-52-45_UTC+0800_49f75f89/accumulator/acc_signed_control/tb/tb_cycle_selfcheck.vhd",
+    "xci": "<REPOSITORY_ROOT>/runs/batches/2026-09-14_21-52-45_UTC+0800_49f75f89/accumulator/acc_signed_control/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci"
+  },
+  "artifact_sha256": {
+    "input_vectors": "61326bdecb8870c68de09f08cc0a1260aa14727108e0a01b22a29dbd9dc57474",
+    "expected_output": "15c5e4b9d75b5f2a8348dc2f7da99b0c0bc77a7dfe8c63cd09a75bd822e8a68f",
+    "vectors": "681aa338d7284ec6a1231ff9ca5178afaa3d69f0e5493855cfab11837a569c81",
+    "cycles": "bc5f90ada7657fda3c6b6e14f5215aea97931f3608885158741164dd829dfd95",
+    "schedule": "303c5be904c745fe3c9d989e19f2fecd8bd9bb320e725d99f73550e5cf7ba4b0",
+    "testbench": "b7acc11a582612534b957032ca7efdfacec6442203b49d776298ce41cbcebc35",
+    "xci": "d0d865ce6be17cab040e5c637bc50095a2c21c669cd591b52e392d92c5df0ec4"
+  }
+}

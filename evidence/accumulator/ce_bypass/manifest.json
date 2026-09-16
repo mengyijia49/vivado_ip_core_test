@@ -1,12 +1,57 @@
 {
   "schema_version": 1,
   "issue": "accumulator.ce_bypass",
-  "selection_sha256": "14e7d702806622c9b237487628ebca17d67b3198d8e6d7f3d06cf35121ec8aba",
+  "selection_sha256": "b4afbcbc1c17336159af335bff126908fdf10e364e7cd17114bbee60da446607",
   "path_replacements": {
     "/home/dpc/vivado_ip_auto_test": "<REPOSITORY_ROOT>",
     "/data/Xilinx/2025.2": "<VIVADO_2025.2>"
   },
   "files": [
+    {
+      "path": "2026-09-14_21-52-45_UTC+0800_49f75f89/failure.json",
+      "sha256": "d0682d0d796f14c06312b8dfdcf76407c86735a193d0fe4287bb57ecfabd3d7a",
+      "bytes": 1940,
+      "source": "runs/history/2026-09-14_21-52-45_UTC+0800_49f75f89/cases/accumulator/acc_signed_control/outputs/failure.json",
+      "source_sha256": "d0682d0d796f14c06312b8dfdcf76407c86735a193d0fe4287bb57ecfabd3d7a",
+      "source_bytes": 1940,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-14_21-52-45_UTC+0800_49f75f89/run_manifest.json",
+      "sha256": "e424fdae890e1f8b019a0eca8256f185bb533c1cfc1fa841555d4566772d1385",
+      "bytes": 6146,
+      "source": "runs/history/2026-09-14_21-52-45_UTC+0800_49f75f89/cases/accumulator/acc_signed_control/manifest.json",
+      "source_sha256": "8bcb2cc9c5bbd3bee26ee66554a446bfeef40c18330d7f970104368e1f60d3ee",
+      "source_bytes": 6242,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-14_21-52-45_UTC+0800_49f75f89/actual_output.txt",
+      "sha256": "0a122edf104eef0e8053eb37011080c8cbd933dcc143ce4dbbcb7e6880e72439",
+      "bytes": 646,
+      "source": "runs/history/2026-09-14_21-52-45_UTC+0800_49f75f89/cases/accumulator/acc_signed_control/outputs/actual_output.txt",
+      "source_sha256": "0a122edf104eef0e8053eb37011080c8cbd933dcc143ce4dbbcb7e6880e72439",
+      "source_bytes": 646,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-14_21-52-45_UTC+0800_49f75f89/sim_selfcheck.log",
+      "sha256": "4a7ab3175087e9016edd7710a014660cd63e612e82144d6954e8611c710bb369",
+      "bytes": 24391,
+      "source": "runs/logs/history/2026-09-14_21-52-45_UTC+0800_49f75f89/accumulator/acc_signed_control/sim_selfcheck/sim_selfcheck.log",
+      "source_sha256": "ddf09c6c784e49793e1b4f05898f083da7244cae058cfb8f15ed4eb801339fd5",
+      "source_bytes": 24795,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-14_21-52-45_UTC+0800_49f75f89/report_rows.json",
+      "sha256": "3299b6d542818e2a256fa57815734d2450263ba45a6601999e319a60545c8d0b",
+      "bytes": 6733,
+      "source": "reports/history/2026-09-14_21-52-45_UTC+0800_49f75f89/report.csv",
+      "source_sha256": "e8c80f2ac4904aeb1535b29da4c295fae00751858f9252c54163cfddd2d638c5",
+      "source_bytes": 36032,
+      "mode": "report_rows"
+    },
     {
       "path": "2026-09-14_22-02-51_UTC+0800_04f9f225/failure.json",
       "sha256": "27d95cbdd14048c114fdf416309091c6dbd84e0b7bdd85ecc7e87c5eaf6d2d2a",

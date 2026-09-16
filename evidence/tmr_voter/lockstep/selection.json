@@ -7,6 +7,28 @@
   },
   "files": [
     {
+      "source": "runs/history/2026-09-15_00-45-00_UTC+0800_af5554c4/cases/tmr_voter/voter_lockstep1/outputs/failure.json",
+      "target": "2026-09-15_00-45-00_UTC+0800_af5554c4/failure.json",
+      "mode": "json"
+    },
+    {
+      "source": "runs/history/2026-09-15_00-45-00_UTC+0800_af5554c4/cases/tmr_voter/voter_lockstep1/manifest.json",
+      "target": "2026-09-15_00-45-00_UTC+0800_af5554c4/run_manifest.json",
+      "mode": "json"
+    },
+    {
+      "source": "runs/logs/history/2026-09-15_00-45-00_UTC+0800_af5554c4/tmr_voter/voter_lockstep1/sim_selfcheck/sim_selfcheck.log",
+      "target": "2026-09-15_00-45-00_UTC+0800_af5554c4/sim_selfcheck.log",
+      "mode": "text"
+    },
+    {
+      "source": "reports/history/2026-09-15_00-45-00_UTC+0800_af5554c4/report.csv",
+      "target": "2026-09-15_00-45-00_UTC+0800_af5554c4/report_rows.json",
+      "mode": "report_rows",
+      "ip_type": "tmr_voter",
+      "case_ids": ["voter_lockstep1", "voter_lockstep_reg17"]
+    },
+    {
       "source": "tests/fixtures/ip/tmr_voter/tb_lockstep_probe.vhd",
       "target": "2026-09-15_00-46-39_UTC+0800_5eeb6a01/tb_lockstep_probe.vhd",
       "mode": "text"

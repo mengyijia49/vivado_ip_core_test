@@ -1,0 +1,110 @@
+{
+  "run_id": "2026-09-15_11-41-29_UTC+0800_8f3d1c77",
+  "classification": "SPECIFICATION_CHECK_NOT_VENDOR_CONFIRMED",
+  "parameters": {
+    "C_NUM_INTR_INPUTS": "1",
+    "C_NUM_SW_INTR": "0",
+    "C_KIND_OF_INTR": "0x00000001",
+    "C_KIND_OF_EDGE": "0x00000001",
+    "C_ASYNC_INTR": "0x00000000",
+    "C_HAS_ILR": "0",
+    "C_HAS_FAST": "0"
+  },
+  "ip_revision": "22",
+  "observations": {
+    "reset": {
+      "expected": 0,
+      "actual": 0,
+      "irq": 0,
+      "expected_irq": 0
+    },
+    "enabled_empty": {
+      "expected": 3,
+      "actual": 3,
+      "irq": 0,
+      "expected_irq": 0
+    },
+    "pending_active": {
+      "expected": 1,
+      "actual": 1,
+      "irq": 1,
+      "expected_irq": 1
+    },
+    "master_disabled": {
+      "expected": 2,
+      "actual": 2,
+      "irq": 1,
+      "expected_irq": 0
+    },
+    "pending_retained": {
+      "expected": 1,
+      "actual": 1,
+      "irq": 1,
+      "expected_irq": 0
+    },
+    "ier_mask_control": {
+      "expected": 0,
+      "actual": 0,
+      "irq": 0,
+      "expected_irq": 0
+    },
+    "me_disabled_from_idle": {
+      "expected": 1,
+      "actual": 1,
+      "irq": 0,
+      "expected_irq": 0
+    },
+    "reenabled": {
+      "expected": 3,
+      "actual": 3,
+      "irq": 1,
+      "expected_irq": 1
+    },
+    "ack_control": {
+      "expected": 0,
+      "actual": 0,
+      "irq": 0,
+      "expected_irq": 0
+    },
+    "new_event_while_disabled": {
+      "expected": 1,
+      "actual": 1,
+      "irq": 0,
+      "expected_irq": 0
+    },
+    "new_event_enabled": {
+      "expected": 1,
+      "actual": 1,
+      "irq": 1,
+      "expected_irq": 1
+    },
+    "reset_master": {
+      "expected": 0,
+      "actual": 0,
+      "irq": 0,
+      "expected_irq": 0
+    },
+    "reset_pending": {
+      "expected": 0,
+      "actual": 0,
+      "irq": 0,
+      "expected_irq": 0
+    }
+  },
+  "fresh_source": true,
+  "source_sha256": {
+    "proj/ip_probe.gen/sources_1/ip/probe_0/hdl/axi_intc_v4_1_vh_rfs.vhd": "2d8ddd2e87f465f89f6d58b2959436058deb42378fc2536717c13a3f2202c279",
+    "proj/ip_probe.gen/sources_1/ip/probe_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd": "d98907344b209fcc66592f283b08fde73a847548afad9a5444497e2eced4d55f",
+    "proj/ip_probe.gen/sources_1/ip/probe_0/sim/probe_0.vhd": "4154f4a5ed616c47793c2a79c38e339ff073ee4a6aebd18b090a24d6f0cf5817",
+    "scripts/inspect_ip.tcl": "718c31b9a86b1294ed143463f73b02efdac91e317a090ed40f9be61761066da4",
+    "scripts/run_xsim_batch.tcl": "f94da6945a95875f4cfecee8c055d2b7dc480ac0b4fc6c52c9a64e86370f82d5",
+    "scripts/create_source_probe.tcl": "1c91b4976a861eef5b9619bd361ca4d8fe136a569eb63532a9ecbf6b14aeb3c8"
+  },
+  "difference_labels": [
+    "master_disabled",
+    "pending_retained"
+  ],
+  "fixture_sha256": "f5e255e454e60b0277cccb40e4c4eeadbbbbd14ec269c2a0e6535025deeb4ec2",
+  "xci_sha256": "e66b96d296f97f185460574fb302be3dd8731ebc701ef837dd5fb6e5bb0d3fec",
+  "returncode": 1
+}

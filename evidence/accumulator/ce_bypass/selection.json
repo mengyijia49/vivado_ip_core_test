@@ -7,6 +7,33 @@
   },
   "files": [
     {
+      "source": "runs/history/2026-09-14_21-52-45_UTC+0800_49f75f89/cases/accumulator/acc_signed_control/outputs/failure.json",
+      "target": "2026-09-14_21-52-45_UTC+0800_49f75f89/failure.json",
+      "mode": "json"
+    },
+    {
+      "source": "runs/history/2026-09-14_21-52-45_UTC+0800_49f75f89/cases/accumulator/acc_signed_control/manifest.json",
+      "target": "2026-09-14_21-52-45_UTC+0800_49f75f89/run_manifest.json",
+      "mode": "json"
+    },
+    {
+      "source": "runs/history/2026-09-14_21-52-45_UTC+0800_49f75f89/cases/accumulator/acc_signed_control/outputs/actual_output.txt",
+      "target": "2026-09-14_21-52-45_UTC+0800_49f75f89/actual_output.txt",
+      "mode": "text"
+    },
+    {
+      "source": "runs/logs/history/2026-09-14_21-52-45_UTC+0800_49f75f89/accumulator/acc_signed_control/sim_selfcheck/sim_selfcheck.log",
+      "target": "2026-09-14_21-52-45_UTC+0800_49f75f89/sim_selfcheck.log",
+      "mode": "text"
+    },
+    {
+      "source": "reports/history/2026-09-14_21-52-45_UTC+0800_49f75f89/report.csv",
+      "target": "2026-09-14_21-52-45_UTC+0800_49f75f89/report_rows.json",
+      "mode": "report_rows",
+      "ip_type": "accumulator",
+      "case_ids": ["acc_signed_control"]
+    },
+    {
       "source": "runs/history/2026-09-14_22-02-51_UTC+0800_04f9f225/cases/accumulator/acc_signed_control/outputs/failure.json",
       "target": "2026-09-14_22-02-51_UTC+0800_04f9f225/failure.json",
       "mode": "json"

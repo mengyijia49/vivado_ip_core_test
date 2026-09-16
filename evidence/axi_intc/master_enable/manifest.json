@@ -1,12 +1,48 @@
 {
   "schema_version": 1,
   "issue": "axi_intc.master_enable",
-  "selection_sha256": "2a94df974646bb51be0573769ece60890dfa88d1c848f5d962a1a619e416cbed",
+  "selection_sha256": "fa187c47dedfc344f1db8bacf1b36489176ae08d789539a868542714ee39c105",
   "path_replacements": {
     "/home/dpc/vivado_ip_auto_test": "<REPOSITORY_ROOT>",
     "/data/Xilinx/2025.2": "<VIVADO_2025.2>"
   },
   "files": [
+    {
+      "path": "2026-09-15_11-41-11_UTC+0800_7f4ee548/summary.json",
+      "sha256": "6ce057a54ae3fa7eadba620eeb8034c504f84225ec05024137a23617c63f65b0",
+      "bytes": 2888,
+      "source": "reports/framework/master_enable_probe/2026-09-15_11-41-11_UTC+0800_7f4ee548/summary.json",
+      "source_sha256": "6ce057a54ae3fa7eadba620eeb8034c504f84225ec05024137a23617c63f65b0",
+      "source_bytes": 2888,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-15_11-41-11_UTC+0800_7f4ee548/simulate.log",
+      "sha256": "752bbda0493ff8d79f3af1d8240a0ef136eb2c53d07f870821a273520eb8228b",
+      "bytes": 30138,
+      "source": "runs/logs/framework/master_enable_probe/2026-09-15_11-41-11_UTC+0800_7f4ee548/axi_intc/simulate.log",
+      "source_sha256": "840edd2c6622b3e717797d14d56a4dec7fda34c8fce85bc3854f98d32b268d73",
+      "source_bytes": 30674,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-15_11-41-29_UTC+0800_8f3d1c77/summary.json",
+      "sha256": "2b305631cbf7513698659f105b8a3ff8af988c3542aa88819fa3a66bb917d6a5",
+      "bytes": 2887,
+      "source": "reports/framework/master_enable_probe/2026-09-15_11-41-29_UTC+0800_8f3d1c77/summary.json",
+      "source_sha256": "2b305631cbf7513698659f105b8a3ff8af988c3542aa88819fa3a66bb917d6a5",
+      "source_bytes": 2887,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-15_11-41-29_UTC+0800_8f3d1c77/simulate.log",
+      "sha256": "9ff4f7555fd4c917e81eb1cabfe59161cccb9d6c6fedaa87b017f233602f3598",
+      "bytes": 30435,
+      "source": "runs/logs/framework/master_enable_probe/2026-09-15_11-41-29_UTC+0800_8f3d1c77/axi_intc/simulate.log",
+      "source_sha256": "38edfb1f09f6be97c183e87bb33d5dd2cb0969d53eaa89e88f968f9cb749b49d",
+      "source_bytes": 30987,
+      "mode": "text"
+    },
     {
       "path": "2026-09-15_11-54-49_UTC+0800_a3a04739/summary.json",
       "sha256": "c0ce58b8ff3dae64d71134af78a6877bb943f6f16e965280249d5c7c833f5bd0",

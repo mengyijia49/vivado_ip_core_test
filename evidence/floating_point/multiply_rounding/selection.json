@@ -7,6 +7,43 @@
   },
   "files": [
     {
+      "source": "runs/history/2026-09-15_12-54-17_UTC+0800_f23eb1d7/cases/floating_point/fp_mul64_low/outputs/failure.json",
+      "target": "2026-09-15_12-54-17_UTC+0800_f23eb1d7/failure.json",
+      "mode": "json"
+    },
+    {
+      "source": "runs/history/2026-09-15_12-54-17_UTC+0800_f23eb1d7/cases/floating_point/fp_mul64_low/manifest.json",
+      "target": "2026-09-15_12-54-17_UTC+0800_f23eb1d7/run_manifest.json",
+      "mode": "json"
+    },
+    {
+      "source": "runs/history/2026-09-15_12-54-17_UTC+0800_f23eb1d7/cases/floating_point/fp_mul64_low/outputs/actual_output.txt",
+      "target": "2026-09-15_12-54-17_UTC+0800_f23eb1d7/actual_output.txt",
+      "mode": "text"
+    },
+    {
+      "source": "runs/history/2026-09-15_12-54-17_UTC+0800_f23eb1d7/cases/floating_point/fp_mul64_low/vectors/input_vectors.txt",
+      "target": "2026-09-15_12-54-17_UTC+0800_f23eb1d7/input_vectors.txt",
+      "mode": "text"
+    },
+    {
+      "source": "runs/history/2026-09-15_12-54-17_UTC+0800_f23eb1d7/cases/floating_point/fp_mul64_low/vectors/expected_output.txt",
+      "target": "2026-09-15_12-54-17_UTC+0800_f23eb1d7/expected_output.txt",
+      "mode": "text"
+    },
+    {
+      "source": "runs/logs/history/2026-09-15_12-54-17_UTC+0800_f23eb1d7/floating_point/fp_mul64_low/sim_selfcheck/sim_selfcheck.log",
+      "target": "2026-09-15_12-54-17_UTC+0800_f23eb1d7/sim_selfcheck.log",
+      "mode": "text"
+    },
+    {
+      "source": "reports/history/2026-09-15_12-54-17_UTC+0800_f23eb1d7/report.csv",
+      "target": "2026-09-15_12-54-17_UTC+0800_f23eb1d7/report_rows.json",
+      "mode": "report_rows",
+      "ip_type": "floating_point",
+      "case_ids": ["fp_mul64_low"]
+    },
+    {
       "source": "reports/framework/floating_multiply_probe/2026-09-15_13-03-11_UTC+0800_ceadf6b0/summary.json",
       "target": "2026-09-15_13-03-11_UTC+0800_ceadf6b0/summary.json",
       "mode": "json"

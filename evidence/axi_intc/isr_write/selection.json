@@ -7,6 +7,36 @@
   },
   "files": [
     {
+      "source": "reports/framework/isr_write_probe/2026-09-15_11-05-17_UTC+0800_0d434122/summary.json",
+      "target": "2026-09-15_11-05-17_UTC+0800_0d434122/summary.json",
+      "mode": "json"
+    },
+    {
+      "source": "runs/logs/framework/isr_write_probe/2026-09-15_11-05-17_UTC+0800_0d434122/axi_intc/simulate.log",
+      "target": "2026-09-15_11-05-17_UTC+0800_0d434122/simulate.log",
+      "mode": "text"
+    },
+    {
+      "source": "reports/framework/isr_write_probe/2026-09-15_11-07-35_UTC+0800_50b362d1/summary.json",
+      "target": "2026-09-15_11-07-35_UTC+0800_50b362d1/summary.json",
+      "mode": "json"
+    },
+    {
+      "source": "runs/logs/framework/isr_write_probe/2026-09-15_11-07-35_UTC+0800_50b362d1/axi_intc/simulate.log",
+      "target": "2026-09-15_11-07-35_UTC+0800_50b362d1/simulate.log",
+      "mode": "text"
+    },
+    {
+      "source": "reports/framework/isr_write_probe/2026-09-15_11-07-58_UTC+0800_54e17d14/summary.json",
+      "target": "2026-09-15_11-07-58_UTC+0800_54e17d14/summary.json",
+      "mode": "json"
+    },
+    {
+      "source": "runs/logs/framework/isr_write_probe/2026-09-15_11-07-58_UTC+0800_54e17d14/axi_intc/simulate.log",
+      "target": "2026-09-15_11-07-58_UTC+0800_54e17d14/simulate.log",
+      "mode": "text"
+    },
+    {
       "source": "reports/framework/isr_write_probe/2026-09-15_11-53-50_UTC+0800_b4122164/summary.json",
       "target": "2026-09-15_11-53-50_UTC+0800_b4122164/summary.json",
       "mode": "json"

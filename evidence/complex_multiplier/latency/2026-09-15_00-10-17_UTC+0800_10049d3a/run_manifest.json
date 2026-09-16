@@ -1,0 +1,327 @@
+{
+  "schema_version": 1,
+  "case_id": "cmul_long_pipe",
+  "ip_type": "complex_multiplier",
+  "vendor": "xilinx.com",
+  "ip_name": "cmpy",
+  "configured_parameters": {
+    "a_width": 8,
+    "b_width": 8,
+    "output_width": 16,
+    "multiplier_type": "Use_Mults",
+    "optimization": "Performance",
+    "rounding": "Truncate",
+    "latency": 55,
+    "clock_enable": true,
+    "a_last": true,
+    "b_last": true,
+    "ctrl_last": false,
+    "last_mode": "AND_all_TLASTs",
+    "a_user_width": 1,
+    "b_user_width": 256,
+    "ctrl_user_width": 0
+  },
+  "verification": {
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": 2026,
+    "case_budget": 1024,
+    "coverage_targets": [
+      "port_boundaries"
+    ],
+    "boundary_mode": "basic",
+    "timing_mode": "random_gaps",
+    "max_gap_cycles": 8,
+    "burst_length": 16,
+    "input_order": "generated",
+    "total_vectors": 6709,
+    "generation": {
+      "strategy": "directed_random",
+      "strategy_version": "1.0",
+      "directed_count": 94,
+      "generated_count": 1024,
+      "covered_targets": [
+        "port_boundaries"
+      ],
+      "missing_targets": [],
+      "coverage_model": "input_bins:1.0",
+      "unique_count": 1024,
+      "input_space_size": 31828687130226345097944463881396533766429193651030253916189694521162207808802136034115584,
+      "input_space_fraction": 3.217223493417518e-86,
+      "target_coverage": {
+        "port_boundaries": {
+          "hit_bins": [
+            "aclken:0",
+            "aclken:1",
+            "s_axis_a_tdata:0",
+            "s_axis_a_tdata:1",
+            "s_axis_a_tdata:32767",
+            "s_axis_a_tdata:65534",
+            "s_axis_a_tdata:65535",
+            "s_axis_a_tlast:0",
+            "s_axis_a_tlast:1",
+            "s_axis_a_tuser:0",
+            "s_axis_a_tuser:1",
+            "s_axis_a_tvalid:0",
+            "s_axis_a_tvalid:1",
+            "s_axis_b_tdata:0",
+            "s_axis_b_tdata:1",
+            "s_axis_b_tdata:32767",
+            "s_axis_b_tdata:65534",
+            "s_axis_b_tdata:65535",
+            "s_axis_b_tlast:0",
+            "s_axis_b_tlast:1",
+            "s_axis_b_tuser:0",
+            "s_axis_b_tuser:1",
+            "s_axis_b_tuser:115792089237316195423570985008687907853269984665640564039457584007913129639934",
+            "s_axis_b_tuser:115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "s_axis_b_tuser:57896044618658097711785492504343953926634992332820282019728792003956564819967",
+            "s_axis_b_tvalid:0",
+            "s_axis_b_tvalid:1"
+          ],
+          "missing_bins": [],
+          "hit_count": 27,
+          "total_count": 27,
+          "fraction": 1.0
+        }
+      }
+    },
+    "schedule": {
+      "strategy": "directed_random",
+      "strategy_version": "1.0",
+      "directed_count": 94,
+      "generated_count": 1024,
+      "covered_targets": [
+        "port_boundaries"
+      ],
+      "missing_targets": [],
+      "coverage_model": "input_bins:1.0",
+      "unique_count": 1024,
+      "input_space_size": 31828687130226345097944463881396533766429193651030253916189694521162207808802136034115584,
+      "input_space_fraction": 3.217223493417518e-86,
+      "target_coverage": {
+        "port_boundaries": {
+          "hit_bins": [
+            "aclken:0",
+            "aclken:1",
+            "s_axis_a_tdata:0",
+            "s_axis_a_tdata:1",
+            "s_axis_a_tdata:32767",
+            "s_axis_a_tdata:65534",
+            "s_axis_a_tdata:65535",
+            "s_axis_a_tlast:0",
+            "s_axis_a_tlast:1",
+            "s_axis_a_tuser:0",
+            "s_axis_a_tuser:1",
+            "s_axis_a_tvalid:0",
+            "s_axis_a_tvalid:1",
+            "s_axis_b_tdata:0",
+            "s_axis_b_tdata:1",
+            "s_axis_b_tdata:32767",
+            "s_axis_b_tdata:65534",
+            "s_axis_b_tdata:65535",
+            "s_axis_b_tlast:0",
+            "s_axis_b_tlast:1",
+            "s_axis_b_tuser:0",
+            "s_axis_b_tuser:1",
+            "s_axis_b_tuser:115792089237316195423570985008687907853269984665640564039457584007913129639934",
+            "s_axis_b_tuser:115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "s_axis_b_tuser:57896044618658097711785492504343953926634992332820282019728792003956564819967",
+            "s_axis_b_tvalid:0",
+            "s_axis_b_tvalid:1"
+          ],
+          "missing_bins": [],
+          "hit_count": 27,
+          "total_count": 27,
+          "fraction": 1.0
+        }
+      },
+      "schedule_version": "1.0",
+      "input_cycles": 6709,
+      "checked_transaction_count": 6709,
+      "gap_cycles": 4092,
+      "max_observed_gap": 8,
+      "directed_sequence_cycles": 1536,
+      "flush_cycles": 57,
+      "directed_suffix_cycles": 0,
+      "comparison_kind": "post_edge_cycle",
+      "sequence_coverage": "not_measured",
+      "defined_output_bits_by_port": {
+        "m_axis_dout_tvalid": 6709,
+        "m_axis_dout_tdata": 55296,
+        "m_axis_dout_tuser": 444096,
+        "m_axis_dout_tlast": 1728
+      },
+      "masked_reason_cycles": {
+        "m_axis_dout_tdata:output_tvalid_low": 4981,
+        "m_axis_dout_tuser:output_tvalid_low": 4981,
+        "m_axis_dout_tlast:output_tvalid_low": 4981
+      },
+      "fully_masked_cycles": 0,
+      "masked_output_bits": 1444490,
+      "reference_sequence_events": {
+        "invalid_input_cycles": 2716,
+        "valid_output_samples": 1728,
+        "valid_input_operations": 1507,
+        "clock_enable_holds": 2486
+      }
+    }
+  },
+  "generated_ip": {
+    "component_reference": "xilinx.com:ip:cmpy:6.0",
+    "ports": {
+      "aclk": [
+        {
+          "direction": "in",
+          "driver_value": "0x0"
+        }
+      ],
+      "aclken": [
+        {
+          "direction": "in",
+          "driver_value": "0x1"
+        }
+      ],
+      "s_axis_a_tvalid": [
+        {
+          "direction": "in",
+          "driver_value": "0x0"
+        }
+      ],
+      "s_axis_a_tuser": [
+        {
+          "direction": "in",
+          "size_left": "0",
+          "size_right": "0",
+          "driver_value": "0"
+        }
+      ],
+      "s_axis_a_tlast": [
+        {
+          "direction": "in",
+          "driver_value": "0x0"
+        }
+      ],
+      "s_axis_a_tdata": [
+        {
+          "direction": "in",
+          "size_left": "15",
+          "size_right": "0",
+          "driver_value": "0"
+        }
+      ],
+      "s_axis_b_tvalid": [
+        {
+          "direction": "in",
+          "driver_value": "0x0"
+        }
+      ],
+      "s_axis_b_tuser": [
+        {
+          "direction": "in",
+          "size_left": "255",
+          "size_right": "0",
+          "driver_value": "0"
+        }
+      ],
+      "s_axis_b_tlast": [
+        {
+          "direction": "in",
+          "driver_value": "0x0"
+        }
+      ],
+      "s_axis_b_tdata": [
+        {
+          "direction": "in",
+          "size_left": "15",
+          "size_right": "0",
+          "driver_value": "0"
+        }
+      ],
+      "m_axis_dout_tvalid": [
+        {
+          "direction": "out",
+          "driver_value": "0x0"
+        }
+      ],
+      "m_axis_dout_tuser": [
+        {
+          "direction": "out",
+          "size_left": "256",
+          "size_right": "0",
+          "driver_value": "0"
+        }
+      ],
+      "m_axis_dout_tlast": [
+        {
+          "direction": "out",
+          "driver_value": "0x0"
+        }
+      ],
+      "m_axis_dout_tdata": [
+        {
+          "direction": "out",
+          "size_left": "31",
+          "size_right": "0",
+          "driver_value": "0"
+        }
+      ]
+    },
+    "model_parameters": {
+      "C_VERBOSITY": "0",
+      "C_XDEVICEFAMILY": "artix7",
+      "C_XDEVICE": "xc7a35t",
+      "C_DATA_TYPE": "0",
+      "C_A_WIDTH": "8",
+      "C_B_WIDTH": "8",
+      "C_OUT_WIDTH": "16",
+      "C_LATENCY": "55",
+      "C_MULT_TYPE": "1",
+      "C_OPTIMIZE_GOAL": "1",
+      "HAS_NEGATE": "0",
+      "SINGLE_OUTPUT": "0",
+      "ROUND": "0",
+      "USE_DSP_CASCADES": "1",
+      "C_HAS_ACCUMULATOR": "0",
+      "C_THROTTLE_SCHEME": "3",
+      "C_HAS_ACLKEN": "1",
+      "C_HAS_ARESETN": "0",
+      "C_HAS_S_AXIS_A_TUSER": "1",
+      "C_HAS_S_AXIS_A_TLAST": "1",
+      "C_HAS_S_AXIS_B_TUSER": "1",
+      "C_HAS_S_AXIS_B_TLAST": "1",
+      "C_HAS_S_AXIS_CTRL_TUSER": "0",
+      "C_HAS_S_AXIS_CTRL_TLAST": "0",
+      "C_TLAST_RESOLUTION": "17",
+      "C_S_AXIS_A_TDATA_WIDTH": "16",
+      "C_S_AXIS_A_TUSER_WIDTH": "1",
+      "C_S_AXIS_B_TDATA_WIDTH": "16",
+      "C_S_AXIS_B_TUSER_WIDTH": "256",
+      "C_S_AXIS_CTRL_TDATA_WIDTH": "8",
+      "C_S_AXIS_CTRL_TUSER_WIDTH": "1",
+      "C_M_AXIS_DOUT_TDATA_WIDTH": "32",
+      "C_M_AXIS_DOUT_TUSER_WIDTH": "257"
+    }
+  },
+  "artifacts": {
+    "input_vectors": "<REPOSITORY_ROOT>/runs/batches/2026-09-15_00-10-17_UTC+0800_10049d3a/complex_multiplier/cmul_long_pipe/vectors/input_vectors.txt",
+    "expected_output": "<REPOSITORY_ROOT>/runs/batches/2026-09-15_00-10-17_UTC+0800_10049d3a/complex_multiplier/cmul_long_pipe/vectors/expected_output.txt",
+    "actual_output": "<REPOSITORY_ROOT>/runs/batches/2026-09-15_00-10-17_UTC+0800_10049d3a/complex_multiplier/cmul_long_pipe/outputs/actual_output.txt",
+    "vectors": "<REPOSITORY_ROOT>/runs/batches/2026-09-15_00-10-17_UTC+0800_10049d3a/complex_multiplier/cmul_long_pipe/vectors/vectors.json",
+    "cycles": "<REPOSITORY_ROOT>/runs/batches/2026-09-15_00-10-17_UTC+0800_10049d3a/complex_multiplier/cmul_long_pipe/vectors/cycles.json",
+    "schedule": "<REPOSITORY_ROOT>/runs/batches/2026-09-15_00-10-17_UTC+0800_10049d3a/complex_multiplier/cmul_long_pipe/vectors/schedule.json",
+    "testbench": "<REPOSITORY_ROOT>/runs/batches/2026-09-15_00-10-17_UTC+0800_10049d3a/complex_multiplier/cmul_long_pipe/tb/tb_cycle_selfcheck.vhd",
+    "xci": "<REPOSITORY_ROOT>/runs/batches/2026-09-15_00-10-17_UTC+0800_10049d3a/complex_multiplier/cmul_long_pipe/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci",
+    "expected_mask": "<REPOSITORY_ROOT>/runs/batches/2026-09-15_00-10-17_UTC+0800_10049d3a/complex_multiplier/cmul_long_pipe/vectors/expected_mask.txt"
+  },
+  "artifact_sha256": {
+    "input_vectors": "0ee4508bd75660ea6d51e6bc0088a27f614f391f853a76ee76fef21c2fea9de5",
+    "expected_output": "e0bbdcb15806f4eaff0b2045b7e9f856277fb4e4888ec3491b1b4be5995338bd",
+    "vectors": "c5c74db8edde873fa27dbf595dd8802d855f812bb53e361b4ee5bac9faaa0fe1",
+    "cycles": "d496f64c2141f0d795147626012b5644905f95c569ca1fb10ad934b643333dc1",
+    "schedule": "d597435c2513ed7699650827549114cba3cf9ef237690fece328f80ec2a9f691",
+    "testbench": "eef4f14b9032ed21a4826f0765cb10a91c4a2095a1bbc487e2c2bf6f052b41f2",
+    "xci": "085c2d1a13b979e2f915229eb2caf86b792501fa50fc6193e3017305e1a16bd8",
+    "expected_mask": "f53e56f3a4fef8fc213a085d8cc8c92fe223ca4e05943bd32fea9fa244d68606"
+  }
+}

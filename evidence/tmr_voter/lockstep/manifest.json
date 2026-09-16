@@ -1,12 +1,48 @@
 {
   "schema_version": 1,
   "issue": "tmr_voter.lockstep",
-  "selection_sha256": "ebb0417ba5975d106a53a77723881517bec10dc5a2ff6719cea71c1c90141f16",
+  "selection_sha256": "7f803129fc5264efa1e1305f96869a9330cf426f14b698002656575e88d939de",
   "path_replacements": {
     "/home/dpc/vivado_ip_auto_test": "<REPOSITORY_ROOT>",
     "/data/Xilinx/2025.2": "<VIVADO_2025.2>"
   },
   "files": [
+    {
+      "path": "2026-09-15_00-45-00_UTC+0800_af5554c4/failure.json",
+      "sha256": "ded06612be8fe97138856ff3208c21550a3125cccf6cc541df34a07950d0fb88",
+      "bytes": 73,
+      "source": "runs/history/2026-09-15_00-45-00_UTC+0800_af5554c4/cases/tmr_voter/voter_lockstep1/outputs/failure.json",
+      "source_sha256": "ded06612be8fe97138856ff3208c21550a3125cccf6cc541df34a07950d0fb88",
+      "source_bytes": 73,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-15_00-45-00_UTC+0800_af5554c4/run_manifest.json",
+      "sha256": "ff38577d068c6bf2202ede4e3a85eb0f3abd2453bc1b5b4e36628d963e1e9efd",
+      "bytes": 6840,
+      "source": "runs/history/2026-09-15_00-45-00_UTC+0800_af5554c4/cases/tmr_voter/voter_lockstep1/manifest.json",
+      "source_sha256": "a04f30c8820f062ba545cdda002779dc2de753236a5caf43484718697bf0816c",
+      "source_bytes": 6948,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-15_00-45-00_UTC+0800_af5554c4/sim_selfcheck.log",
+      "sha256": "e41f34521cf481356b6e6b2a421a82ebb7e4b06dc303e86e6796e2b843a82d59",
+      "bytes": 19422,
+      "source": "runs/logs/history/2026-09-15_00-45-00_UTC+0800_af5554c4/tmr_voter/voter_lockstep1/sim_selfcheck/sim_selfcheck.log",
+      "source_sha256": "9cfa010c47f6664d0f65ba9d2a6294bb07cb0e7c5891aaf82fe79e7ec9bc0c0c",
+      "source_bytes": 19778,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-15_00-45-00_UTC+0800_af5554c4/report_rows.json",
+      "sha256": "28bb5f11a71404dbf4b0c7fdf8f856789a131b099667a48ebe849fe3d6f5a52d",
+      "bytes": 8663,
+      "source": "reports/history/2026-09-15_00-45-00_UTC+0800_af5554c4/report.csv",
+      "source_sha256": "9fb348b9c375fc23a41a3f81eb4e87e3f9b9129239b22d004b2a9ffef390a006",
+      "source_bytes": 9279,
+      "mode": "report_rows"
+    },
     {
       "path": "2026-09-15_00-46-39_UTC+0800_5eeb6a01/tb_lockstep_probe.vhd",
       "sha256": "ed9f5d3b79859bd9acaf42c7f608312bb4e44865e9de445e070c1ec6878d915b",

@@ -1,0 +1,285 @@
+[
+  {
+    "case_id": "voter_lockstep1",
+    "stage": "create_ip",
+    "status": "PASS",
+    "ip_type": "tmr_voter",
+    "parameters": {
+      "comparator": true,
+      "disable_port": false,
+      "include_mask": 18446744073709551615,
+      "input_register": false,
+      "triple": false,
+      "voter_check": false,
+      "width": 1
+    },
+    "strategy": "exhaustive",
+    "strategy_version": "1.0",
+    "random_seed": "2026",
+    "case_budget": "4",
+    "coverage_targets": [
+      "port_boundaries",
+      "complete_input_space"
+    ],
+    "metrics": {
+      "elapsed_seconds": 3.9519831638317555,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026-09-15_00-45-00_UTC+0800_af5554c4/cases/tmr_voter/voter_lockstep1",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026-09-15_00-45-00_UTC+0800_af5554c4/tmr_voter/voter_lockstep1/create_ip/create_ip.log"
+  },
+  {
+    "case_id": "voter_lockstep1",
+    "stage": "generate_testbench",
+    "status": "PASS",
+    "ip_type": "tmr_voter",
+    "parameters": {
+      "comparator": true,
+      "disable_port": false,
+      "include_mask": 18446744073709551615,
+      "input_register": false,
+      "triple": false,
+      "voter_check": false,
+      "width": 1
+    },
+    "strategy": "exhaustive",
+    "strategy_version": "1.0",
+    "random_seed": "2026",
+    "case_budget": "4",
+    "coverage_targets": [
+      "port_boundaries",
+      "complete_input_space"
+    ],
+    "metrics": {
+      "checked_transaction_count": 13,
+      "comparison_kind": "combinational",
+      "coverage_model": "input_bins:1.0",
+      "covered_targets": [
+        "complete_input_space",
+        "port_boundaries"
+      ],
+      "defined_output_bits_by_port": {
+        "Compare": 13,
+        "Discrete": 13
+      },
+      "directed_count": 4,
+      "directed_sequence_cycles": 8,
+      "directed_suffix_cycles": 0,
+      "elapsed_seconds": 0.0014837670605629683,
+      "flush_cycles": 1,
+      "fully_masked_cycles": 0,
+      "gap_cycles": 0,
+      "generated_count": 4,
+      "input_cycles": 13,
+      "input_space_fraction": 1.0,
+      "input_space_size": 4,
+      "masked_output_bits": 39,
+      "masked_reason_cycles": {
+        "Compare:lockstep_unused_compare_bits": 13
+      },
+      "max_observed_gap": 0,
+      "missing_targets": [],
+      "schedule_version": "1.0",
+      "sequence_coverage": "not_measured",
+      "strategy": "exhaustive",
+      "strategy_version": "1.0",
+      "target_coverage": {
+        "complete_input_space": {
+          "fraction": 1.0,
+          "hit_count": 4,
+          "total_count": 4
+        },
+        "port_boundaries": {
+          "fraction": 1.0,
+          "hit_bins": [
+            "Discrete1:0",
+            "Discrete1:1",
+            "Discrete2:0",
+            "Discrete2:1"
+          ],
+          "hit_count": 4,
+          "missing_bins": [],
+          "total_count": 4
+        }
+      },
+      "unique_count": 4
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026-09-15_00-45-00_UTC+0800_af5554c4/cases/tmr_voter/voter_lockstep1",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026-09-15_00-45-00_UTC+0800_af5554c4/tmr_voter/voter_lockstep1/generate_testbench/generate_testbench.log"
+  },
+  {
+    "case_id": "voter_lockstep1",
+    "stage": "sim_selfcheck",
+    "status": "SIMULATION_FAILED",
+    "ip_type": "tmr_voter",
+    "parameters": {
+      "comparator": true,
+      "disable_port": false,
+      "include_mask": 18446744073709551615,
+      "input_register": false,
+      "triple": false,
+      "voter_check": false,
+      "width": 1
+    },
+    "strategy": "exhaustive",
+    "strategy_version": "1.0",
+    "random_seed": "2026",
+    "case_budget": "4",
+    "coverage_targets": [
+      "port_boundaries",
+      "complete_input_space"
+    ],
+    "metrics": {
+      "elapsed_seconds": 9.568798220017925,
+      "failure_evidence": {
+        "classification": "UNTRIAGED",
+        "kind": "missing_output_artifact"
+      },
+      "returncode": 1,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026-09-15_00-45-00_UTC+0800_af5554c4/cases/tmr_voter/voter_lockstep1",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026-09-15_00-45-00_UTC+0800_af5554c4/tmr_voter/voter_lockstep1/sim_selfcheck/sim_selfcheck.log"
+  },
+  {
+    "case_id": "voter_lockstep_reg17",
+    "stage": "create_ip",
+    "status": "PASS",
+    "ip_type": "tmr_voter",
+    "parameters": {
+      "comparator": true,
+      "disable_port": false,
+      "include_mask": 18446744073709551615,
+      "input_register": true,
+      "triple": false,
+      "voter_check": false,
+      "width": 17
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "2026",
+    "case_budget": "1024",
+    "coverage_targets": [
+      "port_boundaries"
+    ],
+    "metrics": {
+      "elapsed_seconds": 3.954882732126862,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026-09-15_00-45-00_UTC+0800_af5554c4/cases/tmr_voter/voter_lockstep_reg17",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026-09-15_00-45-00_UTC+0800_af5554c4/tmr_voter/voter_lockstep_reg17/create_ip/create_ip.log"
+  },
+  {
+    "case_id": "voter_lockstep_reg17",
+    "stage": "generate_testbench",
+    "status": "PASS",
+    "ip_type": "tmr_voter",
+    "parameters": {
+      "comparator": true,
+      "disable_port": false,
+      "include_mask": 18446744073709551615,
+      "input_register": true,
+      "triple": false,
+      "voter_check": false,
+      "width": 17
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "2026",
+    "case_budget": "1024",
+    "coverage_targets": [
+      "port_boundaries"
+    ],
+    "metrics": {
+      "checked_transaction_count": 1161,
+      "comparison_kind": "post_edge_cycle",
+      "coverage_model": "input_bins:1.0",
+      "covered_targets": [
+        "port_boundaries"
+      ],
+      "defined_output_bits_by_port": {
+        "Compare": 1161,
+        "Discrete": 19737
+      },
+      "directed_count": 16,
+      "directed_sequence_cycles": 136,
+      "directed_suffix_cycles": 0,
+      "elapsed_seconds": 0.023186419857665896,
+      "flush_cycles": 1,
+      "fully_masked_cycles": 0,
+      "gap_cycles": 0,
+      "generated_count": 1024,
+      "input_cycles": 1161,
+      "input_space_fraction": 5.960464477539063e-08,
+      "input_space_size": 17179869184,
+      "masked_output_bits": 3483,
+      "masked_reason_cycles": {
+        "Compare:lockstep_unused_compare_bits": 1161
+      },
+      "max_observed_gap": 0,
+      "missing_targets": [],
+      "schedule_version": "1.0",
+      "sequence_coverage": "not_measured",
+      "strategy": "directed_random",
+      "strategy_version": "1.0",
+      "target_coverage": {
+        "port_boundaries": {
+          "fraction": 1.0,
+          "hit_bins": [
+            "Discrete1:0",
+            "Discrete1:1",
+            "Discrete1:131070",
+            "Discrete1:131071",
+            "Discrete1:65535",
+            "Discrete2:0",
+            "Discrete2:1",
+            "Discrete2:131070",
+            "Discrete2:131071",
+            "Discrete2:65535"
+          ],
+          "hit_count": 10,
+          "missing_bins": [],
+          "total_count": 10
+        }
+      },
+      "unique_count": 1024
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026-09-15_00-45-00_UTC+0800_af5554c4/cases/tmr_voter/voter_lockstep_reg17",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026-09-15_00-45-00_UTC+0800_af5554c4/tmr_voter/voter_lockstep_reg17/generate_testbench/generate_testbench.log"
+  },
+  {
+    "case_id": "voter_lockstep_reg17",
+    "stage": "sim_selfcheck",
+    "status": "SIMULATION_FAILED",
+    "ip_type": "tmr_voter",
+    "parameters": {
+      "comparator": true,
+      "disable_port": false,
+      "include_mask": 18446744073709551615,
+      "input_register": true,
+      "triple": false,
+      "voter_check": false,
+      "width": 17
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "2026",
+    "case_budget": "1024",
+    "coverage_targets": [
+      "port_boundaries"
+    ],
+    "metrics": {
+      "elapsed_seconds": 9.55777061986737,
+      "failure_evidence": {
+        "classification": "UNTRIAGED",
+        "kind": "missing_output_artifact"
+      },
+      "returncode": 1,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026-09-15_00-45-00_UTC+0800_af5554c4/cases/tmr_voter/voter_lockstep_reg17",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026-09-15_00-45-00_UTC+0800_af5554c4/tmr_voter/voter_lockstep_reg17/sim_selfcheck/sim_selfcheck.log"
+  }
+]

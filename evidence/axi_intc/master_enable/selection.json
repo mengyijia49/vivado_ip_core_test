@@ -7,6 +7,26 @@
   },
   "files": [
     {
+      "source": "reports/framework/master_enable_probe/2026-09-15_11-41-11_UTC+0800_7f4ee548/summary.json",
+      "target": "2026-09-15_11-41-11_UTC+0800_7f4ee548/summary.json",
+      "mode": "json"
+    },
+    {
+      "source": "runs/logs/framework/master_enable_probe/2026-09-15_11-41-11_UTC+0800_7f4ee548/axi_intc/simulate.log",
+      "target": "2026-09-15_11-41-11_UTC+0800_7f4ee548/simulate.log",
+      "mode": "text"
+    },
+    {
+      "source": "reports/framework/master_enable_probe/2026-09-15_11-41-29_UTC+0800_8f3d1c77/summary.json",
+      "target": "2026-09-15_11-41-29_UTC+0800_8f3d1c77/summary.json",
+      "mode": "json"
+    },
+    {
+      "source": "runs/logs/framework/master_enable_probe/2026-09-15_11-41-29_UTC+0800_8f3d1c77/axi_intc/simulate.log",
+      "target": "2026-09-15_11-41-29_UTC+0800_8f3d1c77/simulate.log",
+      "mode": "text"
+    },
+    {
       "source": "reports/framework/master_enable_probe/2026-09-15_11-54-49_UTC+0800_a3a04739/summary.json",
       "target": "2026-09-15_11-54-49_UTC+0800_a3a04739/summary.json",
       "mode": "json"
