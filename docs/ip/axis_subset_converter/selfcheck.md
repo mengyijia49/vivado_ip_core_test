@@ -4,7 +4,7 @@
 一拍输入对应一拍映射后的输出，不按位宽转换器的字节序列规则比较。
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 python3 scripts/run_all.py --ip-type axis_subset_converter
 ```
 

@@ -44,6 +44,7 @@ class CycleSpec:
     prefix: SequenceSource = ()
     flush_cycles: int = 1
     neutral: Frame = field(default_factory=dict)
+    initial_values: Frame = field(default_factory=dict)
     idle_values: Frame = field(default_factory=dict)
     masked_outputs: bool = False
     clock_aliases: tuple[str, ...] = ()
@@ -52,6 +53,7 @@ class CycleSpec:
     supporting_artifacts: Mapping[str, Path] = field(default_factory=dict)
     xci_glob: str = "proj/*.srcs/sources_1/ip/dut_0/dut_0.xci"
     inline_bd_glob: str | None = None
+    combine_scalar_controls: bool = True
 
     def frame(self, values: Mapping[str, int] | None = None) -> Frame:
         frame = {port.name: self.neutral.get(port.name, 0) for port in self.inputs}

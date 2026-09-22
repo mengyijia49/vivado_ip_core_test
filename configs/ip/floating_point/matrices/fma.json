@@ -1,0 +1,78 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "fp_fma16_plain",
+      "template": {
+        "ip_type": "floating_point", "vendor": "xilinx.com", "ip_name": "floating_point",
+        "parameters": {
+          "operation": "FMA", "input_exponent": 5, "input_fraction": 11,
+          "optimization": "Resources", "mult_usage": "Medium_Usage",
+          "a_user_width": 0, "b_user_width": 0, "c_user_width": 0, "operation_user_width": 0,
+          "has_a_last": false, "has_b_last": false, "has_c_last": false,
+          "has_operation_last": false, "last_mode": "None",
+          "has_underflow": false, "has_overflow": false, "has_invalid_op": false
+        },
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20261101,
+          "case_budget": 1024, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic",
+          "input_order": "shuffled", "timing_mode": "random_gaps", "max_gap_cycles": 8, "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": ["Resources", "Performance"], "mult_usage": ["Medium_Usage", "Full_Usage"],
+        "has_underflow": [false, true], "has_overflow": [false, true], "has_invalid_op": [false, true]
+      }
+    },
+    {
+      "case_prefix": "fp_fma32_plain",
+      "template": {
+        "ip_type": "floating_point", "vendor": "xilinx.com", "ip_name": "floating_point",
+        "parameters": {
+          "operation": "FMA", "input_exponent": 8, "input_fraction": 24,
+          "optimization": "Resources", "mult_usage": "Medium_Usage",
+          "a_user_width": 0, "b_user_width": 0, "c_user_width": 0, "operation_user_width": 0,
+          "has_a_last": false, "has_b_last": false, "has_c_last": false,
+          "has_operation_last": false, "last_mode": "None",
+          "has_underflow": false, "has_overflow": false, "has_invalid_op": false
+        },
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20261102,
+          "case_budget": 1024, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic",
+          "input_order": "shuffled", "timing_mode": "random_gaps", "max_gap_cycles": 8, "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": ["Resources", "Performance"], "mult_usage": ["Medium_Usage", "Full_Usage"],
+        "has_underflow": [false, true], "has_overflow": [false, true], "has_invalid_op": [false, true]
+      }
+    },
+    {
+      "case_prefix": "fp_fma64_plain",
+      "template": {
+        "ip_type": "floating_point", "vendor": "xilinx.com", "ip_name": "floating_point",
+        "parameters": {
+          "operation": "FMA", "input_exponent": 11, "input_fraction": 53,
+          "optimization": "Resources", "mult_usage": "Medium_Usage",
+          "a_user_width": 0, "b_user_width": 0, "c_user_width": 0, "operation_user_width": 0,
+          "has_a_last": false, "has_b_last": false, "has_c_last": false,
+          "has_operation_last": false, "last_mode": "None",
+          "has_underflow": false, "has_overflow": false, "has_invalid_op": false
+        },
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20261103,
+          "case_budget": 1024, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic",
+          "input_order": "shuffled", "timing_mode": "random_gaps", "max_gap_cycles": 8, "burst_length": 16
+        }
+      },
+      "axes": {
+        "optimization": ["Resources", "Performance"], "mult_usage": ["Medium_Usage", "Full_Usage"],
+        "has_underflow": [false, true], "has_overflow": [false, true], "has_invalid_op": [false, true]
+      }
+    }
+  ]
+}

@@ -3,7 +3,7 @@
 对应 `xilinx.com:ip:axis_broadcaster:1.1`。只做行为仿真。
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 python3 scripts/run_all.py --ip-type axis_broadcaster
 ```
 

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Floating Point Exponential Parameters",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["operation","input_exponent","input_fraction","output_exponent","output_fraction","optimization","has_last","user_width","has_underflow","has_overflow","has_invalid_op","has_divide_by_zero"],
+  "properties": {
+    "operation": {"const":"Exponential"},
+    "input_exponent": {"enum":[5,8,11]}, "input_fraction": {"enum":[11,24,53]},
+    "output_exponent": {"enum":[5,8,11]}, "output_fraction": {"enum":[11,24,53]},
+    "optimization": {"enum":["Resources","Performance"]},
+    "has_last": {"type":"boolean"}, "user_width": {"type":"integer","minimum":0,"maximum":256},
+    "has_underflow": {"type":"boolean"}, "has_overflow": {"type":"boolean"},
+    "has_invalid_op": {"const":false}, "has_divide_by_zero": {"const":false}
+  },
+  "allOf": [
+    {"if":{"properties":{"input_exponent":{"const":5}},"required":["input_exponent"]},"then":{"properties":{"input_fraction":{"const":11},"output_exponent":{"const":5},"output_fraction":{"const":11}}}},
+    {"if":{"properties":{"input_exponent":{"const":8}},"required":["input_exponent"]},"then":{"properties":{"input_fraction":{"const":24},"output_exponent":{"const":8},"output_fraction":{"const":24}}}},
+    {"if":{"properties":{"input_exponent":{"const":11}},"required":["input_exponent"]},"then":{"properties":{"input_fraction":{"const":53},"output_exponent":{"const":11},"output_fraction":{"const":53}}}}
+  ]
+}

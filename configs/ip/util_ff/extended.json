@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix":"util_ff_flipflop_matrix",
+      "template":{"ip_type":"util_ff","vendor":"xilinx.com","ip_name":"util_ff","parameters":{"width":8,"ff_type":"FDRE","init_value":"0x0","control_active_high":true,"data_inverted":false,"gate_active_high":true},"stages":["create_ip","generate_testbench","sim_selfcheck"],"verification":{"strategy":"directed_random","strategy_version":"1.0","random_seed":20261019,"case_budget":64,"coverage_targets":["port_boundaries"],"boundary_mode":"basic","input_order":"generated","timing_mode":"continuous","max_gap_cycles":8,"burst_length":16}},
+      "axes":{"width":[8,16,32,64,256,1024],"ff_type":["FDRE","FDCE","FDSE","FDPE"],"init_value":["0x0","0x1"],"control_active_high":[false,true],"data_inverted":[false,true]}
+    },
+    {
+      "case_prefix":"util_ff_latch_matrix",
+      "template":{"ip_type":"util_ff","vendor":"xilinx.com","ip_name":"util_ff","parameters":{"width":8,"ff_type":"LDCE","init_value":"0x0","control_active_high":true,"data_inverted":false,"gate_active_high":true},"stages":["create_ip","generate_testbench","sim_selfcheck"],"verification":{"strategy":"directed_random","strategy_version":"1.0","random_seed":20261020,"case_budget":64,"coverage_targets":["port_boundaries"],"boundary_mode":"basic","input_order":"generated","timing_mode":"continuous","max_gap_cycles":8,"burst_length":16}},
+      "axes":{"width":[8,16,32,64,256,1024],"ff_type":["LDCE","LDPE"],"init_value":["0x0","0x1"],"control_active_high":[false,true],"gate_active_high":[false,true]}
+    }
+  ]
+}

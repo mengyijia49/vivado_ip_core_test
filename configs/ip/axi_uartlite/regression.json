@@ -1,0 +1,42 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "uartlite_8n1_230400",
+      "ip_type": "axi_uartlite",
+      "vendor": "xilinx.com",
+      "ip_name": "axi_uartlite",
+      "parameters": {"baud_rate": 230400, "data_bits": 8, "parity": "None"},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 2026, "case_budget": 256, "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "random_gaps", "max_gap_cycles": 8, "burst_length": 16}
+    },
+    {
+      "case_id": "uartlite_7e1_230400",
+      "ip_type": "axi_uartlite",
+      "vendor": "xilinx.com",
+      "ip_name": "axi_uartlite",
+      "parameters": {"baud_rate": 230400, "data_bits": 7, "parity": "Even"},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 2027, "case_budget": 256, "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "bursts", "max_gap_cycles": 5, "burst_length": 8}
+    },
+    {
+      "case_id": "uartlite_6n1_115200",
+      "ip_type": "axi_uartlite",
+      "vendor": "xilinx.com",
+      "ip_name": "axi_uartlite",
+      "parameters": {"baud_rate": 115200, "data_bits": 6, "parity": "None"},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 2028, "case_budget": 256, "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "random_gaps", "max_gap_cycles": 8, "burst_length": 16}
+    },
+    {
+      "case_id": "uartlite_5o1_128000",
+      "ip_type": "axi_uartlite",
+      "vendor": "xilinx.com",
+      "ip_name": "axi_uartlite",
+      "parameters": {"baud_rate": 128000, "data_bits": 5, "parity": "Odd"},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 2029, "case_budget": 256, "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "bursts", "max_gap_cycles": 5, "burst_length": 8}
+    }
+  ]
+}

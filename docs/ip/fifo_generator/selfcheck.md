@@ -64,5 +64,4 @@ python3 scripts/run_all.py --config configs/ip/fifo_generator/regression/fwft.js
 具体含义和范围见[计数与阈值](status_protocol.md)。
 
 尚未接入独立时钟、异宽端口、阈值输入端口、ECC 和内建 FIFO 原语。
-实测编号和检查器结果见[FWFT 接入检查](../../experiments/fifo_fwft_acceptance.md)
-和[计数及阈值接入检查](../../experiments/fifo_status_acceptance.md)。
+2026.1 的实测结果见[全量运行记录](../../experiments/vivado_2026_full_regression.md)。

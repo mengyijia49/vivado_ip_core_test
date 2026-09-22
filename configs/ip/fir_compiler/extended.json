@@ -1,0 +1,47 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "fir_integer_full",
+      "template": {
+        "ip_type": "fir_compiler",
+        "vendor": "xilinx.com",
+        "ip_name": "fir_compiler",
+        "parameters": {
+          "data_width": 8,
+          "coefficient_width": 4,
+          "coefficients": [1, 2],
+          "architecture": "Systolic_Multiply_Accumulate",
+          "has_last": false,
+          "user_width": 0
+        },
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random",
+          "strategy_version": "1.0",
+          "random_seed": 2026,
+          "case_budget": 4096,
+          "coverage_targets": ["port_boundaries"],
+          "boundary_mode": "systematic",
+          "input_order": "generated",
+          "timing_mode": "random_gaps",
+          "max_gap_cycles": 8,
+          "burst_length": 16
+        }
+      },
+      "axes": {
+        "data_width": [8, 9, 16],
+        "coefficients": [
+          {"label": "positive2", "value": [1, 2]},
+          {"label": "positive3", "value": [1, 1, 2]},
+          {"label": "mixed3", "value": [1, -2, 3]},
+          {"label": "edge3", "value": [-8, 0, 1]}
+        ],
+        "architecture": ["Systolic_Multiply_Accumulate", "Transpose_Multiply_Accumulate"],
+        "has_last": [false, true],
+        "user_width": [0, 7]
+      }
+    }
+  ]
+}

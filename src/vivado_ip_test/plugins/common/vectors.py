@@ -8,10 +8,10 @@ from vivado_ip_test.strategies.boundaries import boundary_values
 
 
 def cycle_space(spec: CycleSpec, systematic: bool) -> CaseSpace:
-    return port_space(spec.inputs, systematic, spec.frame())
+    return port_space(spec.inputs, systematic, spec.frame(), spec.combine_scalar_controls)
 
 
-def port_space(ports, systematic: bool, neutral=None) -> CaseSpace:
+def port_space(ports, systematic: bool, neutral=None, combine_scalar_controls=True) -> CaseSpace:
     active = {port.name: (neutral or {}).get(port.name, 0) for port in ports}
     boundaries = [tuple(sorted({value for value in
                   (boundary_values(port.width, False) if systematic else
@@ -29,12 +29,13 @@ def port_space(ports, systematic: bool, neutral=None) -> CaseSpace:
                 row = list(base)
                 row[index] = value
                 directed.append(tuple(row))
-    control_indices = [index for index, port in enumerate(ports) if port.scalar]
-    for controls in product((0, 1), repeat=len(control_indices)):
-        row = [port.limit for port in ports]
-        for index, value in zip(control_indices, controls):
-            row[index] = value
-        directed.append(tuple(row))
+    if combine_scalar_controls:
+        control_indices = [index for index, port in enumerate(ports) if port.scalar]
+        for controls in product((0, 1), repeat=len(control_indices)):
+            row = [port.limit for port in ports]
+            for index, value in zip(control_indices, controls):
+                row[index] = value
+            directed.append(tuple(row))
     bins = frozenset(f"{port.name}:{with_hex_large_integers(value)}" for port, values in zip(ports, boundaries)
                      for value in values)
     return CaseSpace(

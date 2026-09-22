@@ -5,6 +5,11 @@
     {"$ref": "unary.schema.json"},
     {"$ref": "compare.schema.json"},
     {"$ref": "arithmetic.schema.json"},
-    {"$ref": "divide.schema.json"}
+    {"$ref": "divide.schema.json"},
+    {"$ref": "fma.schema.json"},
+    {"$ref": "reciprocal.schema.json"},
+    {"$ref": "reciprocal_sqrt.schema.json"},
+    {"$ref": "exponential.schema.json"},
+    {"$ref": "logarithm.schema.json"}
   ]
 }

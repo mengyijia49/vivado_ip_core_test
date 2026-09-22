@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AXI APB Bridge 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["address_width", "num_slaves", "base_address", "wait_cycles", "error_response"],
+  "properties": {
+    "address_width": {"enum": [16, 20, 32]},
+    "num_slaves": {"enum": [1, 2, 4, 8, 16]},
+    "base_address": {"type": "integer", "minimum": 0, "maximum": 4294967295},
+    "wait_cycles": {"type": "integer", "minimum": 0, "maximum": 4},
+    "error_response": {"type": "boolean"}
+  }
+}

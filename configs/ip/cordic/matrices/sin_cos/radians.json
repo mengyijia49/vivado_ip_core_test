@@ -1,0 +1,25 @@
+{
+  "$schema": "../../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "cs_rad",
+      "template": {
+        "ip_type": "cordic", "vendor": "xilinx.com", "ip_name": "cordic",
+        "parameters": {"function":"Sin_and_Cos","input_width":8,"output_width":8,"phase_format":"Radians","rounding":"Truncate","architecture":"Parallel","pipelining":"Maximum","optimization":"Resources","coarse_rotation":true,"has_last":false,"user_width":0},
+        "stages": ["create_ip","generate_testbench","sim_selfcheck"],
+        "verification": {"strategy":"directed_random","strategy_version":"1.0","random_seed":2026,"case_budget":4096,"coverage_targets":["port_boundaries"],"boundary_mode":"systematic","input_order":"generated","timing_mode":"random_gaps","max_gap_cycles":8,"burst_length":16}
+      },
+      "axes": {
+        "input_width": [8,9,16,17,24,32,47,48],
+        "output_width": [8,9,16,17,24,32,47,48],
+        "rounding": [{"label":"tr","value":"Truncate"},{"label":"rp","value":"Round_Pos_Inf"},{"label":"ra","value":"Round_Pos_Neg_Inf"},{"label":"ne","value":"Nearest_Even"}],
+        "pipelining": [{"label":"np","value":"No_Pipelining"},{"label":"op","value":"Optimal"},{"label":"mx","value":"Maximum"}],
+        "optimization": [{"label":"res","value":"Resources"},{"label":"perf","value":"Performance"}],
+        "coarse_rotation": [{"label":"q","value":false},{"label":"full","value":true}],
+        "has_last": [{"label":"nl","value":false},{"label":"last","value":true}],
+        "user_width": [0,3]
+      }
+    }
+  ]
+}

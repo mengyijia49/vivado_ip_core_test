@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["filter_type", "input_width", "stages", "differential_delay", "rate"],
+  "properties": {
+    "filter_type": {"enum": ["Decimation", "Interpolation"]},
+    "input_width": {"type": "integer", "minimum": 2, "maximum": 32},
+    "stages": {"type": "integer", "minimum": 2, "maximum": 6},
+    "differential_delay": {"enum": [1, 2]},
+    "rate": {"type": "integer", "minimum": 4, "maximum": 8192}
+  }
+}

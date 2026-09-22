@@ -30,7 +30,7 @@ python3 scripts/run_all.py --config configs/ip/fifo_generator/regression/status.
 
 滞回 full 的撤销阈值必须在上述范围内，并小于置位阈值；
 滞回 empty 的撤销阈值必须在上述范围内，并大于置位阈值。
-范围来自本机 2025.2 Catalog 的参数校验，生成后还会核对 XCI 和实际端口。
+范围经当前 Vivado Catalog 参数校验，生成后还会核对 XCI 和实际端口。
 
 ## 比较规则
 

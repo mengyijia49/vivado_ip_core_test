@@ -1,0 +1,12 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"AXI Protocol Converter 参数","type":"object","additionalProperties":false,
+  "required":["data_width","address_width","id_width","burst_length","downstream_stall_cycles"],
+  "properties":{
+    "data_width":{"enum":[32,64]},
+    "address_width":{"enum":[12,32,64]},
+    "id_width":{"enum":[1,4,8,16,32]},
+    "burst_length":{"enum":[1,2,4,8,16]},
+    "downstream_stall_cycles":{"enum":[0,1,2,4]}
+  }
+}

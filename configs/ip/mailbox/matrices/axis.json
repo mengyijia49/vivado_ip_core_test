@@ -1,0 +1,8 @@
+{
+  "schema_version":2,
+  "sweeps":[{
+    "case_prefix":"mailbox_axis_matrix",
+    "template":{"ip_type":"mailbox","vendor":"xilinx.com","ip_name":"mailbox","parameters":{"interface_mode":"Axis","depth":16,"memory_style":"Distributed_RAM","async_clocks":false,"data_width":32},"stages":["create_ip","generate_testbench","sim_selfcheck"],"verification":{"strategy":"exhaustive","strategy_version":"1.0","random_seed":20261017,"case_budget":1,"coverage_targets":["bidirectional_stream","tlast","fifo_full_backpressure","output_backpressure","concurrent_directions","reset_flush"],"boundary_mode":"systematic","input_order":"generated","timing_mode":"random_gaps","max_gap_cycles":7,"burst_length":16}},
+    "axes":{"depth":[16,32,64,128,256,512,1024,2048,4096,8192],"memory_style":["Distributed_RAM","Block_RAM"]}
+  }]
+}

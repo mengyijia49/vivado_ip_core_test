@@ -3,7 +3,7 @@
 在仓库根目录先加载一次环境：
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 ```
 
 只测某类 IP，或测全部 IP，选一条执行：
@@ -13,7 +13,8 @@ python3 scripts/run_all.py --ip-type divider
 python3 scripts/run_all.py --all
 ```
 
-`--all` 运行 323 组常用配置，不是下面的大矩阵。不带选项仍是原有六组回归。
+不带选项运行 6 组快速检查；`--all` 运行 478 组常用配置；
+`--config configs/extended_discovery.json` 才读取下表所列的可选大矩阵。
 `--ip-type` 可以重复指定；只测某个参数配置可用 `--all --case <case_id>`。
 每个被选中的配置只运行一次，不自动重试，不自动增加种子和时序组合。
 
@@ -57,13 +58,41 @@ python3 scripts/run_all.py --all
 | [ilconstant](ilconstant/selfcheck.md) | ilconstant（Inline HDL） | 16861 | 常量解析、全部 1 至 4096 位、未知位和稳定性 |
 | [ilvector_logic](ilvector_logic/selfcheck.md) | ilvector_logic（Inline HDL） | 16448 | 与、或、异或、取反、两路输入独立变化和超宽数值 |
 | [ilreduced_logic](ilreduced_logic/selfcheck.md) | ilreduced_logic（Inline HDL） | 12336 | 归约与/或/异或、奇偶性、每位单独为一和单独为零 |
-| [cordic](cordic/selfcheck.md) | cordic | 661248 | 整数/定点平方根、数学舍入、补齐位、侧带和 Blocking 握手 |
-| [floating_point](floating_point/selfcheck.md) | floating_point | 8047768 | 绝对值、三种转换、平方根、比较、加减、乘除、独立操作数握手、特殊值和侧带 |
+| [cordic](cordic/selfcheck.md) | cordic | 685824 | 整数/定点平方根、正余弦、相位范围、舍入、侧带和 Blocking 握手 |
+| [floating_point](floating_point/selfcheck.md) | floating_point | 8048248 | 绝对值、三种转换、平方根、比较、加减、乘除、融合乘加/减、倒数、倒数平方根、指数、自然对数、特殊值和侧带 |
+| [fir_compiler](fir_compiler/selfcheck.md) | fir_compiler | 96 | 固定整数系数、两种架构、卷积数值、侧带和回压 |
+| [dds_compiler](dds_compiler/selfcheck.md) | dds_compiler | 96 | 固定步进和相偏、相位回绕、回压、复位进入与恢复 |
+| [processor_system_reset](processor_system_reset/selfcheck.md) | proc_sys_reset | 117 | 脉冲过滤、输入极性、锁定丢失、分阶段释放和输出副本 |
+| [clocking_wizard](clocking_wizard/selfcheck.md) | clk_wiz | 48 | MMCM/PLL、输出周期、占空比、锁定、复位解锁和重新锁定 |
+| [cic_compiler](cic_compiler/selfcheck.md) | cic_compiler | 256 | 固定倍率抽取/插值、全精度数值、输出数量、回压和输入因果关系 |
+| [axi_uartlite](axi_uartlite/selfcheck.md) | axi_uartlite | 84 | 串行回接、字符宽度、校验、收发 FIFO、状态和 AXI-Lite 响应 |
+| [convolution](convolution/selfcheck.md) | convolution | 126 | 约束寄存器、多项式奇偶校验、1/2 至 1/7 输出率、回压和输入填充位 |
+| [xfft](xfft/selfcheck.md) | xfft | 1344 | 无缩放定点正逆变换、四种实现、输出顺序、帧边界、配置通道和回压 |
+| [axi_bram_controller](axi_bram_controller/selfcheck.md) | axi_bram_ctrl | 18 | AXI4-Lite 地址、字节写、保护属性、响应回压和复位后数据保持 |
+| [lmb_bram_controller](lmb_bram_controller/selfcheck.md) | lmb_bram_if_cntlr | 68 | LMB 地址译码、保护属性、应答及 BRAM 地址、使能、字节写和数据转发 |
+| [axi_timebase_wdt](axi_timebase_wdt/selfcheck.md) | axi_timebase_wdt | 16 | 计数周期、首次和第二次到期、启停、冻结、复位状态及 AXI-Lite 响应 |
+| [fit_timer](fit_timer/selfcheck.md) | fit_timer | 96 | 周期中断、单周期脉宽、周期误差、高低有效复位和运行中恢复 |
+| [mutex](mutex/selfcheck.md) | mutex | 48 | 多 AXI 端口共享锁、所有者、硬件保护、USER 寄存器和同时竞争 |
+| [mailbox](mailbox/selfcheck.md) | mailbox | 100 | 双 AXI-Lite 状态与双向 AXI4-Stream 数据、TLAST 和回压 |
+| [util_ff](util_ff/selfcheck.md) | util_ff | 288 | 触发器、锁存器、初值、使能、控制极性和输入反相 |
+| [axi_apb_bridge](axi_apb_bridge/selfcheck.md) | axi_apb_bridge | 210 | APB4 地址路由、字节写、保护属性、错误映射、等待和时序保持 |
+| [axi_fifo_mm_s](axi_fifo_mm_s/selfcheck.md) | axi_fifo_mm_s | 1620 | AXI-Lite 寄存器、数据包回接、长度、TKEEP、TDEST、回压、复位和中断 |
+| [tmr_inject](tmr_inject/selfcheck.md) | tmr_inject | 675 | 目标地址、一次性指令替换、magic、CPU 编号、LMB protection 和透明转发 |
+| [axi_sideband_util](axi_sideband_util/selfcheck.md) | axi_sideband_util | 1152 | 五个 AXI4 通道、SMID 旁路、插入、移除、握手和回压 |
+| [axi_register_slice](axi_register_slice/selfcheck.md) | axi_register_slice | 16200 | 五个 AXI4 通道、五种寄存模式、停顿保持、吞吐和复位 |
+| [axi_lmb_bridge](axi_lmb_bridge/selfcheck.md) | axi_lmb_bridge | 192 | AXI4 burst 到 LMB 的地址、数据、等待、错误、保护和 Pause |
+| [axi_clock_converter](axi_clock_converter/selfcheck.md) | axi_clock_converter | 15750 | 五通道异步跨时钟、负载、顺序、回压保持和 USER 字段 |
+| [axi_protocol_converter](axi_protocol_converter/selfcheck.md) | axi_protocol_converter | 600 | AXI4 burst 拆成 AXI4-Lite 单拍、地址、响应、ID 和回压 |
+| [axi_protocol_checker](axi_protocol_checker/selfcheck.md) | axi_protocol_checker | 10080 | 合法事务、保留 burst、WRAP 长度、传输尺寸和握手稳定性错误 |
+| [axi_memory_init](axi_memory_init/selfcheck.md) | axi_memory_init | 46080 | 初始化 burst、地址和数据序列、写响应、ACLKEN、回压及初始化后五通道透传 |
+| [ahblite_axi_bridge](ahblite_axi_bridge/selfcheck.md) | ahblite_axi_bridge | 7680 | AHB-Lite 单拍读写、AXI 地址和保护属性、窄传输字节使能、错误响应和回压 |
+| [axis_protocol_checker](axis_protocol_checker/selfcheck.md) | axis_protocol_checker | 65536 | AXI4-Stream 复位、回压稳定、有效保持、等待上限、侧带和字节限定规则 |
+| [i2s_transmitter](i2s_transmitter/selfcheck.md) | i2s_transmitter | 1200 | AXI-Lite 配置、AXI4-Stream 声道路由、I2S 串行样本、LR 槽宽和时钟分频 |
 
-合计 9472890 组。配置、参考模型、Tcl、测试和专属文档均按 IP 分目录。
+合计 9667722 组。配置、参考模型、Tcl、测试和专属文档均按 IP 分目录。
 本机未能从 Catalog 创建 c_compare 和 c_reg_fd，因此没有将它们列为支持项。
-浮点融合乘加、FFT 尚未接入；AXI-Lite 外设目前接入 GPIO、Timer 和 INTC。
-其他候选及未完成项见 [Catalog 探测记录](../experiments/catalog_candidates.md)。
+AXI-Lite 外设目前接入 GPIO、Timer、INTC、UART Lite、Timebase Watchdog 和 AXI4-Stream FIFO。
+当前常用配置的实测结果见[2026.1 全量运行记录](../experiments/vivado_2026_full_regression.md)。
 
 ## 需要更多参数时
 
@@ -80,7 +109,7 @@ python3 scripts/run_all.py --config configs/extended_discovery.json --ip-type co
 
 ## 当前限制
 
-实际仿真只检查了代表配置，不能据此宣称 9472890 组都可创建或都通过。
+实际仿真检查了 478 组常用配置，不能据此宣称 9667722 组大矩阵都可创建或都通过。
 大矩阵已检查配置和预算，但 Vivado 的具体限制仍可能使部分配置创建失败。
 创建与自检使用 Artix-7 `xc7a35tcsg324-1`；未检查全部大配置是否放得进这颗器件。
 测试对象是行为仿真模型，不包括综合后、布局布线后和板级结果。
@@ -100,8 +129,10 @@ GPIO 的[方向切换和未启用寄存器读回](axi_gpio/register_issue.md)已
 INTC 的 [ISR 写入](axi_intc/isr_write_issue.md)和[ME 屏蔽](axi_intc/master_enable_issue.md)差异
 有不依赖 Python 的独立复现，仍需厂商确认，不将不同参数触发重复计数。
 CORDIC 的 Nearest_Even 与精确数学舍入存在[差异](cordic/rounding_review.md)，
-厂商 C 模型也可复现。需要审查内部精度，而不是把多组触发都算作独立 bug。
+需要审查内部精度，而不是把多组触发都算作独立 bug。
 浮点转换的[下溢规则](floating_point/underflow_review.md)存在手册正文与注释冲突，
 当前参考明确采用正文的舍入后判断，不把该歧义计作实现 bug。
 浮点[双精度低延迟乘法](floating_point/multiply_rounding_issue.md)另有远离下溢边界的数值差异，
 独立 VHDL 已复现，速度优化对照正常；仍需核对版本、官方记录和厂商结论。
+浮点倒数的判定须考虑 PG060 给出的精度范围，不能把数学参考与厂商结果的
+任意末位差异直接计作 bug。

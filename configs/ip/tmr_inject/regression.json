@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "tmr_inject_cpu1_magic00_2k",
+      "ip_type": "tmr_inject", "vendor": "xilinx.com", "ip_name": "tmr_inject",
+      "parameters": {"base_address": 65536, "address_size": 2048, "magic": 0, "cpu_id": 1, "protection": false, "protection_mask": 255},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260930, "case_budget": 4096, "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "random_gaps", "max_gap_cycles": 8, "burst_length": 16}
+    },
+    {
+      "case_id": "tmr_inject_cpu2_magic5a_4k_protected",
+      "ip_type": "tmr_inject", "vendor": "xilinx.com", "ip_name": "tmr_inject",
+      "parameters": {"base_address": 1048576, "address_size": 4096, "magic": 90, "cpu_id": 2, "protection": true, "protection_mask": 105},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260931, "case_budget": 4096, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "generated", "timing_mode": "bursts", "max_gap_cycles": 5, "burst_length": 8}
+    },
+    {
+      "case_id": "tmr_inject_cpu3_magicff_64k",
+      "ip_type": "tmr_inject", "vendor": "xilinx.com", "ip_name": "tmr_inject",
+      "parameters": {"base_address": 2147483648, "address_size": 65536, "magic": 255, "cpu_id": 3, "protection": false, "protection_mask": 255},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260932, "case_budget": 4096, "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "continuous", "max_gap_cycles": 8, "burst_length": 16}
+    },
+    {
+      "case_id": "tmr_inject_cpu1_magica5_write_protected",
+      "ip_type": "tmr_inject", "vendor": "xilinx.com", "ip_name": "tmr_inject",
+      "parameters": {"base_address": 983040, "address_size": 4096, "magic": 165, "cpu_id": 1, "protection": true, "protection_mask": 15},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260933, "case_budget": 4096, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "generated", "timing_mode": "random_gaps", "max_gap_cycles": 12, "burst_length": 16}
+    }
+  ]
+}

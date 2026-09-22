@@ -1,7 +1,7 @@
 # 浮点除法检查
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 python3 scripts/run_all.py --config configs/ip/floating_point/regression/divide.json
 python3 scripts/run_all.py --ip-type floating_point --case fp_div80_rate66
 python3 scripts/run_all.py --config configs/ip/floating_point/matrices/divide.json --limit 3
@@ -20,7 +20,7 @@ python3 scripts/run_all.py --config configs/ip/floating_point/matrices/divide.js
 `cycles_per_operation` 必填，允许 1 至 `input_fraction + 2`。
 使用 Blocking、启动复位、自动最大延迟，不接入手动延迟、ACLKEN 或运行中复位。
 
-本机 2025.2 将 Low_Latency 和 DSP 使用请求改回固定实现，因此配置不提供这些伪选项。
+配置不提供未进入当前实现的 Low_Latency 和 DSP 使用伪选项。
 请求和实际 XCI 仍会核对。`optimization` 只选择 AXI 接口的 Resources 或 Performance。
 
 可选矩阵共 3578240 组：645 种格式、各自全部合法运算间隔、两种 AXI 优化目标、
@@ -56,5 +56,5 @@ A 和 B 独立到达、独立握手，按各自的第 n 次接收配对。
 只在结果有效握手时比较数值及侧带，最后由 Python 再核对实际接收输入。
 超时预算随运算间隔增加，不用延迟估计代替 READY，也不把低速输出当作漏发。
 
-参数探测记录位于 `reports/framework/floating_divide_probe/2026-09-15_13-39-25_UTC+0800_1802dca9/summary.json`。
-其中 7、67 周期的越界请求被正确拒绝，不计为 bug；失败工程回退后的默认 XCI 也不算请求成功。
+越界的运算间隔请求不计为 bug；失败工程回退后的默认 XCI 也不算请求成功。
+常用配置的结果见[2026.1 全量运行记录](../../experiments/vivado_2026_full_regression.md)。

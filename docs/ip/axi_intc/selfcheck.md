@@ -7,7 +7,7 @@
 ## 运行
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 python3 scripts/run_all.py --ip-type axi_intc
 python3 scripts/run_all.py --ip-type axi_intc --case intc_mixed4_lowirq
 python3 scripts/run_all.py --config configs/ip/axi_intc/extended.json --limit 3
@@ -56,4 +56,4 @@ Fast、级联、脉冲 IRQ 和独立处理器时钟尚未接入，不运行综�
 
 已保留 [ISR 写入异常](isr_write_issue.md)和[清除 ME 后 IRQ 仍有效](master_enable_issue.md)。
 参考模型仍按手册比较，相关配置会报告失败；不能把测试命令返回非零直接当成环境故障。
-接入过程和真实结果见[检查记录](../../experiments/axi_intc_acceptance.md)。
+真实结果见[2026.1 全量运行记录](../../experiments/vivado_2026_full_regression.md)。

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "data_width",
+    "coefficient_width",
+    "coefficients",
+    "architecture",
+    "has_last",
+    "user_width"
+  ],
+  "properties": {
+    "data_width": {"type": "integer", "minimum": 8, "maximum": 32},
+    "coefficient_width": {"type": "integer", "minimum": 2, "maximum": 24},
+    "coefficients": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 256,
+      "items": {"type": "integer"}
+    },
+    "architecture": {
+      "enum": [
+        "Systolic_Multiply_Accumulate",
+        "Transpose_Multiply_Accumulate"
+      ]
+    },
+    "has_last": {"type": "boolean"},
+    "user_width": {"type": "integer", "minimum": 0, "maximum": 64}
+  }
+}

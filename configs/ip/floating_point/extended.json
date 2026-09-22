@@ -10,6 +10,11 @@
     "matrices/compare.json",
     "matrices/add_subtract.json",
     "matrices/multiply.json",
-    "matrices/divide.json"
+    "matrices/divide.json",
+    "matrices/fma.json",
+    "matrices/reciprocal.json",
+    "matrices/reciprocal_sqrt.json",
+    "matrices/exponential.json",
+    "matrices/logarithm.json"
   ]
 }

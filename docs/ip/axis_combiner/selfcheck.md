@@ -5,7 +5,7 @@
 ## 运行
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 python3 scripts/run_all.py --ip-type axis_combiner
 python3 scripts/run_all.py --config configs/ip/axis_combiner/extended.json --list-cases
 python3 scripts/run_all.py --config configs/ip/axis_combiner/extended.json --limit 3
@@ -62,4 +62,4 @@ DATA 范围依据 [PG085 参数说明](https://docs.amd.com/r/en-US/pg085-axi4st
 KEEP、STRB 目前只发送全 1。仅启动时复位，暂不测运行中复位、ACLKEN 和 `s_cmd_err`。
 输入组之间不交叉发送，尚未测试不同组在各路上任意超前积压。
 穷举配置只穷举数值字段，不穷举全部时序和包尾排列。
-PASS 只说明这批测试未发现异常；接入证据见[验收记录](../../experiments/axis_combiner_acceptance.md)。
+PASS 只说明这批测试未发现异常；实际结果见[2026.1 全量运行记录](../../experiments/vivado_2026_full_regression.md)。

@@ -94,6 +94,7 @@ class ComplexMultiplierPlugin(CycleIpPlugin):
         drain = max(1, actual_latency)
         return CycleSpec(tuple(inputs), tuple(outputs), settings, models, factory,
             clock="aclk" if p["latency"] != 0 else None,
+            clock_aliases=("aclk",) if p["latency"] == 0 else (),
             neutral={"aclken": 1} if p["clock_enable"] else {},
             idle_values={f"s_axis_{ch}_tvalid": 0 for ch in channels},
             prefix=lambda: directed_sequence(p, drain), flush_cycles=drain + 2, masked_outputs=True)

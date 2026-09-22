@@ -21,12 +21,12 @@ Python 独立解析常量。传给 Vivado 的原始写法和实际 `.bd` 参数�
 ## 运行
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 python3 scripts/run_all.py --ip-type ilconstant
 python3 scripts/run_all.py --all --case ilconstant_decimal4096
 python3 scripts/run_all.py --config configs/ip/ilconstant/extended.json --list-cases
 ```
 
-范围依据为本机 Vivado 2025.2 的 `data/rsb/iprepos/ilconstant_v1_0/component.xml`；
+范围依据为当前 Vivado 的组件描述；
 不同写法另有实际仿真检查。创建使用 Inline HDL，配置在 `.bd` 中，不是独立 XCI。
 Inline HDL 说明见 [UG994](https://docs.amd.com/r/en-US/ug994-vivado-ip-subsystems/Inline-HDL)。

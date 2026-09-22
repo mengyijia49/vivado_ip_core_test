@@ -23,6 +23,8 @@ def render_testbench(spec, paths, count, max_gap, actions):
                 initial = f"'{1-spec.window.active}'"
             signals.append(f"  signal p_{port.name} : {kind} := {initial};")
             mappings.append(f"{port.name} => p_{port.name}")
+    loopback_assignments = [f"  p_{input_name} <= p_{output_name};"
+                            for input_name, output_name in spec.loopbacks]
     command_parts = {}
     left = sum(p.width for p in spec.command_ports)-1
     for port in spec.command_ports:
@@ -86,8 +88,12 @@ def render_testbench(spec, paths, count, max_gap, actions):
     for port in (*spec.inputs, *spec.outputs):
         if port not in (*spec.side_inputs, *spec.side_outputs):
             mappings.append(f"{port.name} => {port.name.removeprefix('s_axi_')}")
+    mappings.extend(spec.extra_mappings)
     return Template((Path(__file__).parent / "templates/tb_axilite_selfcheck.vhd.tpl").read_text()).substitute(
         side_signals="\n".join(signals), mappings=",\n      ".join(mappings),
+        loopback_assignments="\n".join(loopback_assignments),
+        extra_declarations=spec.testbench_declarations,
+        extra_statements=spec.testbench_statements,
         drive_side="\n".join(drive_side), capture_side="\n".join(capture_side), audit_side="\n".join(audit_side),
         window_driver=window_driver, pulse_monitor=pulse_monitor,
         input_width=sum(p.width for p in spec.command_ports), output_width=sum(p.width for p in spec.observation.outputs),

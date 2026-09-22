@@ -5,7 +5,7 @@ from vivado_ip_test.plugins.common.cycle import Port
 from vivado_ip_test.plugins.floating_point.parameters import ALL_OPERATIONS
 
 
-LAST_MODES = {'None': 'Null', 'A': 'Pass_A_TLAST', 'B': 'Pass_B_TLAST',
+LAST_MODES = {'None': 'Null', 'A': 'Pass_A_TLAST', 'B': 'Pass_B_TLAST', 'C': 'Pass_C_TLAST',
               'Operation': 'Pass_OPERATION_TLAST', 'Or': 'OR_all_TLASTs', 'And': 'AND_all_TLASTs'}
 EXCEPTION_NAMES = ('UNDERFLOW', 'OVERFLOW', 'INVALID_OP', 'DIVIDE_BY_ZERO',
                    'ACCUM_OVERFLOW', 'ACCUM_INPUT_OVERFLOW')
@@ -58,19 +58,21 @@ class OperandSpec:
         return sum(port.width for port in self.payload)
 
 
-def build_spec(p, operations, programmable, result_width, result_fraction=0, *, settings=None, model=None, rate=1):
-    if not programmable and (p['operation_user_width'] or p['has_operation_last']):
+def build_spec(p, operations, programmable, result_width, result_fraction=0, *, settings=None, model=None,
+               rate=1, data_lanes=('a', 'b')):
+    if not programmable and (p.get('operation_user_width', 0) or p.get('has_operation_last', False)):
         raise PluginError('Fixed operation has no OPERATION channel')
-    last_lanes = [lane for lane in ('a', 'b', 'operation') if p[f'has_{lane}_last']]
+    channel_lanes = (*data_lanes, *(('operation',) if programmable else ()))
+    last_lanes = [lane for lane in channel_lanes if p.get(f'has_{lane}_last', False)]
     mode = p['last_mode']
     if (not last_lanes) != (mode == 'None'):
         raise PluginError('TLAST mode must match the enabled input TLAST channels')
-    if mode in ('A', 'B', 'Operation') and mode.lower() not in last_lanes:
+    if mode in ('A', 'B', 'C', 'Operation') and mode.lower() not in last_lanes:
         raise PluginError('Selected TLAST source is not enabled')
     e, precision = p['input_exponent'], p['input_fraction']
     wire_width, result_wire = ((e + precision + 7) // 8) * 8, ((result_width + 7) // 8) * 8
     lanes = []
-    for lane in ('a', 'b', 'operation') if programmable else ('a', 'b'):
+    for lane in channel_lanes:
         ports = [Port('tdata', 8 if lane == 'operation' else wire_width)]
         if p[f'has_{lane}_last']:
             ports.append(Port('tlast', scalar=True))
@@ -78,7 +80,7 @@ def build_spec(p, operations, programmable, result_width, result_fraction=0, *, 
             ports.append(Port('tuser', p[f'{lane}_user_width']))
         lanes.append((lane, tuple(ports)))
     flags = {name: p.get('has_' + name.lower(), False) for name in EXCEPTION_NAMES}
-    user_width = sum(p[f'{lane}_user_width'] for lane in ('a', 'b', 'operation')) + sum(flags.values())
+    user_width = sum(p.get(f'{lane}_user_width', 0) for lane in channel_lanes) + sum(flags.values())
     output = [Port('tdata', result_wire)]
     if last_lanes:
         output.append(Port('tlast', scalar=True))
@@ -94,7 +96,8 @@ def build_spec(p, operations, programmable, result_width, result_fraction=0, *, 
         'C_A_WIDTH': e + precision, 'C_A_FRACTION_WIDTH': precision,
         'C_B_WIDTH': e + precision, 'C_B_FRACTION_WIDTH': precision,
         'C_RESULT_WIDTH': result_width, 'C_RESULT_FRACTION_WIDTH': result_fraction,
-        'C_HAS_B': 1, 'C_HAS_C': 0, 'C_HAS_OPERATION': int(programmable),
+        'C_HAS_B': int('b' in data_lanes), 'C_HAS_C': int('c' in data_lanes),
+        'C_HAS_OPERATION': int(programmable),
         'C_HAS_ACLKEN': 0, 'C_HAS_ARESETN': 1, 'C_RATE': rate, 'C_FIXED_DATA_UNSIGNED': 0,
         'C_THROTTLE_SCHEME': 1 if p['optimization'] == 'Resources' else 2,
         'C_HAS_RESULT_TLAST': int(bool(last_lanes)), 'C_HAS_RESULT_TUSER': int(bool(user_width)),
@@ -107,5 +110,7 @@ def build_spec(p, operations, programmable, result_width, result_fraction=0, *, 
                               f'{key}_TUSER_Width': width or 1})
         parameters.update({f'C_HAS_{key}_TUSER': int(bool(width)), f'C_HAS_{key}_TLAST': int(last),
                            f'C_{key}_TUSER_WIDTH': width or 1})
-    parameters.update(C_A_TDATA_WIDTH=wire_width, C_B_TDATA_WIDTH=wire_width, C_OPERATION_TDATA_WIDTH=8)
+    parameters.update(C_A_TDATA_WIDTH=wire_width, C_B_TDATA_WIDTH=wire_width,
+                      C_C_WIDTH=e + precision, C_C_FRACTION_WIDTH=precision,
+                      C_C_TDATA_WIDTH=wire_width, C_OPERATION_TDATA_WIDTH=8)
     return OperandSpec(tuple(lanes), tuple(output), configuration, parameters)

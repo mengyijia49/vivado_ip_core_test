@@ -7,7 +7,14 @@
 只做行为仿真（功能仿真），不运行综合、实现、网表仿真或时序仿真。
 XSim 的编译和展开是启动仿真的准备，不是综合。
 
-目前接入 36 类 IP。常用回归有 323 组参数，可选的大矩阵有 9472890 组不同参数。
+目前接入 64 类 IP。参数有三种运行规模：
+
+| 命令 | 参数组数 | 用途 |
+| --- | ---: | --- |
+| `python3 scripts/run_all.py` | 6 | 快速检查基本流程 |
+| `python3 scripts/run_all.py --all` | 478 | 全部 IP 的常用回归 |
+| `python3 scripts/run_all.py --config configs/extended_discovery.json` | 9,667,722 | 可选的大参数矩阵，通常按 IP 和 `--limit` 分批运行 |
+
 大矩阵不默认运行，也不自动乘上多个种子和时序模式。
 `PASS` 表示本批测试没有发现异常，不代表 IP 没有 bug。
 其中 xlconcat、xlslice、xlconstant 是旧版连接工具，Vivado 已提示迁移到 Inline HDL；
@@ -16,16 +23,19 @@ Inline 拼接、截取、常量、向量逻辑和归约逻辑已分别接入自�
 
 ## 开始运行
 
-已验证环境为 Ubuntu、Vivado 2025.2、Python 3.10 或更高版本。
+以后运行使用 Ubuntu、Vivado 2026.1、Python 3.10 或更高版本。
+2026.1 已完成 478 组常用配置的整批运行，结果见
+[运行记录](docs/experiments/vivado_2026_full_regression.md)。运行前在终端加载 2026.1 环境。
 在仓库根目录执行：
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 python3 scripts/run_all.py --ip-type divider
 python3 scripts/run_all.py --all
 ```
 
 第一条测试某类 IP，第二条测试全部 IP 的常用配置；按需要选一条。
+运行入口只接受 Vivado 2026.1。每批工程、日志和报告按版本及运行时间归档。
 支持的类型和参数范围见 [IP 清单](docs/ip/catalog.md)。
 不带选项仍运行原有六组配置，兼容之前的用法。
 
@@ -45,7 +55,8 @@ python3 scripts/run_all.py --config configs/extended_discovery.json --ip-type co
 同一参数、输入和时序不必反复测试。分批运行或重现异常时再用历史记录，
 方法见 [复现和续跑](docs/reproducibility.md)。
 已有异常的复现证据和剩余疑点见[待确认问题](docs/experiments/bug_candidates.md)。
-可提交到 GitHub 的小证据包见[公开证据](evidence/README.md)。
+2026.1 的逐项异常见[问题观察](docs/experiments/vivado_2026_observations.md)。
+公开报告和关键证据见[证据归档](evidence/README.md)。
 其中 INTC 已接入寄存器、中断状态和握手自检，ISR 与 ME 的异常另有独立复现。
 `--all` 会保留已接入 IP 的失败结果，不会自动跳过或改成 PASS。
 
@@ -60,16 +71,16 @@ python3 scripts/run_all.py --config configs/extended_discovery.json --ip-type co
 只有 `divider_u16_u8` 额外运行官方 demo。它检查有效输出中的未知值，
 不比较商和余数；数值检查由框架生成的自检 testbench 完成。
 
-每次运行使用本地时间编号，例如 `2026-09-14_20-55-03_UTC+0800_a1b2c3d4`。
+每次运行使用本地时间编号，例如 `2026-09-22_20-55-03_UTC+0800_a1b2c3d4`。
 编号含日期、时分秒、时区和随机后缀，同一分钟重跑也不会覆盖旧文件。
 
 | 内容 | 位置 |
 | --- | --- |
-| 完整工程、输入输出 | `runs/batches/<run_id>/<ip_type>/<case_id>/` |
-| 阶段日志 | `runs/logs/batches/<run_id>/<ip_type>/<case_id>/` |
-| 源码、配置与关键文件归档 | `runs/history/<run_id>/` |
-| 归档日志 | `runs/logs/history/<run_id>/` |
-| 报告和复现命令 | `reports/history/<run_id>/` |
+| 完整工程、输入输出 | `runs/batches/2026.1/<run_id>/<ip_type>/<case_id>/` |
+| 阶段日志 | `runs/logs/batches/2026.1/<run_id>/<ip_type>/<case_id>/` |
+| 源码、配置与关键文件归档 | `runs/history/2026.1/<run_id>/` |
+| 归档日志 | `runs/logs/history/2026.1/<run_id>/` |
+| 报告和复现命令 | `reports/history/2026.1/<run_id>/` |
 
 `reports/latest` 是最近一批报告的符号链接。先看 `report.csv`；
 要确认整批完成，再看 `run.json` 的 `state` 和 `outcome`。
@@ -78,9 +89,9 @@ python3 scripts/run_all.py --config configs/extended_discovery.json --ip-type co
 ## 文档
 
 - 使用：[配置格式](docs/configuration.md)、[缺陷探索配置](docs/bug_discovery.md)、[异常排查](docs/bug_hunting.md)。
-- 结果：[报告格式](docs/report_format.md)、[复现方法](docs/reproducibility.md)、[XSim 排查记录](docs/xsim_runtime_issue.md)。
+- 结果：[报告格式](docs/report_format.md)、[复现方法](docs/reproducibility.md)、[2026.1 运行记录](docs/experiments/vivado_2026_full_regression.md)。
 - IP：[支持范围和运行命令](docs/ip/catalog.md)，各类 IP 的说明按目录保存。
 - 开发：[目录说明](docs/directory_structure.md)、[架构](docs/architecture.md)、[生成策略](docs/test_generation_strategies.md)、[新增插件](docs/plugin_development.md)。
-- 检查与计划：[验收清单](docs/framework_acceptance.md)、[历史验收记录](docs/experiments/bug_discovery_acceptance.md)、[后续工作](docs/roadmap.md)。
+- 检查与计划：[验收清单](docs/framework_acceptance.md)、[后续工作](docs/roadmap.md)。
 
 开发检查见[贡献指南](CONTRIBUTING.md)。项目使用 [MIT 许可证](LICENSE)。

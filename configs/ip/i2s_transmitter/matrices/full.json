@@ -1,0 +1,20 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [{
+    "case_prefix": "i2stx_matrix",
+    "template": {
+      "ip_type": "i2s_transmitter", "vendor": "xilinx.com", "ip_name": "i2s_transmitter",
+      "parameters": {"sample_width": 16, "channels": 2, "use_32bit_lr": false, "fifo_depth": 64, "sclk_divider": 1},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "coverage_guided", "strategy_version": "1.0", "random_seed": 20261184, "case_budget": 16, "coverage_targets": ["serial_data", "channel_routing", "clock_ratio", "axi_handshake"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "continuous", "max_gap_cycles": 8, "burst_length": 16}
+    },
+    "axes": {
+      "sample_width": [{"label": "16", "value": 16}, {"label": "24", "value": 24}],
+      "channels": [{"label": "2ch", "value": 2}, {"label": "4ch", "value": 4}, {"label": "6ch", "value": 6}, {"label": "8ch", "value": 8}],
+      "use_32bit_lr": [{"label": "native", "value": false}, {"label": "lr32", "value": true}],
+      "fifo_depth": [{"label": "f64", "value": 64}, {"label": "f128", "value": 128}, {"label": "f256", "value": 256}, {"label": "f512", "value": 512}, {"label": "f1024", "value": 1024}],
+      "sclk_divider": [{"label": "d1", "value": 1}, {"label": "d2", "value": 2}, {"label": "d3", "value": 3}, {"label": "d4", "value": 4}, {"label": "d5", "value": 5}, {"label": "d6", "value": 6}, {"label": "d7", "value": 7}, {"label": "d8", "value": 8}, {"label": "d9", "value": 9}, {"label": "d10", "value": 10}, {"label": "d11", "value": 11}, {"label": "d12", "value": 12}, {"label": "d13", "value": 13}, {"label": "d14", "value": 14}, {"label": "d15", "value": 15}]
+    }
+  }]
+}

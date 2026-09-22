@@ -44,7 +44,8 @@ class StreamTestbenchBackend:
         self._layout, self._registry = layout, registry
 
     def generate(self, case, spec, ip_name, version, reference, *, prepare=None,
-                 renderer=None, sink_pattern=None, source_timing=None, reference_contract=None):
+                 renderer=None, sink_pattern=None, source_timing=None, reference_contract=None,
+                 causal_inputs=None, tolerances=None):
         run = self._layout.case_run_dir(case)
         xci, metadata = load_metadata(run, spec, ip_name, version)
         generation = self._registry.generate(
@@ -61,13 +62,33 @@ class StreamTestbenchBackend:
                     type(frame[p.name]) is not int or not 0 <= frame[p.name] <= p.limit for p in spec.payload):
                 raise ValueError("Stream input preparation returned an invalid payload")
         expected = reference(frames)
-        if len(expected) != len(frames) or not frames:
+        if not frames or not expected:
+            raise ValueError("Beat stream reference returned an empty input or output sequence")
+        preserves_transfer_count = getattr(spec, "preserves_transfer_count", True)
+        if preserves_transfer_count and len(expected) != len(frames):
             raise ValueError("Beat stream reference must preserve transaction count")
+        if not preserves_transfer_count:
+            if causal_inputs is None:
+                raise ValueError("Rate-changing stream reference requires causal input counts")
+            required_inputs = list(causal_inputs(frames, expected))
+            if (len(required_inputs) != len(expected)
+                    or any(type(value) is not int or not 1 <= value <= len(frames)
+                           for value in required_inputs)
+                    or required_inputs != sorted(required_inputs)):
+                raise ValueError("Rate-changing stream causal input counts are invalid")
+        else:
+            required_inputs = None
         for frame in expected:
             if set(frame) != {port.name for port in spec.sink_payload} or any(
                     type(frame[p.name]) is not int or not 0 <= frame[p.name] <= p.limit
                     for p in spec.sink_payload):
                 raise ValueError("Stream reference returned an invalid payload")
+        tolerance_rows = None if tolerances is None else list(tolerances(frames, expected))
+        if tolerance_rows is not None and (len(tolerance_rows) != len(expected) or any(
+                set(frame) != {port.name for port in spec.sink_payload} or any(
+                    type(frame[p.name]) is not int or not 0 <= frame[p.name] <= p.limit
+                    for p in spec.sink_payload) for frame in tolerance_rows)):
+            raise ValueError("Stream comparison tolerances are invalid")
         for directory in ("tb", "vectors", "outputs"):
             (run / directory).mkdir(parents=True, exist_ok=True)
         paths = {"input_vectors": run / "vectors/input_vectors.txt",
@@ -79,11 +100,25 @@ class StreamTestbenchBackend:
                  "gaps": run / "vectors/gaps.txt", "ready": run / "vectors/ready.txt",
                  "vectors": run / "vectors/vectors.json", "schedule": run / "vectors/schedule.json",
                  "testbench": run / "tb/tb_stream_selfcheck.vhd", "xci": xci}
+        if tolerance_rows is not None:
+            tolerance_fields = spec.tolerance_fields or tuple(
+                (port.width, False) for port in spec.sink_payload)
+            if sum(width for width, _ in tolerance_fields) != sum(
+                    port.width for port in spec.sink_payload):
+                raise ValueError("Stream tolerance field layout does not match the output payload")
+            paths["output_tolerance"] = run / "vectors/output_tolerance.txt"
         for name, rows, ports in (("input_vectors", frames, spec.payload),
                                  ("expected_output", expected, spec.sink_payload)):
             with paths[name].open("w") as output:
                 for row in rows:
                     output.write(packed(row, ports) + "\n")
+        if tolerance_rows is not None:
+            with paths["output_tolerance"].open("w") as output:
+                for row in tolerance_rows:
+                    output.write(packed(row, spec.sink_payload) + "\n")
+        if required_inputs is not None:
+            paths["required_inputs"] = run / "vectors/required_inputs.txt"
+            paths["required_inputs"].write_text("".join(f"{value}\n" for value in required_inputs))
         lanes = getattr(spec, "input_lane_count", 1)
         gaps = (source_timing(schedule, case.verification) if source_timing else
                 [(gap,) for gap in schedule.gaps])
@@ -102,7 +137,9 @@ class StreamTestbenchBackend:
                    "max_observed_gap": max(max(row) for row in gaps),
                    "input_lane_count": lanes, "checked_input_transfers": len(frames) * lanes,
                    "source_timing_pattern": getattr(spec, "source_timing_pattern", "single_input:1.0"),
-                   "checked_transaction_count": len(frames), "comparison_kind": "accepted_axis_payload",
+                   "checked_transaction_count": len(frames), "comparison_kind": (
+                       "accepted_axis_payload_bounded_distance" if tolerance_rows is not None
+                       else "accepted_axis_payload"),
                    "simulation_mode": "behavioral", "backpressure_pattern": getattr(
                        spec, "backpressure_pattern", "seeded_with_long_stalls:1.0"),
                    "initial_sink_stall_cycles": initial_stall,
@@ -112,7 +149,8 @@ class StreamTestbenchBackend:
                    "expected_packet_boundaries": sum(value for f in expected for name, value in f.items()
                                                        if name == "tlast" or name.endswith("_tlast")),
                    "output_branch_count": getattr(spec, "branch_count", 1),
-                   "checked_output_transfers": len(frames) * getattr(spec, "branch_count", 1),
+                   "checked_output_transfers": len(expected) * getattr(spec, "branch_count", 1),
+                   "output_to_input_transfer_ratio": len(expected) / len(frames),
                    "input_payload_width": spec.width,
                    "output_payload_width": sum(p.width for p in spec.sink_payload),
                    "sequence_coverage": "see_protocol_summary_not_measured_as_percentage",
@@ -126,8 +164,19 @@ class StreamTestbenchBackend:
         outputs = {"actual_output", "accepted_input", "protocol_events", "protocol_summary"}
         for name in outputs:
             paths[name].unlink(missing_ok=True)
-        paths["testbench"].write_text((renderer or render_testbench)(spec, paths, len(frames),
-                                                      case.verification.max_gap_cycles, initial_stall))
+        if renderer is None:
+            scoreboard = None
+            extra = None
+            if tolerance_rows is not None:
+                scoreboard = (Path(__file__).parent / "templates/scoreboard_tolerance.vhd.tpl").read_text()
+                extra = {"tolerance_comparison": tolerance_comparison(tolerance_fields)}
+            rendered = render_testbench(
+                spec, paths, len(frames), case.verification.max_gap_cycles, initial_stall,
+                output_count=len(expected), scoreboard=scoreboard, extra=extra)
+        else:
+            rendered = renderer(
+                spec, paths, len(frames), case.verification.max_gap_cycles, initial_stall)
+        paths["testbench"].write_text(rendered)
         manifest = run / "manifest.json"
         manifest.write_text(json.dumps({
             "schema_version": 1, "case_id": case.case_id, "ip_type": case.ip_type,
@@ -164,6 +213,7 @@ def signal_wiring(spec):
                     ((spec.input_clock, "s_clk"), (spec.input_reset, "resetn")) if name)
     mappings.extend((f"{source}_tvalid => s_valid", f"{source}_tready => s_ready",
                      f"{sink}_tvalid => m_valid", f"{sink}_tready => m_ready"))
+    mappings.extend(f"{port.name} => open" for port in getattr(spec, "ignored_outputs", ()))
     if spec.output_clock:
         mappings.append(f"{spec.output_clock} => m_clk")
     if spec.output_reset:
@@ -172,18 +222,44 @@ def signal_wiring(spec):
             "assignments": "\n".join(assignments), "captures": "\n".join(captures)}
 
 
-def render_testbench(spec, paths, count, max_gap, initial_stall, *, scoreboard=None, extra=None):
+def tolerance_comparison(fields):
+    comparisons = []
+    left = sum(width for width, _ in fields) - 1
+    for width, signed_field in fields:
+        right = left - width + 1
+        part = f"{left} downto {right}"
+        if signed_field:
+            actual = f"unsigned((not actual({left})) & actual({left - 1} downto {right}))"
+            expected = f"unsigned((not expected({left})) & expected({left - 1} downto {right}))"
+        else:
+            actual = f"unsigned(actual({part}))"
+            expected = f"unsigned(expected({part}))"
+        comparisons.append(
+            f"(({actual} >= {expected} and "
+            f"{actual} - {expected} <= unsigned(tolerance({part}))) or\n"
+            f"           ({actual} < {expected} and "
+            f"{expected} - {actual} <= unsigned(tolerance({part}))))")
+        left = right - 1
+    return " and\n          ".join(comparisons)
+
+
+def render_testbench(spec, paths, count, max_gap, initial_stall, *, output_count=None,
+                     scoreboard=None, extra=None):
     templates = Path(__file__).parent / "templates"
     output_clock = (f"m_clk <= not m_clk after {spec.output_period_ns // 2} ns;"
                     if spec.output_clock else "m_clk <= not m_clk after 5 ns;")
     timeout = 1000 + initial_stall * spec.output_period_ns + (
         count + 1024) * (max_gap + 32 + 2 * (spec.transfer_interval_cycles - 1)) * max(10, spec.output_period_ns)
     values = {**signal_wiring(spec), "width": spec.width, "count": count,
+        "output_count": count if output_count is None else output_count,
         "output_width": sum(p.width for p in spec.sink_payload),
         "initial_stall": initial_stall, "output_clock": output_clock, "timeout_ns": timeout,
         "drain_cycles": spec.drain_cycles,
         **{name + "_path": str(path.resolve()).replace('"', '""') for name, path in paths.items()},
         **(extra or {})}
-    body = scoreboard or (templates / "scoreboard_transparent.vhd.tpl").read_text()
+    default_scoreboard = ("scoreboard_transparent.vhd.tpl" if getattr(
+                          spec, "preserves_transfer_count", True)
+                          else "scoreboard_rate_changing.vhd.tpl")
+    body = scoreboard or (templates / default_scoreboard).read_text()
     values["scoreboard"] = Template(body).substitute(values)
     return Template((templates / "tb_stream_selfcheck.vhd.tpl").read_text()).substitute(values)

@@ -1,0 +1,8 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Mailbox 参数",
+  "oneOf":[
+    {"type":"object","additionalProperties":false,"required":["interface_mode","depth","memory_style","enable_bus_error","registered_interrupts"],"properties":{"interface_mode":{"const":"Axi4Lite"},"depth":{"type":"integer","minimum":16,"maximum":8192},"memory_style":{"enum":["Distributed_RAM","Block_RAM"]},"enable_bus_error":{"type":"boolean"},"registered_interrupts":{"type":"boolean"}}},
+    {"type":"object","additionalProperties":false,"required":["interface_mode","depth","memory_style","async_clocks","data_width"],"properties":{"interface_mode":{"const":"Axis"},"depth":{"type":"integer","minimum":16,"maximum":8192},"memory_style":{"enum":["Distributed_RAM","Block_RAM"]},"async_clocks":{"const":false},"data_width":{"const":32}}}
+  ]
+}

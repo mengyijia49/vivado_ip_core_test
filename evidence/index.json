@@ -1,14 +1,7 @@
 {
   "schema_version": 1,
   "issues": [
-    "accumulator/ce_bypass",
-    "complex_multiplier/latency",
-    "xlconcat/port_128",
-    "tmr_voter/lockstep",
-    "axi_gpio/registers",
-    "axi_intc/isr_write",
-    "axi_intc/master_enable",
-    "floating_point/multiply_rounding",
-    "fir_compiler/full_precision"
+    "vivado_2026_1/observations",
+    "vivado_2026_1/full_regression"
   ]
 }

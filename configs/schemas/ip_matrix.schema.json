@@ -523,6 +523,118 @@
         {
           "if": {"properties": {"ip_type": {"const": "floating_point"}}, "required": ["ip_type"]},
           "then": {"properties": {"parameters": {"$ref": "ip/floating_point/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "fir_compiler"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/fir_compiler/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "dds_compiler"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/dds_compiler/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "processor_system_reset"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/processor_system_reset/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "clocking_wizard"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/clocking_wizard/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "cic_compiler"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/cic_compiler/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axi_uartlite"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axi_uartlite/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "convolution"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/convolution/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "xfft"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/xfft/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axi_bram_controller"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axi_bram_controller/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "lmb_bram_controller"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/lmb_bram_controller/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axi_timebase_wdt"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axi_timebase_wdt/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "fit_timer"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/fit_timer/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "mutex"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/mutex/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "mailbox"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/mailbox/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "util_ff"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/util_ff/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axi_apb_bridge"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axi_apb_bridge/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axi_fifo_mm_s"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axi_fifo_mm_s/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "tmr_inject"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/tmr_inject/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axi_sideband_util"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axi_sideband_util/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axi_register_slice"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axi_register_slice/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axi_lmb_bridge"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axi_lmb_bridge/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axi_clock_converter"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axi_clock_converter/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axi_protocol_converter"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axi_protocol_converter/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axi_protocol_checker"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axi_protocol_checker/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axi_memory_init"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axi_memory_init/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "ahblite_axi_bridge"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/ahblite_axi_bridge/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "axis_protocol_checker"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/axis_protocol_checker/parameters.schema.json"}}}
+        },
+        {
+          "if": {"properties": {"ip_type": {"const": "i2s_transmitter"}}, "required": ["ip_type"]},
+          "then": {"properties": {"parameters": {"$ref": "ip/i2s_transmitter/parameters.schema.json"}}}
         }
       ]
     }

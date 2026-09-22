@@ -29,6 +29,16 @@ class LayoutTests(unittest.TestCase):
             clock.now.return_value.astimezone.return_value = local
             self.assertRegex(create_run_id(), r"^2026-09-14_20-55-03_UTC\+0800_[0-9a-f]{8}$")
 
+    def test_new_runs_are_separated_by_vivado_version(self):
+        old = RepositoryLayout(Path("/workspace"), vivado_version="2026.0")
+        new = RepositoryLayout(Path("/workspace"), vivado_version="2026.1")
+        case = make_case()
+        self.assertIn("/batches/2026.1/", str(new.case_run_dir(case)))
+        self.assertIn("/logs/batches/2026.1/", str(new.case_log_dir(case)))
+        self.assertIn("/history/2026.1/", str(new.report_path))
+        self.assertIn("/history/2026.1/", str(new.artifact_dir))
+        self.assertNotEqual(old.case_run_dir(case), new.case_run_dir(case))
+
     def test_runs_started_at_same_time_have_different_ids(self):
         moment = datetime(2026, 9, 14, 20, 55, 3, tzinfo=timezone.utc)
         self.assertEqual(len({create_run_id(moment) for _ in range(100)}), 100)

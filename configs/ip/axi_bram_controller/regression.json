@@ -1,0 +1,66 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "axi_bram_lite_single_depth1024",
+      "ip_type": "axi_bram_controller",
+      "vendor": "xilinx.com",
+      "ip_name": "axi_bram_ctrl",
+      "parameters": {"depth": 1024, "single_port": true},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {
+        "strategy": "directed_random", "strategy_version": "1.0",
+        "random_seed": 20260917, "case_budget": 128,
+        "coverage_targets": ["port_boundaries"], "boundary_mode": "basic",
+        "input_order": "generated", "timing_mode": "random_gaps",
+        "max_gap_cycles": 8, "burst_length": 16
+      }
+    },
+    {
+      "case_id": "axi_bram_lite_dual_depth2048",
+      "ip_type": "axi_bram_controller",
+      "vendor": "xilinx.com",
+      "ip_name": "axi_bram_ctrl",
+      "parameters": {"depth": 2048, "single_port": false},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {
+        "strategy": "coverage_guided", "strategy_version": "1.0",
+        "random_seed": 20260918, "case_budget": 128,
+        "coverage_targets": ["port_boundaries"], "boundary_mode": "basic",
+        "input_order": "generated", "timing_mode": "bursts",
+        "max_gap_cycles": 8, "burst_length": 16
+      }
+    },
+    {
+      "case_id": "axi_bram_lite_single_depth262144",
+      "ip_type": "axi_bram_controller",
+      "vendor": "xilinx.com",
+      "ip_name": "axi_bram_ctrl",
+      "parameters": {"depth": 262144, "single_port": true},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {
+        "strategy": "directed_random", "strategy_version": "1.0",
+        "random_seed": 20260919, "case_budget": 512,
+        "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic",
+        "input_order": "generated", "timing_mode": "random_gaps",
+        "max_gap_cycles": 16, "burst_length": 16
+      }
+    },
+    {
+      "case_id": "axi_bram_lite_dual_depth262144",
+      "ip_type": "axi_bram_controller",
+      "vendor": "xilinx.com",
+      "ip_name": "axi_bram_ctrl",
+      "parameters": {"depth": 262144, "single_port": false},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {
+        "strategy": "coverage_guided", "strategy_version": "1.0",
+        "random_seed": 20260920, "case_budget": 512,
+        "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic",
+        "input_order": "generated", "timing_mode": "bursts",
+        "max_gap_cycles": 16, "burst_length": 16
+      }
+    }
+  ]
+}

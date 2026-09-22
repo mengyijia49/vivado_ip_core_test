@@ -1,0 +1,87 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "fir_positive3_systolic",
+      "ip_type": "fir_compiler",
+      "vendor": "xilinx.com",
+      "ip_name": "fir_compiler",
+      "parameters": {
+        "data_width": 8,
+        "coefficient_width": 4,
+        "coefficients": [1, 1, 2],
+        "architecture": "Systolic_Multiply_Accumulate",
+        "has_last": false,
+        "user_width": 0
+      },
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2026,
+        "case_budget": 256,
+        "coverage_targets": ["port_boundaries"],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fir_mixed4_transpose",
+      "ip_type": "fir_compiler",
+      "vendor": "xilinx.com",
+      "ip_name": "fir_compiler",
+      "parameters": {
+        "data_width": 8,
+        "coefficient_width": 4,
+        "coefficients": [1, -2, 3, 1],
+        "architecture": "Transpose_Multiply_Accumulate",
+        "has_last": false,
+        "user_width": 0
+      },
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {
+        "strategy": "exhaustive",
+        "strategy_version": "1.0",
+        "random_seed": 2027,
+        "case_budget": 256,
+        "coverage_targets": ["port_boundaries"],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "bursts",
+        "max_gap_cycles": 5,
+        "burst_length": 8
+      }
+    },
+    {
+      "case_id": "fir_sidebands16",
+      "ip_type": "fir_compiler",
+      "vendor": "xilinx.com",
+      "ip_name": "fir_compiler",
+      "parameters": {
+        "data_width": 16,
+        "coefficient_width": 8,
+        "coefficients": [3, -5, 7],
+        "architecture": "Systolic_Multiply_Accumulate",
+        "has_last": true,
+        "user_width": 7
+      },
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {
+        "strategy": "directed_random",
+        "strategy_version": "1.0",
+        "random_seed": 2028,
+        "case_budget": 1024,
+        "coverage_targets": ["port_boundaries"],
+        "boundary_mode": "systematic",
+        "input_order": "generated",
+        "timing_mode": "random_gaps",
+        "max_gap_cycles": 8,
+        "burst_length": 16
+      }
+    }
+  ]
+}

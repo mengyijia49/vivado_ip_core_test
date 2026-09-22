@@ -1,7 +1,7 @@
 # 常量工具自检
 
 对象是旧版 `xlconstant:1.1`，不是 Inline HDL 的 `ilconstant`。
-Vivado 2025.2 已提示迁移；新版替代项还不能沿用旧版测试结果。
+Vivado 2026.1 已提示迁移；Inline HDL 替代项需独立测试。
 
 参数为 `width` 和字符串 `value`，输出只有 `dout`，没有输入、时钟、复位或握手。
 位宽为 1 至 4096。常量必须放得进所选位宽，不能把越界参数当作正常截断测试。
@@ -23,4 +23,4 @@ python3 scripts/run_all.py --config configs/ip/xlconstant/extended.json --list-c
 报告的 `checked_output_samples` 为 64，`checked_transaction_count` 为 0。
 唯一的无输入状态不代表“功能覆盖完整”，64 次观察也不等于 64 个不同 testcase。
 它只能检查这段观察时间内的值、未知位和稳定性。
-框架故障检查另包含 300 ns 后改变输出的例子，见[连接工具验收](../../experiments/utility_acceptance.md)。
+2026.1 的实际结果见[全量运行记录](../../experiments/vivado_2026_full_regression.md)。

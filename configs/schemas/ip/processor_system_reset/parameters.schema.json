@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["ext_reset_width", "aux_reset_width", "ext_active_high", "aux_active_high",
+    "bus_reset_count", "peripheral_reset_count", "interconnect_aresetn_count",
+    "peripheral_aresetn_count"],
+  "properties": {
+    "ext_reset_width": {"type": "integer", "minimum": 1, "maximum": 16},
+    "aux_reset_width": {"type": "integer", "minimum": 1, "maximum": 16},
+    "ext_active_high": {"type": "boolean"},
+    "aux_active_high": {"type": "boolean"},
+    "bus_reset_count": {"type": "integer", "minimum": 1, "maximum": 8},
+    "peripheral_reset_count": {"type": "integer", "minimum": 1, "maximum": 16},
+    "interconnect_aresetn_count": {"type": "integer", "minimum": 1, "maximum": 8},
+    "peripheral_aresetn_count": {"type": "integer", "minimum": 1, "maximum": 16}
+  }
+}

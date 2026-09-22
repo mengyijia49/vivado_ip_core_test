@@ -34,5 +34,5 @@ Python 独立计算多数值和差异。定向输入逐位改变各副本，并�
 这是 IP 本身的功能仿真，不代表整个容错系统或硬件实现已经得到验证。
 
 比较规则依据 [PG268 比较器说明](https://docs.amd.com/r/en-US/pg268-tmr/TMR-Comparator?contentId=ukIGPedf3GJyt6KXi9qRIA)。
-告警位序、掩码及端口开关还核对了本机 2025.2 的可读接口实现和 XCI；
-仓库中不包含厂商源码。实测记录见[接入检查](../../experiments/tmr_acceptance.md)。
+告警位序、掩码及端口开关还核对了当前 XCI；仓库中不包含厂商源码。
+实测记录见[2026.1 全量报告](../../experiments/vivado_2026_full_regression.md)。

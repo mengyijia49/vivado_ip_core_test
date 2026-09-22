@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Floating Point FMA Parameters",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "operation", "input_exponent", "input_fraction", "optimization", "mult_usage",
+    "a_user_width", "b_user_width", "c_user_width", "operation_user_width",
+    "has_a_last", "has_b_last", "has_c_last", "has_operation_last", "last_mode",
+    "has_underflow", "has_overflow", "has_invalid_op"
+  ],
+  "properties": {
+    "operation": {"const": "FMA"},
+    "input_exponent": {"enum": [5, 8, 11]},
+    "input_fraction": {"enum": [11, 24, 53]},
+    "optimization": {"enum": ["Resources", "Performance"]},
+    "mult_usage": {"enum": ["Medium_Usage", "Full_Usage"]},
+    "a_user_width": {"type": "integer", "minimum": 0, "maximum": 256},
+    "b_user_width": {"type": "integer", "minimum": 0, "maximum": 256},
+    "c_user_width": {"type": "integer", "minimum": 0, "maximum": 256},
+    "operation_user_width": {"type": "integer", "minimum": 0, "maximum": 256},
+    "has_a_last": {"type": "boolean"},
+    "has_b_last": {"type": "boolean"},
+    "has_c_last": {"type": "boolean"},
+    "has_operation_last": {"type": "boolean"},
+    "last_mode": {"enum": ["None", "A", "B", "C", "Operation", "Or", "And"]},
+    "has_underflow": {"type": "boolean"},
+    "has_overflow": {"type": "boolean"},
+    "has_invalid_op": {"type": "boolean"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"input_exponent": {"const": 5}}},
+      "then": {"properties": {"input_fraction": {"const": 11}}}
+    },
+    {
+      "if": {"properties": {"input_exponent": {"const": 8}}},
+      "then": {"properties": {"input_fraction": {"const": 24}}}
+    },
+    {
+      "if": {"properties": {"input_exponent": {"const": 11}}},
+      "then": {"properties": {"input_fraction": {"const": 53}}}
+    }
+  ]
+}

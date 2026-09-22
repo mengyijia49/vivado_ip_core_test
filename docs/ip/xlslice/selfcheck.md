@@ -1,7 +1,7 @@
 # 截取工具自检
 
 对象是旧版 `xlslice:1.0`，不是 Inline HDL 的 `ilslice`。
-Vivado 2025.2 的日志已提示迁移，当前保留旧版作为独立测试对象。
+Vivado 2026.1 的日志提示迁移，当前仍把它作为独立测试对象。
 
 输入 `Din` 宽度为 `input_width`，输出 `Dout` 取 `high_bit` 到 `low_bit`，
 两个端点都包含。没有时钟、复位或握手，单比特输出仍是向量。
@@ -21,4 +21,4 @@ python3 scripts/run_all.py --config configs/ip/xlslice/extended.json --list-case
 常用回归 6 组，大矩阵 61580 组。矩阵包含小宽度的全部区间、
 33/65/129/256 位输入的全部合法区间、宽输入上的边界区间，以及输入宽度扫描。
 参数区间遍历和输入值穷举是两回事：只有输入不超过 8 位时才穷举输入值。
-代表配置的结果见[连接工具验收](../../experiments/utility_acceptance.md)。
+代表配置的结果见[2026.1 全量运行记录](../../experiments/vivado_2026_full_regression.md)。

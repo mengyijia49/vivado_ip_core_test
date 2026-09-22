@@ -4,7 +4,7 @@
 创建、testbench 生成和 XSim 仍从框架的统一入口调用。
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 python3 scripts/run_all.py --ip-type axis_dwidth_converter
 ```
 

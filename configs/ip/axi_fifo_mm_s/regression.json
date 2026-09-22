@@ -1,0 +1,42 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "axi_stream_fifo_512_plain",
+      "ip_type": "axi_fifo_mm_s",
+      "vendor": "xilinx.com",
+      "ip_name": "axi_fifo_mm_s",
+      "parameters": {"tx_depth": 512, "rx_depth": 512, "has_keep": false, "destination_width": 0, "use_xpm": false},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 2026, "case_budget": 256, "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "random_gaps", "max_gap_cycles": 8, "burst_length": 16}
+    },
+    {
+      "case_id": "axi_stream_fifo_1024_keep_xpm",
+      "ip_type": "axi_fifo_mm_s",
+      "vendor": "xilinx.com",
+      "ip_name": "axi_fifo_mm_s",
+      "parameters": {"tx_depth": 1024, "rx_depth": 1024, "has_keep": true, "destination_width": 0, "use_xpm": true},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 2027, "case_budget": 256, "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "bursts", "max_gap_cycles": 5, "burst_length": 8}
+    },
+    {
+      "case_id": "axi_stream_fifo_mixed_depth_dest1",
+      "ip_type": "axi_fifo_mm_s",
+      "vendor": "xilinx.com",
+      "ip_name": "axi_fifo_mm_s",
+      "parameters": {"tx_depth": 2048, "rx_depth": 512, "has_keep": true, "destination_width": 1, "use_xpm": false},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 2028, "case_budget": 512, "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "random_gaps", "max_gap_cycles": 8, "burst_length": 16}
+    },
+    {
+      "case_id": "axi_stream_fifo_mixed_depth_dest4_xpm",
+      "ip_type": "axi_fifo_mm_s",
+      "vendor": "xilinx.com",
+      "ip_name": "axi_fifo_mm_s",
+      "parameters": {"tx_depth": 512, "rx_depth": 4096, "has_keep": true, "destination_width": 4, "use_xpm": true},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 2029, "case_budget": 1024, "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "bursts", "max_gap_cycles": 5, "burst_length": 8}
+    }
+  ]
+}

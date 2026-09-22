@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TMR Inject 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["base_address", "address_size", "magic", "cpu_id", "protection", "protection_mask"],
+  "properties": {
+    "base_address": {"type": "integer", "minimum": 0, "maximum": 4294967295},
+    "address_size": {"enum": [2048, 4096, 65536]},
+    "magic": {"type": "integer", "minimum": 0, "maximum": 255},
+    "cpu_id": {"enum": [1, 2, 3]},
+    "protection": {"type": "boolean"},
+    "protection_mask": {"type": "integer", "minimum": 0, "maximum": 255}
+  }
+}

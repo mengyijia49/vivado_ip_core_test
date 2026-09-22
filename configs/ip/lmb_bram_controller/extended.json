@@ -1,0 +1,35 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "lmb_bram_matrix",
+      "template": {
+        "ip_type": "lmb_bram_controller", "vendor": "xilinx.com", "ip_name": "lmb_bram_if_cntlr",
+        "parameters": {"data_width": 32, "address_width": 32, "base_address": 0, "address_size": 4096, "write_access": "All_Writes", "protection": false, "protection_mask": 255},
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260921, "case_budget": 256, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "generated", "timing_mode": "random_gaps", "max_gap_cycles": 16, "burst_length": 16}
+      },
+      "axes": {
+        "data_width": [32, 64],
+        "address_width": [32, 64],
+        "address_size": [4096, 65536, 1048576],
+        "write_access": ["Read_Only", "Word_Only", "All_Writes"]
+      }
+    },
+    {
+      "case_prefix": "lmb_bram_protection_matrix",
+      "template": {
+        "ip_type": "lmb_bram_controller", "vendor": "xilinx.com", "ip_name": "lmb_bram_if_cntlr",
+        "parameters": {"data_width": 32, "address_width": 32, "base_address": 0, "address_size": 65536, "write_access": "All_Writes", "protection": true, "protection_mask": 255},
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {"strategy": "coverage_guided", "strategy_version": "1.0", "random_seed": 20260922, "case_budget": 256, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "generated", "timing_mode": "bursts", "max_gap_cycles": 16, "burst_length": 16}
+      },
+      "axes": {
+        "data_width": [32, 64],
+        "address_width": [32, 64],
+        "protection_mask": [0, 1, 15, 90, 105, 240, 254, 255]
+      }
+    }
+  ]
+}

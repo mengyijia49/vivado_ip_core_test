@@ -1,0 +1,15 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"AXIS Protocol Checker 参数","type":"object","additionalProperties":false,
+  "required":["data_bytes","tid_width","tdest_width","tuser_width","has_tready","has_tstrb","has_tkeep","has_tlast","has_aclken","has_system_reset","max_waits"],
+  "properties":{
+    "data_bytes":{"enum":[1,4,16,128]},
+    "tid_width":{"enum":[0,1,4,8,16,32]},
+    "tdest_width":{"enum":[0,1,4,8,16,32]},
+    "tuser_width":{"enum":[0,1,8,16,32,128]},
+    "has_tready":{"type":"boolean"},"has_tstrb":{"type":"boolean"},
+    "has_tkeep":{"type":"boolean"},"has_tlast":{"type":"boolean"},
+    "has_aclken":{"type":"boolean"},"has_system_reset":{"type":"boolean"},
+    "max_waits":{"enum":[0,16,64,256]}
+  }
+}

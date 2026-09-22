@@ -5,6 +5,7 @@ from vivado_ip_test.plugins.common.stream.spec import StreamSpec
 from vivado_ip_test.plugins.floating_point.reference import EXCEPTIONS, expected_transactions
 from vivado_ip_test.plugins.floating_point.vectors import prepare_frames
 from vivado_ip_test.plugins.floating_point.parameters import ALL_OPERATIONS, validate_format
+from vivado_ip_test.plugins.floating_point.accuracy import reciprocal_tolerances, transcendental_tolerances
 from vivado_ip_test.plugins.floating_point.compare.spec import describe as describe_compare
 from vivado_ip_test.plugins.floating_point.compare.reference import expected_transactions as compare_reference
 from vivado_ip_test.plugins.floating_point.compare.vectors import prepare_frames as prepare_compare
@@ -17,6 +18,18 @@ from vivado_ip_test.plugins.floating_point.arithmetic.vectors import prepare_fra
 from vivado_ip_test.plugins.floating_point.divide.spec import describe as describe_divide
 from vivado_ip_test.plugins.floating_point.divide.reference import expected_transactions as divide_reference
 from vivado_ip_test.plugins.floating_point.divide.vectors import prepare_frames as prepare_divide
+from vivado_ip_test.plugins.floating_point.fma.spec import describe as describe_fma
+from vivado_ip_test.plugins.floating_point.fma.reference import expected_transactions as fma_reference
+from vivado_ip_test.plugins.floating_point.fma.vectors import prepare_frames as prepare_fma
+from vivado_ip_test.plugins.floating_point.reciprocal.spec import describe as describe_reciprocal
+from vivado_ip_test.plugins.floating_point.reciprocal.reference import expected_transactions as reciprocal_reference
+from vivado_ip_test.plugins.floating_point.reciprocal.vectors import prepare_frames as prepare_reciprocal
+from vivado_ip_test.plugins.floating_point.reciprocal_sqrt.spec import describe as describe_reciprocal_sqrt
+from vivado_ip_test.plugins.floating_point.reciprocal_sqrt.reference import expected_transactions as reciprocal_sqrt_reference
+from vivado_ip_test.plugins.floating_point.reciprocal_sqrt.vectors import prepare_frames as prepare_reciprocal_sqrt
+from vivado_ip_test.plugins.floating_point.transcendental.spec import describe as describe_transcendental
+from vivado_ip_test.plugins.floating_point.transcendental.reference import expected_transactions as transcendental_reference
+from vivado_ip_test.plugins.floating_point.transcendental.vectors import prepare_frames as prepare_transcendental
 
 
 OPERATIONS = {"Absolute": "ABSOLUTE", "Float_to_float": "FLT_TO_FLT",
@@ -34,6 +47,14 @@ class FloatingPointPlugin(StreamIpPlugin):
             return describe_arithmetic(p)
         if p.get('operation') == 'Divide':
             return describe_divide(p)
+        if p.get('operation') == 'FMA':
+            return describe_fma(p)
+        if p.get('operation') == 'Reciprocal':
+            return describe_reciprocal(p)
+        if p.get('operation') == 'Reciprocal_square_root':
+            return describe_reciprocal_sqrt(p)
+        if p.get('operation') in {'Exponential', 'Logarithm'}:
+            return describe_transcendental(p)
         p = {"cycles_per_operation": 1, **p}
         validate_parameters(p, {"operation": OPERATIONS, "input_exponent": range(1, 65),
             "input_fraction": range(65), "output_exponent": range(1, 65), "output_fraction": range(65),
@@ -100,8 +121,12 @@ class FloatingPointPlugin(StreamIpPlugin):
             "C_A_TDATA_WIDTH": source_width, "C_A_TUSER_WIDTH": p["user_width"] or 1,
             "C_RESULT_TDATA_WIDTH": sink_width, "C_RESULT_TUSER_WIDTH": user_width or 1,
             "C_FIXED_DATA_UNSIGNED": int(p["input_unsigned"])}
+        version = self._layout.vivado_version
+        clocked_absolute = (version not in (None, "unavailable")
+                            and tuple(map(int, version.split("."))) >= (2026, 1))
         return StreamSpec(tuple(source), settings, model,
-            input_clock=None if op == "Absolute" else "aclk", input_reset=None if op == "Absolute" else "aresetn",
+            input_clock=None if op == "Absolute" and not clocked_absolute else "aclk",
+            input_reset=None if op == "Absolute" else "aresetn",
             output_payload=tuple(sink), capacity=ie + ip + oe + oprec + 8,
             input_prefix="s_axis_a", output_prefix="m_axis_result", transfer_interval_cycles=rate,
             drain_cycles=max(64, 2 * (ip + rate + 8)) if op == "Square_root" else 64)
@@ -142,6 +167,58 @@ class FloatingPointPlugin(StreamIpPlugin):
                     'underflow_documentation_conflict': True, 'output_padding': 'sign_extension',
                     'latency_check': 'accepted_operand_order', 'input_barrier': False, 'user_pattern': USER_PATTERN,
                     'cycles_per_operation': spec.transfer_interval_cycles, 'drain_cycles': 128})
+        if case.parameters['operation'] == 'FMA':
+            return self._backend.generate(case, spec, self.ip_name, self.version,
+                lambda frames: fma_reference(frames, case.parameters),
+                prepare=lambda frames: prepare_fma(frames, spec, case.parameters), renderer=render_operands,
+                source_timing=lambda schedule, profile: independent_gaps(schedule, profile, spec.input_lane_count),
+                reference_contract={'model': 'floating_point_fma:1.0', 'arithmetic': 'exact_product_and_sum',
+                    'intermediate_rounding': False, 'rounding': 'nearest_even', 'denormals': 'signed_zero',
+                    'nan_result': 'pg060_canonical', 'underflow_detection': 'after_unbounded_exponent_rounding',
+                    'output_padding': 'sign_extension', 'latency_check': 'accepted_operand_order',
+                    'input_barrier': False, 'user_pattern': USER_PATTERN,
+                    'cycles_per_operation': 1, 'drain_cycles': 128})
+        if case.parameters['operation'] == 'Reciprocal':
+            return self._backend.generate(case, spec, self.ip_name, self.version,
+                lambda frames: reciprocal_reference(frames, case.parameters),
+                prepare=lambda frames: prepare_reciprocal(frames, spec, case.parameters),
+                tolerances=lambda frames, expected: reciprocal_tolerances(
+                    frames, expected, case.parameters),
+                reference_contract={'model': 'floating_point_reciprocal:1.0',
+                    'arithmetic': 'exact_integer_ratio', 'rounding': 'nearest_even',
+                    'denormals': 'signed_zero', 'nan_result': 'pg060_canonical',
+                    'underflow_detection': 'after_unbounded_exponent_rounding',
+                    'output_padding': 'sign_extension',
+                    'latency_check': 'accepted_transaction_order',
+                    'accuracy': 'half_exact_single_double_within_one_ulp',
+                    'cycles_per_operation': 1, 'drain_cycles': 128})
+        if case.parameters['operation'] == 'Reciprocal_square_root':
+            return self._backend.generate(case, spec, self.ip_name, self.version,
+                lambda frames: reciprocal_sqrt_reference(frames, case.parameters),
+                prepare=lambda frames: prepare_reciprocal_sqrt(frames, spec, case.parameters),
+                tolerances=lambda frames, expected: reciprocal_tolerances(
+                    frames, expected, case.parameters),
+                reference_contract={'model': 'floating_point_reciprocal_sqrt:1.0',
+                    'arithmetic': 'exact_squared_midpoint', 'rounding': 'nearest_even',
+                    'denormals': 'signed_zero', 'nan_result': 'pg060_canonical',
+                    'output_padding': 'sign_extension',
+                    'accuracy': 'half_exact_single_double_within_one_ulp',
+                    'latency_check': 'accepted_transaction_order',
+                    'cycles_per_operation': 1, 'drain_cycles': 256})
+        if case.parameters['operation'] in {'Exponential', 'Logarithm'}:
+            operation = case.parameters['operation'].lower()
+            return self._backend.generate(case, spec, self.ip_name, self.version,
+                lambda frames: transcendental_reference(frames, case.parameters),
+                prepare=lambda frames: prepare_transcendental(frames, spec, case.parameters),
+                tolerances=lambda frames, expected: transcendental_tolerances(
+                    frames, expected, case.parameters),
+                reference_contract={'model': f'floating_point_{operation}:1.0',
+                    'arithmetic': 'decimal_high_precision_stable_encoding',
+                    'rounding': 'nearest_even_reference', 'denormals': 'signed_zero',
+                    'nan_result': 'pg060_canonical', 'output_padding': 'sign_extension',
+                    'accuracy': 'ordinary_finite_within_one_ulp',
+                    'latency_check': 'accepted_transaction_order',
+                    'cycles_per_operation': 1, 'drain_cycles': 384})
         sqrt_contract = {"model": "floating_point_square_root:1.0", "arithmetic": "integer_exact",
             "rounding": "nearest_even_squared_midpoint", "denormals": "signed_zero",
             "output_padding": "sign_extension", "latency_check": "accepted_transaction_order",

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "axi_register_slice 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["data_width", "id_width", "address_user_width", "data_user_width", "response_user_width", "forward_mode", "response_mode"],
+  "properties": {
+    "data_width": {"enum": [32, 64, 128, 256, 512, 1024]},
+    "id_width": {"type": "integer", "minimum": 1, "maximum": 32},
+    "address_user_width": {"type": "integer", "minimum": 1, "maximum": 1024},
+    "data_user_width": {"type": "integer", "minimum": 1, "maximum": 1024},
+    "response_user_width": {"type": "integer", "minimum": 1, "maximum": 1024},
+    "forward_mode": {"enum": ["Bypass", "Full", "Forward", "Reverse", "Light"]},
+    "response_mode": {"enum": ["Bypass", "Full", "Forward", "Reverse", "Light"]}
+  }
+}

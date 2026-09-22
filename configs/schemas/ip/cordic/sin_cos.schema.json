@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CORDIC 正余弦参数",
+  "type": "object", "additionalProperties": false,
+  "required": ["function","input_width","output_width","phase_format","rounding","architecture","pipelining","optimization","coarse_rotation","has_last","user_width"],
+  "properties": {
+    "function": {"const":"Sin_and_Cos"},
+    "input_width": {"type":"integer","minimum":8,"maximum":48},
+    "output_width": {"type":"integer","minimum":8,"maximum":48},
+    "phase_format": {"enum":["Radians","Scaled_Radians"]},
+    "rounding": {"enum":["Truncate","Round_Pos_Inf","Round_Pos_Neg_Inf","Nearest_Even"]},
+    "architecture": {"const":"Parallel"},
+    "pipelining": {"enum":["No_Pipelining","Optimal","Maximum"]},
+    "optimization": {"enum":["Resources","Performance"]},
+    "coarse_rotation": {"type":"boolean"},
+    "has_last": {"type":"boolean"},
+    "user_width": {"type":"integer","minimum":0,"maximum":256}
+  }
+}

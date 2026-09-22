@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["constraint_length", "output_rate", "code_family"],
+  "properties": {
+    "constraint_length": {"type": "integer", "minimum": 3, "maximum": 9},
+    "output_rate": {"type": "integer", "minimum": 2, "maximum": 7},
+    "code_family": {"enum": ["ascending", "descending", "spread"]}
+  }
+}

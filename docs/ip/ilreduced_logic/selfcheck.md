@@ -20,7 +20,7 @@ Python 独立计算结果；小位宽用所有输入检查模型。
 常用回归有 10 组，大矩阵有 12336 组，包含全部 1 至 4096 位和 16 个更宽边界值。
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 python3 scripts/run_all.py --ip-type ilreduced_logic
 python3 scripts/run_all.py --config configs/ip/ilreduced_logic/extended.json --list-cases
 python3 scripts/run_all.py --config configs/ip/ilreduced_logic/extended.json --case ilreduced_logic_xor__width_65536

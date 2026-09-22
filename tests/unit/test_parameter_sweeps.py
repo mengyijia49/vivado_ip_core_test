@@ -102,9 +102,9 @@ class SweepTests(unittest.TestCase):
                         [case.ip_type, dict(case.parameters)], sort_keys=True)))
                     registry.resolve(case.ip_type).validate_case(case)
                 counts[case.ip_type] += 1
-        self.assertEqual(len(counts), 36)
-        self.assertEqual(len(regression), 323)
-        self.assertEqual(sum(len(case.stages) for case in regression), 970)
+        self.assertEqual(len(counts), 64)
+        self.assertEqual(len(regression), 478)
+        self.assertEqual(sum(len(case.stages) for case in regression), 1435)
 
     def test_extended_discovery_entry_has_expected_static_size(self):
         root = Path(__file__).resolve().parents[2]
@@ -131,9 +131,9 @@ class SweepTests(unittest.TestCase):
             return total
 
         raw_entry = json.loads(entry.read_text())
-        self.assertEqual(len(raw_entry["includes"]), 36)
-        self.assertEqual(len(set(raw_entry["includes"])), 36)
-        self.assertEqual(count(entry), 9472890)
+        self.assertEqual(len(raw_entry["includes"]), 64)
+        self.assertEqual(len(set(raw_entry["includes"])), 64)
+        self.assertEqual(count(entry), 9667722)
 
     @unittest.skipUnless(
         os.environ.get("VIVADO_FULL_MATRIX_AUDIT") == "1",
@@ -150,8 +150,8 @@ class SweepTests(unittest.TestCase):
                     self.assertNotIn("__seed", case.case_id)
                     registry.resolve(case.ip_type).validate_case(case)
                 counts[case.ip_type] += 1
-        self.assertEqual(len(counts), 36)
-        self.assertEqual(sum(counts.values()), 9472890)
+        self.assertEqual(len(counts), 64)
+        self.assertEqual(sum(counts.values()), 9667722)
 
     def test_arithmetic_matrix_budgets_cover_directed_inputs_without_generating_random_data(self):
         root = Path(__file__).resolve().parents[2]

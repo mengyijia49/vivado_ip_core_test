@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "axi_sideband_util 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["data_width", "id_width", "address_user_width", "smid_mode", "smid_width", "smid_value"],
+  "properties": {
+    "data_width": {"enum": [32, 64, 128, 256, 512, 1024]},
+    "id_width": {"type": "integer", "minimum": 1, "maximum": 32},
+    "address_user_width": {"type": "integer", "minimum": 1, "maximum": 512},
+    "smid_mode": {"enum": ["Bypass", "Insert", "Remove"]},
+    "smid_width": {"type": "integer", "minimum": 1, "maximum": 32},
+    "smid_value": {"type": "integer", "minimum": 0, "maximum": 4294967295}
+  }
+}

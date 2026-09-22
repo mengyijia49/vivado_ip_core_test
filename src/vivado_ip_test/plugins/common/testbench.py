@@ -7,6 +7,7 @@ from vivado_ip_test.domain import TestbenchArtifacts
 from vivado_ip_test.infrastructure import sha256_file
 from vivado_ip_test.infrastructure.output_layout import binary_output_layout
 from vivado_ip_test.infrastructure.json_values import with_hex_large_integers
+from vivado_ip_test.plugins.base import PluginError
 from vivado_ip_test.plugins.common.cycle import DefinedBits
 from vivado_ip_test.plugins.common.metadata import load_metadata
 from vivado_ip_test.plugins.common.vectors import cycle_space
@@ -162,12 +163,22 @@ class CycleTestbenchBackend:
 
 def render_testbench(spec, paths, count):
     signals, assignments, mappings, captures = [], [], [], []
+    input_ports = {port.name: port for port in spec.inputs}
+    unknown_initials = set(spec.initial_values) - set(input_ports)
+    if unknown_initials:
+        raise PluginError(f"未知输入端口初始值：{sorted(unknown_initials)}")
+    for name, value in spec.initial_values.items():
+        if type(value) is not int or not 0 <= value <= input_ports[name].limit:
+            raise PluginError(f"端口 {name} 的初始值 {value!r} 超出范围")
     for direction, ports in (("in", spec.inputs), ("out", spec.outputs)):
         left = sum(port.width for port in ports) - 1
         for port in ports:
             signal = f"p_{port.name}"
             kind = "std_logic" if port.scalar else f"std_logic_vector({port.width - 1} downto 0)"
-            initial = "'0'" if port.scalar else "(others => '0')"
+            explicit = direction == "in" and port.name in spec.initial_values
+            value = spec.initial_values.get(port.name, 0) if explicit else 0
+            initial = (f"'{value}'" if port.scalar else f'"{value:0{port.width}b}"') if explicit \
+                else ("'0'" if port.scalar else "(others => '0')")
             signals.append(f"  signal {signal} : {kind} := {initial};")
             mappings.append(f"{port.name} => {signal}")
             part = str(left) if port.scalar else f"{left} downto {left - port.width + 1}"

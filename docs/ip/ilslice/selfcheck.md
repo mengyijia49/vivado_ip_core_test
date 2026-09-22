@@ -12,10 +12,8 @@
 Python 用右移和掩码算期望值。单元测试另用二进制字符串切片核对小位宽的所有输入。
 仿真输入包含每个选中位的单独翻转、相反模式、相邻未选位干扰、逐位标识序列和随机值。
 
-本机 XML 的静态上限是 255，但安装包的 Tcl 会随输入宽度改变范围。
-2026-09-15 实际创建和功能仿真均接受第 4095 位，因此插件按输入宽度校验，
-不会错误地把高 3840 位排除在测试之外。
-创建探测编号为 `2026-09-15_05-38-08_UTC+0800_76d20837`。
+组件的静态范围会随输入宽度调整。插件按实际输入宽度校验位索引；
+常用配置的结果见[2026.1 全量运行记录](../../experiments/vivado_2026_full_regression.md)。
 
 常用回归有 7 组，大矩阵有 31119 组不同参数：
 
@@ -26,7 +24,7 @@ Python 用右移和掩码算期望值。单元测试另用二进制字符串切�
 ## 运行
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 python3 scripts/run_all.py --ip-type ilslice
 python3 scripts/run_all.py --all --case ilslice_high4096
 python3 scripts/run_all.py --config configs/ip/ilslice/extended.json --list-cases

@@ -1,6 +1,7 @@
 """以完整配置和归档证据匹配为条件跳过已完成配置，不复用中间工程状态。"""
 
 import json
+import re
 from collections import defaultdict
 from pathlib import Path
 
@@ -14,15 +15,29 @@ def remaining_cases(layout: RepositoryLayout, cases, records: list[Path]):
     return [case for case in cases if case not in completed.get(case.case_id, ())]
 
 
+def _record_version(record):
+    if record.get("vivado_version"):
+        return record["vivado_version"]
+    executable = record.get("vivado_executable") or ""
+    match = re.search(r"/(\d{4}\.\d+(?:\.\d+)?)/Vivado/", executable)
+    return match.group(1) if match else None
+
+
 def load_completed_cases(layout: RepositoryLayout, records: list[Path]):
     completed = defaultdict(list)
     sources = source_inventory(layout.source_root or layout.root)
     for record_path in records:
         try:
             record = json.loads(record_path.read_text())
+            if layout.vivado_version is not None and _record_version(record) != layout.vivado_version:
+                raise ConfigError(f"续跑记录的 Vivado 版本不匹配：{record_path}")
             if record.get("source_sha256") != sources:
                 raise ConfigError(f"续跑源码与归档不一致：{record_path}")
-            archive = layout.runs_dir / "history" / record["run_id"]
+            version = record.get("vivado_version")
+            archive = layout.runs_dir / "history"
+            if version:
+                archive = archive / version
+            archive = archive / record["run_id"]
             config_path = archive / "ip_matrix.json"
             hashes = record["artifact_sha256"]
             config_key = str(config_path.relative_to(layout.root))

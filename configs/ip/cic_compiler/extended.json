@@ -1,0 +1,24 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "cic_fixed_full_precision",
+      "template": {
+        "ip_type": "cic_compiler",
+        "vendor": "xilinx.com",
+        "ip_name": "cic_compiler",
+        "parameters": {"filter_type": "Decimation", "input_width": 8, "stages": 2, "differential_delay": 1, "rate": 4},
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 2026, "case_budget": 256, "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "random_gaps", "max_gap_cycles": 8, "burst_length": 16}
+      },
+      "axes": {
+        "filter_type": ["Decimation", "Interpolation"],
+        "input_width": [2, 8, 16, 32],
+        "stages": [2, 3, 4, 6],
+        "differential_delay": [1, 2],
+        "rate": [4, 5, 8, 16]
+      }
+    }
+  ]
+}

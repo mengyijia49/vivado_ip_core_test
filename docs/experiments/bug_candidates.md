@@ -1,39 +1,65 @@
 # 待确认问题
 
-截至 2026-09-15，以下异常有本机运行记录，但厂商确认数量仍为 0。
-表中每行是一组排查线索，不是已确认的独立 bug 数量。
+截至 2026-09-22，Vivado 2026.1 行为仿真留下以下 13 条排查线索，
+厂商确认的 bug 仍为 0。每行写一种现象，不按 IP 种类计数；
+同一种差异在多个配置或输入下重复出现，也不重复计数。
+运行编号、原始结果和对照见[2026.1 观察记录](vivado_2026_observations.md)。
+478 组常用配置的整批结果见[全量运行记录](vivado_2026_full_regression.md)。
 
-| 对象 | 已有证据 | 还需确认 |
-| --- | --- | --- |
-| [复数乘法器](../ip/complex_multiplier/latency_issue.md) | 手动长延迟时数值提前，独立 VHDL 可复现；较短延迟对照正常 | 其他版本、官方已知问题和受影响参数范围 |
-| [旧版 xlconcat](../ip/xlconcat/port_128_issue.md) | 128 路非零输入输出零；直接编译附带模型也复现；127 路及新版对照正常 | 旧版已停止支持，是否有新的报告价值 |
-| [TMR 投票器](../ip/tmr_voter/lockstep_issue.md) | 锁步加比较器时，厂商内部端口宽度不符，独立工程无法展开 | 参数组合支持范围、其他版本和官方记录；不是已证明的数值错误 |
-| [AXI GPIO](../ip/axi_gpio/register_issue.md) | 方向切换和未启用寄存器读回与手册有差异，独立 VHDL 有记录 | 方向写入语义与版本说明；两种现象是否为独立原因 |
-| [AXI INTC ISR](../ip/axi_intc/isr_write_issue.md) | ISR 写零清除旧位，写另一位覆盖旧位；预编译库与原始 HDL 均复现 | 是实现还是文档问题，是否已有官方说明；两种写入触发暂归一个问题 |
-| [AXI INTC ME](../ip/axi_intc/master_enable_issue.md) | ME 清零后已有效的 IRQ 不撤销；纯硬件输入及原始 HDL 均复现，未写 ISR | 更多模式、版本、官方已知记录；与 ISR 暂分别排查，不是已确认数量 |
-| [浮点乘法](../ip/floating_point/multiply_rounding_issue.md) | 双精度 Low_Latency 乘法应舍入为 1.0，实测约 0.5；独立 VHDL 两次复现，Speed_Optimized 和厂商 C 数值模型对照正常 | 其他版本、官方记录和影响范围；5 个差异样例暂归一个问题 |
-| [FIR 全精度](../ip/fir_compiler/full_precision_issue.md) | 负系数与最小负输入得到正结果，实测符号翻转；两种架构独立 VHDL 复现，正系数对照正常 | 位宽规则、行为模型与文档的责任边界，其他版本和官方记录；两组系数暂归一个问题 |
-| [累加器](../ip/accumulator/ce_bypass_issue.md) | CE/BYPASS 同时出现时有差异 | 控制优先级的规范解释，证据强度低于前几项 |
+## 第一次看这些记录
 
-除 FIR 目前只有专用复现命令，其余条目均有常规框架配置。
+IP 核可以理解为厂商提供的现成电路模块。Vivado 按你选的参数生成它，
+例如生成一个 8 位输入的 FIR 滤波器，或者一个 32 位数据接口的 Mailbox。
+
+| 文档里的词 | 在本项目中是什么意思 |
+| --- | --- |
+| 参数 / 配置 | 生成电路时选的设置，例如位宽、通道数、架构；一组设置是一种配置 |
+| 测试输入 | 电路生成后送进去的数据或操作，例如输入 -128、向寄存器写 1 |
+| 配置名 | 项目给一组参数起的名字，例如 `fp_mul64_low`；它不是另一个厂商 IP 型号 |
+| testbench | 仿真中的测试程序，负责送输入、产生时钟和复位、收集输出 |
+| 参考值 / golden | 根据数学公式或预期操作规则独立得到的答案；参考本身也需要核对 |
+| 行为仿真 | 在电脑里运行电路模型，观察功能和信号；这里的实测指仿真观测 |
+| 拍 / 周期 | 按时钟数的一步；数据可能需要等几拍才被接收或算出结果 |
+| 独立复现 | 用另外写的固定测试缩小问题；只把同一套自检重跑一次不会自动变成独立复现 |
+
+例如 FIR 的“输入宽度 8 位”是参数，“送入 -128”是测试输入。
+同一参数配置可以测很多输入；换系数或换架构，则会生成不同配置。
+
+可以先读 [FIR](../ip/fir_compiler/full_precision_issue.md)，里面用普通乘加解释数值与位宽；
+再读 [GPIO](../ip/axi_gpio/direction_write_issue.md)，理解寄存器和输入输出方向；
+最后读 [Mailbox](../ip/mailbox/tlast_issue.md)，理解数据、握手和包尾。
+每篇都保留了全部已记录的相关参数组，并解释具体操作和结果。
+
+## 问题列表
+
+
+
+|  | 现象 | 触发配置与结果 | 还需确认 | 确认? |
+| --- | --- | --- | --- | --- |
+| 1 | [复数乘法器](../ip/complex_multiplier/latency_issue.md) | `cmul_long_pipe`，手动延迟 55 拍；第 80 拍已见非零，测试预期第 134 拍 | 延迟定义和受支持参数范围 |  |
+| 2 | [旧版 xlconcat](../ip/xlconcat/port_128_issue.md) | 128 路各 1 位，全 1 输入预期全 1，实际全 0；127 路及新版对照正常 | 旧版是否仍受支持 |  |
+| 3 | [TMR 投票器](../ip/tmr_voter/lockstep_issue.md) | 锁步加比较器，1 位和 17 位配置均在 XSim 展开时报端口宽度错误 | 参数组合支持范围；尚未运行功能输入 |  |
+| 4 | [AXI GPIO 第二通道](../ip/axi_gpio/register_issue.md) | 3 组单通道配置首次在未启用的 `GPIO2_TRI` 读回失败；独立 VHDL 读回 `0xFFFFFFFF`，手册要求 0 | 厂商如何解释这处读回差异 |  |
+| 5 | [AXI GPIO 方向切换](../ip/axi_gpio/direction_write_issue.md) | 独立 8 位 VHDL 复现输入方向写入后切回输出；另有 5 组双通道配置在相关写入序列失败 | “输入时写入无效”的含义；5 组是否同因 |  |
+| 6 | [AXI INTC ISR](../ip/axi_intc/isr_write_issue.md) | 独立 VHDL 观察到 ISR 旧位丢失；整批自检有 12 组配置在 ISR 保留测试段失败 | 实测与手册写 0 不起作用的规定为何不同；12 组是否同因 |  |
+| 7 | [AXI INTC ME](../ip/axi_intc/master_enable_issue.md) | 1 路硬件中断；待处理中断时清 ME，寄存器已关闭但 IRQ 仍为 1 | IRQ 撤销时序；与 ISR 写入分别排查 |  |
+| 8 | [浮点乘法](../ip/floating_point/multiply_rounding_issue.md) | 双精度 `Low_Latency`；期望 1.0，实测约 0.5；速度优化模式对照通过 | 低延迟模式的影响范围；5 个样例暂归一个问题 |  |
+| 9 | [FIR 全精度](../ip/fir_compiler/full_precision_issue.md) | 8 位输入、4 位系数；两组负系数 × 两种架构，共 4 组失败；`-128 × -8` 应为 +1024，实际 -1024 | 自动输出位宽规则；四组暂归一个问题 | :white_check_mark: |
+| 10 | [Mailbox TLAST](../ip/mailbox/tlast_issue.md) | 32 位 AXI4-Stream，4 组深度/存储组合均出现 `TLAST=1` 变 0 | 此模式是否承诺传递 TLAST |  |
+| 11 | [累加器](../ip/accumulator/ce_bypass_issue.md) | 8 位有符号输入、16 位输出；`CE=0、BYPASS=1` 时期望保持 1，实际变 0 | CE/BYPASS 优先级，可能是参考模型理解有误 |  |
+| 12 | [AXI to LMB Bridge](../ip/axi_lmb_bridge/data_issue.md) | 40/32 位和 64/64 位两组地址/数据宽度，在输出序号 3 起出现数据差异 | 尚无固定输入复现，先排查参考和时序 |  |
+| 13 | [AXIS Protocol Checker](../ip/axis_protocol_checker/partial_issue.md) | 128 位流、启用 TKEEP；期望只报 TKEEP 变化，实际还报了未启用的 TSTRB 变化 | 生成模型如何处理关闭的 TSTRB；尚无独立复现 |  |
+
 INTC、浮点乘法和 FIR 的独立 VHDL 复现不依赖 Python 参考模型。
 同一问题在多个位宽、延迟或种子下触发，只扩大影响范围，不增加 bug 数量。
 本机复现也不能证明问题首次发现、尚未修复，或硬件实现必然有同样缺陷。
 
 ## 公开证据
 
-`runs/` 和 `reports/` 不整体提交。公开证据放在 `evidence/`，
-包含支撑现有结论的首次运行、独立复现、报告、日志、输入输出和文件哈希：
-
-- [复数乘法器](../../evidence/complex_multiplier/latency/)
-- [旧版 xlconcat](../../evidence/xlconcat/port_128/)
-- [TMR 投票器](../../evidence/tmr_voter/lockstep/)
-- [AXI GPIO](../../evidence/axi_gpio/registers/)
-- [AXI INTC ISR](../../evidence/axi_intc/isr_write/)
-- [AXI INTC ME](../../evidence/axi_intc/master_enable/)
-- [浮点乘法](../../evidence/floating_point/multiply_rounding/)
-- [FIR 全精度](../../evidence/fir_compiler/full_precision/)
-- [累加器](../../evidence/accumulator/ce_bypass/)
+`runs/` 和 `reports/` 不整体提交。2026.1 的运行报告、独立复现摘要和日志见
+[问题观察证据](../../evidence/vivado_2026_1/observations/)；
+478 组的报告与新差异输入输出见
+[全量运行证据](../../evidence/vivado_2026_1/full_regression/)。
 
 ## 不计入的情况
 

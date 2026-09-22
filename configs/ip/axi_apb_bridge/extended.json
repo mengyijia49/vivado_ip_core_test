@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix":"axi_apb_bridge_zero_base_matrix",
+      "template":{"ip_type":"axi_apb_bridge","vendor":"xilinx.com","ip_name":"axi_apb_bridge","parameters":{"address_width":16,"num_slaves":1,"base_address":0,"wait_cycles":0,"error_response":false},"stages":["create_ip","generate_testbench","sim_selfcheck"],"verification":{"strategy":"directed_random","strategy_version":"1.0","random_seed":20261025,"case_budget":64,"coverage_targets":["port_boundaries"],"boundary_mode":"basic","input_order":"generated","timing_mode":"random_gaps","max_gap_cycles":8,"burst_length":16}},
+      "axes":{"address_width":[16,20,32],"num_slaves":[1,2,4,8,16],"wait_cycles":[0,1,2,3,4],"error_response":[false,true]}
+    },
+    {
+      "case_prefix":"axi_apb_bridge_nonzero_base_matrix",
+      "template":{"ip_type":"axi_apb_bridge","vendor":"xilinx.com","ip_name":"axi_apb_bridge","parameters":{"address_width":20,"num_slaves":1,"base_address":65536,"wait_cycles":0,"error_response":false},"stages":["create_ip","generate_testbench","sim_selfcheck"],"verification":{"strategy":"directed_random","strategy_version":"1.0","random_seed":20261026,"case_budget":64,"coverage_targets":["port_boundaries"],"boundary_mode":"basic","input_order":"generated","timing_mode":"bursts","max_gap_cycles":8,"burst_length":8}},
+      "axes":{"address_width":[20,32],"num_slaves":[1,2,4,8,16],"wait_cycles":[0,2,4],"error_response":[false,true]}
+    }
+  ]
+}

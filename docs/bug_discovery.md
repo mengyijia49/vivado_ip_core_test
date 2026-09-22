@@ -16,7 +16,7 @@
 ## 怎么运行
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 python3 scripts/run_all.py --config configs/bug_discovery.json --list-cases
 python3 scripts/run_all.py --config configs/bug_discovery.json --limit 3
 ```
@@ -28,7 +28,7 @@ python3 scripts/run_all.py --config configs/bug_discovery.json --limit 3
 
 ```bash
 python3 scripts/run_all.py --config configs/bug_discovery.json \
-  --resume-from reports/history/实际运行编号/run.json --limit 3
+  --resume-from reports/history/2026.1/实际运行编号/run.json --limit 3
 ```
 
 也可以只测一种 IP：

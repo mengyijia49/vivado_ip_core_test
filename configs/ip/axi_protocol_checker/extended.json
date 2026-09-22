@@ -1,0 +1,7 @@
+{
+  "$schema":"../../schemas/ip_matrix.schema.json","schema_version":2,
+  "includes":[
+    "matrices/data32.json","matrices/data64.json","matrices/data128.json",
+    "matrices/data256.json","matrices/data512.json","matrices/data1024.json"
+  ]
+}

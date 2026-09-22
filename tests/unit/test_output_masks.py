@@ -5,7 +5,9 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from vivado_ip_test.infrastructure.output import first_output_difference, output_files_match
+from vivado_ip_test.infrastructure.output import (
+    first_output_difference, output_fields_within_tolerance, output_files_match,
+)
 from vivado_ip_test.plugins.common.cycle import DefinedBits
 from vivado_ip_test.plugins.common.testbench import normalize_expected, render_testbench
 from vivado_ip_test.services.failure_analysis import analyze_outputs
@@ -13,6 +15,29 @@ from unit.plugins.cycle_helpers import plugin_case
 
 
 class OutputMaskTests(unittest.TestCase):
+    def test_field_tolerance_is_per_row_and_never_hides_sideband_errors(self):
+        with tempfile.TemporaryDirectory() as directory:
+            expected, actual, tolerance = (Path(directory) / name for name in ('e', 'a', 't'))
+            expected.write_text('00110010\n11110001\n')
+            tolerance.write_text('00010000\n00000000\n')
+            actual.write_text('01000010\n11110001\n')
+            self.assertTrue(output_fields_within_tolerance(expected, actual, tolerance, (4, 4)))
+            actual.write_text('01010010\n11110001\n')
+            self.assertFalse(output_fields_within_tolerance(expected, actual, tolerance, (4, 4)))
+            actual.write_text('01000011\n11110001\n')
+            self.assertFalse(output_fields_within_tolerance(expected, actual, tolerance, (4, 4)))
+
+    def test_signed_field_tolerance_crosses_twos_complement_zero(self):
+        with tempfile.TemporaryDirectory() as directory:
+            expected, actual, tolerance = (Path(directory) / name for name in ('e', 'a', 't'))
+            expected.write_text('0000\n1111\n1000\n')
+            actual.write_text('1111\n0000\n1001\n')
+            tolerance.write_text('0001\n0001\n0001\n')
+            self.assertTrue(output_fields_within_tolerance(
+                expected, actual, tolerance, (4,), (True,)))
+            self.assertFalse(output_fields_within_tolerance(
+                expected, actual, tolerance, (4,), (False,)))
+
     def test_mask_ignores_only_undefined_bits_and_keeps_first_real_difference(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

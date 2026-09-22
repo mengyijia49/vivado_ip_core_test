@@ -46,6 +46,9 @@ class StreamSpec:
     output_prefix: str = "m_axis"
     transfer_interval_cycles: int = 1
     drain_cycles: int = 64
+    preserves_transfer_count: bool = True
+    ignored_outputs: tuple[Port, ...] = ()
+    tolerance_fields: tuple[tuple[int, bool], ...] = ()
 
     # The metadata checker sees clocks explicitly as ports, including both domains.
     clock = None
@@ -60,8 +63,10 @@ class StreamSpec:
 
     @property
     def outputs(self):
-        return (Port(f"{self.input_prefix}_tready", scalar=True), Port(f"{self.output_prefix}_tvalid", scalar=True),
-                *tuple(Port(f"{self.output_prefix}_{p.name}", p.width, p.scalar) for p in self.sink_payload))
+        return (Port(f"{self.input_prefix}_tready", scalar=True),
+                Port(f"{self.output_prefix}_tvalid", scalar=True),
+                *tuple(Port(f"{self.output_prefix}_{p.name}", p.width, p.scalar)
+                       for p in self.sink_payload), *self.ignored_outputs)
 
     @property
     def sink_payload(self):

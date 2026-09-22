@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["transform_length", "input_width", "phase_factor_width", "direction", "output_ordering", "architecture"],
+  "properties": {
+    "transform_length": {"enum": [8, 16, 32, 64, 128, 256]},
+    "input_width": {"type": "integer", "minimum": 8, "maximum": 34},
+    "phase_factor_width": {"type": "integer", "minimum": 8, "maximum": 34},
+    "direction": {"enum": ["forward", "inverse"]},
+    "output_ordering": {"enum": ["natural_order", "bit_reversed_order"]},
+    "architecture": {"enum": ["pipelined_streaming_io", "radix_2_burst_io", "radix_2_lite_burst_io", "radix_4_burst_io"]}
+  }
+}

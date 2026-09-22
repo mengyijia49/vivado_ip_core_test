@@ -5,12 +5,12 @@ def result_frame(value, frame, p, flags=None):
     user = sum(int(flags[name]) << i for i, name in enumerate(selected))
     offset = len(selected)
     lasts = []
-    for lane in ('a', 'b', 'operation'):
-        width = p[f'{lane}_user_width']
+    for lane in ('a', 'b', 'c', 'operation'):
+        width = p.get(f'{lane}_user_width', 0)
         if width:
             user |= frame[f'{lane}_tuser'] << offset
             offset += width
-        if p[f'has_{lane}_last']:
+        if p.get(f'has_{lane}_last', False):
             lasts.append(frame[f'{lane}_tlast'])
     if offset:
         output['tuser'] = user

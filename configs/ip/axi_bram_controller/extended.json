@@ -1,0 +1,27 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "axi_bram_lite_matrix",
+      "template": {
+        "ip_type": "axi_bram_controller",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_bram_ctrl",
+        "parameters": {"depth": 1024, "single_port": true},
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {
+          "strategy": "directed_random", "strategy_version": "1.0",
+          "random_seed": 20260917, "case_budget": 128,
+          "coverage_targets": ["port_boundaries"], "boundary_mode": "basic",
+          "input_order": "generated", "timing_mode": "random_gaps",
+          "max_gap_cycles": 16, "burst_length": 16
+        }
+      },
+      "axes": {
+        "depth": [1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144],
+        "single_port": [true, false]
+      }
+    }
+  ]
+}

@@ -27,6 +27,12 @@ class ComplexMultiplierTests(unittest.TestCase):
         for real, imag in ((3, -7), (-bound, bound - 1), (0, 0)):
             self.assertEqual(product_components((real, imag), (real, -imag)), (real * real + imag * imag, 0))
 
+    def test_combinational_core_maps_2026_clock_without_pipelining_reference(self):
+        spec = self.spec(latency=0)
+        self.assertIsNone(spec.clock)
+        self.assertEqual(spec.clock_aliases, ("aclk",))
+        self.assertEqual(self.spec(latency=3).clock_aliases, ())
+
     def test_input_padding_is_ignored_and_negative_output_padding_is_sign_extended(self):
         for padding in (0, 1):
             self.assertEqual(unpack_complex(pack_complex(-513, 701, 11, padding), 11), (-513, 701))

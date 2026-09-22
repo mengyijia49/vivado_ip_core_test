@@ -14,6 +14,25 @@ from unit.test_pipeline import make_case
 
 
 class CliTests(unittest.TestCase):
+    def test_wrong_vivado_version_is_rejected_before_running(self):
+        with tempfile.TemporaryDirectory() as directory, \
+             patch('vivado_ip_test.application.main.detect_vivado_version', return_value='2026.0'), \
+             patch('vivado_ip_test.application.main.build_pipeline') as factory, \
+             redirect_stderr(io.StringIO()) as errors:
+            self.assertEqual(main(Path(directory), []), 2)
+            self.assertEqual(list(Path(directory).iterdir()), [])
+        self.assertIn('2026.1', errors.getvalue())
+        factory.assert_not_called()
+
+    def test_case_listing_does_not_require_selected_vivado_version(self):
+        with tempfile.TemporaryDirectory() as directory, \
+             patch('vivado_ip_test.application.main.detect_vivado_version') as detect, \
+             patch('vivado_ip_test.application.main.iter_test_cases', return_value=(c for c in [make_case()])), \
+             patch('vivado_ip_test.application.main.build_pipeline'), \
+             redirect_stdout(io.StringIO()):
+            self.assertEqual(main(Path(directory), ['--list-cases']), 0)
+        detect.assert_not_called()
+
     def test_late_duplicate_with_limit_starts_no_tool_and_writes_no_report(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

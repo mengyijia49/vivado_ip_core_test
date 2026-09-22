@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "fit_timer_matrix",
+      "template": {
+        "ip_type": "fit_timer", "vendor": "xilinx.com", "ip_name": "fit_timer",
+        "parameters": {"no_clocks": 3, "inaccuracy": 0, "reset_active_high": true},
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {"strategy": "exhaustive", "strategy_version": "1.0", "random_seed": 20260929, "case_budget": 1, "coverage_targets": ["period", "pulse_width", "reset_recovery"], "boundary_mode": "basic", "input_order": "generated", "timing_mode": "continuous", "max_gap_cycles": 8, "burst_length": 16}
+      },
+      "axes": {
+        "no_clocks": [3, 4, 7, 16, 31, 64, 127, 128, 257, 1009, 4093, 65521],
+        "inaccuracy": [0, 1, 15, 100],
+        "reset_active_high": [true, false]
+      }
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import json
+import os
 import platform
 import shutil
 import subprocess
@@ -23,8 +24,8 @@ class RunRecorder:
     def __init__(self, layout: RepositoryLayout, cases: list[TestCase]) -> None:
         self.layout = layout
         self.run_id = layout.run_id
-        self.artifact_dir = layout.runs_dir / "history" / self.run_id
-        self.log_dir = layout.log_dir / "history" / self.run_id
+        self.artifact_dir = layout.artifact_dir
+        self.log_dir = layout.artifact_log_dir
         self.report_dir = layout.report_path.parent
         self.cases = cases
         self.results: list[StageResult] = []
@@ -71,6 +72,8 @@ class RunRecorder:
         self.metadata = {
             "schema_version": 1,
             "run_id": self.run_id,
+            "vivado_version": self.layout.vivado_version,
+            "artifact_directory": str(self.artifact_dir),
             "state": "running",
             "started_at": _timestamp(),
             "working_directory": str(self.layout.batch_dir),
@@ -100,6 +103,13 @@ class RunRecorder:
         temporary = self.layout.reports_dir / f".latest_{self.run_id}"
         temporary.symlink_to(self.report_dir.relative_to(self.layout.reports_dir), target_is_directory=True)
         temporary.replace(latest)
+        if self.layout.vivado_version:
+            version_latest = self.layout.reports_dir / "by_version" / self.layout.vivado_version / "latest"
+            version_latest.parent.mkdir(parents=True, exist_ok=True)
+            version_temporary = version_latest.with_name(f".latest_{self.run_id}")
+            version_temporary.symlink_to(os.path.relpath(self.report_dir, version_latest.parent),
+                                         target_is_directory=True)
+            version_temporary.replace(version_latest)
 
     def capture(self, result: StageResult) -> None:
         ip_type = next(case.ip_type for case in self.cases if case.case_id == result.case_id)

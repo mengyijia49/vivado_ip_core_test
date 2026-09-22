@@ -6,7 +6,7 @@
 ## 运行
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 python3 scripts/run_all.py --ip-type axis_switch
 python3 scripts/run_all.py --config configs/ip/axis_switch/extended.json --list-cases
 python3 scripts/run_all.py --config configs/ip/axis_switch/extended.json --limit 3
@@ -65,4 +65,4 @@ KEEP、STRB 始终全 1，不包含稀疏字节。回压和竞争的实际计数
 
 尚未测试 AXI-Lite 动态路由、部分连接、请求抑制、外部仲裁、ACLKEN、运行中复位、
 无数值字段的接口、非法目的地址的丢弃规则，以及每种仲裁算法的精确授权次序。
-没有把这些未覆盖项算作通过。接入证据见[验收记录](../../experiments/axis_switch_acceptance.md)。
+没有把这些未覆盖项算作通过。实际结果见[2026.1 全量运行记录](../../experiments/vivado_2026_full_regression.md)。

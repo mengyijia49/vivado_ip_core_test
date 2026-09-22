@@ -1,0 +1,40 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "clock_common",
+      "template": {
+        "ip_type": "clocking_wizard", "vendor": "xilinx.com", "ip_name": "clk_wiz",
+        "parameters": {"input_frequency_mhz": 100, "output_frequency_mhz": 100,
+          "primitive": "MMCM", "reset_active_high": true},
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {"strategy": "exhaustive", "strategy_version": "1.0", "random_seed": 2026,
+          "case_budget": 1, "coverage_targets": ["clock_period", "lock_reset_recovery"],
+          "boundary_mode": "basic", "input_order": "generated", "timing_mode": "continuous",
+          "max_gap_cycles": 1, "burst_length": 1}
+      },
+      "axes": {
+        "input_frequency_mhz": [50, 100, 200], "output_frequency_mhz": [50, 100, 200],
+        "primitive": ["MMCM", "PLL"], "reset_active_high": [false, true]
+      }
+    },
+    {
+      "case_prefix": "clock_mmcm_edge",
+      "template": {
+        "ip_type": "clocking_wizard", "vendor": "xilinx.com", "ip_name": "clk_wiz",
+        "parameters": {"input_frequency_mhz": 100, "output_frequency_mhz": 25,
+          "primitive": "MMCM", "reset_active_high": true},
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {"strategy": "exhaustive", "strategy_version": "1.0", "random_seed": 2027,
+          "case_budget": 1, "coverage_targets": ["clock_period", "lock_reset_recovery"],
+          "boundary_mode": "basic", "input_order": "generated", "timing_mode": "continuous",
+          "max_gap_cycles": 1, "burst_length": 1}
+      },
+      "axes": {
+        "input_frequency_mhz": [50, 100, 200], "output_frequency_mhz": [25, 125],
+        "reset_active_high": [false, true]
+      }
+    }
+  ]
+}

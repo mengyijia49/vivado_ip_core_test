@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AXI Timebase Watchdog 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["interval", "enable_once"],
+  "properties": {
+    "interval": {"type": "integer", "minimum": 8, "maximum": 15},
+    "enable_once": {"type": "boolean"}
+  }
+}

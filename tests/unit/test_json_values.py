@@ -50,7 +50,7 @@ class WideJsonValueTests(unittest.TestCase):
             plugin.validate_case(case)
             run = plugin._layout.case_run_dir(case)
             write_design(run,{"design":{
-                "design_info":{"name":"dut_0","validated":"true","tool_version":"2025.2"},
+                "design_info":{"name":"dut_0","validated":"true","tool_version":"2026.1"},
                 "design_tree":{"core":""},"components":{"core":{
                     "vlnv":"xilinx.com:inline_hdl:ilvector_logic:1.0",
                     "parameters":{"C_SIZE":{"value":"65536"},"C_OPERATION":{"value":"not"}}}},

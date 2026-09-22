@@ -1,0 +1,86 @@
+{
+  "classification": "UNTRIAGED",
+  "kind": "value_mismatch",
+  "output_index": 2245,
+  "expected": "001111001000000000000000000000000000000000000000000000000000000000011001101101111000",
+  "actual": "001111000111000000000000000000000000000000000010000000000000000000011001101101111000",
+  "contains_unknown_bits": false,
+  "vector_index": 2245,
+  "input_vector": {
+    "a_tdata": 4607182418800017406,
+    "a_tlast": 1,
+    "a_tuser": 111,
+    "b_tdata": 4359484439294640129,
+    "b_tlast": 0,
+    "b_tuser": 102
+  },
+  "timing_mode": "random_gaps",
+  "difference_summary": {
+    "schema_version": 1,
+    "grouping": "kind_phase_output_field_route:1.0",
+    "classification": "OBSERVATION_GROUPS_NOT_BUG_COUNTS",
+    "all_rows_visited": true,
+    "difference_rows": 5068,
+    "artifact_issues": 0,
+    "difference_kind_counts": {
+      "value_mismatch": 1,
+      "missing_output": 5067
+    },
+    "rows_without_input_mapping": 0,
+    "layout_issue_rows": {},
+    "group_limit": 256,
+    "retained_group_count": 2,
+    "groups_truncated": false,
+    "omitted_group_memberships": 0,
+    "groups": [
+      {
+        "kind": "value_mismatch",
+        "phase": "accepted_transaction",
+        "output_field": "tdata",
+        "count": 1,
+        "first_output_index": 2245,
+        "last_output_index": 2245,
+        "first_context": {
+          "phase": "accepted_transaction",
+          "input_record_index": 2245,
+          "input_mapping_available": true
+        },
+        "first_difference": {
+          "kind": "value_mismatch",
+          "output_index": 2245,
+          "expected": "001111001000000000000000000000000000000000000000000000000000000000011001101101111000",
+          "actual": "001111000111000000000000000000000000000000000010000000000000000000011001101101111000",
+          "contains_unknown_bits": false
+        },
+        "example_output_indices": [
+          2245
+        ]
+      },
+      {
+        "kind": "missing_output",
+        "phase": "accepted_transaction",
+        "output_field": null,
+        "count": 5067,
+        "first_output_index": 2246,
+        "last_output_index": 7312,
+        "first_context": {
+          "phase": "accepted_transaction",
+          "input_record_index": 2246,
+          "input_mapping_available": true
+        },
+        "first_difference": {
+          "kind": "missing_output",
+          "output_index": 2246,
+          "expected": "001111001000111111111111111111111111111111111111111111111111110100010000101000101000",
+          "actual": null,
+          "contains_unknown_bits": false
+        },
+        "example_output_indices": [
+          2246,
+          2247,
+          2248
+        ]
+      }
+    ]
+  }
+}

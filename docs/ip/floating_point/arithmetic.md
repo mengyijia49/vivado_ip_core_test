@@ -1,7 +1,7 @@
 # 浮点加减和乘法检查
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 python3 scripts/run_all.py --config configs/ip/floating_point/regression/add_subtract.json
 python3 scripts/run_all.py --config configs/ip/floating_point/regression/multiply.json
 python3 scripts/run_all.py --config configs/ip/floating_point/matrices/multiply.json --limit 3
@@ -25,7 +25,7 @@ python3 scripts/run_all.py --config configs/ip/floating_point/matrices/multiply.
 | 乘法，其他格式 | No、Full、Max | 不接入 |
 
 表中 DSP 选项在配置里写作 `No_Usage` 等。部分无效请求会被 Vivado 悄悄改写，
-插件提前拒绝这些组合，并用实际 XCI 再核对。范围以本机 Vivado 2025.2、Artix-7 为准。
+插件提前拒绝这些组合，并用实际 XCI 再核对。范围以本机 Vivado 2026.1、Artix-7 为准。
 `optimization=Resources/Performance` 是 AXI 接口优化目标，不是上表的运算架构。
 只接入 Blocking、启动复位、自动最大延迟、每周期可发起一次运算。
 尚不接入手动延迟、ACLKEN、运行中复位或其他运算间隔。

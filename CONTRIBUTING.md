@@ -12,7 +12,7 @@
 ## 本地检查
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 python3 -m py_compile scripts/run_all.py
 PYTHONPATH=src python3 -m unittest discover -s tests -p 'test_*.py' -v
 python3 scripts/run_all.py

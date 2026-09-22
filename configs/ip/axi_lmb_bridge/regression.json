@@ -1,0 +1,41 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "axi_lmb_bridge_standard_32",
+      "ip_type": "axi_lmb_bridge", "vendor": "xilinx.com", "ip_name": "axi_lmb_bridge",
+      "parameters": {"data_width": 32, "address_width": 32, "id_width": 1, "use_pause": false, "lmb_protocol": "Standard", "protection": false},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260960, "case_budget": 64, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "generated", "timing_mode": "continuous", "max_gap_cycles": 8, "burst_length": 8}
+    },
+    {
+      "case_id": "axi_lmb_bridge_protected_64",
+      "ip_type": "axi_lmb_bridge", "vendor": "xilinx.com", "ip_name": "axi_lmb_bridge",
+      "parameters": {"data_width": 64, "address_width": 32, "id_width": 4, "use_pause": false, "lmb_protocol": "Standard", "protection": true},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260961, "case_budget": 64, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "shuffled", "timing_mode": "random_gaps", "max_gap_cycles": 8, "burst_length": 8}
+    },
+    {
+      "case_id": "axi_lmb_bridge_frequency_40",
+      "ip_type": "axi_lmb_bridge", "vendor": "xilinx.com", "ip_name": "axi_lmb_bridge",
+      "parameters": {"data_width": 32, "address_width": 40, "id_width": 8, "use_pause": false, "lmb_protocol": "Frequency", "protection": true},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "coverage_guided", "strategy_version": "1.0", "random_seed": 20260962, "case_budget": 64, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "generated", "timing_mode": "bursts", "max_gap_cycles": 8, "burst_length": 8}
+    },
+    {
+      "case_id": "axi_lmb_bridge_pause_64",
+      "ip_type": "axi_lmb_bridge", "vendor": "xilinx.com", "ip_name": "axi_lmb_bridge",
+      "parameters": {"data_width": 64, "address_width": 64, "id_width": 16, "use_pause": true, "lmb_protocol": "Frequency", "protection": true},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260963, "case_budget": 64, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "shuffled", "timing_mode": "random_gaps", "max_gap_cycles": 12, "burst_length": 8}
+    },
+    {
+      "case_id": "axi_lmb_bridge_pause_standard_40",
+      "ip_type": "axi_lmb_bridge", "vendor": "xilinx.com", "ip_name": "axi_lmb_bridge",
+      "parameters": {"data_width": 32, "address_width": 40, "id_width": 4, "use_pause": true, "lmb_protocol": "Standard", "protection": false},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260964, "case_budget": 64, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "generated", "timing_mode": "bursts", "max_gap_cycles": 8, "burst_length": 8}
+    }
+  ]
+}

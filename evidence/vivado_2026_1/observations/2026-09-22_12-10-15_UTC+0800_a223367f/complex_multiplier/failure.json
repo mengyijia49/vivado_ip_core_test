@@ -1,0 +1,417 @@
+{
+  "classification": "UNTRIAGED",
+  "kind": "value_mismatch",
+  "output_index": 113,
+  "expected": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000",
+  "actual": "100000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000",
+  "expected_mask": "111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+  "contains_unknown_bits": false,
+  "sampled_cycle": {
+    "inputs": {
+      "s_axis_a_tdata": 256,
+      "s_axis_a_tvalid": 1,
+      "s_axis_a_tuser": 1,
+      "s_axis_a_tlast": 0,
+      "s_axis_b_tdata": 32768,
+      "s_axis_b_tvalid": 1,
+      "s_axis_b_tuser": 58,
+      "s_axis_b_tlast": 0,
+      "aclken": 1
+    },
+    "phase": "directed_sequence",
+    "vector_index": null
+  },
+  "preceding_cycles": [
+    {
+      "inputs": {
+        "s_axis_a_tdata": 0,
+        "s_axis_a_tvalid": 1,
+        "s_axis_a_tuser": 1,
+        "s_axis_a_tlast": 0,
+        "s_axis_b_tdata": 32639,
+        "s_axis_b_tvalid": 1,
+        "s_axis_b_tuser": 50,
+        "s_axis_b_tlast": 0,
+        "aclken": 1
+      },
+      "phase": "directed_sequence",
+      "vector_index": null,
+      "undefined_outputs": {
+        "m_axis_dout_tdata": {
+          "mask": 0,
+          "reason": "output_tvalid_low"
+        },
+        "m_axis_dout_tuser": {
+          "mask": 0,
+          "reason": "output_tvalid_low"
+        },
+        "m_axis_dout_tlast": {
+          "mask": 0,
+          "reason": "output_tvalid_low"
+        }
+      }
+    },
+    {
+      "inputs": {
+        "s_axis_a_tdata": 0,
+        "s_axis_a_tvalid": 1,
+        "s_axis_a_tuser": 1,
+        "s_axis_a_tlast": 0,
+        "s_axis_b_tdata": 32639,
+        "s_axis_b_tvalid": 1,
+        "s_axis_b_tuser": 50,
+        "s_axis_b_tlast": 0,
+        "aclken": 1
+      },
+      "phase": "directed_sequence",
+      "vector_index": null,
+      "undefined_outputs": {
+        "m_axis_dout_tdata": {
+          "mask": 0,
+          "reason": "output_tvalid_low"
+        },
+        "m_axis_dout_tuser": {
+          "mask": 0,
+          "reason": "output_tvalid_low"
+        },
+        "m_axis_dout_tlast": {
+          "mask": 0,
+          "reason": "output_tvalid_low"
+        }
+      }
+    },
+    {
+      "inputs": {
+        "s_axis_a_tdata": 256,
+        "s_axis_a_tvalid": 1,
+        "s_axis_a_tuser": 0,
+        "s_axis_a_tlast": 1,
+        "s_axis_b_tdata": 0,
+        "s_axis_b_tvalid": 1,
+        "s_axis_b_tuser": 52,
+        "s_axis_b_tlast": 0,
+        "aclken": 1
+      },
+      "phase": "directed_sequence",
+      "vector_index": null,
+      "undefined_outputs": {
+        "m_axis_dout_tdata": {
+          "mask": 0,
+          "reason": "output_tvalid_low"
+        },
+        "m_axis_dout_tuser": {
+          "mask": 0,
+          "reason": "output_tvalid_low"
+        },
+        "m_axis_dout_tlast": {
+          "mask": 0,
+          "reason": "output_tvalid_low"
+        }
+      }
+    },
+    {
+      "inputs": {
+        "s_axis_a_tdata": 256,
+        "s_axis_a_tvalid": 1,
+        "s_axis_a_tuser": 0,
+        "s_axis_a_tlast": 1,
+        "s_axis_b_tdata": 0,
+        "s_axis_b_tvalid": 1,
+        "s_axis_b_tuser": 52,
+        "s_axis_b_tlast": 0,
+        "aclken": 1
+      },
+      "phase": "directed_sequence",
+      "vector_index": null,
+      "undefined_outputs": {
+        "m_axis_dout_tdata": {
+          "mask": 0,
+          "reason": "output_tvalid_low"
+        },
+        "m_axis_dout_tuser": {
+          "mask": 0,
+          "reason": "output_tvalid_low"
+        },
+        "m_axis_dout_tlast": {
+          "mask": 0,
+          "reason": "output_tvalid_low"
+        }
+      }
+    },
+    {
+      "inputs": {
+        "s_axis_a_tdata": 256,
+        "s_axis_a_tvalid": 1,
+        "s_axis_a_tuser": 1,
+        "s_axis_a_tlast": 0,
+        "s_axis_b_tdata": 256,
+        "s_axis_b_tvalid": 1,
+        "s_axis_b_tuser": 54,
+        "s_axis_b_tlast": 1,
+        "aclken": 1
+      },
+      "phase": "directed_sequence",
+      "vector_index": null,
+      "undefined_outputs": {
+        "m_axis_dout_tdata": {
+          "mask": 0,
+          "reason": "output_tvalid_low"
+        },
+        "m_axis_dout_tuser": {
+          "mask": 0,
+          "reason": "output_tvalid_low"
+        },
+        "m_axis_dout_tlast": {
+          "mask": 0,
+          "reason": "output_tvalid_low"
+        }
+      }
+    },
+    {
+      "inputs": {
+        "s_axis_a_tdata": 256,
+        "s_axis_a_tvalid": 1,
+        "s_axis_a_tuser": 1,
+        "s_axis_a_tlast": 0,
+        "s_axis_b_tdata": 256,
+        "s_axis_b_tvalid": 1,
+        "s_axis_b_tuser": 54,
+        "s_axis_b_tlast": 1,
+        "aclken": 1
+      },
+      "phase": "directed_sequence",
+      "vector_index": null,
+      "undefined_outputs": {
+        "m_axis_dout_tdata": {
+          "mask": 0,
+          "reason": "output_tvalid_low"
+        },
+        "m_axis_dout_tuser": {
+          "mask": 0,
+          "reason": "output_tvalid_low"
+        },
+        "m_axis_dout_tlast": {
+          "mask": 0,
+          "reason": "output_tvalid_low"
+        }
+      }
+    },
+    {
+      "inputs": {
+        "s_axis_a_tdata": 256,
+        "s_axis_a_tvalid": 1,
+        "s_axis_a_tuser": 0,
+        "s_axis_a_tlast": 1,
+        "s_axis_b_tdata": 65280,
+        "s_axis_b_tvalid": 1,
+        "s_axis_b_tuser": 56,
+        "s_axis_b_tlast": 1,
+        "aclken": 1
+      },
+      "phase": "directed_sequence",
+      "vector_index": null
+    },
+    {
+      "inputs": {
+        "s_axis_a_tdata": 256,
+        "s_axis_a_tvalid": 1,
+        "s_axis_a_tuser": 0,
+        "s_axis_a_tlast": 1,
+        "s_axis_b_tdata": 65280,
+        "s_axis_b_tvalid": 1,
+        "s_axis_b_tuser": 56,
+        "s_axis_b_tlast": 1,
+        "aclken": 1
+      },
+      "phase": "directed_sequence",
+      "vector_index": null
+    }
+  ],
+  "timing_mode": "random_gaps",
+  "causal_input_not_identified": true,
+  "difference_summary": {
+    "schema_version": 1,
+    "grouping": "kind_phase_output_field_route:1.0",
+    "classification": "OBSERVATION_GROUPS_NOT_BUG_COUNTS",
+    "all_rows_visited": true,
+    "difference_rows": 6596,
+    "artifact_issues": 0,
+    "difference_kind_counts": {
+      "value_mismatch": 1,
+      "missing_output": 6595
+    },
+    "rows_without_input_mapping": 0,
+    "layout_issue_rows": {},
+    "group_limit": 256,
+    "retained_group_count": 5,
+    "groups_truncated": false,
+    "omitted_group_memberships": 0,
+    "groups": [
+      {
+        "kind": "value_mismatch",
+        "phase": "directed_sequence",
+        "output_field": "m_axis_dout_tdata",
+        "count": 1,
+        "first_output_index": 113,
+        "last_output_index": 113,
+        "first_context": {
+          "phase": "directed_sequence",
+          "input_record_index": 113,
+          "input_mapping_available": true,
+          "causal_input_not_identified": true
+        },
+        "first_difference": {
+          "kind": "value_mismatch",
+          "output_index": 113,
+          "expected": "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "actual": "1000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "expected_mask": "1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+          "contains_unknown_bits": false,
+          "expected_width": 291,
+          "actual_width": 291,
+          "expected_mask_width": 291,
+          "truncated_row_fields": [
+            "expected",
+            "actual",
+            "expected_mask"
+          ]
+        },
+        "example_output_indices": [
+          113
+        ]
+      },
+      {
+        "kind": "missing_output",
+        "phase": "directed_sequence",
+        "output_field": null,
+        "count": 1422,
+        "first_output_index": 114,
+        "last_output_index": 1535,
+        "first_context": {
+          "phase": "directed_sequence",
+          "input_record_index": 114,
+          "input_mapping_available": true,
+          "causal_input_not_identified": true
+        },
+        "first_difference": {
+          "kind": "missing_output",
+          "output_index": 114,
+          "expected": "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "actual": null,
+          "expected_mask": "1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+          "contains_unknown_bits": false,
+          "expected_width": 291,
+          "expected_mask_width": 291,
+          "truncated_row_fields": [
+            "expected",
+            "expected_mask"
+          ]
+        },
+        "example_output_indices": [
+          114,
+          115,
+          116
+        ]
+      },
+      {
+        "kind": "missing_output",
+        "phase": "generated",
+        "output_field": null,
+        "count": 1024,
+        "first_output_index": 1536,
+        "last_output_index": 6651,
+        "first_context": {
+          "phase": "generated",
+          "input_record_index": 1536,
+          "input_mapping_available": true,
+          "causal_input_not_identified": true
+        },
+        "first_difference": {
+          "kind": "missing_output",
+          "output_index": 1536,
+          "expected": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "actual": null,
+          "expected_mask": "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "contains_unknown_bits": false,
+          "expected_width": 291,
+          "expected_mask_width": 291,
+          "truncated_row_fields": [
+            "expected",
+            "expected_mask"
+          ]
+        },
+        "example_output_indices": [
+          1536,
+          1537,
+          1544
+        ]
+      },
+      {
+        "kind": "missing_output",
+        "phase": "gap",
+        "output_field": null,
+        "count": 4092,
+        "first_output_index": 1538,
+        "last_output_index": 6650,
+        "first_context": {
+          "phase": "gap",
+          "input_record_index": 1538,
+          "input_mapping_available": true,
+          "causal_input_not_identified": true
+        },
+        "first_difference": {
+          "kind": "missing_output",
+          "output_index": 1538,
+          "expected": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "actual": null,
+          "expected_mask": "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "contains_unknown_bits": false,
+          "expected_width": 291,
+          "expected_mask_width": 291,
+          "truncated_row_fields": [
+            "expected",
+            "expected_mask"
+          ]
+        },
+        "example_output_indices": [
+          1538,
+          1539,
+          1540
+        ]
+      },
+      {
+        "kind": "missing_output",
+        "phase": "flush",
+        "output_field": null,
+        "count": 57,
+        "first_output_index": 6652,
+        "last_output_index": 6708,
+        "first_context": {
+          "phase": "flush",
+          "input_record_index": 6652,
+          "input_mapping_available": true,
+          "causal_input_not_identified": true
+        },
+        "first_difference": {
+          "kind": "missing_output",
+          "output_index": 6652,
+          "expected": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "actual": null,
+          "expected_mask": "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "contains_unknown_bits": false,
+          "expected_width": 291,
+          "expected_mask_width": 291,
+          "truncated_row_fields": [
+            "expected",
+            "expected_mask"
+          ]
+        },
+        "example_output_indices": [
+          6652,
+          6653,
+          6654
+        ]
+      }
+    ]
+  }
+}

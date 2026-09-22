@@ -5,7 +5,7 @@
 单计数器配置保留第二路的默认极性，不把无效参数变化重复计数。
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 python3 scripts/run_all.py --ip-type axi_timer
 python3 scripts/run_all.py --config configs/ip/axi_timer/extended.json --limit 3
 ```
@@ -39,8 +39,7 @@ AXI-Lite 驱动保留独立地址/数据握手、读写响应回压、响应保�
 
 自动重装载的连续周期含一个额外时钟，与
 [PG079 的周期公式](https://docs.amd.com/r/en-US/pg079-axi-timer/Generate-Mode)一致。
-窗口结束时已经请求的重装载仍会完成；该暂停边界用独立 VHDL 核对，
-见[接口及时序探测](interface_probe.md)。
+窗口结束时已经请求的重装载仍会完成；这一边界仍需在 2026.1 做独立 VHDL 对照。
 输出脉冲和模式相关中断是两条规则，不能混为一谈，见
 [端口说明](https://docs.amd.com/r/en-US/pg079-axi-timer/Port-Descriptions)。
 捕获保持按编程章节的“读 TLR 后重新捕获”处理，见

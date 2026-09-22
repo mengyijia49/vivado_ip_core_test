@@ -1,16 +1,16 @@
 # Floating-Point 检查
 
-`floating_point` 对应 Floating-Point Operator 7.1，目前接入九种功能：
-Absolute、Float_to_float、Fixed_to_float、Float_to_fixed、Square_root、Compare、Add_Subtract、Multiply、Divide。
+`floating_point` 对应 Floating-Point Operator 7.1，目前接入十四种功能：
+Absolute、Float_to_float、Fixed_to_float、Float_to_fixed、Square_root、Compare、Add_Subtract、Multiply、Divide、FMA、Reciprocal、Reciprocal_square_root、Exponential、Logarithm。
 只做行为仿真。
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 python3 scripts/run_all.py --ip-type floating_point
 python3 scripts/run_all.py --config configs/ip/floating_point/matrices/float_to_fixed.json --limit 3
 ```
 
-第一条运行 78 组常用配置。第二条只选浮点转定点矩阵的前 3 组。
+第一条运行 98 组常用配置。第二条只选浮点转定点矩阵的前 3 组。
 各功能有独立矩阵入口，不需要修改公共配置，也不自动增加种子。
 
 ## 参数
@@ -31,10 +31,15 @@ python3 scripts/run_all.py --config configs/ip/floating_point/matrices/float_to_
 | add_subtract | 407472 | 全部格式，固定加/减及可编程加减，支持的架构与 DSP 组合、13 种侧带配置 |
 | multiply | 402896 | 全部格式，支持的架构与 DSP 组合、13 种侧带配置 |
 | divide | 3578240 | 全部格式与合法运算间隔，四种异常位开关、五种侧带配置 |
+| fma | 96 | 半、单、双精度，融合加/减、两种 DSP 用量和三种异常位开关 |
+| reciprocal | 96 | 半、单、双精度，两种 AXI 优化、侧带和两个异常位开关 |
+| reciprocal_sqrt | 96 | 半、单、双精度，两种 AXI 优化、侧带和两个异常位开关 |
+| exponential | 96 | 半、单、双精度，两种 AXI 优化、侧带、下溢和上溢开关 |
+| logarithm | 96 | 半、单、双精度，两种 AXI 优化、侧带、无效运算和除零开关 |
 
-合计 8047768 组不同参数，不是所有输入输出格式的完整交叉乘积。
+合计 8048248 组不同参数，不是所有输入输出格式的完整交叉乘积。
 其中也包含运算间隔、侧带、异常标志和 AXI 优化设置的变化。
-不同运算仍属于同一类 IP，不把它们计作九类 IP。
+不同运算仍属于同一类 IP，不拆成多个 IP 类型计数。
 这些是待选参数，不代表全部完成仿真。
 
 ## 怎么比较
@@ -48,7 +53,9 @@ Python 用整数拆分符号、指数和尾数，精确计算二进制移位及�
 绝对值则保留次正规数和 NaN 载荷。数值运算的输出补齐位做符号扩展；比较结果补零。
 浮点转定点使用最近偶数舍入，越界时饱和；NaN、无穷和普通越界的异常标志分别检查。
 下溢采用[舍入后判断](underflow_review.md)，该处的手册冲突单独保留。
-数据、补齐位、异常标志和用户侧带全部比较，没有放宽误差或使用输出掩码。
+数据、补齐位、异常标志和用户侧带全部比较。倒数和倒数平方根按 PG060 的精度范围评分：
+半精度仍逐位相等，单、双精度的普通数值允许 1 ULP；特殊值和侧带仍逐位相等。
+指数和自然对数的普通有限结果允许 1 ULP，三种精度采用同一规则；特殊值、异常标志和侧带逐位相等。
 
 Blocking 接口检查有效握手、收发数量、顺序和回压期间的稳定性。
 三种转换和平方根在启动时复位；Absolute 没有时钟和复位端口，testbench 按固定节拍采样。
@@ -89,11 +96,50 @@ A、B 和可选 OPERATION 各自握手、各自推进，不要求一组全部完
 除法用整数商和余数决定舍入，单独处理除零及无效运算，详见[除法检查](divide.md)。
 低速实现仍按各路 READY 驱动输入，不根据估计的延迟跳过检查。
 
-尚未接入融合乘加等其他运算，也没有接入 NonBlocking、ACLKEN、
+## 融合乘加和融合乘减
+
+FMA 使用 A、B、C 和 OPERATION 四个独立 AXI-Stream 输入。操作码 0 计算 `A*B+C`，
+操作码 1 计算 `A*B-C`。testbench 分别推进四路握手，不假定它们在同一周期到达。
+Python 参考先精确计算乘积与加减，只对最终结果做一次最近偶数舍入，
+因此可以检查先乘后舍入再相加无法覆盖的情况。
+
+当前只覆盖原生半精度、单精度和双精度，使用速度优化及 Medium/Full DSP 用量。
+定向输入包含零、次正规数、无穷、NaN、上溢、下溢、抵消和融合舍入差异，
+并检查异常标志、各输入的 TUSER/TLAST、输出侧带顺序和回压保持。
+
+## 倒数
+
+Reciprocal 计算 `1/A`。参考模型使用精确整数除法，只在结果编码时做一次最近偶数舍入。
+当前只支持输入输出格式相同的原生半、单、双精度。格式不同的 XCI 虽能生成，
+当前不把异格式组合作为已覆盖项。
+
+精度判定以 PG060 给出的范围为准；2026.1 的实际结果见
+[全量报告](../../experiments/vivado_2026_full_regression.md)。
+
+## 倒数平方根
+
+Reciprocal square root 计算 `1/sqrt(A)`。参考模型使用整数平方根和精确中点平方比较，
+不调用宿主浮点运算。当前只支持输入输出格式相同的原生半、单、双精度。
+异格式 XCI 虽能生成，但当前不把它们作为已覆盖项。
+
+定向输入覆盖正负零、次正规数、正负无穷、NaN、负数、指数边界和舍入边界。
+INVALID_OP、DIVIDE_BY_ZERO、TLAST 和 TUSER 单独检查。四组代表配置的创建、
+testbench 生成和行为仿真均通过，见
+[全量报告](../../experiments/vivado_2026_full_regression.md)。
+
+## 指数和自然对数
+
+Exponential 计算 `e^A`，Logarithm 计算自然对数 `ln(A)`。Python 用 180 位和 260 位
+十进制精度各算一次，只有两次编码结果一致才生成期望值。定向输入包含零、次正规数、
+无穷、NaN、负数、1、2、0.5、`ln(2)` 附近以及指数上溢和下溢边界。
+
+当前只保留输入输出格式相同的原生半、单、双精度。指数检查 UNDERFLOW 和 OVERFLOW，
+对数检查 INVALID_OP 和 DIVIDE_BY_ZERO。两者没有复位端口。6 组代表配置的 18 个阶段通过，
+见[全量报告](../../experiments/vivado_2026_full_regression.md)。
+
+尚未接入其他运算，也没有接入 NonBlocking、ACLKEN、
 运行中复位和手动延迟。当前使用自动延迟，不断言固定输入到输出周期数。
 所有请求参数和实际端口均与 XCI 核对，实际模型延迟保存在运行归档。
 
-真实运行和检查记录见[转换接入检查](../../experiments/floating_point_acceptance.md)
-及[平方根接入检查](../../experiments/floating_point_sqrt_acceptance.md)、
-[比较接入检查](../../experiments/floating_point_compare_acceptance.md)、
-[加减和乘法接入检查](../../experiments/floating_point_arithmetic_acceptance.md)。
+所有常用配置的实际结果见
+[Vivado 2026.1 全量报告](../../experiments/vivado_2026_full_regression.md)。

@@ -1,0 +1,23 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "axi_lmb_bridge",
+      "template": {
+        "ip_type": "axi_lmb_bridge", "vendor": "xilinx.com", "ip_name": "axi_lmb_bridge",
+        "parameters": {"data_width": 32, "address_width": 32, "id_width": 1, "use_pause": false, "lmb_protocol": "Standard", "protection": false},
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260960, "case_budget": 64, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "shuffled", "timing_mode": "random_gaps", "max_gap_cycles": 12, "burst_length": 8}
+      },
+      "axes": {
+        "data_width": [32, 64],
+        "address_width": [32, 40, 64],
+        "id_width": [1, 4, 8, 16],
+        "use_pause": [false, true],
+        "lmb_protocol": ["Standard", "Frequency"],
+        "protection": [false, true]
+      }
+    }
+  ]
+}

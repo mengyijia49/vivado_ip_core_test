@@ -1,5 +1,6 @@
 from dataclasses import replace
 from pathlib import Path
+import json
 import tempfile
 import unittest
 
@@ -61,3 +62,35 @@ class ResumeTests(unittest.TestCase):
                     archived_source.write_text("corrupted")
                 with self.assertRaises(ConfigError):
                     remaining_cases(layout, [make_case()], [record])
+
+    def test_resume_rejects_a_different_vivado_version(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            old = RepositoryLayout(root, vivado_version="2026.0")
+            case = make_case()
+            log = old.stage_log_path(case, case.stages[0])
+            with RunRecorder(old, [case]) as recorder:
+                log.parent.mkdir(parents=True)
+                log.write_text("PASS")
+                for stage in case.stages:
+                    recorder.capture(StageResult(case.case_id, stage, Status.PASS,
+                                                 old.case_run_dir(case), log))
+            record = recorder.report_dir / "run.json"
+            self.assertEqual(remaining_cases(old, [case], [record]), [])
+            current = RepositoryLayout(root, vivado_version="2026.1")
+            with self.assertRaisesRegex(ConfigError, "版本不匹配"):
+                remaining_cases(current, [case], [record])
+
+    def test_legacy_record_uses_its_recorded_executable_version(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            layout, path = self.record(root)
+            metadata = json.loads(path.read_text())
+            metadata.pop("vivado_version")
+            metadata["vivado_executable"] = "/data/Xilinx/2026.0/Vivado/bin/vivado"
+            path.write_text(json.dumps(metadata))
+            self.assertEqual(remaining_cases(RepositoryLayout(root, vivado_version="2026.0"),
+                                             [make_case()], [path]), [])
+            with self.assertRaisesRegex(ConfigError, "版本不匹配"):
+                remaining_cases(RepositoryLayout(root, vivado_version="2026.1"),
+                                [make_case()], [path])

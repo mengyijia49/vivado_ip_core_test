@@ -1,7 +1,7 @@
 # 拼接工具自检
 
 对象是 `xlconcat:2.1`，不是 Inline HDL 的 `ilconcat`。
-Vivado 2025.2 仍能创建旧版，但日志已提示迁移，后续版本不能据此推定可用。
+Vivado 2026.1 仍能创建该 IP，但日志提示迁移到 Inline HDL。
 
 `input_widths` 按 `In0`、`In1` 等端口顺序列出宽度。
 端口数为 1 至 128，每路 1 至 4096 位；`dout` 宽度等于各路之和。
@@ -25,4 +25,4 @@ python3 scripts/run_all.py --config configs/ip/xlconcat/extended.json --list-cas
 
 创建采用 batch Tcl 的 Block Design 流程，符合 [PB041 的 IP Integrator 使用范围](https://docs.amd.com/v/u/en-US/pb041-xilinx-com-ip-xlconcat)。
 生成前后分别核对配置和 XCI，不读取 IP 输出来修正参考值。
-验证记录见[连接工具验收](../../experiments/utility_acceptance.md)。
+验证结果见[2026.1 全量运行记录](../../experiments/vivado_2026_full_regression.md)。

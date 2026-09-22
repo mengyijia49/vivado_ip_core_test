@@ -1,0 +1,39 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "xfft_standard",
+      "template": {
+        "ip_type": "xfft", "vendor": "xilinx.com", "ip_name": "xfft",
+        "parameters": {"transform_length": 8, "input_width": 8, "phase_factor_width": 8, "direction": "forward", "output_ordering": "natural_order", "architecture": "pipelined_streaming_io"},
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 2026, "case_budget": 16, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "generated", "timing_mode": "random_gaps", "max_gap_cycles": 5, "burst_length": 8}
+      },
+      "axes": {
+        "transform_length": [8, 16, 32, 64, 128, 256],
+        "input_width": [8, 12, 16, 24],
+        "phase_factor_width": [8, 12, 16, 24],
+        "direction": ["forward", "inverse"],
+        "output_ordering": ["natural_order", "bit_reversed_order"],
+        "architecture": ["pipelined_streaming_io", "radix_2_burst_io", "radix_2_lite_burst_io"]
+      }
+    },
+    {
+      "case_prefix": "xfft_radix4",
+      "template": {
+        "ip_type": "xfft", "vendor": "xilinx.com", "ip_name": "xfft",
+        "parameters": {"transform_length": 64, "input_width": 8, "phase_factor_width": 8, "direction": "forward", "output_ordering": "natural_order", "architecture": "radix_4_burst_io"},
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 2026, "case_budget": 16, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "generated", "timing_mode": "random_gaps", "max_gap_cycles": 5, "burst_length": 8}
+      },
+      "axes": {
+        "transform_length": [64, 128, 256],
+        "input_width": [8, 12, 16, 24],
+        "phase_factor_width": [8, 12, 16, 24],
+        "direction": ["forward", "inverse"],
+        "output_ordering": ["natural_order", "bit_reversed_order"]
+      }
+    }
+  ]
+}

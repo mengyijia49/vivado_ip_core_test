@@ -41,6 +41,13 @@ class CycleBackendTests(unittest.TestCase):
         self.assertTrue(any(row["A"] == 255 and row["B"] == 0 and row["CE"] == 1
                             and row["SCLR"] == 0 for row in rows))
 
+    def test_scalar_control_combinations_can_be_disabled_per_plugin(self):
+        plugin, case = plugin_case("adder_subtractor")
+        spec = plugin.describe(case.parameters)
+        combined = cycle_space(spec, False)
+        separate = cycle_space(replace(spec, combine_scalar_controls=False), False)
+        self.assertGreater(len(combined.directed_cases), len(separate.directed_cases))
+
     def test_each_backend_has_deterministic_generation_and_checked_cycles(self):
         for ip_type in ("adder_subtractor", "accumulator", "counter", "shift_register",
                         "distributed_memory", "vector_logic", "reduced_logic"):
@@ -75,6 +82,21 @@ class CycleBackendTests(unittest.TestCase):
         self.assertIn("actual(0) := p_Res", text)
         self.assertIn("not is_x(actual)", text)
         self.assertLess(text.index("writeline(actual_file"), text.index("assert not is_x"))
+
+    def test_explicit_input_initial_values_are_rendered(self):
+        plugin, case = plugin_case("util_ff")
+        spec = plugin.describe({**case.parameters, "ff_type": "FDCE",
+                                "control_active_high": False})
+        paths = {name: Path(f"/tmp/{name}")
+                 for name in ("input_vectors", "expected_output", "actual_output")}
+        text = render_testbench(spec, paths, 2)
+        self.assertIn("signal p_clear : std_logic := '1';", text)
+        self.assertIn("signal p_D : std_logic_vector(7 downto 0) := (others => '0');", text)
+
+        with self.assertRaisesRegex(PluginError, "未知输入端口"):
+            render_testbench(replace(spec, initial_values={"missing": 1}), paths, 2)
+        with self.assertRaisesRegex(PluginError, "超出范围"):
+            render_testbench(replace(spec, initial_values={"clear": 2}), paths, 2)
 
     def test_xci_requires_requested_parameters_and_exact_ports(self):
         plugin, case = plugin_case("vector_logic")

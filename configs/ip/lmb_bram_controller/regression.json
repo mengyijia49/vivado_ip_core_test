@@ -1,0 +1,34 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "lmb_bram_32_all_writes_4k",
+      "ip_type": "lmb_bram_controller", "vendor": "xilinx.com", "ip_name": "lmb_bram_if_cntlr",
+      "parameters": {"data_width": 32, "address_width": 32, "base_address": 0, "address_size": 4096, "write_access": "All_Writes", "protection": false, "protection_mask": 255},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260921, "case_budget": 256, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "generated", "timing_mode": "random_gaps", "max_gap_cycles": 8, "burst_length": 16}
+    },
+    {
+      "case_id": "lmb_bram_64_all_writes_protected_64k",
+      "ip_type": "lmb_bram_controller", "vendor": "xilinx.com", "ip_name": "lmb_bram_if_cntlr",
+      "parameters": {"data_width": 64, "address_width": 64, "base_address": 4294967296, "address_size": 65536, "write_access": "All_Writes", "protection": true, "protection_mask": 105},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "coverage_guided", "strategy_version": "1.0", "random_seed": 20260922, "case_budget": 256, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "generated", "timing_mode": "bursts", "max_gap_cycles": 8, "burst_length": 16}
+    },
+    {
+      "case_id": "lmb_bram_32_word_only_1m",
+      "ip_type": "lmb_bram_controller", "vendor": "xilinx.com", "ip_name": "lmb_bram_if_cntlr",
+      "parameters": {"data_width": 32, "address_width": 32, "base_address": 2147483648, "address_size": 1048576, "write_access": "Word_Only", "protection": false, "protection_mask": 255},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260923, "case_budget": 2048, "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "continuous", "max_gap_cycles": 8, "burst_length": 16}
+    },
+    {
+      "case_id": "lmb_bram_64_read_only_4k",
+      "ip_type": "lmb_bram_controller", "vendor": "xilinx.com", "ip_name": "lmb_bram_if_cntlr",
+      "parameters": {"data_width": 64, "address_width": 32, "base_address": 65536, "address_size": 4096, "write_access": "Read_Only", "protection": false, "protection_mask": 255},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "coverage_guided", "strategy_version": "1.0", "random_seed": 20260924, "case_budget": 256, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "generated", "timing_mode": "random_gaps", "max_gap_cycles": 16, "burst_length": 16}
+    }
+  ]
+}

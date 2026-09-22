@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FIT Timer 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["no_clocks", "inaccuracy", "reset_active_high"],
+  "properties": {
+    "no_clocks": {"type": "integer", "minimum": 3, "maximum": 1000000},
+    "inaccuracy": {"type": "integer", "minimum": 0, "maximum": 999},
+    "reset_active_high": {"type": "boolean"}
+  }
+}

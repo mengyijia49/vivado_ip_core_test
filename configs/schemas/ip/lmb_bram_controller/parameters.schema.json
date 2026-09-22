@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LMB BRAM Interface Controller 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["data_width", "address_width", "base_address", "address_size", "write_access", "protection", "protection_mask"],
+  "properties": {
+    "data_width": {"enum": [32, 64]},
+    "address_width": {"enum": [32, 64]},
+    "base_address": {"type": "integer", "minimum": 0},
+    "address_size": {"enum": [4096, 65536, 1048576]},
+    "write_access": {"enum": ["Read_Only", "Word_Only", "All_Writes"]},
+    "protection": {"type": "boolean"},
+    "protection_mask": {"type": "integer", "minimum": 0, "maximum": 255}
+  }
+}

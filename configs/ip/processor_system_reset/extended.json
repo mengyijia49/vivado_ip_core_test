@@ -1,0 +1,44 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "processor_reset_inputs",
+      "template": {
+        "ip_type": "processor_system_reset", "vendor": "xilinx.com", "ip_name": "proc_sys_reset",
+        "parameters": {"ext_reset_width": 4, "aux_reset_width": 4,
+          "ext_active_high": true, "aux_active_high": true, "bus_reset_count": 1,
+          "peripheral_reset_count": 1, "interconnect_aresetn_count": 1,
+          "peripheral_aresetn_count": 1},
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {"strategy": "exhaustive", "strategy_version": "1.0", "random_seed": 2026,
+          "case_budget": 16, "coverage_targets": ["complete_input_space"], "boundary_mode": "basic",
+          "input_order": "generated", "timing_mode": "continuous", "max_gap_cycles": 1,
+          "burst_length": 16}
+      },
+      "axes": {
+        "ext_reset_width": [1, 4, 16], "aux_reset_width": [1, 4, 16],
+        "ext_active_high": [false, true], "aux_active_high": [false, true]
+      }
+    },
+    {
+      "case_prefix": "processor_reset_outputs",
+      "template": {
+        "ip_type": "processor_system_reset", "vendor": "xilinx.com", "ip_name": "proc_sys_reset",
+        "parameters": {"ext_reset_width": 3, "aux_reset_width": 5,
+          "ext_active_high": false, "aux_active_high": true, "bus_reset_count": 1,
+          "peripheral_reset_count": 1, "interconnect_aresetn_count": 1,
+          "peripheral_aresetn_count": 1},
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {"strategy": "exhaustive", "strategy_version": "1.0", "random_seed": 2027,
+          "case_budget": 16, "coverage_targets": ["complete_input_space"], "boundary_mode": "basic",
+          "input_order": "generated", "timing_mode": "continuous", "max_gap_cycles": 1,
+          "burst_length": 16}
+      },
+      "axes": {
+        "bus_reset_count": [1, 4, 8], "peripheral_reset_count": [1, 8, 16],
+        "interconnect_aresetn_count": [1, 4, 8], "peripheral_aresetn_count": [1, 8, 16]
+      }
+    }
+  ]
+}

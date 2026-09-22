@@ -26,7 +26,7 @@ Python 按这个位序独立计算期望值，不读取生成的 HDL 来决定�
 ## 运行
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 python3 scripts/run_all.py --ip-type ilconcat
 python3 scripts/run_all.py --config configs/ip/ilconcat/extended.json --list-cases
 python3 scripts/run_all.py --config configs/ip/ilconcat/extended.json --case ilconcat__input_widths_n128_w4096
@@ -36,6 +36,6 @@ python3 scripts/run_all.py --config configs/ip/ilconcat/extended.json --case ilc
 再调用公共 XSim 行为仿真入口。不会生成假 XCI，也不会运行综合。
 生成的 `.bd` 和行为 HDL 随本次运行归档。
 
-范围来自本机 Vivado 2025.2 的 `data/rsb/iprepos/ilconcat_v1_0/component.xml`。
+运行时会核对当前 Vivado 的组件参数和生成的 `.bd`。
 Inline HDL 的使用方式见 [UG994](https://docs.amd.com/r/en-US/ug994-vivado-ip-subsystems/Inline-HDL)。
 旧版 128 路问题见[独立复现记录](../xlconcat/port_128_issue.md)，不能归到新版名下。

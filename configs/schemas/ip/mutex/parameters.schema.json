@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Mutex 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["num_interfaces", "num_mutexes", "enable_user", "hardware_protection"],
+  "properties": {
+    "num_interfaces": {"enum": [2, 4, 8]},
+    "num_mutexes": {"type": "integer", "minimum": 1, "maximum": 32},
+    "enable_user": {"type": "boolean"},
+    "hardware_protection": {"type": "boolean"}
+  }
+}

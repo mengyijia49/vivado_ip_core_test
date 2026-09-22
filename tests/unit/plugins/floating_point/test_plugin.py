@@ -5,8 +5,11 @@ import unittest
 from unittest.mock import patch
 
 from vivado_ip_test.configuration import load_test_cases
+from vivado_ip_test.infrastructure import RepositoryLayout
 from vivado_ip_test.plugins.base import PluginError
 from vivado_ip_test.plugins.common.stream.testbench import render_testbench
+from vivado_ip_test.plugins.floating_point.plugin import FloatingPointPlugin
+from vivado_ip_test.strategies import create_default_strategy_registry
 from unit.plugins.cycle_helpers import plugin_case, ROOT
 
 
@@ -36,6 +39,17 @@ class FloatingPluginTests(unittest.TestCase):
                        {'operation': 'Float_to_fixed', 'input_exponent': 4, 'output_exponent': 64, 'output_fraction': 0}):
             with self.subTest(change=change), self.assertRaises(PluginError):
                 plugin.validate_case(replace(case, parameters={**case.parameters, **change}))
+
+    def test_absolute_clock_port_in_supported_versions(self):
+        _, case = plugin_case('floating_point')
+        for version, expected_clock in (("2026.1", "aclk"), ("2026.1.1", "aclk")):
+            with self.subTest(version=version):
+                plugin = FloatingPointPlugin(RepositoryLayout(ROOT, vivado_version=version),
+                                             create_default_strategy_registry())
+                spec = plugin.describe(case.parameters)
+                self.assertEqual(spec.input_clock, expected_clock)
+                self.assertIsNone(spec.input_reset)
+                self.assertEqual("aclk" in {port.name for port in spec.inputs}, bool(expected_clock))
 
     def test_generation_is_reproducible_and_validates_exception_port_width(self):
         with tempfile.TemporaryDirectory() as directory:

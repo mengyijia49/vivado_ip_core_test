@@ -20,7 +20,7 @@ class FirCmodelProbeTests(unittest.TestCase):
         report = root / 'reports/framework/fir_cmodel_probe' / rid
         for directory in (run, logs, report):
             directory.mkdir(parents=True)
-        archive = Path('/data/Xilinx/2025.2/data/ip/xilinx/fir_compiler_v7_2/cmodel/fir_compiler_v7_2_bitacc_cmodel_lin64.zip')
+        archive = Path('/data/Xilinx/2026.1/Vivado/data/ip/xilinx/fir_compiler_v7_2/cmodel/fir_compiler_v7_2_bitacc_cmodel_lin64.zip')
         vendor = run / 'vendor_model'
         vendor.mkdir()
         names = ('fir_compiler_v7_2_bitacc_cmodel.h', 'xip_common_bitacc_cmodel.h',

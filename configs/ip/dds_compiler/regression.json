@@ -1,0 +1,42 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "dds_phase8_forward",
+      "ip_type": "dds_compiler",
+      "vendor": "xilinx.com",
+      "ip_name": "dds_compiler",
+      "parameters": {"phase_width": 8, "phase_increment": 17, "phase_offset": 0},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "exhaustive", "strategy_version": "1.0", "random_seed": 2026,
+        "case_budget": 4, "coverage_targets": ["complete_input_space"], "boundary_mode": "basic",
+        "input_order": "generated", "timing_mode": "continuous", "max_gap_cycles": 8,
+        "burst_length": 16}
+    },
+    {
+      "case_id": "dds_phase8_reverse_offset",
+      "ip_type": "dds_compiler",
+      "vendor": "xilinx.com",
+      "ip_name": "dds_compiler",
+      "parameters": {"phase_width": 8, "phase_increment": 241, "phase_offset": 37},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "exhaustive", "strategy_version": "1.0", "random_seed": 2027,
+        "case_budget": 4, "coverage_targets": ["complete_input_space"], "boundary_mode": "basic",
+        "input_order": "generated", "timing_mode": "continuous", "max_gap_cycles": 8,
+        "burst_length": 16}
+    },
+    {
+      "case_id": "dds_phase16_wrap",
+      "ip_type": "dds_compiler",
+      "vendor": "xilinx.com",
+      "ip_name": "dds_compiler",
+      "parameters": {"phase_width": 16, "phase_increment": 65535, "phase_offset": 32768},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "exhaustive", "strategy_version": "1.0", "random_seed": 2028,
+        "case_budget": 4, "coverage_targets": ["complete_input_space"], "boundary_mode": "basic",
+        "input_order": "generated", "timing_mode": "continuous", "max_gap_cycles": 8,
+        "burst_length": 16}
+    }
+  ]
+}

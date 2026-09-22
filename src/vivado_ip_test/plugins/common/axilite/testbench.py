@@ -92,7 +92,7 @@ class AxiLiteTestbenchBackend:
 
     def generate(self, case, spec, ip_name, version):
         run = self._layout.case_run_dir(case)
-        xci, metadata = load_metadata(run, spec, ip_name, version)
+        xci, metadata = load_metadata(run, spec.metadata_spec or spec, ip_name, version)
         revision = int(json.loads(xci.read_text())["ip_inst"]["ip_revision"])
         if revision < spec.minimum_ip_revision:
             raise ValueError(f"This reference requires IP revision >= {spec.minimum_ip_revision}, found {revision}")

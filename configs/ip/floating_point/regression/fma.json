@@ -1,0 +1,86 @@
+{
+  "$schema": "../../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "fp_fma16_medium",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "FMA", "input_exponent": 5, "input_fraction": 11,
+        "optimization": "Resources", "mult_usage": "Medium_Usage",
+        "a_user_width": 0, "b_user_width": 0, "c_user_width": 0, "operation_user_width": 0,
+        "has_a_last": false, "has_b_last": false, "has_c_last": false,
+        "has_operation_last": false, "last_mode": "None",
+        "has_underflow": true, "has_overflow": true, "has_invalid_op": true
+      },
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {
+        "strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20261101,
+        "case_budget": 1024, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic",
+        "input_order": "shuffled", "timing_mode": "random_gaps", "max_gap_cycles": 8, "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_fma32_sidebands",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "FMA", "input_exponent": 8, "input_fraction": 24,
+        "optimization": "Performance", "mult_usage": "Full_Usage",
+        "a_user_width": 3, "b_user_width": 5, "c_user_width": 7, "operation_user_width": 2,
+        "has_a_last": true, "has_b_last": true, "has_c_last": true,
+        "has_operation_last": true, "last_mode": "Or",
+        "has_underflow": true, "has_overflow": true, "has_invalid_op": true
+      },
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {
+        "strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20261102,
+        "case_budget": 2048, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic",
+        "input_order": "generated", "timing_mode": "bursts", "max_gap_cycles": 8, "burst_length": 8
+      }
+    },
+    {
+      "case_id": "fp_fma64_c_sideband",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "FMA", "input_exponent": 11, "input_fraction": 53,
+        "optimization": "Resources", "mult_usage": "Medium_Usage",
+        "a_user_width": 0, "b_user_width": 0, "c_user_width": 1, "operation_user_width": 0,
+        "has_a_last": false, "has_b_last": false, "has_c_last": true,
+        "has_operation_last": false, "last_mode": "C",
+        "has_underflow": false, "has_overflow": true, "has_invalid_op": false
+      },
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {
+        "strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20261103,
+        "case_budget": 2048, "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic",
+        "input_order": "shuffled", "timing_mode": "random_gaps", "max_gap_cycles": 16, "burst_length": 16
+      }
+    },
+    {
+      "case_id": "fp_fma32_full_plain",
+      "ip_type": "floating_point",
+      "vendor": "xilinx.com",
+      "ip_name": "floating_point",
+      "parameters": {
+        "operation": "FMA", "input_exponent": 8, "input_fraction": 24,
+        "optimization": "Resources", "mult_usage": "Full_Usage",
+        "a_user_width": 0, "b_user_width": 0, "c_user_width": 0, "operation_user_width": 0,
+        "has_a_last": false, "has_b_last": false, "has_c_last": false,
+        "has_operation_last": false, "last_mode": "None",
+        "has_underflow": false, "has_overflow": false, "has_invalid_op": false
+      },
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {
+        "strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20261104,
+        "case_budget": 1024, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic",
+        "input_order": "generated", "timing_mode": "continuous", "max_gap_cycles": 8, "burst_length": 16
+      }
+    }
+  ]
+}

@@ -2,7 +2,7 @@ from functools import lru_cache
 
 from vivado_ip_test.domain import SimulationRequest, Stage, Status
 from vivado_ip_test.domain.counts import count_for_report
-from vivado_ip_test.infrastructure import output_files_match
+from vivado_ip_test.infrastructure import output_fields_within_tolerance, output_files_match
 from vivado_ip_test.plugins.base import PluginError
 from vivado_ip_test.plugins.common.plugin import CycleIpPlugin
 from vivado_ip_test.plugins.common.stream.testbench import StreamTestbenchBackend
@@ -58,8 +58,18 @@ class StreamIpPlugin(CycleIpPlugin):
         )
 
     def verify_simulation(self, case, stage):
-        status = super().verify_simulation(case, stage)
         run = self._layout.case_run_dir(case)
+        tolerance = run / "vectors/output_tolerance.txt"
+        if tolerance.is_file():
+            spec = self.describe(case.parameters)
+            status = (Status.PASS if output_fields_within_tolerance(
+                run / "vectors/expected_output.txt", run / "outputs/actual_output.txt",
+                tolerance, tuple(width for width, _ in (spec.tolerance_fields or tuple(
+                    (port.width, False) for port in spec.sink_payload))),
+                tuple(signed for _, signed in spec.tolerance_fields))
+                else Status.VERIFICATION_FAILED)
+        else:
+            status = super().verify_simulation(case, stage)
         if status is Status.PASS and not output_files_match(
                 run / "vectors/input_vectors.txt", run / "outputs/accepted_input.txt"):
             return Status.VERIFICATION_FAILED

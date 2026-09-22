@@ -1,0 +1,23 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "dds_phase_fixed",
+      "template": {
+        "ip_type": "dds_compiler", "vendor": "xilinx.com", "ip_name": "dds_compiler",
+        "parameters": {"phase_width": 8, "phase_increment": 1, "phase_offset": 0},
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {"strategy": "exhaustive", "strategy_version": "1.0", "random_seed": 2026,
+          "case_budget": 4, "coverage_targets": ["complete_input_space"], "boundary_mode": "basic",
+          "input_order": "generated", "timing_mode": "continuous", "max_gap_cycles": 8,
+          "burst_length": 16}
+      },
+      "axes": {
+        "phase_width": [3, 4, 8, 16, 32, 48],
+        "phase_increment": [0, 1, 3, 7],
+        "phase_offset": [0, 1, 2, 7]
+      }
+    }
+  ]
+}

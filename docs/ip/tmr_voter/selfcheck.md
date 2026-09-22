@@ -38,8 +38,8 @@ bit 3 检查投票输出。锁步模式只定义 bit 0，其他三位不作功�
 没有接入时间冗余、AXI/LMB/BRAM 接口或内置测试注入接口，也不进行综合后的测试。
 
 功能依据 [PG268 投票器说明](https://docs.amd.com/r/en-US/pg268-tmr/TMR-Voter?contentId=spWYQjbdzOIg7qRCl0tDdQ)。
-端口开关、告警位序和离散掩码同时核对本机 2025.2 的 `component.xml`、生成 XCI
+端口开关、告警位序和离散掩码同时核对当前 `component.xml`、生成 XCI
 及随安装提供的可读接口实现；这些厂商文件不复制进仓库。
-实测记录见[接入检查](../../experiments/tmr_acceptance.md)。
+实测记录见[2026.1 全量报告](../../experiments/vivado_2026_full_regression.md)。
 锁步加内置比较器目前有[厂商模型内部端口展开失败](lockstep_issue.md)，
 不能将该模式列为已通过功能仿真；配置和失败记录保留用于复现。

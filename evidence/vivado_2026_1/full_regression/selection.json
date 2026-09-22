@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "issue": "vivado_2026_1.full_regression",
+  "path_replacements": {
+    "/home/dpc/vivado_ip_auto_test": "<REPOSITORY_ROOT>",
+    "/data/Xilinx/2026.1": "<VIVADO_2026.1>"
+  },
+  "files": [
+    {"source": "reports/history/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/report.csv", "target": "2026-09-22_12-47-30_UTC+0800_4bca4f69/report.csv", "mode": "text"},
+    {"source": "reports/history/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/run.json", "target": "2026-09-22_12-47-30_UTC+0800_4bca4f69/run.json", "mode": "json"},
+    {"source": "reports/history/2026.1/2026-09-22_16-09-47_UTC+0800_7e11e8e7/report.csv", "target": "2026-09-22_16-09-47_UTC+0800_7e11e8e7/report.csv", "mode": "text"},
+    {"source": "reports/history/2026.1/2026-09-22_16-09-47_UTC+0800_7e11e8e7/run.json", "target": "2026-09-22_16-09-47_UTC+0800_7e11e8e7/run.json", "mode": "json"},
+    {"source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/axi_lmb_bridge_frequency_40/outputs/failure.json", "target": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/frequency_40_failure.json", "mode": "json"},
+    {"source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/axi_lmb_bridge_frequency_40/vectors/operations.json", "target": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/frequency_40_operations.json", "mode": "json"},
+    {"source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/axi_lmb_bridge_frequency_40/vectors/expected_output.txt", "target": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/frequency_40_expected_output.txt", "mode": "text"},
+    {"source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/axi_lmb_bridge_frequency_40/outputs/actual_output.txt", "target": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/frequency_40_actual_output.txt", "mode": "text"},
+    {"source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/axi_lmb_bridge_pause_64/outputs/failure.json", "target": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/pause_64_failure.json", "mode": "json"},
+    {"source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/axi_lmb_bridge_pause_64/vectors/operations.json", "target": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/pause_64_operations.json", "mode": "json"},
+    {"source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/axi_lmb_bridge_pause_64/vectors/expected_output.txt", "target": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/pause_64_expected_output.txt", "mode": "text"},
+    {"source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/axi_lmb_bridge_pause_64/outputs/actual_output.txt", "target": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/pause_64_actual_output.txt", "mode": "text"},
+    {"source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axis_protocol_checker/axis_pc_128_partial/outputs/failure.json", "target": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axis_protocol_checker/partial_failure.json", "mode": "json"},
+    {"source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axis_protocol_checker/axis_pc_128_partial/vectors/protocol_scenarios.json", "target": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axis_protocol_checker/partial_scenarios.json", "mode": "json"},
+    {"source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axis_protocol_checker/axis_pc_128_partial/vectors/expected_output.txt", "target": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axis_protocol_checker/partial_expected_output.txt", "mode": "text"},
+    {"source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axis_protocol_checker/axis_pc_128_partial/outputs/actual_output.txt", "target": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axis_protocol_checker/partial_actual_output.txt", "mode": "text"}
+  ]
+}

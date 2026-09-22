@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AXI4-Stream FIFO 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["tx_depth", "rx_depth", "has_keep", "destination_width", "use_xpm"],
+  "properties": {
+    "tx_depth": {"enum": [512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072]},
+    "rx_depth": {"enum": [512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072]},
+    "has_keep": {"type": "boolean"},
+    "destination_width": {"type": "integer", "minimum": 0, "maximum": 4},
+    "use_xpm": {"type": "boolean"}
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "cic_decim_r4_n2_m1_i8",
+      "ip_type": "cic_compiler",
+      "vendor": "xilinx.com",
+      "ip_name": "cic_compiler",
+      "parameters": {"filter_type": "Decimation", "input_width": 8, "stages": 2, "differential_delay": 1, "rate": 4},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "exhaustive", "strategy_version": "1.0", "random_seed": 2026, "case_budget": 256, "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "random_gaps", "max_gap_cycles": 8, "burst_length": 16}
+    },
+    {
+      "case_id": "cic_decim_r5_n3_m2_i16",
+      "ip_type": "cic_compiler",
+      "vendor": "xilinx.com",
+      "ip_name": "cic_compiler",
+      "parameters": {"filter_type": "Decimation", "input_width": 16, "stages": 3, "differential_delay": 2, "rate": 5},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 2027, "case_budget": 256, "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "bursts", "max_gap_cycles": 5, "burst_length": 8}
+    },
+    {
+      "case_id": "cic_interp_r4_n2_m1_i8",
+      "ip_type": "cic_compiler",
+      "vendor": "xilinx.com",
+      "ip_name": "cic_compiler",
+      "parameters": {"filter_type": "Interpolation", "input_width": 8, "stages": 2, "differential_delay": 1, "rate": 4},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "exhaustive", "strategy_version": "1.0", "random_seed": 2028, "case_budget": 256, "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "random_gaps", "max_gap_cycles": 8, "burst_length": 16}
+    },
+    {
+      "case_id": "cic_interp_r8_n4_m2_i16",
+      "ip_type": "cic_compiler",
+      "vendor": "xilinx.com",
+      "ip_name": "cic_compiler",
+      "parameters": {"filter_type": "Interpolation", "input_width": 16, "stages": 4, "differential_delay": 2, "rate": 8},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 2029, "case_budget": 256, "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "bursts", "max_gap_cycles": 5, "burst_length": 8}
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "I2S Transmitter 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sample_width", "channels", "use_32bit_lr", "fifo_depth", "sclk_divider"],
+  "properties": {
+    "sample_width": {"enum": [16, 24]},
+    "channels": {"enum": [2, 4, 6, 8]},
+    "use_32bit_lr": {"type": "boolean"},
+    "fifo_depth": {"enum": [64, 128, 256, 512, 1024]},
+    "sclk_divider": {"type": "integer", "minimum": 1, "maximum": 15}
+  }
+}

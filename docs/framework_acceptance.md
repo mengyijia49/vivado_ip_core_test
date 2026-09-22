@@ -5,7 +5,7 @@
 ## 执行命令
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 python3 -m py_compile scripts/run_all.py
 PYTHONPATH=src python3 -m unittest discover -s tests -p 'test_*.py' -v
 python3 scripts/run_all.py
@@ -38,15 +38,6 @@ git diff --check
 再不带 `PYTHONPATH` 运行测试和 `vivado-ip-test --list-cases`。
 本地通过不等于远程 GitHub Actions 已通过。
 
-历史检查数字见[验收记录](experiments/bug_discovery_acceptance.md)，不是每次运行的最新结果。
 综合后、布局布线后和板级测试不属于项目范围；自动输入缩减和根因去重尚未实现。
-扩展 IP 的本次检查见 [扩展记录](experiments/ip_expansion.md)。大矩阵无需在开发时全部运行。
-存储器和 FIFO 的接入检查见[存储类验收记录](experiments/memory_fifo_acceptance.md)。
-乘加的接入检查见[乘加验收记录](experiments/multiply_adder_acceptance.md)。
-复数乘法的接入检查和可复现异常见[复数乘法验收记录](experiments/complex_multiplier_acceptance.md)。
-位宽转换和字节检查的接入检查见[位宽转换验收记录](experiments/axis_dwidth_acceptance.md)。
-子集映射、自动包尾和宽位边界检查见[子集转换验收记录](experiments/axis_subset_acceptance.md)。
-多支路广播和独立回压检查见[广播器验收记录](experiments/axis_broadcaster_acceptance.md)。
-多路输入汇合、主接口选择和宽 USER 检查见[汇合器验收记录](experiments/axis_combiner_acceptance.md)。
-多输入路由、独立输出队列和仲裁竞争检查见[交换器验收记录](experiments/axis_switch_acceptance.md)。
-多处差异、完整失败文件归档和旧报告兼容性见[差异汇总验收](experiments/failure_group_acceptance.md)。
+大矩阵无需在开发时全部运行。当前各 IP 的实际结果见
+[Vivado 2026.1 全量运行记录](experiments/vivado_2026_full_regression.md)。

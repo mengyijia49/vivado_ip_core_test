@@ -1,0 +1,119 @@
+{
+  "run_id": "2026-09-22_12-16-04_UTC+0800_339fde83",
+  "classification": "SPECIFICATION_CHECK_NOT_VENDOR_CONFIRMED",
+  "parameters": {
+    "C_NUM_INTR_INPUTS": "1",
+    "C_NUM_SW_INTR": "2",
+    "C_KIND_OF_INTR": "0x00000001",
+    "C_KIND_OF_EDGE": "0x00000001",
+    "C_ASYNC_INTR": "0x00000000",
+    "C_HAS_ILR": "0"
+  },
+  "ip_revision": "23",
+  "observations": {
+    "reset_0": {
+      "expected": 0,
+      "actual": 0,
+      "irq": 0,
+      "expected_irq": 0
+    },
+    "master_0": {
+      "expected": 1,
+      "actual": 1,
+      "irq": 0,
+      "expected_irq": 0
+    },
+    "initial_0": {
+      "expected": 1,
+      "actual": 1,
+      "irq": 1,
+      "expected_irq": 1
+    },
+    "zero_preserves_0": {
+      "expected": 1,
+      "actual": 0,
+      "irq": 0,
+      "expected_irq": 1
+    },
+    "ack_0": {
+      "expected": 0,
+      "actual": 0,
+      "irq": 0,
+      "expected_irq": 0
+    },
+    "accumulate_0": {
+      "expected": 3,
+      "actual": 2,
+      "irq": 1,
+      "expected_irq": 1
+    },
+    "final_ack_0": {
+      "expected": 0,
+      "actual": 0,
+      "irq": 0,
+      "expected_irq": 0
+    },
+    "reset_1": {
+      "expected": 0,
+      "actual": 0,
+      "irq": 0,
+      "expected_irq": 0
+    },
+    "master_1": {
+      "expected": 3,
+      "actual": 3,
+      "irq": 0,
+      "expected_irq": 0
+    },
+    "initial_1": {
+      "expected": 2,
+      "actual": 2,
+      "irq": 1,
+      "expected_irq": 1
+    },
+    "zero_preserves_1": {
+      "expected": 2,
+      "actual": 0,
+      "irq": 0,
+      "expected_irq": 1
+    },
+    "ack_1": {
+      "expected": 0,
+      "actual": 0,
+      "irq": 0,
+      "expected_irq": 0
+    },
+    "accumulate_1": {
+      "expected": 6,
+      "actual": 4,
+      "irq": 1,
+      "expected_irq": 1
+    },
+    "final_ack_1": {
+      "expected": 0,
+      "actual": 0,
+      "irq": 0,
+      "expected_irq": 0
+    }
+  },
+  "fresh_source": true,
+  "source_sha256": {
+    "proj/ip_probe.gen/sources_1/ip/probe_0/hdl/axi_intc_v4_1_rfs.vhd": "51d12147f572e67ef62fcc26c8405e31a45219c6f84b7069f7eef05851c55d36",
+    "proj/ip_probe.gen/sources_1/ip/probe_0/hdl/axi_lite_ipif_v3_1_rfs.vhd": "47e1781b1810405448fdaa831b0f4d742314817c7f56672ccfd9c898034214d8",
+    "proj/ip_probe.gen/sources_1/ip/probe_0/sim/probe_0.vhd": "1f651e03820489df410993a10e5ee6589b960bbf7fb31bfedcc908fe9689c71c",
+    "scripts/inspect_ip.tcl": "718c31b9a86b1294ed143463f73b02efdac91e317a090ed40f9be61761066da4",
+    "scripts/run_xsim_batch.tcl": "f94da6945a95875f4cfecee8c055d2b7dc480ac0b4fc6c52c9a64e86370f82d5",
+    "scripts/create_source_probe.tcl": "1c91b4976a861eef5b9619bd361ca4d8fe136a569eb63532a9ecbf6b14aeb3c8",
+    "scripts/isolated_probe.py": "74837acf1108729396ce97f5ec2b8f9875fd15ac757ae964cb7f13833a577ea3",
+    "scripts/test_isr_write_probe.py": "7b7e0dfae989eee18da95bcfd983b3699919b6b9113e4e74318b9837a391dd6e"
+  },
+  "difference_labels": [
+    "zero_preserves_0",
+    "accumulate_0",
+    "zero_preserves_1",
+    "accumulate_1"
+  ],
+  "fixture_sha256": "c5ddc9bc4fc25c565e4a4c58fd84afdf05aae6dbd3e8654fbc44b8a5550d1492",
+  "xci_sha256": "572fa0729b67a233f37d20fec879e29fc5a3c05766fa2220725a80c613f8148c",
+  "returncode": 1
+}

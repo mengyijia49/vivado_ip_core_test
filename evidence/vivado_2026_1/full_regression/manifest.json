@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "issue": "vivado_2026_1.full_regression",
+  "selection_sha256": "b09a5b1adacee207369d740df518bc98bf77c4e537001aa5a59d494e2ea847b6",
+  "path_replacements": {
+    "/home/dpc/vivado_ip_auto_test": "<REPOSITORY_ROOT>",
+    "/data/Xilinx/2026.1": "<VIVADO_2026.1>"
+  },
+  "files": [
+    {
+      "path": "2026-09-22_12-47-30_UTC+0800_4bca4f69/report.csv",
+      "sha256": "e5cfb0aaca3eabc1f54e55c61457ac771af629fcd7d364205ae46f144dd3b372",
+      "bytes": 5174589,
+      "source": "reports/history/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/report.csv",
+      "source_sha256": "2e8086079a5c24d8f1a4f6cd1146cc038b21bace4e0bf95068af2eb354ae3889",
+      "source_bytes": 5208957,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-22_12-47-30_UTC+0800_4bca4f69/run.json",
+      "sha256": "4eaa9614cde711c16efffa88a62f6cf704dd7cd201b8d4939ad7355cf680c835",
+      "bytes": 4641548,
+      "source": "reports/history/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/run.json",
+      "source_sha256": "a692eaf6bc2ed9f72b7065a88f99cee1d6b972574987e248ed224f7a0ec2bc32",
+      "source_bytes": 4643136,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-22_16-09-47_UTC+0800_7e11e8e7/report.csv",
+      "sha256": "3674de7536998a426d742c708e92a5bfd65afc953fe0a0aede911ae097862c08",
+      "bytes": 10644,
+      "source": "reports/history/2026.1/2026-09-22_16-09-47_UTC+0800_7e11e8e7/report.csv",
+      "source_sha256": "27b8090c67153566e0f348a99d05b0295b6ae7c7a43bef4f48c6a8ff176b9ed5",
+      "source_bytes": 10860,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-22_16-09-47_UTC+0800_7e11e8e7/run.json",
+      "sha256": "ea7d845ed40591fe0d11246be82f3e696a94dc6e9abb5af919a70ea2c66327c4",
+      "bytes": 189508,
+      "source": "reports/history/2026.1/2026-09-22_16-09-47_UTC+0800_7e11e8e7/run.json",
+      "source_sha256": "ae1bcb479909c1afa9fbd8d92dd8de5731d1af1d0fd28f774cf5b4d7abbe7050",
+      "source_bytes": 189584,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/frequency_40_failure.json",
+      "sha256": "ff9cda203dbec7527f2cd234d5d23ed45ec3daa170a9d7a2713542e617b93c4f",
+      "bytes": 2136,
+      "source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/axi_lmb_bridge_frequency_40/outputs/failure.json",
+      "source_sha256": "ff9cda203dbec7527f2cd234d5d23ed45ec3daa170a9d7a2713542e617b93c4f",
+      "source_bytes": 2136,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/frequency_40_operations.json",
+      "sha256": "b4487f5c5ebf2fde5a90832c236284269ed8509f3d51760f562437c5ba66ef4e",
+      "bytes": 44361,
+      "source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/axi_lmb_bridge_frequency_40/vectors/operations.json",
+      "source_sha256": "b4487f5c5ebf2fde5a90832c236284269ed8509f3d51760f562437c5ba66ef4e",
+      "source_bytes": 44361,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/frequency_40_expected_output.txt",
+      "sha256": "c3a835877db331ae1bfb6b809e3d32308183a3281cb1f3aea8bf22c8bd61c556",
+      "bytes": 6750,
+      "source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/axi_lmb_bridge_frequency_40/vectors/expected_output.txt",
+      "source_sha256": "c3a835877db331ae1bfb6b809e3d32308183a3281cb1f3aea8bf22c8bd61c556",
+      "source_bytes": 6750,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/frequency_40_actual_output.txt",
+      "sha256": "8eec60eed93914ef76e0bdde82d34bf4db51bd14d8b41bae003d8ac0151ff597",
+      "bytes": 6750,
+      "source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/axi_lmb_bridge_frequency_40/outputs/actual_output.txt",
+      "source_sha256": "8eec60eed93914ef76e0bdde82d34bf4db51bd14d8b41bae003d8ac0151ff597",
+      "source_bytes": 6750,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/pause_64_failure.json",
+      "sha256": "6d760f6d6512b4eff0f196932b4bb3021b9c1b5250714f88a5123f623b3a0279",
+      "bytes": 2376,
+      "source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/axi_lmb_bridge_pause_64/outputs/failure.json",
+      "source_sha256": "6d760f6d6512b4eff0f196932b4bb3021b9c1b5250714f88a5123f623b3a0279",
+      "source_bytes": 2376,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/pause_64_operations.json",
+      "sha256": "c2f5c98baffffd8a7f3a22abc306671b898d704a349cec8d1e560f05fcd4e90b",
+      "bytes": 45596,
+      "source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/axi_lmb_bridge_pause_64/vectors/operations.json",
+      "source_sha256": "c2f5c98baffffd8a7f3a22abc306671b898d704a349cec8d1e560f05fcd4e90b",
+      "source_bytes": 45596,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/pause_64_expected_output.txt",
+      "sha256": "ae17a484060e4342aba14a566ab076c0900740e77faf099cd4ae0e1341863f3a",
+      "bytes": 12750,
+      "source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/axi_lmb_bridge_pause_64/vectors/expected_output.txt",
+      "source_sha256": "ae17a484060e4342aba14a566ab076c0900740e77faf099cd4ae0e1341863f3a",
+      "source_bytes": 12750,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/pause_64_actual_output.txt",
+      "sha256": "abea2c7a2d3bd459be1a95a798e80f44806963d08adc66b43a1403f7565f0d34",
+      "bytes": 12750,
+      "source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axi_lmb_bridge/axi_lmb_bridge_pause_64/outputs/actual_output.txt",
+      "source_sha256": "abea2c7a2d3bd459be1a95a798e80f44806963d08adc66b43a1403f7565f0d34",
+      "source_bytes": 12750,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axis_protocol_checker/partial_failure.json",
+      "sha256": "ceca43e6588b1c40c69c300e111826237a51636f19659f381bde4ab0eed19fcb",
+      "bytes": 1439,
+      "source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axis_protocol_checker/axis_pc_128_partial/outputs/failure.json",
+      "source_sha256": "ceca43e6588b1c40c69c300e111826237a51636f19659f381bde4ab0eed19fcb",
+      "source_bytes": 1439,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axis_protocol_checker/partial_scenarios.json",
+      "sha256": "4a3a0b85b396b7d1a76372561dd53680e3bbaec12dfcd6b00d287c81250964b3",
+      "bytes": 989,
+      "source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axis_protocol_checker/axis_pc_128_partial/vectors/protocol_scenarios.json",
+      "source_sha256": "4a3a0b85b396b7d1a76372561dd53680e3bbaec12dfcd6b00d287c81250964b3",
+      "source_bytes": 989,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axis_protocol_checker/partial_expected_output.txt",
+      "sha256": "67bb6c3826bf5603cc099193449321f9bb9e79314c29075e9b866bfc75fa01e1",
+      "bytes": 792,
+      "source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axis_protocol_checker/axis_pc_128_partial/vectors/expected_output.txt",
+      "source_sha256": "67bb6c3826bf5603cc099193449321f9bb9e79314c29075e9b866bfc75fa01e1",
+      "source_bytes": 792,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-22_12-47-30_UTC+0800_4bca4f69/axis_protocol_checker/partial_actual_output.txt",
+      "sha256": "2ff381c81e45b763807b9d3f0911c04660e31c26097f4999f7918e18df7a5746",
+      "bytes": 792,
+      "source": "runs/batches/2026.1/2026-09-22_12-47-30_UTC+0800_4bca4f69/axis_protocol_checker/axis_pc_128_partial/outputs/actual_output.txt",
+      "source_sha256": "2ff381c81e45b763807b9d3f0911c04660e31c26097f4999f7918e18df7a5746",
+      "source_bytes": 792,
+      "mode": "text"
+    }
+  ]
+}

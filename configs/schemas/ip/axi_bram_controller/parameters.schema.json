@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AXI BRAM Controller 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["depth", "single_port"],
+  "properties": {
+    "depth": {
+      "enum": [1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144]
+    },
+    "single_port": {"type": "boolean"}
+  }
+}

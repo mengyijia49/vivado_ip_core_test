@@ -8,7 +8,7 @@ from vivado_ip_test.adapters.vivado import VivadoBatchRunner
 from vivado_ip_test.application.pipeline import AutomationPipeline
 from vivado_ip_test.configuration import ConfigError, iter_test_cases
 from vivado_ip_test.application.selection import select_cases
-from vivado_ip_test.infrastructure import CommandRunner, RepositoryLayout
+from vivado_ip_test.infrastructure import CommandRunner, RepositoryLayout, detect_vivado_version
 from vivado_ip_test.infrastructure.workspace_lock import WorkspaceBusy, workspace_lock
 from vivado_ip_test.plugins import PluginError
 from vivado_ip_test.plugins.catalog import create_plugin_registry
@@ -21,6 +21,8 @@ from vivado_ip_test.services import (
 )
 from vivado_ip_test.strategies import StrategyError, create_default_strategy_registry
 from vivado_ip_test.services.resume import load_completed_cases
+
+TARGET_VIVADO_VERSION = "2026.1"
 
 
 def build_pipeline(layout: RepositoryLayout) -> AutomationPipeline:
@@ -55,7 +57,18 @@ def main(root: Path | None = None, argv: list[str] | None = None) -> int:
                         help="跳过指定历史 run.json 中完整通过且配置和源码一致的用例，可重复指定")
     args = parser.parse_args(argv)
     source_root = (root or Path.cwd()).resolve()
-    layout = RepositoryLayout((args.workspace or source_root).resolve(), source_root)
+    try:
+        version = None if args.list_cases else detect_vivado_version()
+    except ValueError as exc:
+        print(f"配置错误：{exc}", file=sys.stderr)
+        return 2
+    if version not in (None, "unavailable", TARGET_VIVADO_VERSION):
+        print(f"配置错误：当前 Vivado 为 {version}，请加载 {TARGET_VIVADO_VERSION}："
+              f"source /data/Xilinx/{TARGET_VIVADO_VERSION}/Vivado/settings64.sh",
+              file=sys.stderr)
+        return 2
+    layout = RepositoryLayout((args.workspace or source_root).resolve(), source_root,
+                              vivado_version=version)
 
     try:
         if args.seed is not None and args.seed < 0:

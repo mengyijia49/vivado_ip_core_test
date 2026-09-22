@@ -37,7 +37,11 @@ class CompareTests(unittest.TestCase):
         directory = ROOT / 'configs/schemas/ip/floating_point'
         schema = json.loads((directory / 'parameters.schema.json').read_text())
         self.assertEqual(schema['oneOf'], [{'$ref': 'unary.schema.json'}, {'$ref': 'compare.schema.json'},
-                                         {'$ref': 'arithmetic.schema.json'}, {'$ref': 'divide.schema.json'}])
+                                         {'$ref': 'arithmetic.schema.json'}, {'$ref': 'divide.schema.json'},
+                                         {'$ref': 'fma.schema.json'}, {'$ref': 'reciprocal.schema.json'},
+                                         {'$ref': 'reciprocal_sqrt.schema.json'},
+                                         {'$ref': 'exponential.schema.json'},
+                                         {'$ref': 'logarithm.schema.json'}])
         comparison = json.loads((directory / 'compare.schema.json').read_text())
         unary = json.loads((directory / 'unary.schema.json').read_text())
         self.assertEqual(set(comparison['required']), set(parameters()))

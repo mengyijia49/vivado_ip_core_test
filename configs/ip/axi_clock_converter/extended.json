@@ -1,0 +1,7 @@
+{
+  "$schema":"../../schemas/ip_matrix.schema.json","schema_version":2,"sweeps":[{
+    "case_prefix":"axi_clock_converter_matrix",
+    "template":{"ip_type":"axi_clock_converter","vendor":"xilinx.com","ip_name":"axi_clock_converter","parameters":{"data_width":32,"address_width":32,"id_width":1,"user_width":1,"synchronization_stages":2,"output_period_ns":10},"stages":["create_ip","generate_testbench","sim_selfcheck"],"verification":{"strategy":"directed_random","strategy_version":"1.0","random_seed":20261126,"case_budget":64,"coverage_targets":["port_boundaries"],"boundary_mode":"basic","input_order":"generated","timing_mode":"random_gaps","max_gap_cycles":8,"burst_length":16}},
+    "axes":{"data_width":[32,64,128,256,512,1024],"address_width":[32,40,64],"id_width":[1,4,8,16,32],"user_width":[1,8,32,128,1024],"synchronization_stages":[2,3,4,5,6,7,8],"output_period_ns":[6,10,14,20,30]}
+  }]
+}

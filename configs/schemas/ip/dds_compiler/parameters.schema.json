@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["phase_width", "phase_increment", "phase_offset"],
+  "properties": {
+    "phase_width": {"type": "integer", "minimum": 3, "maximum": 48},
+    "phase_increment": {"type": "integer", "minimum": 0, "maximum": 281474976710655},
+    "phase_offset": {"type": "integer", "minimum": 0, "maximum": 281474976710655}
+  }
+}

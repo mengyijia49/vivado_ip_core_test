@@ -13,7 +13,7 @@ from unit.plugins.cycle_helpers import plugin_case
 
 def sample_design():
     return {"design": {
-        "design_info": {"name": "dut_0", "validated": "true", "tool_version": "2025.2"},
+        "design_info": {"name": "dut_0", "validated": "true", "tool_version": "2026.1"},
         "design_tree": {"core": ""},
         "components": {"core": {"vlnv": "xilinx.com:inline_hdl:ilconcat:1.0", "parameters": {
             "NUM_PORTS": {"value": "3"}, "IN0_WIDTH": {"value": "1"},

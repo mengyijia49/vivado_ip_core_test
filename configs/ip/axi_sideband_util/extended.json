@@ -1,0 +1,66 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "axi_sideband_bypass",
+      "template": {
+        "ip_type": "axi_sideband_util", "vendor": "xilinx.com", "ip_name": "axi_sideband_util",
+        "parameters": {"data_width": 32, "id_width": 1, "address_user_width": 1, "smid_mode": "Bypass", "smid_width": 1, "smid_value": 0},
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260940, "case_budget": 2048, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "generated", "timing_mode": "random_gaps", "max_gap_cycles": 8, "burst_length": 16}
+      },
+      "axes": {"data_width": [32, 64, 128, 256, 512, 1024], "id_width": [1, 2, 4, 8], "address_user_width": [1, 2, 4, 8, 16]}
+    },
+    {
+      "case_prefix": "axi_sideband_insert_smid1",
+      "template": {
+        "ip_type": "axi_sideband_util", "vendor": "xilinx.com", "ip_name": "axi_sideband_util",
+        "parameters": {"data_width": 32, "id_width": 1, "address_user_width": 1, "smid_mode": "Insert", "smid_width": 1, "smid_value": 0},
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260941, "case_budget": 2048, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "generated", "timing_mode": "bursts", "max_gap_cycles": 8, "burst_length": 16}
+      },
+      "axes": {"data_width": [32, 64, 128, 256, 512, 1024], "id_width": [1, 2, 4, 8], "address_user_width": [1, 2, 4, 8, 16], "smid_value": [0, 1]}
+    },
+    {
+      "case_prefix": "axi_sideband_insert_smid2",
+      "template": {
+        "ip_type": "axi_sideband_util", "vendor": "xilinx.com", "ip_name": "axi_sideband_util",
+        "parameters": {"data_width": 32, "id_width": 1, "address_user_width": 2, "smid_mode": "Insert", "smid_width": 2, "smid_value": 0},
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260942, "case_budget": 2048, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "shuffled", "timing_mode": "random_gaps", "max_gap_cycles": 12, "burst_length": 16}
+      },
+      "axes": {"data_width": [32, 64, 128, 256, 512, 1024], "id_width": [1, 2, 4, 8], "address_user_width": [2, 4, 8, 16], "smid_value": [0, 1, 2, 3]}
+    },
+    {
+      "case_prefix": "axi_sideband_insert_smid4",
+      "template": {
+        "ip_type": "axi_sideband_util", "vendor": "xilinx.com", "ip_name": "axi_sideband_util",
+        "parameters": {"data_width": 32, "id_width": 1, "address_user_width": 4, "smid_mode": "Insert", "smid_width": 4, "smid_value": 0},
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260943, "case_budget": 2048, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "generated", "timing_mode": "continuous", "max_gap_cycles": 8, "burst_length": 16}
+      },
+      "axes": {"data_width": [32, 64, 128, 256, 512, 1024], "id_width": [1, 2, 4, 8], "address_user_width": [4, 8, 16], "smid_value": [0, 1, 5, 15]}
+    },
+    {
+      "case_prefix": "axi_sideband_remove_smid2",
+      "template": {
+        "ip_type": "axi_sideband_util", "vendor": "xilinx.com", "ip_name": "axi_sideband_util",
+        "parameters": {"data_width": 32, "id_width": 1, "address_user_width": 4, "smid_mode": "Remove", "smid_width": 2, "smid_value": 0},
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260944, "case_budget": 2048, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "generated", "timing_mode": "random_gaps", "max_gap_cycles": 8, "burst_length": 16}
+      },
+      "axes": {"data_width": [32, 64, 128, 256, 512, 1024], "id_width": [1, 2, 4, 8], "address_user_width": [4, 8, 16]}
+    },
+    {
+      "case_prefix": "axi_sideband_remove_smid4",
+      "template": {
+        "ip_type": "axi_sideband_util", "vendor": "xilinx.com", "ip_name": "axi_sideband_util",
+        "parameters": {"data_width": 32, "id_width": 1, "address_user_width": 8, "smid_mode": "Remove", "smid_width": 4, "smid_value": 0},
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260945, "case_budget": 2048, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "shuffled", "timing_mode": "bursts", "max_gap_cycles": 8, "burst_length": 8}
+      },
+      "axes": {"data_width": [32, 64, 128, 256, 512, 1024], "id_width": [1, 2, 4, 8], "address_user_width": [8, 16]}
+    }
+  ]
+}

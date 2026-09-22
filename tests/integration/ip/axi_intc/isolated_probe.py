@@ -41,12 +41,16 @@ def run_isolated_probe(test, *, name, marker, parameters, observation_count, fre
         test.assertEqual(created.returncode, 0, created.output[-2000:])
         project = run / "proj/ip_probe.xpr"
         generated = run / "proj/ip_probe.gen/sources_1/ip/probe_0"
-        model = generated / "hdl/axi_intc_v4_1_vh_rfs.vhd"
-        ipif = generated / "hdl/axi_lite_ipif_v3_0_vh_rfs.vhd"
+        model_files = list(generated.glob("hdl/axi_intc_v4_1*_rfs.vhd"))
+        ipif_files = list(generated.glob("hdl/axi_lite_ipif_v3_*_rfs.vhd"))
+        test.assertEqual(len(model_files), 1, model_files)
+        test.assertEqual(len(ipif_files), 1, ipif_files)
+        model = model_files[0]
+        ipif = ipif_files[0]
         wrapper = generated / "sim/probe_0.vhd"
         if fresh_source:
             model_libraries = set(re.findall(r"(?i)library\s+(axi_intc_v4_1_\d+)\s*;", wrapper.read_text()))
-            ipif_libraries = set(re.findall(r"(?i)library\s+(axi_lite_ipif_v3_0_\d+)\s*;", model.read_text()))
+            ipif_libraries = set(re.findall(r"(?i)library\s+(axi_lite_ipif_v3_\d+_\d+)\s*;", model.read_text()))
             test.assertEqual(len(model_libraries), 1)
             test.assertEqual(len(ipif_libraries), 1)
             copied = runner.run(description="Compile unmodified INTC and AXI-Lite source libraries:",

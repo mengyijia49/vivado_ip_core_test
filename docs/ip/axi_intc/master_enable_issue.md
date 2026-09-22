@@ -1,64 +1,76 @@
-# AXI INTC 清除 ME 后 IRQ 仍有效
+# AXI INTC：主使能已经关闭，IRQ 仍保持有效
 
-2026-09-15，Vivado 2025.2，`axi_intc:4.1` 修订 22。
-这是待确认的规范与实现差异，尚未获得厂商确认，也未检查其他 Vivado 版本。
+Vivado 2026.1 中，先让中断输出 IRQ 变为 1，再关闭主使能 ME。
+寄存器读回确认 ME 已经是 0，但 IRQ 仍为 1。
 
-## 现象
+## 先分清“有事待处理”和“是否发出通知”
 
-[PG099 v4.1 第 23 页](https://docs.amd.com/v/u/en-US/pg099-axi-intc)说明，
-MER 的 ME 位为零时应屏蔽 IRQ 输出。
-本机实测：如果 IRQ 已经有效，再清零 ME，MER 能正确读回，但 IRQ 仍保持有效。
-先清 IER 或确认中断后，IRQ 可以恢复无效。
+AXI INTC 用来收集外设的中断请求，再通知处理器。
+ISR 记录“哪些事还没处理”；IER 决定每一路能否通知处理器；
+ME 是总使能，IRQ 是最后发出去的通知信号。
 
-独立复现只使用一路上升沿硬件输入，关闭软件中断、Fast 和 ILR。
-全程不写 ISR，因而不依赖另一项 ISR 覆盖旧位的问题。
-读写均使用完整字和 AXI-Lite 握手，每次操作后等待 64 个时钟。
+本次使用高电平有效的单路中断、不启用优先级阈值。
+在这组简单条件下，可以把预期关系理解成：
 
-| 操作 | 读回 | 期望 IRQ | 实测 IRQ |
-| --- | --- | ---: | ---: |
-| IER=1，MER=3，触发并释放 intr(0) | ISR=1 | 1 | 1 |
-| MER=0 | MER=2，HIE 保持 | 0 | 1 |
-| 再读状态 | ISR=1 | 0 | 1 |
-| IER=0 | IER=0 | 0 | 0 |
-| IER=1，ME 仍为零 | ISR=1 | 0 | 0 |
-| MER=1 | MER=3 | 1 | 1 |
-
-共 13 项观察，11 项正向对照符合预期，2 项记录同一个 IRQ 未关闭现象。
-对照另包括确认中断、ME 关闭时的新输入事件、重新启用和复位。
-两条差异不是两个 bug。
-
-## 复现
-
-```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
-VIVADO_INTEGRATION=1 PYTHONPATH=src python3 -m unittest discover \
-  -s tests -p 'test_master_enable_probe.py' -v
+```text
+IRQ 应有效 = 有待处理事件，并且该路 IER 开启，并且 ME 开启
 ```
 
-该命令执行预编译库和原始 HDL 两种路径，当前都应报告规范检查失败。
-最小 testbench 是 `tests/fixtures/ip/axi_intc/tb_master_enable_probe.vhd`，
-没有调用 Python 参考模型。
+关闭 ME 不必清掉 ISR 中的待处理事件，但应停止对外通知。
+[PG099 的 MER 说明](https://docs.amd.com/v/u/en-US/pg099-axi-intc)也明确写明，
+向 ME 写 0 会关闭 IRQ 输出。
 
-首次两条记录：
+## 本次参数
 
-- 预编译库：`2026-09-15_11-41-11_UTC+0800_7f4ee548`。
-- 直接编译原始 HDL：`2026-09-15_11-41-29_UTC+0800_8f3d1c77`。
+| 参数 | 值 | 作用 |
+| --- | --- | --- |
+| `C_NUM_INTR_INPUTS` | 1 | 只有一根硬件中断输入 |
+| `C_NUM_SW_INTR` | 0 | 不配置专用软件中断 |
+| 触发方式 | 上升沿 | 输入从 0 变 1 时产生事件 |
+| 异步输入 | 关闭 | 本次输入与测试时钟协调驱动 |
+| ILR / Fast | 都关闭 | 不使用优先级阈值和快速中断模式 |
+| 工具与 IP | Vivado 2026.1，修订号 23 | 独立 VHDL 行为仿真 |
 
-13 项观察完全一致。[预编译库记录](../../../evidence/axi_intc/master_enable/2026-09-15_11-41-11_UTC+0800_7f4ee548/)
-和[原始 HDL 对照](../../../evidence/axi_intc/master_enable/2026-09-15_11-41-29_UTC+0800_8f3d1c77/)
-均保留摘要和仿真日志。
-摘要保存配置、修订号、期望与实测值，以及 testbench、XCI 和源码的哈希。
-原始 HDL 对照的 xvhdl.log 和 xsim.ini 确认 IPIF、INTC 被编译到工程本地库。
+同一参数组分别用预编译库和直接编译的厂商 HDL 跑过，
+两次都观察到差异。这是两种运行方式，不是两组不同参数。
 
-## 判断和疑点
+## 完整操作顺序
 
-随 IP 生成的未修改 HDL 中，`IRQ_LEVEL_ON_AXI_P` 在无挂起中断时撤销 IRQ，
-在有挂起中断且 ME=1 时置位，却没有在仍挂起且 ME=0 时撤销的分支。
-这能解释实测保持现象，但 RTL 只用于排查原因，不作为期望值依据。
+MER 寄存器的最低两位是 `HIE、ME`。
+HIE 控制是否使用真实硬件输入，开启后会保持到复位。
+所以向 MER 写 0 后读回 2（二进制 `10`）是可以解释的：
+HIE 仍为 1，ME 已经为 0。
 
-官方驱动的 [XIntc_Stop](https://github.com/Xilinx/embeddedsw/blob/bb2b3f9fe65a74d458ab21f1006cb52820981520/XilinxProcessorIPLib/drivers/intc/src/xintc.c)
-通过向 MER 写零停止控制器，与这次触发操作一致。
-没有实际执行处理器软件，不能据此宣称某个应用已发生故障。
+| 步骤 | 做了什么 | 应看到什么 | 实际 |
+| --- | --- | --- | --- |
+| 1 | 复位，开启该路 IER，向 MER 写 3（`11`） | 没有事件，IRQ=0 | 符合 |
+| 2 | 硬件输入产生一次上升沿，再回到 0 | ISR=1，IRQ=1 | 符合 |
+| 3 | 向 MER 写 0 | 读回 MER=2；ISR 可保留；IRQ 应变 0 | MER=2、ISR=1，但 IRQ=1 |
+| 4 | 向 IER 写 0，屏蔽该路 | IRQ=0 | 符合 |
+| 5 | 保持 ME=0，再开启 IER | IRQ 仍为 0 | 符合 |
+| 6 | 重新开启 ME | 旧事件尚未清除，IRQ=1 | 符合 |
 
-下一步核对官方已知问题、其他版本和更多输出模式。
-本机搜索未找到对应说明不代表首次发现；行为仿真结果也不等于已验证板级影响。
+关键是第 3 步。testbench 在写入完成后等待了 64 个时钟周期再读取，
+并非写入的同一瞬间就要求看到变化。
+
+```mermaid
+flowchart TD
+    A["已有待处理事件，IRQ=1"] --> B["关闭 ME，等写入完成并再等 64 拍"]
+    B --> C["寄存器读回：ME=0"]
+    C --> D["预期 IRQ=0"]
+    C --> E["实测 IRQ 仍为 1"]
+```
+
+## 这个差异可能影响什么
+
+如果系统靠关闭 ME 暂停中断通知，这种保持行为可能让处理器仍看到中断请求。
+本次只证明行为模型在这条操作路径上的表现，尚未证明板上硬件也一样。
+
+测试还覆盖了清除事件、ME 关闭期间产生新事件、重新开启以及复位等对照。
+这些对照帮助说明：ME 不是完全不起作用，差异集中在“IRQ 已经有效时再关 ME”。
+
+这段测试没有写 ISR，因此与 [ISR 写入丢失旧位](isr_write_issue.md)分别记录。
+[独立 VHDL](../../../tests/fixtures/ip/axi_intc/tb_master_enable_probe.vhd)、
+[预编译库观测](../../../evidence/vivado_2026_1/observations/2026-09-22_12-16-56_UTC+0800_61892d25/axi_intc/me_precompiled_summary.json)
+和[原始 HDL 观测](../../../evidence/vivado_2026_1/observations/2026-09-22_12-17-16_UTC+0800_f6f38e7c/axi_intc/me_fresh_source_summary.json)
+列出每步读回和 IRQ 值。

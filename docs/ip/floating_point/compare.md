@@ -6,7 +6,7 @@
 `compare/` 下。仍从公共 TestbenchGenerator 和 SimulationRunner 调用，不增加零散入口。
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 python3 scripts/run_all.py --config configs/ip/floating_point/regression/compare.json
 python3 scripts/run_all.py --ip-type floating_point --case fp_compare80_programmable_or
 ```
@@ -48,4 +48,4 @@ Programmable 对每组输入依次执行全部七种合法操作，变化操作�
 目前只接入 Blocking、自动延迟、每周期可接受一次的配置。
 不检查固定延迟、性能指标、运行中复位、ACLKEN 或 NonBlocking。
 所有请求参数和实际接口会与 XCI 核对；通过不代表全部内部状态都覆盖。
-真实结果和故障替身检查见[接入记录](../../experiments/floating_point_compare_acceptance.md)。
+2026.1 的实际结果见[全量运行记录](../../experiments/vivado_2026_full_regression.md)。

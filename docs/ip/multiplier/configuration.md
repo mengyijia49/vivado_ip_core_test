@@ -39,7 +39,7 @@
 - `a_type` 和 `b_type` 分别为 `Unsigned` 或 `Signed`；
 - `pipeline_stages` 为 1 到 64 的整数；
 - 使用完整精度输出，不启用时钟使能和同步清零；
-- Vivado 2025.2 的该 IP 不生成官方 demo testbench，因此不允许配置
+- 当前该 IP 不使用官方 demo testbench，因此不允许配置
   `sim_demo` 阶段；
 - 覆盖目标只能使用 `boundary_values`、`sign_combinations`、
   `full_precision`、`operand_magnitude`、`systematic_values` 和 `complete_input_space`。

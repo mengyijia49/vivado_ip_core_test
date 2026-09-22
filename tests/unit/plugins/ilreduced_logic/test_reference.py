@@ -44,7 +44,7 @@ class InlineReducedLogicTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             data = {"design":{
-                "design_info":{"name":"dut_0","validated":"true","tool_version":"2025.2"},
+                "design_info":{"name":"dut_0","validated":"true","tool_version":"2026.1"},
                 "design_tree":{"core":""},"components":{"core":{
                     "vlnv":"xilinx.com:inline_hdl:ilreduced_logic:1.0",
                     "parameters":{"C_SIZE":{"value":"1"},"C_OPERATION":{"value":"xor"}}}},

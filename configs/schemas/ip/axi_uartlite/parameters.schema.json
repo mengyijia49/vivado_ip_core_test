@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AXI UART Lite 参数",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["baud_rate", "data_bits", "parity"],
+  "properties": {
+    "baud_rate": {
+      "enum": [9600, 19200, 38400, 57600, 115200, 128000, 230400]
+    },
+    "data_bits": {
+      "type": "integer",
+      "minimum": 5,
+      "maximum": 8
+    },
+    "parity": {
+      "enum": ["None", "Even", "Odd"]
+    }
+  }
+}

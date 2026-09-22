@@ -1,0 +1,42 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "convolution_k3_r2_ascending",
+      "ip_type": "convolution",
+      "vendor": "xilinx.com",
+      "ip_name": "convolution",
+      "parameters": {"constraint_length": 3, "output_rate": 2, "code_family": "ascending"},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 2026, "case_budget": 128, "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "random_gaps", "max_gap_cycles": 8, "burst_length": 16}
+    },
+    {
+      "case_id": "convolution_k7_r2_descending",
+      "ip_type": "convolution",
+      "vendor": "xilinx.com",
+      "ip_name": "convolution",
+      "parameters": {"constraint_length": 7, "output_rate": 2, "code_family": "descending"},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 2027, "case_budget": 128, "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "bursts", "max_gap_cycles": 5, "burst_length": 8}
+    },
+    {
+      "case_id": "convolution_k9_r3_spread",
+      "ip_type": "convolution",
+      "vendor": "xilinx.com",
+      "ip_name": "convolution",
+      "parameters": {"constraint_length": 9, "output_rate": 3, "code_family": "spread"},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 2028, "case_budget": 128, "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "random_gaps", "max_gap_cycles": 8, "burst_length": 16}
+    },
+    {
+      "case_id": "convolution_k5_r7_descending",
+      "ip_type": "convolution",
+      "vendor": "xilinx.com",
+      "ip_name": "convolution",
+      "parameters": {"constraint_length": 5, "output_rate": 7, "code_family": "descending"},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 2029, "case_budget": 128, "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "bursts", "max_gap_cycles": 5, "burst_length": 8}
+    }
+  ]
+}

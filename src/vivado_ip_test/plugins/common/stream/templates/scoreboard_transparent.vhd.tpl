@@ -54,7 +54,7 @@ $captures
       wait for 0 ns;
       assert received <= sent
         report "AXIS_SELF_CHECK_STATUS: FAIL output before accepted input" severity failure;
-      if source_done and received = count then
+      if source_done and received = $output_count then
         drain_cycles := drain_cycles + 1;
         exit when drain_cycles = $drain_cycles;
       end if;

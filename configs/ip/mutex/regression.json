@@ -1,0 +1,30 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "mutex_2x1_basic", "ip_type": "mutex", "vendor": "xilinx.com", "ip_name": "mutex",
+      "parameters": {"num_interfaces": 2, "num_mutexes": 1, "enable_user": false, "hardware_protection": false},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "exhaustive", "strategy_version": "1.0", "random_seed": 20261003, "case_budget": 1, "coverage_targets": ["ownership", "cross_port_visibility", "arbitration", "reset"], "boundary_mode": "basic", "input_order": "generated", "timing_mode": "continuous", "max_gap_cycles": 8, "burst_length": 16}
+    },
+    {
+      "case_id": "mutex_2x16_user", "ip_type": "mutex", "vendor": "xilinx.com", "ip_name": "mutex",
+      "parameters": {"num_interfaces": 2, "num_mutexes": 16, "enable_user": true, "hardware_protection": false},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "exhaustive", "strategy_version": "1.0", "random_seed": 20261004, "case_budget": 1, "coverage_targets": ["ownership", "cross_port_visibility", "arbitration", "reset"], "boundary_mode": "basic", "input_order": "generated", "timing_mode": "continuous", "max_gap_cycles": 8, "burst_length": 16}
+    },
+    {
+      "case_id": "mutex_4x16_protected", "ip_type": "mutex", "vendor": "xilinx.com", "ip_name": "mutex",
+      "parameters": {"num_interfaces": 4, "num_mutexes": 16, "enable_user": false, "hardware_protection": true},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "exhaustive", "strategy_version": "1.0", "random_seed": 20261005, "case_budget": 1, "coverage_targets": ["ownership", "cross_port_visibility", "arbitration", "reset"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "continuous", "max_gap_cycles": 8, "burst_length": 16}
+    },
+    {
+      "case_id": "mutex_8x32_user_protected", "ip_type": "mutex", "vendor": "xilinx.com", "ip_name": "mutex",
+      "parameters": {"num_interfaces": 8, "num_mutexes": 32, "enable_user": true, "hardware_protection": true},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "exhaustive", "strategy_version": "1.0", "random_seed": 20261006, "case_budget": 1, "coverage_targets": ["ownership", "cross_port_visibility", "arbitration", "reset"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "continuous", "max_gap_cycles": 8, "burst_length": 16}
+    }
+  ]
+}

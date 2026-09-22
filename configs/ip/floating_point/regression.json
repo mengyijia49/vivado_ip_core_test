@@ -7,6 +7,11 @@
     "regression/compare.json",
     "regression/add_subtract.json",
     "regression/multiply.json",
-    "regression/divide.json"
+    "regression/divide.json",
+    "regression/fma.json",
+    "regression/reciprocal.json",
+    "regression/reciprocal_sqrt.json",
+    "regression/exponential.json",
+    "regression/logarithm.json"
   ]
 }

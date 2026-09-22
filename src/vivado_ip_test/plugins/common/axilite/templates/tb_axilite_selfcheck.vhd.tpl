@@ -25,8 +25,11 @@ architecture sim of tb_axilite_selfcheck is
   signal b_stall_cycles, r_stall_cycles, request_wait_cycles : natural := 0;
   signal operation_index : natural := 0;
 $side_signals
+$extra_declarations
 begin
   aclk <= not aclk after 5 ns;
+$loopback_assignments
+$extra_statements
   dut : entity work.dut_0
     port map (
       $mappings

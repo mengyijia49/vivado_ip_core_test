@@ -3,6 +3,7 @@
   "schema_version": 2,
   "includes": [
     "matrices/square_root/integer.json",
-    "matrices/square_root/fractional.json"
+    "matrices/square_root/fractional.json",
+    "matrices/sin_cos.json"
   ]
 }

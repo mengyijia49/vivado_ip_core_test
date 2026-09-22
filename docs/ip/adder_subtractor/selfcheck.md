@@ -14,4 +14,4 @@
 
 当前固定 Fabric，不包含 DSP48、进位端口、常数 B、旁路和多级流水线。
 端口、控制含义和延迟依据 [PG120](https://docs.amd.com/v/u/en-US/pg120-c-addsub)，
-每次生成后再核对 XCI。实际检查范围见 [扩展记录](../../experiments/ip_expansion.md)。
+每次生成后再核对 XCI。实际结果见[2026.1 全量运行记录](../../experiments/vivado_2026_full_regression.md)。

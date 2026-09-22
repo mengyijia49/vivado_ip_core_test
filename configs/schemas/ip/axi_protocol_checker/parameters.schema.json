@@ -1,0 +1,14 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"AXI Protocol Checker 参数","type":"object","additionalProperties":false,
+  "required":["data_width","address_width","id_width","max_burst_length","max_outstanding","supports_narrow_burst","check_error_response"],
+  "properties":{
+    "data_width":{"enum":[32,64,128,256,512,1024]},
+    "address_width":{"enum":[32,40,64]},
+    "id_width":{"enum":[1,4,8,16,32]},
+    "max_burst_length":{"enum":[4,8,16,32,64,128,256]},
+    "max_outstanding":{"enum":[2,8,32,256]},
+    "supports_narrow_burst":{"type":"boolean"},
+    "check_error_response":{"type":"boolean"}
+  }
+}

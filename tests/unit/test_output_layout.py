@@ -31,11 +31,11 @@ class OutputLayoutTests(unittest.TestCase):
                 metadata = {}
                 if ip_type == "divider":
                     metadata = DividerMetadata("div_gen_0", "xilinx.com:ip:div_gen:5.1",
-                        "1", "2025.2", 16, 8, 24, 18, "Unsigned")
+                        "1", "2026.1", 16, 8, 24, 18, "Unsigned")
                     fields = (("m_axis_dout_tdata", 24),)
                 elif ip_type == "multiplier":
                     metadata = MultiplierMetadata("mult_gen_0", "xilinx.com:ip:mult_gen:12.0",
-                        "1", "2025.2", 8, 8, "Unsigned", "Unsigned", 15, 0, 2)
+                        "1", "2026.1", 8, 8, "Unsigned", "Unsigned", 15, 0, 2)
                     fields = (("P", 16),)
                 else:
                     spec = plugin.describe(case.parameters)

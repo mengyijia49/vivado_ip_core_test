@@ -1,0 +1,8 @@
+{
+  "schema_version":2,
+  "sweeps":[{
+    "case_prefix":"mailbox_matrix",
+    "template":{"ip_type":"mailbox","vendor":"xilinx.com","ip_name":"mailbox","parameters":{"interface_mode":"Axi4Lite","depth":16,"memory_style":"Distributed_RAM","enable_bus_error":false,"registered_interrupts":false},"stages":["create_ip","generate_testbench","sim_selfcheck"],"verification":{"strategy":"exhaustive","strategy_version":"1.0","random_seed":20261012,"case_budget":1,"coverage_targets":["bidirectional_fifo","full_empty_errors","fifo_clear","threshold_interrupts","axi_backpressure"],"boundary_mode":"systematic","input_order":"generated","timing_mode":"continuous","max_gap_cycles":8,"burst_length":16}},
+    "axes":{"depth":[16,32,64,128,256,512,1024,2048,4096,8192],"memory_style":["Distributed_RAM","Block_RAM"],"enable_bus_error":[false,true],"registered_interrupts":[false,true]}
+  }]
+}

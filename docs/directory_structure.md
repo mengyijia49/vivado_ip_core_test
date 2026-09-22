@@ -58,36 +58,37 @@ scripts/
 
 ## 每次运行的文件
 
-运行编号使用本地时间，例如 `2026-09-14_20-55-03_UTC+0800_a1b2c3d4`。
+运行编号使用本地时间，例如 `2026-09-22_20-55-03_UTC+0800_a1b2c3d4`。
 前半部分是日期、时分秒和 UTC 偏移，后缀用于避免同秒重名。
 同一批的工程、日志和报告使用相同编号。
 
 ```text
 runs/
-  batches/<run_id>/<ip_type>/<case_id>/
+  batches/<vivado_version>/<run_id>/<ip_type>/<case_id>/
     proj/                          完整 Vivado 工程
     tb/                            生成的自检 testbench
     vectors/                       输入、期望值和时序映射
     outputs/                       实际输出，失败时的 failure.json
     work/<stage>/                  阶段临时文件
     manifest.json
-  history/<run_id>/
+  history/<vivado_version>/<run_id>/
     source/                        Python、Tcl 和模板快照
     ip_matrix.json                 本次有效配置
     configs/<ip_type>/              多 IP 运行的分文件配置
     cases/<ip_type>/<case_id>/      关键文件副本
   logs/
-    batches/<run_id>/<ip_type>/<case_id>/
-    history/<run_id>/<ip_type>/<case_id>/<stage>/
+    batches/<vivado_version>/<run_id>/<ip_type>/<case_id>/
+    history/<vivado_version>/<run_id>/<ip_type>/<case_id>/<stage>/
     framework/<用途>/<run_id>/      框架自测日志
   framework/<用途>/<run_id>/         框架自测产物
 reports/
-  history/<run_id>/
+  history/<vivado_version>/<run_id>/
     report.csv
     report.json
     run.json                       状态、哈希和复现命令
     ip/<ip_type>/                  分 IP 报告
-  latest -> history/<run_id>        最近启动的一批，可能尚未完成
+  latest -> history/<vivado_version>/<run_id>  最近启动的一批
+  by_version/<vivado_version>/latest -> ../../history/<vivado_version>/<run_id>
   maintenance/<run_id>/             维护记录
   framework/<用途>/<run_id>/         框架自测与资源测量报告
 ```
@@ -96,19 +97,5 @@ reports/
 归档时另存到日志目录。目录名已有时间，里面的文件不必重复加时间。
 
 `reports/latest` 只改链接，不保存第二份无日期报告。
-首次切换时，旧的实体 `latest/` 会移入 `reports/legacy/<run_id>/latest/`。
-新代码不再写 `runs/current/`；已有的旧目录和旧时间编号保持原样。
+每版本的 `latest` 链接也不复制报告。
 所有路径由 `RepositoryLayout` 生成，插件不要自行拼出另一套目录规则。
-
-## 旧版文件
-
-旧散落产物保存在 `runs/legacy/`、`runs/logs/legacy/` 和 `reports/legacy/`。
-维护工具默认预览，只有传入 `--apply` 才移动：
-
-```bash
-python3 scripts/maintenance/archive_legacy_layout.py
-python3 scripts/maintenance/archive_legacy_layout.py --apply
-```
-
-工具核对移动前后的内容哈希，不改写历史归档。旧工程可能嵌有旧绝对路径，
-复现时应从源码快照和配置重新生成，不直接继续运行迁移后的工程。

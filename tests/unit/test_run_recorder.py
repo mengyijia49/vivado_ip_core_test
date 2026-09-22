@@ -154,6 +154,19 @@ class RunRecorderTests(unittest.TestCase):
             with RunRecorder(RepositoryLayout(root), [make_case()]) as recorder:
                 self.assertEqual(latest.resolve(), recorder.report_dir)
 
+    def test_versioned_runs_have_independent_latest_links(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            records = {}
+            for version in ("2026.0", "2026.1"):
+                with RunRecorder(RepositoryLayout(root, vivado_version=version), [make_case()]) as recorder:
+                    pass
+                records[version] = recorder.report_dir
+                self.assertEqual(json.loads((recorder.report_dir / "run.json").read_text())["vivado_version"], version)
+            for version, report_dir in records.items():
+                self.assertEqual((root / "reports/by_version" / version / "latest").resolve(), report_dir)
+            self.assertEqual((root / "reports/latest").resolve(), records["2026.1"])
+
     def test_interrupted_run_is_not_a_success(self):
         with tempfile.TemporaryDirectory() as directory:
             recorder = RunRecorder(RepositoryLayout(Path(directory)), [make_case()])

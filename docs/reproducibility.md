@@ -2,8 +2,8 @@
 
 ## 环境
 
-当前已验证 Ubuntu、Vivado 2025.2、Python 3.10 或更高版本，
-目标器件为 `xc7a35tcsg324-1`，IP 为 `div_gen:5.1` 和 `mult_gen:12.0`。
+以后使用 Ubuntu、Vivado 2026.1、Python 3.10 或更高版本。
+2026.1 已完成 478 组常用配置。目标器件为 `xc7a35tcsg324-1`。
 实际版本、修订号和参数以每个配置的 `manifest.json` 为准。
 
 默认回归命令见 [README](../README.md)。
@@ -14,9 +14,9 @@
 每批有统一时间编号，文件位置见[目录说明](directory_structure.md)。
 
 - 工作目录保留完整 Vivado 工程、生成的 testbench、输入和输出。
-- `runs/history/<run_id>/` 保存有效配置、Python/Tcl/模板快照和关键文件副本。
-- `runs/logs/history/<run_id>/` 保存已完成阶段的日志副本。
-- `reports/history/<run_id>/run.json` 保存环境、Git 状态、阶段、文件哈希和复现命令。
+- `runs/history/<vivado_version>/<run_id>/` 保存有效配置、源码快照和关键文件副本。
+- `runs/logs/history/<vivado_version>/<run_id>/` 保存已完成阶段的日志副本。
+- `reports/history/<vivado_version>/<run_id>/run.json` 保存版本、阶段、哈希和复现命令。
 
 `manifest.json` 记录配置和 XCI 实际参数、工具版本、策略和向量信息。
 归档副本里的原始路径指向当时工作目录；归档文件位置及哈希以 `run.json` 为准。
@@ -34,7 +34,7 @@ import json
 import subprocess
 from pathlib import Path
 
-record = json.loads(Path("reports/history/实际运行编号/run.json").read_text())
+record = json.loads(Path("reports/history/2026.1/实际运行编号/run.json").read_text())
 subprocess.run(record["replay_command"], check=True)
 ```
 
@@ -48,10 +48,10 @@ XCI 可能含工具元数据，其哈希不保证跨版本相同。
 
 ```bash
 python3 scripts/run_all.py --config configs/bug_discovery.json \
-  --resume-from reports/history/实际运行编号/run.json --limit 3
+  --resume-from reports/history/2026.1/实际运行编号/run.json --limit 3
 ```
 
-只有配置、源码和归档哈希核对一致，才允许跳过。可多次指定历史记录。
+只有 Vivado 版本、配置、源码和归档哈希核对一致，才允许跳过。可多次指定历史记录。
 失败或未完成的配置从创建阶段重跑；工具或环境改变后应重新测试，不沿用跳过结果。
 
 中断时保留已完成阶段；正在执行的日志可能还只在工作日志目录。

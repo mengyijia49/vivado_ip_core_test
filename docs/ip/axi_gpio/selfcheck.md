@@ -1,16 +1,16 @@
 # AXI GPIO 自检
 
-使用 `axi_gpio:2.0`，本机验证版本为 Vivado 2025.2、IP 修订 37。
+使用 `axi_gpio:2.0`，本机验证版本为 Vivado 2026.1。
 Python 独立计算寄存器、方向和中断状态，公共 AXI-Lite 后端驱动并检查总线。
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 python3 scripts/run_all.py --ip-type axi_gpio
 ```
 
 常用回归为 12 组配置：3 组单通道，以及双通道输入、输出、双向模式的全部 9 种组合。
 它们并非全部通过，已复现的差异见[问题记录](register_issue.md)，不会自动跳过。
-本次实际结果与故障对照见[接入记录](../../experiments/axi_gpio_acceptance.md)。
+本次实际结果见[2026.1 全量运行记录](../../experiments/vivado_2026_full_regression.md)。
 
 ## 参数矩阵
 

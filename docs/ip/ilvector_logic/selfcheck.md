@@ -18,7 +18,7 @@ Python 按位计算期望值，小位宽另用完整真值表检查参考模型�
 四种运算分别放在 `configs/ip/ilvector_logic/matrices/` 下，不与其他 IP 混放。
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 python3 scripts/run_all.py --ip-type ilvector_logic
 python3 scripts/run_all.py --config configs/ip/ilvector_logic/extended.json --list-cases
 python3 scripts/run_all.py --all --case ilvector_logic_not65536
@@ -29,4 +29,4 @@ JSON 中超过 13000 位的数值用十六进制字符串保存；仿真输入�
 
 运算定义见 [UG994 向量逻辑](https://docs.amd.com/r/en-US/ug994-vivado-ip-subsystems/Utility-Vector-Logic)，
 Inline 形式见 [UG994 Inline HDL](https://docs.amd.com/r/en-US/ug994-vivado-ip-subsystems/Inline-HDL)。
-本机 2025.2 的实际参数另核对了 `data/rsb/iprepos/ilvector_logic_v1_0/component.xml` 和生成的 `.bd`。
+实际参数另核对当前组件描述和生成的 `.bd`。

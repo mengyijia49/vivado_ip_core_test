@@ -1,0 +1,1 @@
+{"$schema":"../../schemas/ip_matrix.schema.json","schema_version":2,"includes":["matrices/axi_lite.json","matrices/axis.json"]}

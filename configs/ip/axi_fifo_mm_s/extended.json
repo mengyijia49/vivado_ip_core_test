@@ -1,0 +1,24 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "sweeps": [
+    {
+      "case_prefix": "axi_stream_fifo",
+      "template": {
+        "ip_type": "axi_fifo_mm_s",
+        "vendor": "xilinx.com",
+        "ip_name": "axi_fifo_mm_s",
+        "parameters": {"tx_depth": 512, "rx_depth": 512, "has_keep": true, "destination_width": 4, "use_xpm": false},
+        "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+        "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 2026, "case_budget": 1024, "coverage_targets": ["port_boundaries"], "boundary_mode": "systematic", "input_order": "generated", "timing_mode": "random_gaps", "max_gap_cycles": 8, "burst_length": 16}
+      },
+      "axes": {
+        "tx_depth": [512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072],
+        "rx_depth": [512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072],
+        "has_keep": [false, true],
+        "destination_width": [0, 1, 2, 3, 4],
+        "use_xpm": [false, true]
+      }
+    }
+  ]
+}

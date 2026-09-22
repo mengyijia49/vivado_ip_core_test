@@ -34,7 +34,7 @@ class CordicPluginTests(unittest.TestCase):
 
     def test_invalid_and_silently_normalized_configurations_are_rejected(self):
         plugin, case = plugin_case("cordic")
-        for changes in ({"function": "Sin_and_Cos"}, {"input_width": 7}, {"input_width": True},
+        for changes in ({"input_width": 7}, {"input_width": True},
                         {"output_width": 8}, {"architecture": "Word_Serial"}, {"user_width": 257},
                         {"data_format": "SignedFraction"}, {"data_format": "UnsignedFraction", "output_width": 7},
                         {"flow_control": "NonBlocking"}, {"rounding": "ceil"}):

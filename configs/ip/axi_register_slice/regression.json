@@ -1,0 +1,41 @@
+{
+  "$schema": "../../schemas/ip_matrix.schema.json",
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "axi_register_slice_bypass_32",
+      "ip_type": "axi_register_slice", "vendor": "xilinx.com", "ip_name": "axi_register_slice",
+      "parameters": {"data_width": 32, "id_width": 1, "address_user_width": 1, "data_user_width": 1, "response_user_width": 1, "forward_mode": "Bypass", "response_mode": "Bypass"},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260950, "case_budget": 2048, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "generated", "timing_mode": "continuous", "max_gap_cycles": 8, "burst_length": 16}
+    },
+    {
+      "case_id": "axi_register_slice_full_64",
+      "ip_type": "axi_register_slice", "vendor": "xilinx.com", "ip_name": "axi_register_slice",
+      "parameters": {"data_width": 64, "id_width": 3, "address_user_width": 5, "data_user_width": 2, "response_user_width": 2, "forward_mode": "Full", "response_mode": "Full"},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260951, "case_budget": 2048, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "generated", "timing_mode": "random_gaps", "max_gap_cycles": 8, "burst_length": 16}
+    },
+    {
+      "case_id": "axi_register_slice_forward_128",
+      "ip_type": "axi_register_slice", "vendor": "xilinx.com", "ip_name": "axi_register_slice",
+      "parameters": {"data_width": 128, "id_width": 4, "address_user_width": 8, "data_user_width": 4, "response_user_width": 4, "forward_mode": "Forward", "response_mode": "Forward"},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260952, "case_budget": 2048, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "shuffled", "timing_mode": "bursts", "max_gap_cycles": 8, "burst_length": 8}
+    },
+    {
+      "case_id": "axi_register_slice_reverse_256",
+      "ip_type": "axi_register_slice", "vendor": "xilinx.com", "ip_name": "axi_register_slice",
+      "parameters": {"data_width": 256, "id_width": 8, "address_user_width": 16, "data_user_width": 8, "response_user_width": 8, "forward_mode": "Reverse", "response_mode": "Reverse"},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260953, "case_budget": 2048, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "generated", "timing_mode": "random_gaps", "max_gap_cycles": 12, "burst_length": 16}
+    },
+    {
+      "case_id": "axi_register_slice_light_1024",
+      "ip_type": "axi_register_slice", "vendor": "xilinx.com", "ip_name": "axi_register_slice",
+      "parameters": {"data_width": 1024, "id_width": 16, "address_user_width": 32, "data_user_width": 16, "response_user_width": 16, "forward_mode": "Light", "response_mode": "Light"},
+      "stages": ["create_ip", "generate_testbench", "sim_selfcheck"],
+      "verification": {"strategy": "directed_random", "strategy_version": "1.0", "random_seed": 20260954, "case_budget": 2048, "coverage_targets": ["port_boundaries"], "boundary_mode": "basic", "input_order": "shuffled", "timing_mode": "bursts", "max_gap_cycles": 8, "burst_length": 8}
+    }
+  ]
+}

@@ -49,7 +49,7 @@ Vivado 自身日志缺失时，检查同名 `.process.log` 和 `.invocation.json
 故障注入测试用故意出错的 DUT，检查未知输出和提前出现的有效信号能否被捕获：
 
 ```bash
-source /data/Xilinx/2025.2/Vivado/settings64.sh
+source /data/Xilinx/2026.1/Vivado/settings64.sh
 VIVADO_INTEGRATION=1 PYTHONPATH=src python3 -m unittest discover -s tests -p 'test_failure_detection.py' -v
 ```
 

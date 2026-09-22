@@ -52,6 +52,11 @@ class AxiLiteSpec:
     minimum_ip_revision: int = 0
     window: ClockWindow | None = None
     pulses: tuple[PulseObservation, ...] = ()
+    loopbacks: tuple[tuple[str, str], ...] = ()
+    metadata_spec: object | None = None
+    extra_mappings: tuple[str, ...] = ()
+    testbench_declarations: str = ""
+    testbench_statements: str = ""
     clock = None
     masked_outputs = True
 
@@ -68,6 +73,19 @@ class AxiLiteSpec:
                     or pulse.count_port.name in names):
                 raise ValueError("Invalid AXI-Lite pulse observation")
             names.append(pulse.count_port.name)
+        inputs = {port.name: port for port in self.side_inputs}
+        outputs = {port.name: port for port in self.side_outputs}
+        looped_inputs = set()
+        for input_name, output_name in self.loopbacks:
+            if (input_name not in inputs or output_name not in outputs
+                    or inputs[input_name].width != outputs[output_name].width
+                    or input_name in looped_inputs):
+                raise ValueError("Invalid AXI-Lite side-port loopback")
+            looped_inputs.add(input_name)
+        if (any(type(item) is not str or "=>" not in item for item in self.extra_mappings)
+                or type(self.testbench_declarations) is not str
+                or type(self.testbench_statements) is not str):
+            raise ValueError("Invalid AXI-Lite testbench extension")
 
     @property
     def inputs(self):
@@ -86,8 +104,10 @@ class AxiLiteSpec:
 
     @property
     def command_ports(self):
+        looped_inputs = {input_name for input_name, _ in self.loopbacks}
         return (Port("action", 3), Port("address", self.address_width),
-                Port("data", 32), Port("strobe", 4), *self.side_inputs,
+                Port("data", 32), Port("strobe", 4),
+                *(port for port in self.side_inputs if port.name not in looped_inputs),
                 *((Port("run_cycles", self.window.width),) if self.window else ()))
 
     @property
