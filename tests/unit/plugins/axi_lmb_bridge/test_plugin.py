@@ -104,6 +104,19 @@ class AxiLmbBridgeTests(unittest.TestCase):
         with self.assertRaises(PluginError):
             self.plugin.validate_case(replace(self.case, ip_name="wrong"))
 
+    def test_frequency_responder_delays_only_read_payload_and_read_error(self):
+        operations = [operation("read", 0, 0xF0, beats=2)]
+        accesses, _ = AxiLmbBridgeReference(self.p).evaluate(operations)
+        for protocol, flag in (("Standard", 0), ("Frequency", 1)):
+            text = render_testbench({**self.p, "lmb_protocol": protocol},
+                                   operations, accesses, Path("/tmp/actual.txt"))
+            self.assertIn(f"FREQUENCY_PROTOCOL : boolean := {flag} = 1", text)
+            self.assertIn("read_data_delayed <= read_data_now;", text)
+            self.assertIn("read_ue_delayed <= read_ue_now;", text)
+            self.assertIn("LMB_ReadDBus <= read_data_delayed when FREQUENCY_PROTOCOL", text)
+            self.assertIn("(read_ue_delayed or write_ue_now) when FREQUENCY_PROTOCOL", text)
+            self.assertIn("write_ue_now <= not request_is_read;", text)
+
     def test_extended_matrix_has_unique_valid_parameters(self):
         root = Path(__file__).resolve().parents[4]
         cases = load_test_cases(root / "configs/ip/axi_lmb_bridge/extended.json")

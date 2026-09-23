@@ -1,0 +1,98 @@
+[
+  {
+    "scenario": "legal"
+  },
+  {
+    "scenario": "tkeep_tstrb_conflict"
+  },
+  {
+    "scenario": "tdata_changed"
+  },
+  {
+    "scenario": "tvalid_dropped"
+  },
+  {
+    "scenario": "tid_changed"
+  },
+  {
+    "scenario": "tdest_changed"
+  },
+  {
+    "scenario": "tkeep_changed"
+  },
+  {
+    "scenario": "tlast_changed"
+  },
+  {
+    "scenario": "tstrb_changed"
+  },
+  {
+    "scenario": "tuser_changed"
+  },
+  {
+    "scenario": "max_wait_exceeded"
+  },
+  {
+    "scenario": "aclken_pauses_wait_counter"
+  },
+  {
+    "scenario": "legal"
+  },
+  {
+    "scenario": "tkeep_tstrb_conflict"
+  },
+  {
+    "scenario": "tdata_changed"
+  },
+  {
+    "scenario": "tvalid_dropped"
+  },
+  {
+    "scenario": "tid_changed"
+  },
+  {
+    "scenario": "tdest_changed"
+  },
+  {
+    "scenario": "tkeep_changed"
+  },
+  {
+    "scenario": "tlast_changed"
+  },
+  {
+    "scenario": "tstrb_changed"
+  },
+  {
+    "scenario": "tuser_changed"
+  },
+  {
+    "scenario": "max_wait_exceeded"
+  },
+  {
+    "scenario": "aclken_pauses_wait_counter"
+  },
+  {
+    "scenario": "legal"
+  },
+  {
+    "scenario": "tkeep_tstrb_conflict"
+  },
+  {
+    "scenario": "tdata_changed"
+  },
+  {
+    "scenario": "tvalid_dropped"
+  },
+  {
+    "scenario": "tid_changed"
+  },
+  {
+    "scenario": "tdest_changed"
+  },
+  {
+    "scenario": "tkeep_changed"
+  },
+  {
+    "scenario": "tlast_changed"
+  }
+]

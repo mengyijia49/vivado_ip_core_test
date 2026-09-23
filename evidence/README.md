@@ -11,6 +11,10 @@
 Vivado 2026.1 的[问题观察](vivado_2026_1/observations/)保存报告、观察值和日志。
 478 组常用配置的报告、适配复测和新差异的输入输出在
 [全量运行证据](vivado_2026_1/full_regression/)。
+[复数乘法器延迟对照](vivado_2026_1/complex_multiplier/latency_trace/)保存五组配置的完整逐拍记录、参数和日志。
+[Bridge 应答时序排查](vivado_2026_1/axi_lmb_bridge/protocol_review/)和
+[AXIS 检查器默认信号排查](vivado_2026_1/axis_protocol_checker/protocol_review/)
+保存修改前后的报告、输入输出、testbench、参数和日志。这两条已查明是框架问题，不是新增 IP bug。
 它们都不是厂商确认结果，也不表示硬件实现一定有同样问题。
 
 重新导出和校验：

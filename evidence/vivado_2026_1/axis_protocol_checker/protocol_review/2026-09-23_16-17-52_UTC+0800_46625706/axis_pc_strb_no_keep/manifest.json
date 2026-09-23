@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "case_id": "axis_pc_strb_no_keep",
+  "ip_type": "axis_protocol_checker",
+  "vendor": "xilinx.com",
+  "ip_name": "axis_protocol_checker",
+  "configured_parameters": {
+    "data_bytes": 4,
+    "tid_width": 8,
+    "tdest_width": 0,
+    "tuser_width": 0,
+    "has_tready": true,
+    "has_tstrb": true,
+    "has_tkeep": false,
+    "has_tlast": false,
+    "has_aclken": true,
+    "has_system_reset": false,
+    "max_waits": 0
+  },
+  "generated_ip": {
+    "component_reference": "xilinx.com:ip:axis_protocol_checker:2.0",
+    "ports": {
+      "aclk": [
+        {
+          "direction": "in"
+        }
+      ],
+      "aresetn": [
+        {
+          "direction": "in"
+        }
+      ],
+      "aclken": [
+        {
+          "direction": "in",
+          "driver_value": "0x1"
+        }
+      ],
+      "pc_axis_tvalid": [
+        {
+          "direction": "in"
+        }
+      ],
+      "pc_axis_tready": [
+        {
+          "direction": "in",
+          "driver_value": "0x1"
+        }
+      ],
+      "pc_axis_tdata": [
+        {
+          "direction": "in",
+          "size_left": "31",
+          "size_right": "0",
+          "driver_value": "0x00000000"
+        }
+      ],
+      "pc_axis_tstrb": [
+        {
+          "direction": "in",
+          "size_left": "3",
+          "size_right": "0",
+          "driver_value": "0xF"
+        }
+      ],
+      "pc_axis_tid": [
+        {
+          "direction": "in",
+          "size_left": "7",
+          "size_right": "0",
+          "driver_value": "0x0"
+        }
+      ],
+      "pc_asserted": [
+        {
+          "direction": "out"
+        }
+      ],
+      "pc_status": [
+        {
+          "direction": "out",
+          "size_left": "31",
+          "size_right": "0"
+        }
+      ]
+    },
+    "model_parameters": {
+      "C_AXIS_TDATA_WIDTH": "32",
+      "C_AXIS_TID_WIDTH": "8",
+      "C_AXIS_TDEST_WIDTH": "1",
+      "C_AXIS_TUSER_WIDTH": "1",
+      "C_AXIS_SIGNAL_SET": "0b00000000000000000000000000100111",
+      "C_PC_MAXWAITS": "0",
+      "C_PC_MESSAGE_LEVEL": "0",
+      "C_PC_HAS_SYSTEM_RESET": "0",
+      "C_ENABLE_CONTROL": "0",
+      "C_PC_STATUS_WIDTH": "32",
+      "C_ENABLE_MARK_DEBUG": "0"
+    }
+  },
+  "output_layout": {
+    "encoding": "binary_msb_first",
+    "fields": [
+      {
+        "name": "pc_status",
+        "width": 32
+      }
+    ]
+  },
+  "verification": {
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": 20261176,
+    "case_budget": 20,
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "boundary_mode": "basic",
+    "timing_mode": "continuous",
+    "max_gap_cycles": 4,
+    "burst_length": 16,
+    "input_order": "generated",
+    "schedule": {
+      "checked_transaction_count": 20,
+      "comparison_kind": "axis_protocol_checker_exact_status_bits",
+      "reference_sequence_events": {
+        "legal": 4,
+        "tvalid_after_reset": 4,
+        "tdata_changed": 3,
+        "tvalid_dropped": 3,
+        "tid_changed": 3,
+        "tstrb_changed": 3
+      },
+      "sequence_coverage": "reset_stability_valid_wait_and_keep_strb_rules"
+    }
+  },
+  "artifacts": {
+    "testbench": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_strb_no_keep/tb/tb_axis_protocol_checker.vhd",
+    "input_vectors": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_strb_no_keep/vectors/protocol_scenarios.json",
+    "expected_output": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_strb_no_keep/vectors/expected_output.txt",
+    "actual_output": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_strb_no_keep/outputs/actual_output.txt",
+    "xci": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_strb_no_keep/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci"
+  },
+  "artifact_sha256": {
+    "testbench": "2dd6a9454a56c2f4efbcc44ec83f0e47d4245a92a78620fb0828b3d0726b2e5d",
+    "input_vectors": "1661c9e4d851c3c8b48d4c5111a254c49de910888656e2e5368fea1ae5454283",
+    "expected_output": "854f5b376fef2a522e226555a4d31c5feb4d2199bf2ba9c75afe9515537e949e",
+    "xci": "e2bfe6587bb58e5b905a944acc23ab10773b85c5accecb940df12e17f2fa3eb7"
+  }
+}

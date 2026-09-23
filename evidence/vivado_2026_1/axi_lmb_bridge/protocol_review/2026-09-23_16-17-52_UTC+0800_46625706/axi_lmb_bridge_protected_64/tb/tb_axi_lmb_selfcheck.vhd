@@ -1,0 +1,521 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use std.textio.all;
+
+entity tb_axi_lmb_selfcheck is
+end entity;
+
+architecture test of tb_axi_lmb_selfcheck is
+  constant DATA_WIDTH : positive := 64;
+  constant ADDR_WIDTH : positive := 32;
+  constant ID_WIDTH : positive := 4;
+  constant LANES : positive := 8;
+  constant ACCESS_COUNT : natural := 135;
+  constant OPERATION_COUNT : natural := 143;
+  constant FREQUENCY_PROTOCOL : boolean := 0 = 1;
+  type natural_array is array(natural range <>) of natural;
+  type address_array is array(natural range <>) of std_logic_vector(31 downto 0);
+  type data_array is array(natural range <>) of std_logic_vector(63 downto 0);
+  type be_array is array(natural range <>) of std_logic_vector(7 downto 0);
+  type protection_array is array(natural range <>) of std_logic_vector(1 downto 0);
+  constant EXPECTED_ADDR : address_array(0 to 134) := (0 => "00000000000000000000000100000000", 1 => "00000000000000000000000100000000", 2 => "00000000000000000000000111110000", 3 => "00000000000000000000000111110100", 4 => "00000000000000000000000111111000", 5 => "00000000000000000000000111111100", 6 => "00000000000000000000000111110000", 7 => "00000000000000000000000111110100", 8 => "00000000000000000000000111111000", 9 => "00000000000000000000000111111100", 10 => "00000000000000000000001000100000", 11 => "00000000000000000000001000100000", 12 => "00000000000000000000001000100000", 13 => "00000000000000000000001000100000", 14 => "00000000000000000000001000111100", 15 => "00000000000000000000001000110000", 16 => "00000000000000000000001000110100", 17 => "00000000000000000000001000111000", 18 => "00000000000000000000001000111100", 19 => "00000000000000000000001000110000", 20 => "00000000000000000000001000110100", 21 => "00000000000000000000001000111000", 22 => "00000000000000000000001010100000", 23 => "00000000000000000000001010100000", 24 => "00000000000000000000001011000000", 25 => "00000000000000000000001011000000", 26 => "00000000000000000000001011010000", 27 => "00000000000000000000001011010000", 28 => "00000000000000000000000000000000", 29 => "00000000000000000000000000000000", 30 => "01111111111111111111111111111100", 31 => "11111111111111111111111111111100", 32 => "11111111111111111111111111111100", 33 => "00000000000000000000000000000000", 34 => "00000000000000000000000000000000", 35 => "00000000000000000000000000000000", 36 => "00000000000000000000000000000000", 37 => "00000000000000000000000000000000", 38 => "00000000000000000000000000000000", 39 => "00000000000000000000000000000000", 40 => "00000000000000000000000000000000", 41 => "00000000000000000000000000000000", 42 => "00000000000000000000000000000000", 43 => "00000000000000000000000000000000", 44 => "00000000000000000000000000000000", 45 => "00000000000000000000000000000000", 46 => "00000000000000000000000000000000", 47 => "00000000000000000000000000000000", 48 => "00000000000000000000000000000000", 49 => "00000000000000000000000000000000", 50 => "00000000000000000000000000000000", 51 => "00000000000000000000000000000000", 52 => "00000000000000000000000000000000", 53 => "00000000000000000000000000000000", 54 => "00000000000000000000000000000000", 55 => "00000000000000000000000000000000", 56 => "11111111111111111111111111111100", 57 => "11111111111111111111111111111100", 58 => "00000000000000000000000000000000", 59 => "00000000000000000000000000000000", 60 => "00000000000000000000000000000000", 61 => "00000000000000000000000000000000", 62 => "01111111111111111111111111111100", 63 => "01111111111111111111111111111100", 64 => "11111111111111111111111111111100", 65 => "11111111111111111111111111111100", 66 => "11111111111111111111111111111100", 67 => "11111111111111111111111111111100", 68 => "11111111111111111111111111111100", 69 => "11111111111111111111111111111100", 70 => "11111111111111111111111111111100", 71 => "11111111111111111111111111111100", 72 => "11111111111111111111111111111100", 73 => "11111111111111111111111111111100", 74 => "11111111111111111111111111111100", 75 => "11111111111111111111111111111100", 76 => "11111111111111111111111111111100", 77 => "11111111111111111111111111111100", 78 => "11111111111111111111111111111100", 79 => "11111111111111111111111111111100", 80 => "11111111111111111111111111111100", 81 => "11111111111111111111111111111100", 82 => "11111111111111111111111111111100", 83 => "11111111111111111111111111111100", 84 => "11111111111111111111111111111100", 85 => "11111111111111111111111111111100", 86 => "11111111111111111111111111111100", 87 => "11111111111111111111111111111100", 88 => "11111111111111111111111111111100", 89 => "11111111111111111111111111111100", 90 => "11111111111111111111111111111100", 91 => "11111111111111111111111111111100", 92 => "11111111111111111111111111111100", 93 => "11111111111111111111111111111100", 94 => "11111111111111111111111111111100", 95 => "11111111111111111111111111111100", 96 => "11111111111111111111111111111100", 97 => "11111111111111111111111111111100", 98 => "11111111111111111111111111111100", 99 => "11111111111111111111111111111100", 100 => "11111111111111111111111111111100", 101 => "11111111111111111111111111111100", 102 => "11111111111111111111111111111100", 103 => "00100100000010001100100011010000", 104 => "00100100000010001100100011010000", 105 => "00001010101110101011001101000100", 106 => "00001010101110101011001101000100", 107 => "11111011101111111011111101001100", 108 => "11111011101111111011111101001100", 109 => "01100100110011101101011101011100", 110 => "01100100110011101101011101011100", 111 => "00000100001110011001101100111100", 112 => "00000100001110011001101100111100", 113 => "01001101100111011100101000111000", 114 => "01001101100111011100101000111000", 115 => "10001110111001110110111100111100", 116 => "10001110111001110110111100111100", 117 => "10110101110111110000001000010100", 118 => "10110101110111110000001000010100", 119 => "01011110110110111000110110110100", 120 => "01011110110110111000110110110100", 121 => "11111100100011000110011100001000", 122 => "11111100100011000110011100001000", 123 => "10000011100000010000010101101000", 124 => "10000011100000010000010101101000", 125 => "10100111010110100100110010101000", 126 => "10100111010110100100110010101000", 127 => "11100101111010100110101001000100", 128 => "11100101111010100110101001000100", 129 => "00011110100011100101010001110100", 130 => "00011110100011100101010001110100", 131 => "11111110001101010101110011110100", 132 => "11111110001101010101110011110100", 133 => "00000110000010000100011100001100", 134 => "00000110000010000100011100001100");
+  constant EXPECTED_READ : natural_array(0 to 134) := (0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1);
+  constant EXPECTED_WRITE : natural_array(0 to 134) := (1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0);
+  constant EXPECTED_DATA : data_array(0 to 134) := (0 => "0001000000100000001100000100000001010000011000000111000010000000", 1 => "0000000000000000000000000000000000000000000000000000000000000000", 2 => "1111111111111111111111111111111111111111111111111111111111111111", 3 => "1111111111111111111111111111111111111111111111111111111011111110", 4 => "1111111111111111111111111111111111111111111111111111110111111101", 5 => "1111111111111111111111111111111111111111111111111111110011111100", 6 => "0000000000000000000000000000000000000000000000000000000000000000", 7 => "0000000000000000000000000000000000000000000000000000000000000000", 8 => "0000000000000000000000000000000000000000000000000000000000000000", 9 => "0000000000000000000000000000000000000000000000000000000000000000", 10 => "1000100001110111011001100101010101000100001100110010001000010001", 11 => "1000100001110111011001100101010101000100001100110010001100010000", 12 => "0000000000000000000000000000000000000000000000000000000000000000", 13 => "0000000000000000000000000000000000000000000000000000000000000000", 14 => "0000000000000000000000000000000010100101010110100101101010100101", 15 => "0000000000000000000000000000000010100101010110100101101110100100", 16 => "0000000000000000000000000000000010100101010110100101100010100111", 17 => "0000000000000000000000000000000010100101010110100101100110100110", 18 => "0000000000000000000000000000000000000000000000000000000000000000", 19 => "0000000000000000000000000000000000000000000000000000000000000000", 20 => "0000000000000000000000000000000000000000000000000000000000000000", 21 => "0000000000000000000000000000000000000000000000000000000000000000", 22 => "0000000000000000000000000000000000010010001101000101011001111000", 23 => "0000000000000000000000000000000000000000000000000000000000000000", 24 => "0000000000000000000000000000000011001010111111101011101010111110", 25 => "0000000000000000000000000000000000000000000000000000000000000000", 26 => "0000000000000000000000000000000000010011010101111001101111011111", 27 => "0000000000000000000000000000000000000000000000000000000000000000", 28 => "0000000000000000000000000000000000000000000000000000000000000000", 29 => "0000000000000000000000000000000000000000000000000000000000000000", 30 => "0000000000000000000000000000000000000000000000000000000000000000", 31 => "0000000000000000000000000000000000000000000000000000000000000000", 32 => "0000000000000000000000000000000000000000000000000000000000000000", 33 => "0000000000000000000000000000000000000000000000000000000000000000", 34 => "0000000000000000000000000000000000000000000000000000000000000000", 35 => "0000000000000000000000000000000000000000000000000000000000000000", 36 => "0000000000000000000000000000000000000000000000000000000000000000", 37 => "0000000000000000000000000000000000000000000000000000000000000000", 38 => "0000000000000000000000000000000000000000000000000000000000000000", 39 => "0000000000000000000000000000000000000000000000000000000000000000", 40 => "0000000000000000000000000000000000000000000000000000000000000000", 41 => "0000000000000000000000000000000000000000000000000000000000000000", 42 => "0000000000000000000000000000000000000000000000000000000000000000", 43 => "0000000000000000000000000000000000000000000000000000000000000000", 44 => "0000000000000000000000000000000000000000000000000000000000000000", 45 => "0000000000000000000000000000000000000000000000000000000000000000", 46 => "0000000000000000000000000000000000000000000000000000000000000000", 47 => "0000000000000000000000000000000000000000000000000000000000000000", 48 => "0000000000000000000000000000000000000000000000000000000000000000", 49 => "0000000000000000000000000000000000000000000000000000000000000000", 50 => "0000000000000000000000000000000000000000000000000000000000000000", 51 => "0000000000000000000000000000000000000000000000000000000000000000", 52 => "0000000000000000000000000000000000000000000000000000000000000000", 53 => "0000000000000000000000000000000000000000000000000000000000000000", 54 => "0000000000000000000000000000000000000000000000000000000000000000", 55 => "0000000000000000000000000000000000000000000000000000000000000000", 56 => "1111111111111111111111111111111111111111111111111111111111111111", 57 => "0000000000000000000000000000000000000000000000000000000000000000", 58 => "1111111111111111111111111111111111111111111111111111111111111111", 59 => "0000000000000000000000000000000000000000000000000000000000000000", 60 => "1111111111111111111111111111111111111111111111111111111111111111", 61 => "0000000000000000000000000000000000000000000000000000000000000000", 62 => "1111111111111111111111111111111111111111111111111111111111111111", 63 => "0000000000000000000000000000000000000000000000000000000000000000", 64 => "1111111111111111111111111111111111111111111111111111111111111111", 65 => "0000000000000000000000000000000000000000000000000000000000000000", 66 => "0000000000000000000000000000000000000000000000000000000000000000", 67 => "0000000000000000000000000000000000000000000000000000000000000000", 68 => "0000000000000000000000000000000000000000000000000000000000000001", 69 => "0000000000000000000000000000000000000000000000000000000000000000", 70 => "0111111111111111111111111111111111111111111111111111111111111111", 71 => "0000000000000000000000000000000000000000000000000000000000000000", 72 => "1111111111111111111111111111111111111111111111111111111111111110", 73 => "0000000000000000000000000000000000000000000000000000000000000000", 74 => "0000000000000000000000000000000000000000000000000000000000000000", 75 => "1111111111111111111111111111111111111111111111111111111111111111", 76 => "0000000000000000000000000000000000000000000000000000000000000000", 77 => "1111111111111111111111111111111111111111111111111111111111111111", 78 => "0000000000000000000000000000000000000000000000000000000000000000", 79 => "1111111111111111111111111111111111111111111111111111111111111111", 80 => "0000000000000000000000000000000000000000000000000000000000000000", 81 => "1111111111111111111111111111111111111111111111111111111111111111", 82 => "0000000000000000000000000000000000000000000000000000000000000000", 83 => "1111111111111111111111111111111111111111111111111111111111111111", 84 => "0000000000000000000000000000000000000000000000000000000000000000", 85 => "1111111111111111111111111111111111111111111111111111111111111111", 86 => "0000000000000000000000000000000000000000000000000000000000000000", 87 => "1111111111111111111111111111111111111111111111111111111111111111", 88 => "0000000000000000000000000000000000000000000000000000000000000000", 89 => "1111111111111111111111111111111111111111111111111111111111111111", 90 => "0000000000000000000000000000000000000000000000000000000000000000", 91 => "1111111111111111111111111111111111111111111111111111111111111111", 92 => "0000000000000000000000000000000000000000000000000000000000000000", 93 => "1111111111111111111111111111111111111111111111111111111111111111", 94 => "0000000000000000000000000000000000000000000000000000000000000000", 95 => "1111111111111111111111111111111111111111111111111111111111111111", 96 => "0000000000000000000000000000000000000000000000000000000000000000", 97 => "1111111111111111111111111111111111111111111111111111111111111111", 98 => "0000000000000000000000000000000000000000000000000000000000000000", 99 => "1111111111111111111111111111111111111111111111111111111111111111", 100 => "0000000000000000000000000000000000000000000000000000000000000000", 101 => "1111111111111111111111111111111111111111111111111111111111111111", 102 => "0000000000000000000000000000000000000000000000000000000000000000", 103 => "0001110100100001111001111110100001011000011011000001110001011001", 104 => "0000000000000000000000000000000000000000000000000000000000000000", 105 => "1011010010110111001111110010011001101100001001101000111110101111", 106 => "0000000000000000000000000000000000000000000000000000000000000000", 107 => "0001100100001010010110000000001011001011110011110000111101111011", 108 => "0000000000000000000000000000000000000000000000000000000000000000", 109 => "0111000110100110110111001010111011010001100100000001010110110010", 110 => "0000000000000000000000000000000000000000000000000000000000000000", 111 => "1010110101010111001000100100111100000011000010110011001100110000", 112 => "0000000000000000000000000000000000000000000000000000000000000000", 113 => "1000101001110000000110110110110010010010010011010011011001010100", 114 => "0000000000000000000000000000000000000000000000000000000000000000", 115 => "1011001001010111111011100110110110000111101010000101011001101001", 116 => "0000000000000000000000000000000000000000000000000000000000000000", 117 => "0011001011000011011100111010010101110111011100110101001011100100", 118 => "0000000000000000000000000000000000000000000000000000000000000000", 119 => "0011001001100100011011100110011000010110110010011001000011101001", 120 => "0000000000000000000000000000000000000000000000000000000000000000", 121 => "1000001110001101001111010010010001000110001011110110100101011001", 122 => "0000000000000000000000000000000000000000000000000000000000000000", 123 => "1010101011111011110100001111001110011101101110110110111100001010", 124 => "0000000000000000000000000000000000000000000000000000000000000000", 125 => "1101110101011011011110010110000000010110111100000100100000001011", 126 => "0000000000000000000000000000000000000000000000000000000000000000", 127 => "1001110001110001000110010111101010110001111101011000100110000111", 128 => "0000000000000000000000000000000000000000000000000000000000000000", 129 => "0010111100011010100001110000110110010001001110000010010011000000", 130 => "0000000000000000000000000000000000000000000000000000000000000000", 131 => "1100011001001011000111000010001111100000101000000111000001010100", 132 => "0000000000000000000000000000000000000000000000000000000000000000", 133 => "1111111011110100011010101110000110101111011010110100110001100111", 134 => "0000000000000000000000000000000000000000000000000000000000000000");
+  constant EXPECTED_BE : be_array(0 to 134) := (0 => "11111111", 1 => "00000000", 2 => "11111111", 3 => "11111111", 4 => "11111111", 5 => "11111111", 6 => "00000000", 7 => "00000000", 8 => "00000000", 9 => "00000000", 10 => "00000011", 11 => "00000011", 12 => "00000000", 13 => "00000000", 14 => "11111111", 15 => "11111111", 16 => "11111111", 17 => "11111111", 18 => "00000000", 19 => "00000000", 20 => "00000000", 21 => "00000000", 22 => "11111111", 23 => "00000000", 24 => "11111111", 25 => "00000000", 26 => "11111111", 27 => "00000000", 28 => "00000000", 29 => "00000000", 30 => "00000000", 31 => "00000000", 32 => "00000000", 33 => "00000000", 34 => "00000000", 35 => "00000000", 36 => "00000000", 37 => "00000001", 38 => "00000000", 39 => "01111111", 40 => "00000000", 41 => "11111110", 42 => "00000000", 43 => "11111111", 44 => "00000000", 45 => "00000000", 46 => "00000000", 47 => "00000000", 48 => "00000000", 49 => "00000000", 50 => "00000000", 51 => "00000000", 52 => "00000000", 53 => "00000000", 54 => "00000000", 55 => "00000000", 56 => "11111111", 57 => "00000000", 58 => "11111111", 59 => "00000000", 60 => "11111111", 61 => "00000000", 62 => "11111111", 63 => "00000000", 64 => "11111111", 65 => "00000000", 66 => "11111111", 67 => "00000000", 68 => "11111111", 69 => "00000000", 70 => "11111111", 71 => "00000000", 72 => "11111111", 73 => "00000000", 74 => "00000000", 75 => "00000001", 76 => "00000000", 77 => "01111111", 78 => "00000000", 79 => "11111110", 80 => "00000000", 81 => "11111111", 82 => "00000000", 83 => "11111111", 84 => "00000000", 85 => "11111111", 86 => "00000000", 87 => "11111111", 88 => "00000000", 89 => "11111111", 90 => "00000000", 91 => "11111111", 92 => "00000000", 93 => "11111111", 94 => "00000000", 95 => "11111111", 96 => "00000000", 97 => "11111111", 98 => "00000000", 99 => "11111111", 100 => "00000000", 101 => "11111111", 102 => "00000000", 103 => "00111110", 104 => "00000000", 105 => "11101011", 106 => "00000000", 107 => "00110001", 108 => "00000000", 109 => "01100000", 110 => "00000000", 111 => "00111011", 112 => "00000000", 113 => "11001000", 114 => "00000000", 115 => "00001110", 116 => "00000000", 117 => "10110011", 118 => "00000000", 119 => "10110100", 120 => "00000000", 121 => "00001110", 122 => "00000000", 123 => "01000000", 124 => "00000000", 125 => "00101011", 126 => "00000000", 127 => "10000111", 128 => "00000000", 129 => "01011001", 130 => "00000000", 131 => "11000010", 132 => "00000000", 133 => "10101001", 134 => "00000000");
+  constant EXPECTED_PROT : protection_array(0 to 134) := (0 => "01", 1 => "01", 2 => "10", 3 => "10", 4 => "10", 5 => "10", 6 => "10", 7 => "10", 8 => "10", 9 => "10", 10 => "01", 11 => "01", 12 => "01", 13 => "01", 14 => "01", 15 => "01", 16 => "01", 17 => "01", 18 => "01", 19 => "01", 20 => "01", 21 => "01", 22 => "01", 23 => "01", 24 => "01", 25 => "01", 26 => "01", 27 => "01", 28 => "01", 29 => "01", 30 => "01", 31 => "01", 32 => "01", 33 => "01", 34 => "01", 35 => "01", 36 => "01", 37 => "01", 38 => "01", 39 => "01", 40 => "01", 41 => "01", 42 => "01", 43 => "01", 44 => "01", 45 => "01", 46 => "01", 47 => "01", 48 => "01", 49 => "10", 50 => "10", 51 => "01", 52 => "10", 53 => "01", 54 => "01", 55 => "01", 56 => "10", 57 => "10", 58 => "10", 59 => "10", 60 => "10", 61 => "10", 62 => "10", 63 => "10", 64 => "10", 65 => "10", 66 => "10", 67 => "10", 68 => "10", 69 => "10", 70 => "10", 71 => "10", 72 => "10", 73 => "10", 74 => "10", 75 => "10", 76 => "10", 77 => "10", 78 => "10", 79 => "10", 80 => "10", 81 => "10", 82 => "10", 83 => "10", 84 => "10", 85 => "10", 86 => "10", 87 => "10", 88 => "10", 89 => "01", 90 => "01", 91 => "10", 92 => "10", 93 => "10", 94 => "10", 95 => "01", 96 => "01", 97 => "10", 98 => "10", 99 => "10", 100 => "10", 101 => "10", 102 => "10", 103 => "01", 104 => "01", 105 => "10", 106 => "10", 107 => "01", 108 => "01", 109 => "10", 110 => "10", 111 => "10", 112 => "10", 113 => "01", 114 => "01", 115 => "01", 116 => "01", 117 => "10", 118 => "10", 119 => "10", 120 => "10", 121 => "10", 122 => "10", 123 => "10", 124 => "10", 125 => "01", 126 => "01", 127 => "01", 128 => "01", 129 => "01", 130 => "01", 131 => "01", 132 => "01", 133 => "01", 134 => "01");
+
+  signal Clk : std_logic := '0';
+  signal Rst : std_logic := '1';
+
+  signal S_AXI_AWID : std_logic_vector(ID_WIDTH-1 downto 0) := (others => '0');
+  signal S_AXI_AWADDR : std_logic_vector(ADDR_WIDTH-1 downto 0) := (others => '0');
+  signal S_AXI_AWLEN : std_logic_vector(7 downto 0) := (others => '0');
+  signal S_AXI_AWSIZE : std_logic_vector(2 downto 0) := (others => '0');
+  signal S_AXI_AWBURST : std_logic_vector(1 downto 0) := (others => '0');
+  signal S_AXI_AWVALID : std_logic := '0';
+  signal S_AXI_AWPROT : std_logic_vector(2 downto 0) := (others => '0');
+  signal S_AXI_AWREADY : std_logic;
+  signal S_AXI_WDATA : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+  signal S_AXI_WSTRB : std_logic_vector(LANES-1 downto 0) := (others => '0');
+  signal S_AXI_WLAST, S_AXI_WVALID, S_AXI_WREADY : std_logic := '0';
+  signal S_AXI_BID : std_logic_vector(ID_WIDTH-1 downto 0);
+  signal S_AXI_BRESP : std_logic_vector(1 downto 0);
+  signal S_AXI_BVALID : std_logic;
+  signal S_AXI_BREADY : std_logic := '0';
+  signal S_AXI_ARID : std_logic_vector(ID_WIDTH-1 downto 0) := (others => '0');
+  signal S_AXI_ARADDR : std_logic_vector(ADDR_WIDTH-1 downto 0) := (others => '0');
+  signal S_AXI_ARLEN : std_logic_vector(7 downto 0) := (others => '0');
+  signal S_AXI_ARSIZE : std_logic_vector(2 downto 0) := (others => '0');
+  signal S_AXI_ARBURST : std_logic_vector(1 downto 0) := (others => '0');
+  signal S_AXI_ARVALID : std_logic := '0';
+  signal S_AXI_ARPROT : std_logic_vector(2 downto 0) := (others => '0');
+  signal S_AXI_ARREADY : std_logic;
+  signal S_AXI_RID : std_logic_vector(ID_WIDTH-1 downto 0);
+  signal S_AXI_RDATA : std_logic_vector(DATA_WIDTH-1 downto 0);
+  signal S_AXI_RRESP : std_logic_vector(1 downto 0);
+  signal S_AXI_RLAST, S_AXI_RVALID : std_logic;
+  signal S_AXI_RREADY : std_logic := '0';
+  signal M_ABus : std_logic_vector(ADDR_WIDTH-1 downto 0);
+  signal M_Prot : std_logic_vector(1 downto 0);
+  signal M_ReadStrobe, M_WriteStrobe, M_AddrStrobe : std_logic;
+  signal M_DBus : std_logic_vector(DATA_WIDTH-1 downto 0);
+  signal M_BE : std_logic_vector(LANES-1 downto 0);
+  signal LMB_ReadDBus : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+  signal LMB_Ready, LMB_UE : std_logic := '0';
+  signal LMB_Wait : std_logic := '1';
+  signal LMB_CE : std_logic := '0';
+  signal read_data_now, read_data_delayed : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+  signal read_ue_now, read_ue_delayed, write_ue_now : std_logic := '0';
+  signal request_is_read : std_logic := '0';
+  signal fault_mode : natural range 0 to 2 := 0;
+  signal wait_limit : natural range 0 to 3 := 0;
+  signal wait_count : natural range 0 to 3 := 0;
+  signal access_index : natural range 0 to ACCESS_COUNT := 0;
+  signal aw_handshakes, w_handshakes, wlast_handshakes : natural := 0;
+  type responder_state_t is (IDLE, WAITING, COMPLETE_GAP);
+  signal responder_state : responder_state_t := IDLE;
+
+  function read_value(address : std_logic_vector) return std_logic_vector is
+    variable result : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+    variable base : natural;
+  begin
+    base := to_integer(unsigned(address(15 downto 0)));
+    for lane in 0 to LANES-1 loop
+      result(lane*8+7 downto lane*8) := std_logic_vector(to_unsigned((base + lane*49) mod 256, 8));
+    end loop;
+    return result;
+  end function;
+
+  function beat_value(base : std_logic_vector; beat : natural) return std_logic_vector is
+    variable result : unsigned(DATA_WIDTH-1 downto 0) := unsigned(base);
+  begin
+    result := result xor resize(to_unsigned(beat*257, 32), DATA_WIDTH);
+    return std_logic_vector(result);
+  end function;
+
+  procedure write_bit(variable target : inout line; value : std_logic) is
+  begin
+    if value = '1' then
+      write(target, character'('1'));
+    else
+      write(target, character'('0'));
+    end if;
+  end procedure;
+
+  procedure write_bits(variable target : inout line; value : std_logic_vector) is
+  begin
+    for index in value'range loop
+      write_bit(target, value(index));
+    end loop;
+  end procedure;
+begin
+  Clk <= not Clk after 5 ns;
+
+  -- Frequency reads return data and UE one cycle after Ready; writes do not.
+  LMB_ReadDBus <= read_data_delayed when FREQUENCY_PROTOCOL else read_data_now;
+  LMB_UE <= (read_ue_delayed or write_ue_now) when FREQUENCY_PROTOCOL else
+            (read_ue_now or write_ue_now);
+
+  dut : entity work.dut_0
+    port map (
+      Clk => Clk, Rst => Rst,
+      S_AXI_AWID => S_AXI_AWID, S_AXI_AWADDR => S_AXI_AWADDR,
+      S_AXI_AWLEN => S_AXI_AWLEN, S_AXI_AWSIZE => S_AXI_AWSIZE,
+      S_AXI_AWBURST => S_AXI_AWBURST, S_AXI_AWVALID => S_AXI_AWVALID,
+      S_AXI_AWPROT => S_AXI_AWPROT, S_AXI_AWREADY => S_AXI_AWREADY,
+      S_AXI_WDATA => S_AXI_WDATA, S_AXI_WSTRB => S_AXI_WSTRB,
+      S_AXI_WLAST => S_AXI_WLAST, S_AXI_WVALID => S_AXI_WVALID,
+      S_AXI_WREADY => S_AXI_WREADY, S_AXI_BID => S_AXI_BID,
+      S_AXI_BRESP => S_AXI_BRESP, S_AXI_BVALID => S_AXI_BVALID,
+      S_AXI_BREADY => S_AXI_BREADY, S_AXI_ARID => S_AXI_ARID,
+      S_AXI_ARADDR => S_AXI_ARADDR, S_AXI_ARLEN => S_AXI_ARLEN,
+      S_AXI_ARSIZE => S_AXI_ARSIZE, S_AXI_ARBURST => S_AXI_ARBURST,
+      S_AXI_ARVALID => S_AXI_ARVALID, S_AXI_ARPROT => S_AXI_ARPROT,
+      S_AXI_ARREADY => S_AXI_ARREADY, S_AXI_RID => S_AXI_RID,
+      S_AXI_RDATA => S_AXI_RDATA, S_AXI_RRESP => S_AXI_RRESP,
+      S_AXI_RLAST => S_AXI_RLAST, S_AXI_RVALID => S_AXI_RVALID,
+      S_AXI_RREADY => S_AXI_RREADY, M_ABus => M_ABus,
+      M_ReadStrobe => M_ReadStrobe, M_WriteStrobe => M_WriteStrobe,
+      M_AddrStrobe => M_AddrStrobe, M_DBus => M_DBus, M_BE => M_BE,
+      LMB_ReadDBus => LMB_ReadDBus, LMB_Ready => LMB_Ready,
+      LMB_Wait => LMB_Wait, LMB_UE => LMB_UE, LMB_CE => LMB_CE,
+      M_Prot => M_Prot
+    );
+
+  lmb_responder : process(Clk)
+  begin
+    if rising_edge(Clk) then
+      LMB_Ready <= '0';
+      read_ue_now <= '0';
+      write_ue_now <= '0';
+      read_data_delayed <= read_data_now;
+      read_ue_delayed <= read_ue_now;
+      LMB_Wait <= '1';
+      if Rst = '1' then
+        wait_count <= 0;
+        responder_state <= IDLE;
+        access_index <= 0;
+        read_data_now <= (others => '0');
+        read_data_delayed <= (others => '0');
+        read_ue_delayed <= '0';
+        request_is_read <= '0';
+      else
+        case responder_state is
+          when IDLE =>
+            if M_AddrStrobe = '1' then
+              assert access_index < ACCESS_COUNT
+                report "AXI_LMB_SELF_CHECK_STATUS: FAIL extra LMB access" severity failure;
+              assert M_ABus = EXPECTED_ADDR(access_index)
+                report "AXI_LMB_SELF_CHECK_STATUS: FAIL LMB address mismatch" severity failure;
+              assert M_ReadStrobe = std_logic'val(EXPECTED_READ(access_index)+2) and
+                     M_WriteStrobe = std_logic'val(EXPECTED_WRITE(access_index)+2)
+                report "AXI_LMB_SELF_CHECK_STATUS: FAIL LMB direction mismatch index=" &
+                  integer'image(access_index) & " read=" & std_logic'image(M_ReadStrobe) &
+                  " write=" & std_logic'image(M_WriteStrobe) & " expected_read=" &
+                  integer'image(EXPECTED_READ(access_index)) & " expected_write=" &
+                  integer'image(EXPECTED_WRITE(access_index)) severity failure;
+              assert M_DBus = EXPECTED_DATA(access_index) and M_BE = EXPECTED_BE(access_index)
+                report "AXI_LMB_SELF_CHECK_STATUS: FAIL LMB write payload mismatch" severity failure;
+        assert M_Prot = EXPECTED_PROT(access_index)
+          report "AXI_LMB_SELF_CHECK_STATUS: FAIL LMB protection mismatch index=" &
+            integer'image(access_index) & " actual=" & integer'image(to_integer(unsigned(M_Prot))) &
+            " expected=" & integer'image(to_integer(unsigned(EXPECTED_PROT(access_index))))
+            severity failure;
+              access_index <= access_index + 1;
+              read_data_now <= read_value(M_ABus);
+              request_is_read <= M_ReadStrobe;
+              wait_count <= 0;
+              responder_state <= WAITING;
+            end if;
+          when WAITING =>
+            if fault_mode = 1 then
+              LMB_Wait <= '0';
+              responder_state <= COMPLETE_GAP;
+            elsif wait_count < wait_limit then
+              wait_count <= wait_count + 1;
+            else
+              LMB_Ready <= '1';
+              if fault_mode = 2 then
+                read_ue_now <= request_is_read;
+                write_ue_now <= not request_is_read;
+              end if;
+              responder_state <= COMPLETE_GAP;
+            end if;
+          when COMPLETE_GAP =>
+            wait_count <= 0;
+            if M_AddrStrobe = '1' then
+              assert access_index < ACCESS_COUNT
+                report "AXI_LMB_SELF_CHECK_STATUS: FAIL extra LMB access" severity failure;
+              assert M_ABus = EXPECTED_ADDR(access_index)
+                report "AXI_LMB_SELF_CHECK_STATUS: FAIL LMB address mismatch" severity failure;
+              assert M_ReadStrobe = std_logic'val(EXPECTED_READ(access_index)+2) and
+                     M_WriteStrobe = std_logic'val(EXPECTED_WRITE(access_index)+2)
+                report "AXI_LMB_SELF_CHECK_STATUS: FAIL LMB direction mismatch index=" &
+                  integer'image(access_index) & " read=" & std_logic'image(M_ReadStrobe) &
+                  " write=" & std_logic'image(M_WriteStrobe) & " expected_read=" &
+                  integer'image(EXPECTED_READ(access_index)) & " expected_write=" &
+                  integer'image(EXPECTED_WRITE(access_index)) severity failure;
+              assert M_DBus = EXPECTED_DATA(access_index) and M_BE = EXPECTED_BE(access_index)
+                report "AXI_LMB_SELF_CHECK_STATUS: FAIL LMB write payload mismatch" severity failure;
+        assert M_Prot = EXPECTED_PROT(access_index)
+          report "AXI_LMB_SELF_CHECK_STATUS: FAIL LMB protection mismatch index=" &
+            integer'image(access_index) & " actual=" & integer'image(to_integer(unsigned(M_Prot))) &
+            " expected=" & integer'image(to_integer(unsigned(EXPECTED_PROT(access_index))))
+            severity failure;
+              access_index <= access_index + 1;
+              read_data_now <= read_value(M_ABus);
+              request_is_read <= M_ReadStrobe;
+              responder_state <= WAITING;
+            else
+              responder_state <= IDLE;
+            end if;
+        end case;
+      end if;
+    end if;
+  end process;
+
+  stability_monitor : process(Clk)
+    variable b_held, r_held : boolean := false;
+    variable held_bid, held_rid : std_logic_vector(ID_WIDTH-1 downto 0);
+    variable held_bresp, held_rresp : std_logic_vector(1 downto 0);
+    variable held_rdata : std_logic_vector(DATA_WIDTH-1 downto 0);
+    variable held_rlast : std_logic;
+  begin
+    if rising_edge(Clk) then
+      if Rst = '1' then
+        b_held := false; r_held := false;
+        aw_handshakes <= 0; w_handshakes <= 0; wlast_handshakes <= 0;
+      else
+        if S_AXI_AWVALID = '1' and S_AXI_AWREADY = '1' then
+          aw_handshakes <= aw_handshakes + 1;
+        end if;
+        if S_AXI_WVALID = '1' and S_AXI_WREADY = '1' then
+          w_handshakes <= w_handshakes + 1;
+          if S_AXI_WLAST = '1' then wlast_handshakes <= wlast_handshakes + 1; end if;
+        end if;
+        if b_held then
+          assert S_AXI_BVALID = '1' and S_AXI_BID = held_bid and S_AXI_BRESP = held_bresp
+            report "AXI_LMB_SELF_CHECK_STATUS: FAIL B changed under backpressure" severity failure;
+        end if;
+        if r_held then
+          assert S_AXI_RVALID = '1' and S_AXI_RID = held_rid and
+                 S_AXI_RDATA = held_rdata and S_AXI_RRESP = held_rresp and S_AXI_RLAST = held_rlast
+            report "AXI_LMB_SELF_CHECK_STATUS: FAIL R changed under backpressure" severity failure;
+        end if;
+        b_held := S_AXI_BVALID = '1' and S_AXI_BREADY = '0';
+        r_held := S_AXI_RVALID = '1' and S_AXI_RREADY = '0';
+        if b_held then held_bid := S_AXI_BID; held_bresp := S_AXI_BRESP; end if;
+        if r_held then
+          held_rid := S_AXI_RID; held_rdata := S_AXI_RDATA;
+          held_rresp := S_AXI_RRESP; held_rlast := S_AXI_RLAST;
+        end if;
+      end if;
+    end if;
+  end process;
+
+  stimulus : process
+    file output_file : text open write_mode is "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_protected_64/outputs/actual_output.txt";
+    variable row : line;
+
+    procedure send_aw(ident : natural; address : std_logic_vector;
+                      beats, size, burst, prot : natural) is
+    begin
+      S_AXI_AWID <= std_logic_vector(to_unsigned(ident, ID_WIDTH));
+      S_AXI_AWADDR <= address;
+      S_AXI_AWLEN <= std_logic_vector(to_unsigned(beats-1, 8));
+      S_AXI_AWSIZE <= std_logic_vector(to_unsigned(size, 3));
+      S_AXI_AWBURST <= std_logic_vector(to_unsigned(burst, 2));
+      S_AXI_AWPROT <= std_logic_vector(to_unsigned(prot, 3));
+      S_AXI_AWVALID <= '1';
+      loop wait until rising_edge(Clk); exit when S_AXI_AWREADY = '1'; end loop;
+      S_AXI_AWVALID <= '0';
+    end procedure;
+
+    procedure send_w(base : std_logic_vector; strobe, beat, beats : natural) is
+    begin
+      S_AXI_WDATA <= beat_value(base, beat);
+      S_AXI_WSTRB <= std_logic_vector(to_unsigned(strobe, LANES));
+      if beat = beats-1 then S_AXI_WLAST <= '1'; else S_AXI_WLAST <= '0'; end if;
+      S_AXI_WVALID <= '1';
+      loop wait until rising_edge(Clk); exit when S_AXI_WREADY = '1'; end loop;
+      S_AXI_WVALID <= '0'; S_AXI_WLAST <= '0';
+    end procedure;
+
+    procedure drive_write(ident : natural; address : std_logic_vector;
+                          beats, size, burst, prot, fault, waits, holds : natural;
+                          base : std_logic_vector; strobe : natural; w_first : boolean) is
+      variable zero_data : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+    begin
+      fault_mode <= fault; wait_limit <= waits;
+      if w_first then
+        for beat in 0 to beats-1 loop send_w(base, strobe, beat, beats); end loop;
+        send_aw(ident, address, beats, size, burst, prot);
+      else
+        send_aw(ident, address, beats, size, burst, prot);
+        for beat in 0 to beats-1 loop send_w(base, strobe, beat, beats); end loop;
+      end if;
+      loop wait until rising_edge(Clk); exit when S_AXI_BVALID = '1'; end loop;
+      for i in 1 to holds loop wait until rising_edge(Clk); end loop;
+      assert not is_x(S_AXI_BID) and not is_x(S_AXI_BRESP)
+        report "AXI_LMB_SELF_CHECK_STATUS: FAIL unknown B response" severity failure;
+      write_bit(row, '0'); write_bits(row, S_AXI_BID); write_bits(row, zero_data);
+      write_bits(row, S_AXI_BRESP); write_bit(row, '0'); writeline(output_file, row);
+      S_AXI_BREADY <= '1'; wait until rising_edge(Clk); S_AXI_BREADY <= '0';
+    end procedure;
+
+    procedure drive_read(ident : natural; address : std_logic_vector;
+                         beats, size, burst, prot, fault, waits, holds : natural) is
+    begin
+      fault_mode <= fault; wait_limit <= waits;
+      S_AXI_ARID <= std_logic_vector(to_unsigned(ident, ID_WIDTH));
+      S_AXI_ARADDR <= address;
+      S_AXI_ARLEN <= std_logic_vector(to_unsigned(beats-1, 8));
+      S_AXI_ARSIZE <= std_logic_vector(to_unsigned(size, 3));
+      S_AXI_ARBURST <= std_logic_vector(to_unsigned(burst, 2));
+      S_AXI_ARPROT <= std_logic_vector(to_unsigned(prot, 3));
+      S_AXI_ARVALID <= '1';
+      loop wait until rising_edge(Clk); exit when S_AXI_ARREADY = '1'; end loop;
+      S_AXI_ARVALID <= '0';
+      for beat in 0 to beats-1 loop
+        loop wait until rising_edge(Clk); exit when S_AXI_RVALID = '1'; end loop;
+        for i in 1 to holds loop wait until rising_edge(Clk); end loop;
+        assert not is_x(S_AXI_RID) and not is_x(S_AXI_RDATA) and
+               not is_x(S_AXI_RRESP) and (S_AXI_RLAST = '0' or S_AXI_RLAST = '1')
+          report "AXI_LMB_SELF_CHECK_STATUS: FAIL unknown R response" severity failure;
+        write_bit(row, '1'); write_bits(row, S_AXI_RID); write_bits(row, S_AXI_RDATA);
+        write_bits(row, S_AXI_RRESP); write_bit(row, S_AXI_RLAST); writeline(output_file, row);
+        S_AXI_RREADY <= '1'; wait until rising_edge(Clk); S_AXI_RREADY <= '0';
+      end loop;
+    end procedure;
+  begin
+    for i in 1 to 6 loop wait until rising_edge(Clk); end loop;
+    Rst <= '0';
+    for i in 1 to 3 loop wait until rising_edge(Clk); end loop;
+    drive_write(1, "00000000000000000000000100000000", 1, 2, 1, 0, 0, 0, 0, "0001000000100000001100000100000001010000011000000111000010000000", 255, false);
+    drive_read(1, "00000000000000000000000100000000", 1, 2, 1, 0, 0, 0, 3);
+    drive_write(2, "00000000000000000000000111110000", 4, 2, 1, 1, 0, 2, 0, "1111111111111111111111111111111111111111111111111111111111111111", 255, false);
+    drive_read(2, "00000000000000000000000111110000", 4, 2, 1, 1, 0, 1, 2);
+    drive_write(3, "00000000000000000000001000100000", 2, 1, 0, 0, 0, 0, 0, "1000100001110111011001100101010101000100001100110010001000010001", 3, false);
+    drive_read(3, "00000000000000000000001000100000", 2, 1, 0, 0, 0, 0, 0);
+    drive_write(4, "00000000000000000000001000111100", 4, 2, 2, 0, 0, 0, 0, "0000000000000000000000000000000010100101010110100101101010100101", 255, true);
+    drive_read(4, "00000000000000000000001000111100", 4, 2, 2, 0, 0, 0, 0);
+    drive_write(5, "00000000000000000000001010000000", 1, 2, 1, 0, 0, 0, 0, "0000000000000000000000000000000011011110101011011011111011101111", 0, false);
+    drive_write(6, "00000000000000000000001010100000", 1, 2, 1, 0, 1, 0, 0, "0000000000000000000000000000000000010010001101000101011001111000", 255, false);
+    drive_read(6, "00000000000000000000001010100000", 1, 2, 1, 0, 1, 0, 0);
+    drive_write(7, "00000000000000000000001011000000", 1, 2, 1, 0, 2, 0, 0, "0000000000000000000000000000000011001010111111101011101010111110", 255, false);
+    drive_read(7, "00000000000000000000001011000000", 1, 2, 1, 0, 2, 0, 0);
+    drive_write(1, "00000000000000000000001011010000", 1, 2, 1, 0, 0, 0, 0, "0000000000000000000000000000000000010011010101111001101111011111", 255, false);
+    drive_read(1, "00000000000000000000001011010000", 1, 2, 1, 0, 0, 0, 0);
+    drive_write(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 0, 0, "0000000000000000000000000000000000000000000000000000000000000000", 0, false);
+    drive_read(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 1, 1);
+    drive_write(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 0, 1, "0000000000000000000000000000000000000000000000000000000000000000", 0, true);
+    drive_read(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 1, 2);
+    drive_write(0, "01111111111111111111111111111100", 1, 2, 1, 0, 0, 0, 2, "0000000000000000000000000000000000000000000000000000000000000000", 0, false);
+    drive_read(0, "01111111111111111111111111111100", 1, 2, 1, 0, 0, 1, 3);
+    drive_write(0, "11111111111111111111111111111100", 1, 2, 1, 0, 0, 0, 0, "0000000000000000000000000000000000000000000000000000000000000000", 0, true);
+    drive_read(0, "11111111111111111111111111111100", 1, 2, 1, 0, 0, 1, 0);
+    drive_write(0, "11111111111111111111111111111100", 1, 2, 1, 0, 0, 0, 1, "0000000000000000000000000000000000000000000000000000000000000000", 0, false);
+    drive_read(0, "11111111111111111111111111111100", 1, 2, 1, 0, 0, 1, 1);
+    drive_write(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 0, 2, "0000000000000000000000000000000000000000000000000000000000000001", 0, true);
+    drive_read(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 1, 2);
+    drive_write(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 0, 0, "0111111111111111111111111111111111111111111111111111111111111111", 0, false);
+    drive_read(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 1, 3);
+    drive_write(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 0, 1, "1111111111111111111111111111111111111111111111111111111111111110", 0, true);
+    drive_read(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 1, 0);
+    drive_write(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 0, 2, "1111111111111111111111111111111111111111111111111111111111111111", 0, false);
+    drive_read(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 1, 1);
+    drive_write(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 0, 0, "0000000000000000000000000000000000000000000000000000000000000000", 1, true);
+    drive_read(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 1, 2);
+    drive_write(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 0, 1, "0000000000000000000000000000000000000000000000000000000000000000", 127, false);
+    drive_read(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 1, 3);
+    drive_write(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 0, 2, "0000000000000000000000000000000000000000000000000000000000000000", 254, true);
+    drive_read(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 1, 0);
+    drive_write(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 0, 0, "0000000000000000000000000000000000000000000000000000000000000000", 255, false);
+    drive_read(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 1, 1);
+    drive_write(1, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 0, 1, "0000000000000000000000000000000000000000000000000000000000000000", 0, true);
+    drive_read(1, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 1, 2);
+    drive_write(7, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 0, 2, "0000000000000000000000000000000000000000000000000000000000000000", 0, false);
+    drive_read(7, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 1, 3);
+    drive_write(14, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 0, 0, "0000000000000000000000000000000000000000000000000000000000000000", 0, true);
+    drive_read(14, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 1, 0);
+    drive_write(15, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 0, 1, "0000000000000000000000000000000000000000000000000000000000000000", 0, false);
+    drive_read(15, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 1, 1);
+    drive_write(0, "00000000000000000000000000000000", 1, 2, 1, 1, 0, 0, 2, "0000000000000000000000000000000000000000000000000000000000000000", 0, true);
+    drive_read(0, "00000000000000000000000000000000", 1, 2, 1, 1, 0, 1, 2);
+    drive_write(0, "00000000000000000000000000000000", 1, 2, 1, 3, 0, 0, 0, "0000000000000000000000000000000000000000000000000000000000000000", 0, false);
+    drive_read(0, "00000000000000000000000000000000", 1, 2, 1, 3, 0, 1, 3);
+    drive_write(0, "00000000000000000000000000000000", 1, 2, 1, 6, 0, 0, 1, "0000000000000000000000000000000000000000000000000000000000000000", 0, true);
+    drive_read(0, "00000000000000000000000000000000", 1, 2, 1, 6, 0, 1, 0);
+    drive_write(0, "00000000000000000000000000000000", 1, 2, 1, 7, 0, 0, 2, "0000000000000000000000000000000000000000000000000000000000000000", 0, false);
+    drive_read(0, "00000000000000000000000000000000", 1, 2, 1, 7, 0, 1, 1);
+    drive_write(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 1, 0, "0000000000000000000000000000000000000000000000000000000000000000", 0, true);
+    drive_read(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 2, 2);
+    drive_write(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 2, 1, "0000000000000000000000000000000000000000000000000000000000000000", 0, false);
+    drive_read(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 3, 3);
+    drive_write(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 3, 2, "0000000000000000000000000000000000000000000000000000000000000000", 0, true);
+    drive_read(0, "00000000000000000000000000000000", 1, 2, 1, 0, 0, 0, 0);
+    drive_write(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 3, 0, "1111111111111111111111111111111111111111111111111111111111111111", 255, false);
+    drive_read(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 0, 1);
+    drive_write(15, "00000000000000000000000000000000", 1, 2, 1, 7, 0, 3, 1, "1111111111111111111111111111111111111111111111111111111111111111", 255, true);
+    drive_read(15, "00000000000000000000000000000000", 1, 2, 1, 7, 0, 0, 2);
+    drive_write(15, "00000000000000000000000000000000", 1, 2, 1, 7, 0, 3, 2, "1111111111111111111111111111111111111111111111111111111111111111", 255, false);
+    drive_read(15, "00000000000000000000000000000000", 1, 2, 1, 7, 0, 0, 3);
+    drive_write(15, "01111111111111111111111111111100", 1, 2, 1, 7, 0, 3, 0, "1111111111111111111111111111111111111111111111111111111111111111", 255, true);
+    drive_read(15, "01111111111111111111111111111100", 1, 2, 1, 7, 0, 0, 0);
+    drive_write(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 3, 1, "1111111111111111111111111111111111111111111111111111111111111111", 255, false);
+    drive_read(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 0, 1);
+    drive_write(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 3, 2, "0000000000000000000000000000000000000000000000000000000000000000", 255, true);
+    drive_read(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 0, 2);
+    drive_write(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 3, 0, "0000000000000000000000000000000000000000000000000000000000000001", 255, false);
+    drive_read(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 0, 3);
+    drive_write(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 3, 1, "0111111111111111111111111111111111111111111111111111111111111111", 255, true);
+    drive_read(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 0, 0);
+    drive_write(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 3, 2, "1111111111111111111111111111111111111111111111111111111111111110", 255, false);
+    drive_read(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 0, 1);
+    drive_write(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 3, 0, "1111111111111111111111111111111111111111111111111111111111111111", 0, true);
+    drive_read(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 0, 2);
+    drive_write(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 3, 1, "1111111111111111111111111111111111111111111111111111111111111111", 1, false);
+    drive_read(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 0, 3);
+    drive_write(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 3, 2, "1111111111111111111111111111111111111111111111111111111111111111", 127, true);
+    drive_read(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 0, 0);
+    drive_write(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 3, 0, "1111111111111111111111111111111111111111111111111111111111111111", 254, false);
+    drive_read(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 0, 1);
+    drive_write(0, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 3, 1, "1111111111111111111111111111111111111111111111111111111111111111", 255, true);
+    drive_read(0, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 0, 2);
+    drive_write(1, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 3, 2, "1111111111111111111111111111111111111111111111111111111111111111", 255, false);
+    drive_read(1, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 0, 3);
+    drive_write(7, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 3, 0, "1111111111111111111111111111111111111111111111111111111111111111", 255, true);
+    drive_read(7, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 0, 0);
+    drive_write(14, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 3, 1, "1111111111111111111111111111111111111111111111111111111111111111", 255, false);
+    drive_read(14, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 0, 1);
+    drive_write(15, "11111111111111111111111111111100", 1, 2, 1, 0, 0, 3, 2, "1111111111111111111111111111111111111111111111111111111111111111", 255, true);
+    drive_read(15, "11111111111111111111111111111100", 1, 2, 1, 0, 0, 0, 2);
+    drive_write(15, "11111111111111111111111111111100", 1, 2, 1, 1, 0, 3, 0, "1111111111111111111111111111111111111111111111111111111111111111", 255, false);
+    drive_read(15, "11111111111111111111111111111100", 1, 2, 1, 1, 0, 0, 3);
+    drive_write(15, "11111111111111111111111111111100", 1, 2, 1, 3, 0, 3, 1, "1111111111111111111111111111111111111111111111111111111111111111", 255, true);
+    drive_read(15, "11111111111111111111111111111100", 1, 2, 1, 3, 0, 0, 0);
+    drive_write(15, "11111111111111111111111111111100", 1, 2, 1, 6, 0, 3, 2, "1111111111111111111111111111111111111111111111111111111111111111", 255, false);
+    drive_read(15, "11111111111111111111111111111100", 1, 2, 1, 6, 0, 0, 1);
+    drive_write(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 0, 0, "1111111111111111111111111111111111111111111111111111111111111111", 255, true);
+    drive_read(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 1, 2);
+    drive_write(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 1, 1, "1111111111111111111111111111111111111111111111111111111111111111", 255, false);
+    drive_read(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 2, 3);
+    drive_write(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 2, 2, "1111111111111111111111111111111111111111111111111111111111111111", 255, true);
+    drive_read(15, "11111111111111111111111111111100", 1, 2, 1, 7, 0, 3, 0);
+    drive_write(9, "00100100000010001100100011010000", 1, 2, 1, 2, 0, 2, 0, "0001110100100001111001111110100001011000011011000001110001011001", 62, false);
+    drive_read(9, "00100100000010001100100011010000", 1, 2, 1, 2, 0, 3, 1);
+    drive_write(6, "00001010101110101011001101000100", 1, 2, 1, 3, 0, 3, 1, "1011010010110111001111110010011001101100001001101000111110101111", 235, true);
+    drive_read(6, "00001010101110101011001101000100", 1, 2, 1, 3, 0, 0, 2);
+    drive_write(5, "11111011101111111011111101001100", 1, 2, 1, 0, 0, 3, 2, "0001100100001010010110000000001011001011110011110000111101111011", 49, false);
+    drive_read(5, "11111011101111111011111101001100", 1, 2, 1, 0, 0, 0, 3);
+    drive_write(0, "01100100110011101101011101011100", 1, 2, 1, 5, 0, 3, 0, "0111000110100110110111001010111011010001100100000001010110110010", 96, true);
+    drive_read(0, "01100100110011101101011101011100", 1, 2, 1, 5, 0, 0, 0);
+    drive_write(4, "00000100001110011001101100111100", 1, 2, 1, 3, 0, 2, 1, "1010110101010111001000100100111100000011000010110011001100110000", 59, false);
+    drive_read(4, "00000100001110011001101100111100", 1, 2, 1, 3, 0, 3, 1);
+    drive_write(9, "01001101100111011100101000111000", 1, 2, 1, 4, 0, 2, 2, "1000101001110000000110110110110010010010010011010011011001010100", 200, true);
+    drive_read(9, "01001101100111011100101000111000", 1, 2, 1, 4, 0, 3, 2);
+    drive_write(13, "10001110111001110110111100111100", 1, 2, 1, 4, 0, 3, 0, "1011001001010111111011100110110110000111101010000101011001101001", 14, false);
+    drive_read(13, "10001110111001110110111100111100", 1, 2, 1, 4, 0, 0, 3);
+    drive_write(8, "10110101110111110000001000010100", 1, 2, 1, 1, 0, 3, 1, "0011001011000011011100111010010101110111011100110101001011100100", 179, true);
+    drive_read(8, "10110101110111110000001000010100", 1, 2, 1, 1, 0, 0, 0);
+    drive_write(12, "01011110110110111000110110110100", 1, 2, 1, 7, 0, 2, 2, "0011001001100100011011100110011000010110110010011001000011101001", 180, false);
+    drive_read(12, "01011110110110111000110110110100", 1, 2, 1, 7, 0, 3, 1);
+    drive_write(2, "11111100100011000110011100001000", 1, 2, 1, 5, 0, 3, 0, "1000001110001101001111010010010001000110001011110110100101011001", 14, true);
+    drive_read(2, "11111100100011000110011100001000", 1, 2, 1, 5, 0, 0, 2);
+    drive_write(10, "10000011100000010000010101101000", 1, 2, 1, 3, 0, 0, 1, "1010101011111011110100001111001110011101101110110110111100001010", 64, false);
+    drive_read(10, "10000011100000010000010101101000", 1, 2, 1, 3, 0, 1, 3);
+    drive_write(8, "10100111010110100100110010101000", 1, 2, 1, 4, 0, 2, 2, "1101110101011011011110010110000000010110111100000100100000001011", 43, true);
+    drive_read(8, "10100111010110100100110010101000", 1, 2, 1, 4, 0, 3, 0);
+    drive_write(12, "11100101111010100110101001000100", 1, 2, 1, 4, 0, 2, 0, "1001110001110001000110010111101010110001111101011000100110000111", 135, false);
+    drive_read(12, "11100101111010100110101001000100", 1, 2, 1, 4, 0, 3, 1);
+    drive_write(4, "00011110100011100101010001110100", 1, 2, 1, 2, 0, 1, 1, "0010111100011010100001110000110110010001001110000010010011000000", 89, true);
+    drive_read(4, "00011110100011100101010001110100", 1, 2, 1, 2, 0, 2, 2);
+    drive_write(5, "11111110001101010101110011110100", 1, 2, 1, 2, 0, 1, 2, "1100011001001011000111000010001111100000101000000111000001010100", 194, false);
+    drive_read(5, "11111110001101010101110011110100", 1, 2, 1, 2, 0, 2, 3);
+    drive_write(10, "00000110000010000100011100001100", 1, 2, 1, 2, 0, 3, 0, "1111111011110100011010101110000110101111011010110100110001100111", 169, true);
+    drive_read(10, "00000110000010000100011100001100", 1, 2, 1, 2, 0, 0, 0);
+    for i in 1 to 8 loop wait until rising_edge(Clk); end loop;
+    assert access_index = ACCESS_COUNT
+      report "AXI_LMB_SELF_CHECK_STATUS: FAIL missing LMB access" severity failure;
+    report "AXI_LMB_SELF_CHECK_STATUS: PASS" severity failure;
+    wait;
+  end process;
+
+  timeout : process
+  begin
+    wait for 148000 ns;
+    report "AXI_LMB_SELF_CHECK_STATUS: FAIL timeout access_index=" &
+      integer'image(access_index) & " awready=" & std_logic'image(S_AXI_AWREADY) &
+      " wready=" & std_logic'image(S_AXI_WREADY) & " bvalid=" & std_logic'image(S_AXI_BVALID) &
+      " arready=" & std_logic'image(S_AXI_ARREADY) & " rvalid=" & std_logic'image(S_AXI_RVALID) &
+      " addrstrobe=" & std_logic'image(M_AddrStrobe) & " readstrobe=" &
+      std_logic'image(M_ReadStrobe) & " writestrobe=" & std_logic'image(M_WriteStrobe) &
+      " lmb_ready=" & std_logic'image(LMB_Ready) & " lmb_wait=" & std_logic'image(LMB_Wait)
+      & " aw_handshakes=" & integer'image(aw_handshakes)
+      & " w_handshakes=" & integer'image(w_handshakes)
+      & " wlast_handshakes=" & integer'image(wlast_handshakes)
+      severity failure;
+  end process;
+end architecture;

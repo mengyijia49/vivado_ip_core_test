@@ -56,6 +56,9 @@ $prot_signal
   signal LMB_Ready, LMB_UE : std_logic := '0';
   signal LMB_Wait : std_logic := '1';
   signal LMB_CE : std_logic := '0';
+  signal read_data_now, read_data_delayed : std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
+  signal read_ue_now, read_ue_delayed, write_ue_now : std_logic := '0';
+  signal request_is_read : std_logic := '0';
   signal fault_mode : natural range 0 to 2 := 0;
   signal wait_limit : natural range 0 to 3 := 0;
   signal wait_count : natural range 0 to 3 := 0;
@@ -100,6 +103,11 @@ $prot_signal
 begin
   Clk <= not Clk after 5 ns;
 
+  -- Frequency reads return data and UE one cycle after Ready; writes do not.
+  LMB_ReadDBus <= read_data_delayed when FREQUENCY_PROTOCOL else read_data_now;
+  LMB_UE <= (read_ue_delayed or write_ue_now) when FREQUENCY_PROTOCOL else
+            (read_ue_now or write_ue_now);
+
   dut : entity work.dut_0
     port map (
       Clk => Clk, Rst => Rst,
@@ -129,13 +137,19 @@ begin
   begin
     if rising_edge(Clk) then
       LMB_Ready <= '0';
-      LMB_UE <= '0';
+      read_ue_now <= '0';
+      write_ue_now <= '0';
+      read_data_delayed <= read_data_now;
+      read_ue_delayed <= read_ue_now;
       LMB_Wait <= '1';
       if Rst = '1' then
         wait_count <= 0;
         responder_state <= IDLE;
         access_index <= 0;
-        LMB_ReadDBus <= (others => '0');
+        read_data_now <= (others => '0');
+        read_data_delayed <= (others => '0');
+        read_ue_delayed <= '0';
+        request_is_read <= '0';
       else
         case responder_state is
           when IDLE =>
@@ -154,7 +168,8 @@ begin
               assert M_DBus = EXPECTED_DATA(access_index) and M_BE = EXPECTED_BE(access_index)
                 report "AXI_LMB_SELF_CHECK_STATUS: FAIL LMB write payload mismatch" severity failure;$prot_check
               access_index <= access_index + 1;
-              LMB_ReadDBus <= read_value(M_ABus);
+              read_data_now <= read_value(M_ABus);
+              request_is_read <= M_ReadStrobe;
               wait_count <= 0;
               responder_state <= WAITING;
             end if;
@@ -166,7 +181,10 @@ begin
               wait_count <= wait_count + 1;
             else
               LMB_Ready <= '1';
-              if fault_mode = 2 then LMB_UE <= '1'; end if;
+              if fault_mode = 2 then
+                read_ue_now <= request_is_read;
+                write_ue_now <= not request_is_read;
+              end if;
               responder_state <= COMPLETE_GAP;
             end if;
           when COMPLETE_GAP =>
@@ -186,7 +204,8 @@ begin
               assert M_DBus = EXPECTED_DATA(access_index) and M_BE = EXPECTED_BE(access_index)
                 report "AXI_LMB_SELF_CHECK_STATUS: FAIL LMB write payload mismatch" severity failure;$prot_check
               access_index <= access_index + 1;
-              LMB_ReadDBus <= read_value(M_ABus);
+              read_data_now <= read_value(M_ABus);
+              request_is_read <= M_ReadStrobe;
               responder_state <= WAITING;
             else
               responder_state <= IDLE;

@@ -1,0 +1,37 @@
+[
+  {
+    "case": "auto",
+    "requested_latency": -1,
+    "generated_latency": 4,
+    "returncode": 0,
+    "mismatch_count": 0
+  },
+  {
+    "case": "latency_4",
+    "requested_latency": 4,
+    "generated_latency": 4,
+    "returncode": 0,
+    "mismatch_count": 0
+  },
+  {
+    "case": "latency_16",
+    "requested_latency": 16,
+    "generated_latency": 16,
+    "returncode": 0,
+    "mismatch_count": 0
+  },
+  {
+    "case": "latency_54",
+    "requested_latency": 54,
+    "generated_latency": 54,
+    "returncode": 0,
+    "mismatch_count": 7
+  },
+  {
+    "case": "latency_55",
+    "requested_latency": 55,
+    "generated_latency": 55,
+    "returncode": 0,
+    "mismatch_count": 7
+  }
+]

@@ -21,22 +21,22 @@ python3 scripts/run_all.py --all
 | 累加器、复数乘法长延迟、TMR、GPIO、旧版 xlconcat | 14 | 与既有待确认现象同类，仍需核对规范或厂商模型 |
 | CORDIC 平方根 | 5 | 精确数学参考与厂商内部精度存在差异，不能直接算 IP bug |
 | 双精度浮点低延迟乘法、Mailbox TLAST、AXI INTC | 17 | 与此前 2026.1 独立复现的现象同类，不能按配置数计算 bug |
-| AXI to LMB Bridge 文件校验 | 2 | `frequency_40` 和 `pause_64` 的数据及响应有差异，原因未定 |
-| AXIS Protocol Checker 文件校验 | 1 | `axis_pc_128_partial` 的状态位比参考值多 bit 6，原因未定 |
+| AXI to LMB Bridge 文件校验 | 2 | 9 月 23 日查明测试端没有延后 Frequency 读应答；修正后通过 |
+| AXIS Protocol Checker 文件校验 | 1 | 9 月 23 日查明参考漏算默认 TSTRB=TKEEP；修正后通过 |
 
 修复两个框架适配点后，单独复测 `cmul_comb_pad11`、`cmul_comb_round`、
 `axis_pc_no_ready_sidebands`，三组的创建、生成和仿真均通过。
 复测编号为 `2026-09-22_16-09-47_UTC+0800_7e11e8e7`。
-因此，按最近一次结果计算，478 组中有 439 组自检通过、39 组仍有失败；
+当时合并结果为 439 组自检通过、39 组仍有失败；
 这不是一次重新执行全部 478 组的“全绿”报告。
 
-新出现的三条文件校验失败尚未有独立 VHDL 复现。
-AXI to LMB Bridge 两组从第 3 条输出开始出现数据差异，第 19 条还出现响应差异。
-Protocol Checker 的 `axis_pc_128_partial` 第 5、14、23 条输出中，
-参考状态为 bit 3，实际还置了 bit 6。该配置没有启用 `TSTRB` 端口，
-所以不能直接按当前参考表把 bit 6 解释成 `TSTRB` 变化。
-需要核对状态位定义和激励，再决定是修 testbench、参考模型，还是继续调查 IP。
-现在不计为确认 bug。
+9 月 23 日追加排查，已确认上述三组文件校验失败都来自框架：
+[Bridge](../ip/axi_lmb_bridge/data_issue.md) 的 LMB 应答时序写错，
+[Protocol Checker](../ip/axis_protocol_checker/partial_issue.md) 的默认信号关系漏算。
+修改前重跑三组仍失败；修正后两类 IP 的全部 11 组常用配置、33 个阶段通过，
+固定请求及可选端口对照也通过。复测编号为 `2026-09-23_16-17-52_UTC+0800_46625706`。
+按各配置最近结果合并为 442 组通过、36 组仍有失败；没有重新跑完整 478 组，
+也没有改写 9 月 22 日的原始失败报告。剩余失败数仍不等于 IP bug 数。
 
 原始报告、复测报告和上述三组的输入输出、失败摘要在
 [公开证据](../../evidence/vivado_2026_1/full_regression/)；

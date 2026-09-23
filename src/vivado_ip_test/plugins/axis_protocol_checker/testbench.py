@@ -61,7 +61,7 @@ class AxisProtocolCheckerTestbenchBackend:
         run = self.layout.case_run_dir(case)
         xci, metadata = load_metadata(run, spec.metadata, "axis_protocol_checker", "2.0")
         operations = prepare_operations(case.parameters, case.verification)
-        model = AxisProtocolCheckerReference()
+        model = AxisProtocolCheckerReference(case.parameters)
         outputs = model.evaluate(operations)
         paths = {name: run / value for name, value in {
             "testbench": "tb/tb_axis_protocol_checker.vhd",

@@ -1,0 +1,12 @@
+{
+  "C_DATA_WIDTH": 32,
+  "C_ADDR_WIDTH": 32,
+  "C_AXI_AW_DEPTH": 2,
+  "C_AXI_W_DEPTH": 8,
+  "C_AXI_AR_DEPTH": 2,
+  "C_AXI_R_DEPTH": 8,
+  "C_AXI_ID_WIDTH": 1,
+  "C_USE_PAUSE": 0,
+  "C_LMB_PROTOCOL": 1,
+  "C_LMB_HAS_PROT": 0
+}

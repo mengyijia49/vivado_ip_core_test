@@ -1,0 +1,2550 @@
+{
+  "case": "latency_16",
+  "requested_latency": 16,
+  "generated_latency": 16,
+  "classification": "OBSERVATION_NOT_VENDOR_CONFIRMED",
+  "rows": [
+    {
+      "cycle": 0,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "0"
+    },
+    {
+      "cycle": 1,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "0"
+    },
+    {
+      "cycle": 2,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "0"
+    },
+    {
+      "cycle": 3,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "0"
+    },
+    {
+      "cycle": 4,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "0"
+    },
+    {
+      "cycle": 5,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "0"
+    },
+    {
+      "cycle": 6,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "0"
+    },
+    {
+      "cycle": 7,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "0"
+    },
+    {
+      "cycle": 8,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "0"
+    },
+    {
+      "cycle": 9,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "0"
+    },
+    {
+      "cycle": 10,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "0"
+    },
+    {
+      "cycle": 11,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "0"
+    },
+    {
+      "cycle": 12,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "0"
+    },
+    {
+      "cycle": 13,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "0"
+    },
+    {
+      "cycle": 14,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "0"
+    },
+    {
+      "cycle": 15,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 16,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 17,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 18,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 19,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 20,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 21,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 22,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 23,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 24,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 25,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 26,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 27,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 28,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 29,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 30,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 31,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 32,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 33,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 34,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 35,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 36,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 37,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 38,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 39,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 40,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 41,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 42,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 43,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 44,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 45,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 46,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 47,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 48,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 49,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 50,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 51,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 52,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 53,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 54,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 55,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 56,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 57,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 58,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 59,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 60,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 61,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 62,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 63,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 64,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 65,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 66,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 67,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 68,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 69,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 70,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 71,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 72,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 73,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 74,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 75,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 76,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 77,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 78,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 79,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 80,
+      "input": "0002",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 81,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 82,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 83,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 84,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 85,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 86,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 87,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 88,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 89,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 90,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 91,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 92,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 93,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 94,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 95,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000001",
+      "vout": "1"
+    },
+    {
+      "cycle": 96,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000001",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 97,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 98,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 99,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 100,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 101,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 102,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 103,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 104,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 105,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 106,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 107,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 108,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 109,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 110,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 111,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 112,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 113,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 114,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 115,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 116,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 117,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 118,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 119,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 120,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 121,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 122,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 123,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 124,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 125,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 126,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 127,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 128,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 129,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 130,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 131,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 132,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 133,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 134,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 135,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 136,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 137,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 138,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 139,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 140,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 141,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 142,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 143,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 144,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 145,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 146,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 147,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 148,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 149,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 150,
+      "input": "0004",
+      "vin": "0",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 151,
+      "input": "0004",
+      "vin": "0",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 152,
+      "input": "0004",
+      "vin": "0",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 153,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 154,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 155,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 156,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 157,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 158,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 159,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 160,
+      "input": "0006",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 161,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 162,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 163,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 164,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 165,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000002",
+      "vout": "0"
+    },
+    {
+      "cycle": 166,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000002",
+      "output": "00000002",
+      "vout": "0"
+    },
+    {
+      "cycle": 167,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000002",
+      "output": "00000002",
+      "vout": "0"
+    },
+    {
+      "cycle": 168,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000002",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 169,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 170,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 171,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 172,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 173,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 174,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 175,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000003",
+      "vout": "1"
+    },
+    {
+      "cycle": 176,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000003",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 177,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 178,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 179,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 180,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 181,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 182,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 183,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 184,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 185,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 186,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 187,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 188,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 189,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 190,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 191,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 192,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 193,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 194,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 195,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 196,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 197,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 198,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 199,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 200,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 201,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 202,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 203,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 204,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 205,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 206,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 207,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 208,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 209,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 210,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 211,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 212,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 213,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 214,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 215,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 216,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 217,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 218,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 219,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 220,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 221,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 222,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 223,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 224,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 225,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 226,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 227,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 228,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 229,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 230,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 231,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 232,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 233,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 234,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 235,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 236,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 237,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 238,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    },
+    {
+      "cycle": 239,
+      "input": "0000",
+      "vin": "1",
+      "before": "00000000",
+      "output": "00000000",
+      "vout": "1"
+    }
+  ],
+  "mismatches": [],
+  "fixture_sha256": "3423a02d177a8c77321b259e2c88a0f4c307728ef5f92a77ae48f9eeb788e1c8",
+  "xci_sha256": "f0b8c013e101cddd167fa14cc6c45f0086eb490c6bdeb192a1bc3725df4ed542",
+  "wrapper_sha256": "49eae28dd4a7d575c347a3d529569cf2af74d677640cb653d19db01e61a2b5bf",
+  "settings": {
+    "DataType": "Integer",
+    "HasAccumulator": "false",
+    "APortWidth": "8",
+    "BPortWidth": "8",
+    "OutputWidth": "16",
+    "MultType": "Use_Mults",
+    "OptimizeGoal": "Performance",
+    "FlowControl": "NonBlocking",
+    "RoundMode": "Truncate",
+    "LatencyConfig": "Manual",
+    "ACLKEN": "false",
+    "ARESETN": "false",
+    "OutTLASTBehv": "Null",
+    "HasATLAST": "false",
+    "HasATUSER": "false",
+    "HasBTLAST": "false",
+    "HasBTUSER": "false",
+    "HasCTRLTLAST": "false",
+    "HasCTRLTUSER": "false",
+    "MinimumLatency": "16"
+  },
+  "parameters": {
+    "component_parameters": {
+      "Component_Name": [
+        {
+          "value": "dut_0",
+          "resolve_type": "user",
+          "usage": "all"
+        }
+      ],
+      "DataType": [
+        {
+          "value": "Integer",
+          "value_src": "user",
+          "resolve_type": "user",
+          "usage": "all"
+        }
+      ],
+      "HasAccumulator": [
+        {
+          "value": "false",
+          "value_src": "user",
+          "resolve_type": "user",
+          "format": "bool",
+          "usage": "all"
+        }
+      ],
+      "APortWidth": [
+        {
+          "value": "8",
+          "value_src": "user",
+          "resolve_type": "user",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "HasATLAST": [
+        {
+          "value": "false",
+          "value_src": "user",
+          "resolve_type": "user",
+          "format": "bool",
+          "usage": "all"
+        }
+      ],
+      "HasATUSER": [
+        {
+          "value": "false",
+          "value_src": "user",
+          "resolve_type": "user",
+          "format": "bool",
+          "usage": "all"
+        }
+      ],
+      "ATUSERWidth": [
+        {
+          "value": "1",
+          "resolve_type": "user",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "BPortWidth": [
+        {
+          "value": "8",
+          "value_src": "user",
+          "resolve_type": "user",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "HasBTLAST": [
+        {
+          "value": "false",
+          "value_src": "user",
+          "resolve_type": "user",
+          "format": "bool",
+          "usage": "all"
+        }
+      ],
+      "HasBTUSER": [
+        {
+          "value": "false",
+          "value_src": "user",
+          "resolve_type": "user",
+          "format": "bool",
+          "usage": "all"
+        }
+      ],
+      "BTUSERWidth": [
+        {
+          "value": "1",
+          "resolve_type": "user",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "MultType": [
+        {
+          "value": "Use_Mults",
+          "value_src": "user",
+          "resolve_type": "user",
+          "usage": "all"
+        }
+      ],
+      "OptimizeGoal": [
+        {
+          "value": "Performance",
+          "value_src": "user",
+          "resolve_type": "user",
+          "usage": "all"
+        }
+      ],
+      "FlowControl": [
+        {
+          "value": "NonBlocking",
+          "value_src": "user",
+          "resolve_type": "user",
+          "usage": "all"
+        }
+      ],
+      "RoundMode": [
+        {
+          "value": "Truncate",
+          "value_src": "user",
+          "resolve_type": "user",
+          "usage": "all"
+        }
+      ],
+      "OutputWidth": [
+        {
+          "value": "16",
+          "value_src": "user",
+          "resolve_type": "user",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "HasCTRLTLAST": [
+        {
+          "value": "false",
+          "value_src": "user",
+          "resolve_type": "user",
+          "format": "bool",
+          "usage": "all"
+        }
+      ],
+      "HasCTRLTUSER": [
+        {
+          "value": "false",
+          "value_src": "user",
+          "resolve_type": "user",
+          "format": "bool",
+          "usage": "all"
+        }
+      ],
+      "CTRLTUSERWidth": [
+        {
+          "value": "1",
+          "resolve_type": "user",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "OutTLASTBehv": [
+        {
+          "value": "Null",
+          "value_src": "user",
+          "resolve_type": "user",
+          "usage": "all"
+        }
+      ],
+      "LatencyConfig": [
+        {
+          "value": "Manual",
+          "value_src": "user",
+          "resolve_type": "user",
+          "usage": "all"
+        }
+      ],
+      "MinimumLatency": [
+        {
+          "value": "16",
+          "value_src": "user",
+          "resolve_type": "user",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "ACLKEN": [
+        {
+          "value": "false",
+          "value_src": "user",
+          "resolve_type": "user",
+          "format": "bool",
+          "usage": "all"
+        }
+      ],
+      "ARESETN": [
+        {
+          "value": "false",
+          "value_src": "user",
+          "resolve_type": "user",
+          "format": "bool",
+          "usage": "all"
+        }
+      ]
+    },
+    "model_parameters": {
+      "C_VERBOSITY": [
+        {
+          "value": "0",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_XDEVICEFAMILY": [
+        {
+          "value": "artix7",
+          "resolve_type": "generated",
+          "usage": "all"
+        }
+      ],
+      "C_XDEVICE": [
+        {
+          "value": "xc7a35t",
+          "resolve_type": "generated",
+          "usage": "all"
+        }
+      ],
+      "C_DATA_TYPE": [
+        {
+          "value": "0",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_A_WIDTH": [
+        {
+          "value": "8",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_B_WIDTH": [
+        {
+          "value": "8",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_OUT_WIDTH": [
+        {
+          "value": "16",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_LATENCY": [
+        {
+          "value": "16",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_MULT_TYPE": [
+        {
+          "value": "1",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_OPTIMIZE_GOAL": [
+        {
+          "value": "1",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "HAS_NEGATE": [
+        {
+          "value": "0",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "SINGLE_OUTPUT": [
+        {
+          "value": "0",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "ROUND": [
+        {
+          "value": "0",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "USE_DSP_CASCADES": [
+        {
+          "value": "1",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_HAS_ACCUMULATOR": [
+        {
+          "value": "0",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_THROTTLE_SCHEME": [
+        {
+          "value": "3",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_HAS_ACLKEN": [
+        {
+          "value": "0",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_HAS_ARESETN": [
+        {
+          "value": "0",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_HAS_S_AXIS_A_TUSER": [
+        {
+          "value": "0",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_HAS_S_AXIS_A_TLAST": [
+        {
+          "value": "0",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_HAS_S_AXIS_B_TUSER": [
+        {
+          "value": "0",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_HAS_S_AXIS_B_TLAST": [
+        {
+          "value": "0",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_HAS_S_AXIS_CTRL_TUSER": [
+        {
+          "value": "0",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_HAS_S_AXIS_CTRL_TLAST": [
+        {
+          "value": "0",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_TLAST_RESOLUTION": [
+        {
+          "value": "0",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_S_AXIS_A_TDATA_WIDTH": [
+        {
+          "value": "16",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_S_AXIS_A_TUSER_WIDTH": [
+        {
+          "value": "1",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_S_AXIS_B_TDATA_WIDTH": [
+        {
+          "value": "16",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_S_AXIS_B_TUSER_WIDTH": [
+        {
+          "value": "1",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_S_AXIS_CTRL_TDATA_WIDTH": [
+        {
+          "value": "8",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_S_AXIS_CTRL_TUSER_WIDTH": [
+        {
+          "value": "1",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_M_AXIS_DOUT_TDATA_WIDTH": [
+        {
+          "value": "32",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ],
+      "C_M_AXIS_DOUT_TUSER_WIDTH": [
+        {
+          "value": "1",
+          "resolve_type": "generated",
+          "format": "long",
+          "usage": "all"
+        }
+      ]
+    },
+    "project_parameters": {
+      "ARCHITECTURE": [
+        {
+          "value": "artix7",
+          "resolve_type": "generated",
+          "usage": "all"
+        }
+      ],
+      "BASE_BOARD_PART": [
+        {
+          "value": "",
+          "resolve_type": "generated",
+          "usage": "all"
+        }
+      ],
+      "BOARD_CONNECTIONS": [
+        {
+          "value": "",
+          "resolve_type": "generated",
+          "usage": "all"
+        }
+      ],
+      "DEVICE": [
+        {
+          "value": "xc7a35t",
+          "resolve_type": "generated",
+          "usage": "all"
+        }
+      ],
+      "PACKAGE": [
+        {
+          "value": "csg324",
+          "resolve_type": "generated",
+          "usage": "all"
+        }
+      ],
+      "PREFHDL": [
+        {
+          "value": "VERILOG",
+          "resolve_type": "generated",
+          "usage": "all"
+        }
+      ],
+      "SILICON_REVISION": [
+        {
+          "value": "",
+          "resolve_type": "generated",
+          "usage": "all"
+        }
+      ],
+      "SIMULATOR_LANGUAGE": [
+        {
+          "value": "MIXED",
+          "resolve_type": "generated",
+          "usage": "all"
+        }
+      ],
+      "SPEEDGRADE": [
+        {
+          "value": "-1",
+          "resolve_type": "generated",
+          "usage": "all"
+        }
+      ],
+      "STATIC_POWER": [
+        {
+          "value": "",
+          "resolve_type": "generated",
+          "usage": "all"
+        }
+      ],
+      "TEMPERATURE_GRADE": [
+        {
+          "value": "",
+          "resolve_type": "generated",
+          "usage": "all"
+        }
+      ]
+    },
+    "runtime_parameters": {
+      "IPCONTEXT": [
+        {
+          "value": "IP_Flow"
+        }
+      ],
+      "IPREVISION": [
+        {
+          "value": "28"
+        }
+      ],
+      "MANAGED": [
+        {
+          "value": "TRUE"
+        }
+      ],
+      "OUTPUTDIR": [
+        {
+          "value": "../../../../ip_test.gen/sources_1/ip/dut_0"
+        }
+      ],
+      "SELECTEDSIMMODEL": [
+        {
+          "value": ""
+        }
+      ],
+      "SHAREDDIR": [
+        {
+          "value": "."
+        }
+      ],
+      "SWVERSION": [
+        {
+          "value": "2026.1"
+        }
+      ],
+      "SYNTHESISFLOW": [
+        {
+          "value": "OUT_OF_CONTEXT"
+        }
+      ]
+    }
+  },
+  "run_dir": "<REPOSITORY_ROOT>/runs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_16",
+  "log_dir": "<REPOSITORY_ROOT>/runs/logs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_16",
+  "returncode": 0
+}

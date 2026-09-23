@@ -1,0 +1,143 @@
+[
+  {
+    "case_id": "axis_pc_128_partial",
+    "stage": "create_ip",
+    "status": "PASS",
+    "ip_type": "axis_protocol_checker",
+    "parameters": {
+      "data_bytes": 16,
+      "has_aclken": false,
+      "has_system_reset": false,
+      "has_tkeep": true,
+      "has_tlast": true,
+      "has_tready": true,
+      "has_tstrb": false,
+      "max_waits": 64,
+      "tdest_width": 8,
+      "tid_width": 0,
+      "tuser_width": 16
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20261174",
+    "case_budget": "24",
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "metrics": {
+      "elapsed_seconds": 4.770702467067167,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/cases/axis_protocol_checker/axis_pc_128_partial",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axis_protocol_checker/axis_pc_128_partial/create_ip/create_ip.log"
+  },
+  {
+    "case_id": "axis_pc_128_partial",
+    "stage": "generate_testbench",
+    "status": "PASS",
+    "ip_type": "axis_protocol_checker",
+    "parameters": {
+      "data_bytes": 16,
+      "has_aclken": false,
+      "has_system_reset": false,
+      "has_tkeep": true,
+      "has_tlast": true,
+      "has_tready": true,
+      "has_tstrb": false,
+      "max_waits": 64,
+      "tdest_width": 8,
+      "tid_width": 0,
+      "tuser_width": 16
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20261174",
+    "case_budget": "24",
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "metrics": {
+      "checked_transaction_count": 24,
+      "comparison_kind": "axis_protocol_checker_exact_status_bits",
+      "elapsed_seconds": 0.0009173171129077673,
+      "reference_sequence_events": {
+        "legal": 3,
+        "max_wait_exceeded": 2,
+        "tdata_changed": 3,
+        "tdest_changed": 3,
+        "tkeep_changed": 3,
+        "tlast_changed": 2,
+        "tuser_changed": 2,
+        "tvalid_after_reset": 3,
+        "tvalid_dropped": 3
+      },
+      "sequence_coverage": "reset_stability_valid_wait_and_keep_strb_rules"
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/cases/axis_protocol_checker/axis_pc_128_partial",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axis_protocol_checker/axis_pc_128_partial/generate_testbench/generate_testbench.log"
+  },
+  {
+    "case_id": "axis_pc_128_partial",
+    "stage": "sim_selfcheck",
+    "status": "VERIFICATION_FAILED",
+    "ip_type": "axis_protocol_checker",
+    "parameters": {
+      "data_bytes": 16,
+      "has_aclken": false,
+      "has_system_reset": false,
+      "has_tkeep": true,
+      "has_tlast": true,
+      "has_tready": true,
+      "has_tstrb": false,
+      "max_waits": 64,
+      "tdest_width": 8,
+      "tid_width": 0,
+      "tuser_width": 16
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20261174",
+    "case_budget": "24",
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "metrics": {
+      "actual_output_sha256": "2ff381c81e45b763807b9d3f0911c04660e31c26097f4999f7918e18df7a5746",
+      "elapsed_seconds": 15.751975544029847,
+      "failure_detail_file": "outputs/failure.json",
+      "failure_detail_sha256": "ceca43e6588b1c40c69c300e111826237a51636f19659f381bde4ab0eed19fcb",
+      "failure_evidence": {
+        "actual": "00000000000000000000000001001000",
+        "classification": "UNTRIAGED",
+        "contains_unknown_bits": false,
+        "difference_summary": {
+          "all_rows_visited": true,
+          "artifact_issues": 0,
+          "classification": "OBSERVATION_GROUPS_NOT_BUG_COUNTS",
+          "difference_kind_counts": {
+            "value_mismatch": 3
+          },
+          "difference_rows": 3,
+          "group_limit": 256,
+          "grouping": "kind_phase_output_field_route:1.0",
+          "groups_truncated": false,
+          "layout_issue_rows": {},
+          "omitted_group_memberships": 0,
+          "retained_group_count": 1,
+          "rows_without_input_mapping": 3,
+          "schema_version": 1
+        },
+        "expected": "00000000000000000000000000001000",
+        "input_mapping_available": false,
+        "kind": "value_mismatch",
+        "output_index": 5
+      },
+      "output_count": 24,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/cases/axis_protocol_checker/axis_pc_128_partial",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axis_protocol_checker/axis_pc_128_partial/sim_selfcheck/sim_selfcheck.log"
+  }
+]

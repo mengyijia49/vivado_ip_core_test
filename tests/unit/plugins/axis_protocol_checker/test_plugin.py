@@ -23,7 +23,7 @@ class AxisProtocolCheckerTests(unittest.TestCase):
             "has_system_reset": False, "tid_width": 8, "tdest_width": 8,
             "tuser_width": 8, "max_waits": 16}
         operations = [{"scenario": name} for name in applicable_scenarios(parameters)]
-        rows = AxisProtocolCheckerReference().evaluate(operations)
+        rows = AxisProtocolCheckerReference(parameters).evaluate(operations)
         statuses = {operation["scenario"]: row["status"]
                     for operation, row in zip(operations, rows)}
         self.assertEqual(statuses["tvalid_after_reset"], 1 << 0)
@@ -32,6 +32,15 @@ class AxisProtocolCheckerTests(unittest.TestCase):
         self.assertEqual(statuses["tkeep_tstrb_conflict"], 1 << 10)
         self.assertEqual(statuses["legal"], 0)
         self.assertEqual(statuses["aclken_pauses_wait_counter"], 0)
+
+    def test_absent_tstrb_tracks_tkeep_including_stability_errors(self):
+        operations = [{"scenario": "legal"}, {"scenario": "tkeep_changed"}]
+        for has_tstrb, expected in ((False, 0x48), (True, 0x08)):
+            parameters = {**self.case.parameters, "has_tkeep": True,
+                          "has_tstrb": has_tstrb, "has_tready": True}
+            rows = AxisProtocolCheckerReference(parameters).evaluate(operations)
+            self.assertEqual([row["status"] for row in rows], [0, expected])
+            self.assertEqual([row["asserted"] for row in rows], [0, 1])
 
     def test_absent_ports_remove_only_their_dependent_scenarios(self):
         scenarios = set(applicable_scenarios(self.case.parameters))

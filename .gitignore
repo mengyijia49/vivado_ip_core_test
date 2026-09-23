@@ -14,3 +14,6 @@ __pycache__/
 build/
 dist/
 .coverage
+!evidence/vivado_2026_1/complex_multiplier/latency_trace/**/*.log
+!evidence/vivado_2026_1/axi_lmb_bridge/protocol_review/**/*.log
+!evidence/vivado_2026_1/axis_protocol_checker/protocol_review/**/*.log

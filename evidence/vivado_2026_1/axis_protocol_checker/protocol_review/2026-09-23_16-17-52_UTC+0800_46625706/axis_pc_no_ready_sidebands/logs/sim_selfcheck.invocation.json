@@ -1,0 +1,27 @@
+{
+  "started_at": "2026-09-23T08:21:19.028546+00:00",
+  "command": [
+    "<VIVADO_2026.1>/Vivado/bin/vivado",
+    "-mode",
+    "batch",
+    "-journal",
+    "<REPOSITORY_ROOT>/runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_no_ready_sidebands/sim_selfcheck.jou",
+    "-log",
+    "<REPOSITORY_ROOT>/runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_no_ready_sidebands/sim_selfcheck.log",
+    "-source",
+    "<REPOSITORY_ROOT>/tcl/run_xsim_batch.tcl",
+    "-tclargs",
+    "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_no_ready_sidebands/proj/ip_test.xpr",
+    "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_no_ready_sidebands/tb/tb_axis_protocol_checker.vhd",
+    "tb_axis_protocol_checker",
+    "AXIS_PROTOCOL_CHECKER_STATUS: PASS",
+    "AXIS_PROTOCOL_CHECKER_STATUS: FAIL"
+  ],
+  "cwd": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_no_ready_sidebands/work/sim_selfcheck",
+  "timeout_seconds": 600,
+  "state": "finished",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 16.980844751000404,
+  "finished_at": "2026-09-23T08:21:36.009460+00:00"
+}

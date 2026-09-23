@@ -52,7 +52,8 @@ def prepare_operations(parameters, verification):
 
 
 class AxisProtocolCheckerReference:
-    def __init__(self):
+    def __init__(self, parameters):
+        self.derived_tstrb = parameters["has_tkeep"] and not parameters["has_tstrb"]
         self.event_counts = Counter()
 
     def evaluate(self, operations):
@@ -61,6 +62,9 @@ class AxisProtocolCheckerReference:
             scenario = operation["scenario"]
             bit = STATUS_BITS[scenario]
             status = 0 if bit is None else 1 << bit
+            # AXI-Stream IHI 0051B 3.1.2: absent TSTRB defaults to TKEEP.
+            if scenario == "tkeep_changed" and self.derived_tstrb:
+                status |= 1 << STATUS_BITS["tstrb_changed"]
             rows.append({"status": status, "asserted": int(status != 0)})
             self.event_counts[scenario] += 1
         return rows

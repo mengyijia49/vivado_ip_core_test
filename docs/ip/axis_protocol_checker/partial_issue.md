@@ -1,7 +1,9 @@
-# AXIS Protocol Checker：没有启用 TSTRB，却多报了它的变化错误
+# AXIS Protocol Checker：已查明额外状态位来自默认信号
 
-Vivado 2026.1 的 `axis_pc_128_partial` 配置中，测试故意在等待接收时改变 TKEEP，
-检查器正确报出 TKEEP 变化，但同时多报了 TSTRB 变化。该配置没有启用 TSTRB。
+2026-09-23 已完成排查。这条不再作为 IP bug 候选。
+`axis_pc_128_partial` 没有 TSTRB 端口，但协议规定：没有 TSTRB 时，内部默认用 TKEEP。
+因此等待期间改变 TKEEP，也改变了内部的 TSTRB；报出两个变化状态有依据。
+原先“只应该报一个”的参考值不完整，已修正。
 
 ## 这个 IP 不算数字，它检查传输是否守规则
 
@@ -16,7 +18,7 @@ Protocol Checker 在旁边观察这些信号，发现违反规则就设置相应
 | TVALID | 发送方提供了一笔有效数据 |
 | TREADY | 接收方现在能接收 |
 | TKEEP | 每个字节是否属于有效传输内容，1 位对应 1 字节 |
-| TSTRB | 配合 TKEEP 区分数据字节与位置字节；本配置未启用 |
+| TSTRB | 配合 TKEEP 区分数据字节与位置字节；本配置无端口，内部默认等于 TKEEP |
 | TLAST | 这笔是否为包尾 |
 | TDEST / TID / TUSER | 目的标记、流标识、用户附加信息 |
 
@@ -32,7 +34,7 @@ Protocol Checker 在旁边观察这些信号，发现违反规则就设置相应
 | `data_bytes` | 16 | 每拍 16 字节，也就是 128 位数据 |
 | `has_tready` | true | 检查接收方的准备信号 |
 | `has_tkeep` | true | 检查 16 位字节有效标记 |
-| `has_tstrb` | false | 不启用 TSTRB 检查接口 |
+| `has_tstrb` | false | 不带外部 TSTRB 端口；不是内部信号固定为 0 |
 | `has_tlast` | true | 检查包尾标记 |
 | `tdest_width / tid_width / tuser_width` | 8 / 0 / 16 | 目的标记 8 位，不带 TID，用户信息 16 位 |
 | `max_waits` | 64 | 等待准备信号的监测阈值 |
@@ -50,9 +52,9 @@ TKEEP 起初全为 0，随后把最低一位改成 1，而接收方还没有同�
     ↓
 TKEEP 从 0x0000 变为 0x0001
     ↓
-应报告 TKEEP 变化错误
+TKEEP 变化，内部默认的 TSTRB 也一起变化
     ↓
-实测还多报了 TSTRB 变化错误
+实测同时报告两种变化，状态为 0x48
 ```
 
 ## 0x08 和 0x48 具体是什么意思
@@ -63,20 +65,55 @@ TKEEP 从 0x0000 变为 0x0001
 
 | 状态 | 置 1 的位 | 含义 |
 | --- | --- | --- |
-| 参考 `0x00000008` | 第 3 位 | 只报 TKEEP 变化 |
-| 实测 `0x00000048` | 第 3 位和第 6 位 | 同时报 TKEEP 和 TSTRB 变化 |
+| 旧参考 `0x00000008` | 第 3 位 | 漏算了默认 TSTRB 的变化 |
+| 实测及修正后参考 `0x00000048` | 第 3 位和第 6 位 | 同时报 TKEEP 和 TSTRB 变化 |
 
 `0x48 = 0x08 + 0x40`，多出的 `0x40` 就是第 6 位。
-手册把该项检查列为 TSTRB 等接口信号启用时才有效，因此这里值得追查。
+此前只按手册的检查使能说明理解，没有考虑缺省信号的处理，所以误判为额外告警。
 
 输出序号 5、14、23 都出现这个结果。它们是同一场景在测试序列中重复运行，
 不是三组参数，也不是三个已经确定的 bug。
 
-## 还需要排查什么
+## 为什么这样判断
 
-下一步要用固定的少量时钟步骤复现，并核对生成模型如何处理未启用的 TSTRB。
-例如内部是否由其他信号派生了它，或者配置没有按预期生效。
-当前还没有这份独立复现，不能仅据此确定检查器的内部原因。
+[Arm AXI-Stream 规范 IHI 0051B 第 3.1.2 节](https://documentation-service.arm.com/static/64819f1516f0f201aa6b963c)
+明确规定，TSTRB 缺省时等于 TKEEP。它不是被忽略，也不是固定为零。
+Vivado 2026.1 安装的 `axis_protocol_checker_v2_0_rfs.v` 第 745 行实现了这个选择；
+文件在 `/data/Xilinx/2026.1/Vivado/data/ip/xilinx/axis_protocol_checker_v2_0/hdl/`。
+
+另外写了一个不调用 Python 参考模型的 VHDL 小测试，数据宽度为 1 字节，
+开启 TREADY、TKEEP，关闭其他侧带、ACLKEN 和系统复位，MAX_WAITS=0。
+两组配置只改变 TSTRB 是否启用。每个场景先复位，等待期间在时钟下降沿改变信号：
+
+| 场景 | 无 TSTRB 端口 | 有 TSTRB 端口 |
+| --- | --- | --- |
+| 等待期间所有信号保持 | `0x00` | `0x00` |
+| 只把 TKEEP 从 0 改成 1 | `0x48` | `0x08` |
+| TKEEP 和测试端 TSTRB 都从 0 改成 1 | `0x48` | `0x48` |
+| TKEEP 保持 1，只改变测试端 TSTRB | `0x00`，该信号没有接入 IP | `0x40` |
+
+上表 8 项实测都与固定期望一致。合法输入没有被误报；额外的 bit 6 恰好取决于
+内部 TSTRB 是否跟随 TKEEP。这是本次排除误报的关键对照。
+
+框架现在按配置计算完整的 32 位期望状态，不屏蔽 bit 6。
+原配置修正前后场景文件和实际输出完全相同，只修正期望值。
+全部 6 组常用配置、18 个阶段复测均 PASS。没有因此宣称所有协议检查场景都正确。
+
+## 复跑与证据
+
+```bash
+source /data/Xilinx/2026.1/Vivado/settings64.sh
+python3 scripts/run_all.py --ip-type axis_protocol_checker
+VIVADO_INTEGRATION=1 PYTHONPATH=src:tests python3 -m unittest \
+  integration.ip.axis_protocol_checker.test_optional_strb -v
+```
+
+本次[修改前报告](../../../evidence/vivado_2026_1/axis_protocol_checker/protocol_review/2026-09-23_16-16-05_UTC+0800_21e595ba/report.json)、
+[修改后报告](../../../evidence/vivado_2026_1/axis_protocol_checker/protocol_review/2026-09-23_16-17-52_UTC+0800_46625706/report.json)、
+[独立 VHDL 对照](../../../evidence/vivado_2026_1/axis_protocol_checker/protocol_review/2026-09-23_16-20-22_UTC+0800_e1f9e2ab/)
+已归档，包含各配置的参数、testbench、观察值和日志。
+
+以下是最初误判时的历史记录，保留原样：
 
 [失败字段](../../../evidence/vivado_2026_1/full_regression/2026-09-22_12-47-30_UTC+0800_4bca4f69/axis_protocol_checker/partial_failure.json)
 保存期望与实测状态，

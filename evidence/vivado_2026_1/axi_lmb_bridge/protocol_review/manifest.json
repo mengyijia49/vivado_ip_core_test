@@ -1,0 +1,1046 @@
+{
+  "schema_version": 1,
+  "issue": "vivado_2026_1.axi_lmb_bridge_protocol_review",
+  "selection_sha256": "d4f424d9cd42e4538c294252a2bd4070ee006e330ac5e2e403980a4de01bc032",
+  "path_replacements": {
+    "/home/dpc/vivado_ip_auto_test": "<REPOSITORY_ROOT>",
+    "/data/Xilinx/2026.1": "<VIVADO_2026.1>"
+  },
+  "files": [
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/report.json",
+      "sha256": "08bb5f1578a5ee7b64a003ff1636c46aee59784945a09a61b5eba9b47193cfcc",
+      "bytes": 12806,
+      "source": "reports/history/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/report.csv",
+      "source_sha256": "2f5fe77a6d64f2317c7b19008688cc10715ebd645420ad4a90193da28e93e8d6",
+      "source_bytes": 12834,
+      "mode": "report_rows"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_frequency_40/tb/tb_axi_lmb_selfcheck.vhd",
+      "sha256": "b2fceafc314c15799e6813ac6283bbaac28ca174e191916c3b84f61849cda0b9",
+      "bytes": 49968,
+      "source": "runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_frequency_40/tb/tb_axi_lmb_selfcheck.vhd",
+      "source_sha256": "1116834cbba24586c03ea1ef678c48ab5d5b70d1f6d2364a2a2aba8b6668c14c",
+      "source_bytes": 49980,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_frequency_40/manifest.json",
+      "sha256": "c949ed0b011afc0832df8adc47d43078f920ec2278395a0ef52f7c5a157deebe",
+      "bytes": 12881,
+      "source": "runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_frequency_40/manifest.json",
+      "source_sha256": "22060693fa14644fc441892beb3e913dc755c93680ff5b29c8f1b76a91967f74",
+      "source_bytes": 12965,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_frequency_40/outputs/actual_output.txt",
+      "sha256": "8eec60eed93914ef76e0bdde82d34bf4db51bd14d8b41bae003d8ac0151ff597",
+      "bytes": 6750,
+      "source": "runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_frequency_40/outputs/actual_output.txt",
+      "source_sha256": "8eec60eed93914ef76e0bdde82d34bf4db51bd14d8b41bae003d8ac0151ff597",
+      "source_bytes": 6750,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_frequency_40/vectors/numeric_samples.json",
+      "sha256": "45ed8e4c4ef5a1122fb7a0228e248653ba789a169d344d1efcceaab2c99606ca",
+      "bytes": 10095,
+      "source": "runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_frequency_40/vectors/numeric_samples.json",
+      "source_sha256": "45ed8e4c4ef5a1122fb7a0228e248653ba789a169d344d1efcceaab2c99606ca",
+      "source_bytes": 10095,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_frequency_40/vectors/lmb_accesses.json",
+      "sha256": "7ccb06a7ae74e0c92f90abe6e7da96808f1e383f5cf3b7fa6026656343451396",
+      "bytes": 14715,
+      "source": "runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_frequency_40/vectors/lmb_accesses.json",
+      "source_sha256": "7ccb06a7ae74e0c92f90abe6e7da96808f1e383f5cf3b7fa6026656343451396",
+      "source_bytes": 14715,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_frequency_40/vectors/operations.json",
+      "sha256": "b4487f5c5ebf2fde5a90832c236284269ed8509f3d51760f562437c5ba66ef4e",
+      "bytes": 44361,
+      "source": "runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_frequency_40/vectors/operations.json",
+      "source_sha256": "b4487f5c5ebf2fde5a90832c236284269ed8509f3d51760f562437c5ba66ef4e",
+      "source_bytes": 44361,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_frequency_40/vectors/expected_output.txt",
+      "sha256": "c3a835877db331ae1bfb6b809e3d32308183a3281cb1f3aea8bf22c8bd61c556",
+      "bytes": 6750,
+      "source": "runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_frequency_40/vectors/expected_output.txt",
+      "source_sha256": "c3a835877db331ae1bfb6b809e3d32308183a3281cb1f3aea8bf22c8bd61c556",
+      "source_bytes": 6750,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_frequency_40/outputs/failure.json",
+      "sha256": "ff9cda203dbec7527f2cd234d5d23ed45ec3daa170a9d7a2713542e617b93c4f",
+      "bytes": 2136,
+      "source": "runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_frequency_40/outputs/failure.json",
+      "source_sha256": "ff9cda203dbec7527f2cd234d5d23ed45ec3daa170a9d7a2713542e617b93c4f",
+      "source_bytes": 2136,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_frequency_40/ip_metadata.json",
+      "sha256": "627a3a1869222c797665ccf9dd2305abf0adf5c547adc2b117a385a6d8724080",
+      "bytes": 28890,
+      "source": "runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_frequency_40/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci",
+      "source_sha256": "17f26a551ff550f1a7610d1ec4d183d9c2c26286c898851650e50a834fb06345",
+      "source_bytes": 18320,
+      "mode": "xci_metadata"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_frequency_40/logs/create_ip.process.log",
+      "sha256": "79372b106670834dba69d633862153723374e3f3f9be41c79dc7d9bb4d617af6",
+      "bytes": 1958,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_frequency_40/create_ip.process.log",
+      "source_sha256": "7b009fb567c7463f3e8d73795df9a3c8ca57fb709625bc68b7d68fcfe204d286",
+      "source_bytes": 1974,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_frequency_40/logs/create_ip.invocation.json",
+      "sha256": "874c71a07706073dbdec49239856e02c7b38d9615480a6b7ae2b3fd5076522d9",
+      "bytes": 1379,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_frequency_40/create_ip.invocation.json",
+      "source_sha256": "a5216404b89dcbacf892d0d3c41e2a2fa27ba33dfcf84732d3481d19d709a290",
+      "source_bytes": 1443,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_frequency_40/logs/sim_selfcheck.process.log",
+      "sha256": "dd3a6372d5078f609735adbc4b2931ab6ebb44925c60c4aa8c58917fbb12337d",
+      "bytes": 11239,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_frequency_40/sim_selfcheck.process.log",
+      "source_sha256": "d0168746158e3e26f9903feb2a149dcc05c33411bd82dcb3886050a1fb4f79c0",
+      "source_bytes": 11399,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_frequency_40/logs/sim_selfcheck.invocation.json",
+      "sha256": "4e4e612d6ef777975005748ec0aef31de265c6a96acdfe1daf80b9c889ebcd37",
+      "bytes": 1283,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_frequency_40/sim_selfcheck.invocation.json",
+      "source_sha256": "85692cb5fd51d95cf839115720ec8435504aae4a91e974f7889340d6993299b8",
+      "source_bytes": 1359,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_frequency_40/logs/generate_testbench.log",
+      "sha256": "37ef6def817c60ac391c6aa6ba9822bff5ee44df389c9e1177a201984ff51f84",
+      "bytes": 345,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_frequency_40/generate_testbench.log",
+      "source_sha256": "912af1536a2f6e1a9bc693e971da0f0dbe03f98fb25f18716ac5a7dbc00a8e49",
+      "source_bytes": 369,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_pause_64/tb/tb_axi_lmb_selfcheck.vhd",
+      "sha256": "be9842384ee3033d15ee57b484b15ce9d5c9d5ff32aa36c45ad76f81f150cbb0",
+      "bytes": 64683,
+      "source": "runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_pause_64/tb/tb_axi_lmb_selfcheck.vhd",
+      "source_sha256": "c1f000c9f7f54e53e3cc3ea99c7589eb3c0dce7357b6850bcbf71db544ef1952",
+      "source_bytes": 64695,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_pause_64/manifest.json",
+      "sha256": "b95a9833c609c0fc0f091a4a5fe3fe0e596072d3dc7095f3fa4789d2cb89c8ed",
+      "bytes": 13204,
+      "source": "runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_pause_64/manifest.json",
+      "source_sha256": "b44f0f883722b4bd13ce8c1e479cdc1ef365383d1a278da1a031564cc0922628",
+      "source_bytes": 13288,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_pause_64/outputs/actual_output.txt",
+      "sha256": "abea2c7a2d3bd459be1a95a798e80f44806963d08adc66b43a1403f7565f0d34",
+      "bytes": 12750,
+      "source": "runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_pause_64/outputs/actual_output.txt",
+      "source_sha256": "abea2c7a2d3bd459be1a95a798e80f44806963d08adc66b43a1403f7565f0d34",
+      "source_bytes": 12750,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_pause_64/vectors/numeric_samples.json",
+      "sha256": "f09228d4547426011ef49949413d566e993b76f2fe66d9dbe36452b2b48f6cfd",
+      "bytes": 10929,
+      "source": "runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_pause_64/vectors/numeric_samples.json",
+      "source_sha256": "f09228d4547426011ef49949413d566e993b76f2fe66d9dbe36452b2b48f6cfd",
+      "source_bytes": 10929,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_pause_64/vectors/lmb_accesses.json",
+      "sha256": "3841592b0987cc2fd211c21526c4016c63c5711fbd4464b95e2e014441b283b5",
+      "bytes": 16007,
+      "source": "runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_pause_64/vectors/lmb_accesses.json",
+      "source_sha256": "3841592b0987cc2fd211c21526c4016c63c5711fbd4464b95e2e014441b283b5",
+      "source_bytes": 16007,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_pause_64/vectors/operations.json",
+      "sha256": "c2f5c98baffffd8a7f3a22abc306671b898d704a349cec8d1e560f05fcd4e90b",
+      "bytes": 45596,
+      "source": "runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_pause_64/vectors/operations.json",
+      "source_sha256": "c2f5c98baffffd8a7f3a22abc306671b898d704a349cec8d1e560f05fcd4e90b",
+      "source_bytes": 45596,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_pause_64/vectors/expected_output.txt",
+      "sha256": "ae17a484060e4342aba14a566ab076c0900740e77faf099cd4ae0e1341863f3a",
+      "bytes": 12750,
+      "source": "runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_pause_64/vectors/expected_output.txt",
+      "source_sha256": "ae17a484060e4342aba14a566ab076c0900740e77faf099cd4ae0e1341863f3a",
+      "source_bytes": 12750,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_pause_64/outputs/failure.json",
+      "sha256": "6d760f6d6512b4eff0f196932b4bb3021b9c1b5250714f88a5123f623b3a0279",
+      "bytes": 2376,
+      "source": "runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_pause_64/outputs/failure.json",
+      "source_sha256": "6d760f6d6512b4eff0f196932b4bb3021b9c1b5250714f88a5123f623b3a0279",
+      "source_bytes": 2376,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_pause_64/ip_metadata.json",
+      "sha256": "8aea7c753c496c52932bd2cfd20445611f1ca5b7b245089b30ebae39763eff0d",
+      "bytes": 29081,
+      "source": "runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_pause_64/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci",
+      "source_sha256": "9375c59865d4af11c703b053c8cd412d595db1eb59c0d918b7e0ae70c3826270",
+      "source_bytes": 18441,
+      "mode": "xci_metadata"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_pause_64/logs/create_ip.process.log",
+      "sha256": "c222768d8e99e1dce0622889c15854eb1858054124c95bffd3977932567a8d17",
+      "bytes": 1958,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_pause_64/create_ip.process.log",
+      "source_sha256": "4c9425c359a1c6a2733f5b3bd74f9318f25ea4d8ae2bfa1be30720a477808065",
+      "source_bytes": 1974,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_pause_64/logs/create_ip.invocation.json",
+      "sha256": "2aeae07e863fe554a0051cc3de8cd175b4ff856663789081ad15891bdce78bbe",
+      "bytes": 1363,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_pause_64/create_ip.invocation.json",
+      "source_sha256": "84f340ddc7bb79b4503236d19e05577cbd9e141d9b1f840c84184142cb2bdd4d",
+      "source_bytes": 1427,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_pause_64/logs/sim_selfcheck.process.log",
+      "sha256": "f207734ef41ed3f4495940ab311bdf3becc9da31c6e6188e1e6783102fb7b304",
+      "bytes": 11195,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_pause_64/sim_selfcheck.process.log",
+      "source_sha256": "d47d3872edf50d8d6edb9fb16897ffaa4b6a4fe0995c555b7cc0f375294b6d94",
+      "source_bytes": 11355,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_pause_64/logs/sim_selfcheck.invocation.json",
+      "sha256": "843f4041497b87353b02173d1e6c46ee3fdcdbee68cd67822a871d62974d3426",
+      "bytes": 1263,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_pause_64/sim_selfcheck.invocation.json",
+      "source_sha256": "b3237d14693755f27c20f5355f301ce03eb192ec3753bcc6016e5f47c6794b65",
+      "source_bytes": 1339,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge_pause_64/logs/generate_testbench.log",
+      "sha256": "ebd1ee6f755629bb7d298983e773b76f7207172ceb04819cf5889ed2eaeab615",
+      "bytes": 337,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_pause_64/generate_testbench.log",
+      "source_sha256": "86ca43302e209fe1fa255cb9c076dc1812bff14e8f639666167a4bd8d901501d",
+      "source_bytes": 361,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/report.json",
+      "sha256": "b03b7de11e4146e1edade382afe60f51baf35069bdf75cc1846ec1ff909dac85",
+      "bytes": 26086,
+      "source": "reports/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/report.csv",
+      "source_sha256": "55b9c5d8b9b117ee5f5e51237cb676e316314567981c37168a17c68e9f6d0d2c",
+      "source_bytes": 33937,
+      "mode": "report_rows"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_standard_32/tb/tb_axi_lmb_selfcheck.vhd",
+      "sha256": "ed9578725f479ebb416016037692fbdd4a6a128152edd7c409e5918e12e5df43",
+      "bytes": 48293,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_standard_32/tb/tb_axi_lmb_selfcheck.vhd",
+      "source_sha256": "daa0160ca9f1b31df987b4da8ed5750f4810dee101146a5d56555a51170be27d",
+      "source_bytes": 48305,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_standard_32/manifest.json",
+      "sha256": "1f8874283a9b0f415599eb32b8d49f8f1476aba414562f7f0a9f773775429046",
+      "bytes": 12679,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_standard_32/manifest.json",
+      "source_sha256": "1dc2467ef6f07317338aee0efc3185ca39f003f230ce1fb022a69ceef97edae2",
+      "source_bytes": 12763,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_standard_32/outputs/actual_output.txt",
+      "sha256": "70926b7f46c856d2842d310c4e47ffc3a65c793d0c6397176776a4e16d715fe5",
+      "bytes": 5700,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_standard_32/outputs/actual_output.txt",
+      "source_sha256": "70926b7f46c856d2842d310c4e47ffc3a65c793d0c6397176776a4e16d715fe5",
+      "source_bytes": 5700,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_standard_32/vectors/numeric_samples.json",
+      "sha256": "06f44333b9b5650992e9ce1d1fbea0f5f88335632b34b8175162237a5bd5687b",
+      "bytes": 9962,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_standard_32/vectors/numeric_samples.json",
+      "source_sha256": "06f44333b9b5650992e9ce1d1fbea0f5f88335632b34b8175162237a5bd5687b",
+      "source_bytes": 9962,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_standard_32/vectors/lmb_accesses.json",
+      "sha256": "8e0b4d100ae88fdcf5afd58b6e316fb2c833d9ff5c1d4dcd24d79dd53208b2b1",
+      "bytes": 15004,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_standard_32/vectors/lmb_accesses.json",
+      "source_sha256": "8e0b4d100ae88fdcf5afd58b6e316fb2c833d9ff5c1d4dcd24d79dd53208b2b1",
+      "source_bytes": 15004,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_standard_32/vectors/operations.json",
+      "sha256": "938420db30490b13fe5b81b0bafe024a6ae6a9a77c953f40cc5fb072697e1c4f",
+      "bytes": 44071,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_standard_32/vectors/operations.json",
+      "source_sha256": "938420db30490b13fe5b81b0bafe024a6ae6a9a77c953f40cc5fb072697e1c4f",
+      "source_bytes": 44071,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_standard_32/vectors/expected_output.txt",
+      "sha256": "70926b7f46c856d2842d310c4e47ffc3a65c793d0c6397176776a4e16d715fe5",
+      "bytes": 5700,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_standard_32/vectors/expected_output.txt",
+      "source_sha256": "70926b7f46c856d2842d310c4e47ffc3a65c793d0c6397176776a4e16d715fe5",
+      "source_bytes": 5700,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_standard_32/ip_metadata.json",
+      "sha256": "408e8ce335d568994abf09ae8ad4d041e9399f27537f53afacc798c596ed664d",
+      "bytes": 28854,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_standard_32/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci",
+      "source_sha256": "60bfca034a1e7b589932083999e8775296599092b75f885991113cb9fb559ad9",
+      "source_bytes": 18298,
+      "mode": "xci_metadata"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_standard_32/logs/create_ip.process.log",
+      "sha256": "8ef8c53c69f1ecf4430ed77f4a4c2e314ebf7be2f5c985e64da02b2904cf18a6",
+      "bytes": 1958,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_standard_32/create_ip.process.log",
+      "source_sha256": "44b87cf629b98df9e9e0ec8a84bb5895392cebeb50f660c87af0d9d53b948d4a",
+      "source_bytes": 1974,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_standard_32/logs/create_ip.invocation.json",
+      "sha256": "de85daa4ecd31e835034c3cb85bf0fd0f2d3d4cf2fe3ede8d5c539a70f11b69c",
+      "bytes": 1375,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_standard_32/create_ip.invocation.json",
+      "source_sha256": "dbbd12c84f79e2ff47e910ea684ed1e1b8246559a99901774b0bd0a28d3e0836",
+      "source_bytes": 1439,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_standard_32/logs/sim_selfcheck.process.log",
+      "sha256": "941303c870994facf12183b02ba3d2e61d896f327c60260cd2dff131fa10378c",
+      "bytes": 11215,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_standard_32/sim_selfcheck.process.log",
+      "source_sha256": "e35095813cb026ba54e415327995d4388a19fe4ab6f6f541d5276b174b7c501d",
+      "source_bytes": 11375,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_standard_32/logs/sim_selfcheck.invocation.json",
+      "sha256": "d70a137ccdf74ec57f52b19a2c0e2cc7a0ccb1f0a24ac2e1386f9322935dc9b4",
+      "bytes": 1277,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_standard_32/sim_selfcheck.invocation.json",
+      "source_sha256": "0254a4c0c3852e17b18d84fbacfc6de576edb50a921c7ff7433505239ea54be1",
+      "source_bytes": 1353,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_standard_32/logs/generate_testbench.log",
+      "sha256": "0c0bfd019cb4a2ba66f776b87ce9d714e6a11b21b532e1acb246e81e7e3f718c",
+      "bytes": 343,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_standard_32/generate_testbench.log",
+      "source_sha256": "890df42bf9e58de95dab1d17332273ecac0b56a44f6352fa262c0d1381e5b214",
+      "source_bytes": 367,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_protected_64/tb/tb_axi_lmb_selfcheck.vhd",
+      "sha256": "2c86d9e7296d1cc58fcfaeabb71f51f176dbed9ba9a83ec6436b5185dec030ad",
+      "bytes": 56045,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_protected_64/tb/tb_axi_lmb_selfcheck.vhd",
+      "source_sha256": "423b8c96991b87391053ccb4779f7edcfff3e47cedeb1dd5cae09c7f303ae97a",
+      "source_bytes": 56057,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_protected_64/manifest.json",
+      "sha256": "8e80b670f6ded9731dfcf47241182c92e68d9f669825970b3b3aa621d8307032",
+      "bytes": 12940,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_protected_64/manifest.json",
+      "source_sha256": "355073df7a4fdae0ac6940ba0768a9177f11131bb0d627b0153f6d69fb373dd1",
+      "source_bytes": 13024,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_protected_64/outputs/actual_output.txt",
+      "sha256": "fb498e0206dbdfbd9288384441de130a8c69185915143ff558c50130e16f69c9",
+      "bytes": 10950,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_protected_64/outputs/actual_output.txt",
+      "source_sha256": "fb498e0206dbdfbd9288384441de130a8c69185915143ff558c50130e16f69c9",
+      "source_bytes": 10950,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_protected_64/vectors/numeric_samples.json",
+      "sha256": "6a3a3dad460d592861e23803fe0293c065717542a240b93628964a139ebd9dd5",
+      "bytes": 10388,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_protected_64/vectors/numeric_samples.json",
+      "source_sha256": "6a3a3dad460d592861e23803fe0293c065717542a240b93628964a139ebd9dd5",
+      "source_bytes": 10388,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_protected_64/vectors/lmb_accesses.json",
+      "sha256": "0afadbe89a86674fc8878caf919d9e4d094b6adf9a93a6ab68515bbc1a5a0cf7",
+      "bytes": 15231,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_protected_64/vectors/lmb_accesses.json",
+      "source_sha256": "0afadbe89a86674fc8878caf919d9e4d094b6adf9a93a6ab68515bbc1a5a0cf7",
+      "source_bytes": 15231,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_protected_64/vectors/operations.json",
+      "sha256": "e55ad1b930a04a80d1734b023263d042cbd3c5e6565f222266d1bf20ece0a434",
+      "bytes": 44513,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_protected_64/vectors/operations.json",
+      "source_sha256": "e55ad1b930a04a80d1734b023263d042cbd3c5e6565f222266d1bf20ece0a434",
+      "source_bytes": 44513,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_protected_64/vectors/expected_output.txt",
+      "sha256": "fb498e0206dbdfbd9288384441de130a8c69185915143ff558c50130e16f69c9",
+      "bytes": 10950,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_protected_64/vectors/expected_output.txt",
+      "source_sha256": "fb498e0206dbdfbd9288384441de130a8c69185915143ff558c50130e16f69c9",
+      "source_bytes": 10950,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_protected_64/ip_metadata.json",
+      "sha256": "48e0d3269cc9c3c4af6247215f952c4341dcaa70c8e6bbc038e12e98f63b2cbc",
+      "bytes": 28854,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_protected_64/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci",
+      "source_sha256": "7b1854b50d66ca87458648bd48c15c3a040334ccfcb81ba12ecbb4b54553d9ec",
+      "source_bytes": 18298,
+      "mode": "xci_metadata"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_protected_64/logs/create_ip.process.log",
+      "sha256": "9bc90b46304e5a05569f97637f325b6f56f5e6bdcbfbd2e048c0ee44dd784031",
+      "bytes": 1958,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_protected_64/create_ip.process.log",
+      "source_sha256": "76a04d6344868da2749349c69896a332ca36062e7d3daac95c8e55ce5d42a8ae",
+      "source_bytes": 1974,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_protected_64/logs/create_ip.invocation.json",
+      "sha256": "4c35ff731433679a730e81b7b703668d0b404c9a36546724833a4409a82469bf",
+      "bytes": 1379,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_protected_64/create_ip.invocation.json",
+      "source_sha256": "4b99bbba6248cc992bd683f64c2a12a236315d6a21d816c9fe2e5071fe557007",
+      "source_bytes": 1443,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_protected_64/logs/sim_selfcheck.process.log",
+      "sha256": "43f2c98970a592898c243e38062f8866485e21900eb3ea75ee00bdef96d8c88f",
+      "bytes": 11239,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_protected_64/sim_selfcheck.process.log",
+      "source_sha256": "766a4f0c24f3348f0d76e498bf0f4f196c18dd00e67278a3b2a38744a78331ca",
+      "source_bytes": 11399,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_protected_64/logs/sim_selfcheck.invocation.json",
+      "sha256": "9eff5477149abad014d159d67dfc69d43a5495860b0e83598d7b7b3d127533d8",
+      "bytes": 1283,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_protected_64/sim_selfcheck.invocation.json",
+      "source_sha256": "5145816c73d952d26be3921285dc849e5a3b936626ad9909d61e961b52094a83",
+      "source_bytes": 1359,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_protected_64/logs/generate_testbench.log",
+      "sha256": "7ddb78336ead27a744363d546eda1d5276dd07478a78a962d1e4f144fe5193f5",
+      "bytes": 345,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_protected_64/generate_testbench.log",
+      "source_sha256": "475cb93aaeecb073e1b042eaffeb895e02cb807090fd864774069a54aa7891de",
+      "source_bytes": 369,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_frequency_40/tb/tb_axi_lmb_selfcheck.vhd",
+      "sha256": "86b8cd1f72ab76a893add391f4096bc555a8957284fe0e63eb3669f1c511d104",
+      "bytes": 50885,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_frequency_40/tb/tb_axi_lmb_selfcheck.vhd",
+      "source_sha256": "fd1401fdf9024395815d822a7a86c682d5fb328bb4d3620d6b1caf5bf34dfe1e",
+      "source_bytes": 50897,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_frequency_40/manifest.json",
+      "sha256": "d5c69026f03a4fe508f3b7944cf74c65453d0bacb8ca026d1b7a66dac122453c",
+      "bytes": 12881,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_frequency_40/manifest.json",
+      "source_sha256": "e0ed3d5128dcf7e78ce7efa772ad35b1edd005ea802ce51d7c34853c546a12ef",
+      "source_bytes": 12965,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_frequency_40/outputs/actual_output.txt",
+      "sha256": "c3a835877db331ae1bfb6b809e3d32308183a3281cb1f3aea8bf22c8bd61c556",
+      "bytes": 6750,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_frequency_40/outputs/actual_output.txt",
+      "source_sha256": "c3a835877db331ae1bfb6b809e3d32308183a3281cb1f3aea8bf22c8bd61c556",
+      "source_bytes": 6750,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_frequency_40/vectors/numeric_samples.json",
+      "sha256": "45ed8e4c4ef5a1122fb7a0228e248653ba789a169d344d1efcceaab2c99606ca",
+      "bytes": 10095,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_frequency_40/vectors/numeric_samples.json",
+      "source_sha256": "45ed8e4c4ef5a1122fb7a0228e248653ba789a169d344d1efcceaab2c99606ca",
+      "source_bytes": 10095,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_frequency_40/vectors/lmb_accesses.json",
+      "sha256": "7ccb06a7ae74e0c92f90abe6e7da96808f1e383f5cf3b7fa6026656343451396",
+      "bytes": 14715,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_frequency_40/vectors/lmb_accesses.json",
+      "source_sha256": "7ccb06a7ae74e0c92f90abe6e7da96808f1e383f5cf3b7fa6026656343451396",
+      "source_bytes": 14715,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_frequency_40/vectors/operations.json",
+      "sha256": "b4487f5c5ebf2fde5a90832c236284269ed8509f3d51760f562437c5ba66ef4e",
+      "bytes": 44361,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_frequency_40/vectors/operations.json",
+      "source_sha256": "b4487f5c5ebf2fde5a90832c236284269ed8509f3d51760f562437c5ba66ef4e",
+      "source_bytes": 44361,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_frequency_40/vectors/expected_output.txt",
+      "sha256": "c3a835877db331ae1bfb6b809e3d32308183a3281cb1f3aea8bf22c8bd61c556",
+      "bytes": 6750,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_frequency_40/vectors/expected_output.txt",
+      "source_sha256": "c3a835877db331ae1bfb6b809e3d32308183a3281cb1f3aea8bf22c8bd61c556",
+      "source_bytes": 6750,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_frequency_40/ip_metadata.json",
+      "sha256": "627a3a1869222c797665ccf9dd2305abf0adf5c547adc2b117a385a6d8724080",
+      "bytes": 28890,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_frequency_40/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci",
+      "source_sha256": "17f26a551ff550f1a7610d1ec4d183d9c2c26286c898851650e50a834fb06345",
+      "source_bytes": 18320,
+      "mode": "xci_metadata"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_frequency_40/logs/create_ip.process.log",
+      "sha256": "c4510083fb67f3070fe744555ee4ec44364a9ef69be20e12a79cea5070b6f20d",
+      "bytes": 1958,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_frequency_40/create_ip.process.log",
+      "source_sha256": "b84c4ad92aa6e9baa04785eb52b16a69e89899c554484d812e0a1d4acdc43515",
+      "source_bytes": 1974,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_frequency_40/logs/create_ip.invocation.json",
+      "sha256": "9dded6fe813c76226b441db833c3e1568ee5a894c4e1717deeb54ba24aee66d3",
+      "bytes": 1379,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_frequency_40/create_ip.invocation.json",
+      "source_sha256": "f29abcd3d74062cd3070f35e0f835aeb1ddc9920d55a7e1050685696b923f25f",
+      "source_bytes": 1443,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_frequency_40/logs/sim_selfcheck.process.log",
+      "sha256": "b1a661b3d5a462625831232396ec321a12eb4c31ec84c35431cf98e995283acd",
+      "bytes": 11239,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_frequency_40/sim_selfcheck.process.log",
+      "source_sha256": "7a7f89f1582b51cb7ff83de715874dbeb3108770e63c4594fda1effc3ffcf65d",
+      "source_bytes": 11399,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_frequency_40/logs/sim_selfcheck.invocation.json",
+      "sha256": "9c6f5175bcc674cda29b2f75c1875ec76b0dde30d383786f231454c82576b705",
+      "bytes": 1283,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_frequency_40/sim_selfcheck.invocation.json",
+      "source_sha256": "162c20aa0495aafcdc1aa5ec1fed68756e32339d445965f592efe1a2a1679400",
+      "source_bytes": 1359,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_frequency_40/logs/generate_testbench.log",
+      "sha256": "e1d3d3bcc35ecb611c0d073226e84a6ca88cf32de15a3ee35f853545fe60c54e",
+      "bytes": 345,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_frequency_40/generate_testbench.log",
+      "source_sha256": "f79482884bc06155c4976d0ec70aaaf064b691cf02cffdb4fd0d315aae243ddd",
+      "source_bytes": 369,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_64/tb/tb_axi_lmb_selfcheck.vhd",
+      "sha256": "84ba0aa8cf67298628d73d236cb079c2735ed969103e19069621a6373f2f0ff9",
+      "bytes": 65600,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_64/tb/tb_axi_lmb_selfcheck.vhd",
+      "source_sha256": "147c7fba90ca79167cb186082961401d284caf01ff12cafa181bac955e2aab7c",
+      "source_bytes": 65612,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_64/manifest.json",
+      "sha256": "b2be48894660953a0b3952746308a2cbbf97c0cc21469ffcc3bb4a98488270a5",
+      "bytes": 13204,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_64/manifest.json",
+      "source_sha256": "2ae0b403214283f5ebcf272d81a7358ec502e677dbb6e9c0b465c53e6ec5f4ea",
+      "source_bytes": 13288,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_64/outputs/actual_output.txt",
+      "sha256": "ae17a484060e4342aba14a566ab076c0900740e77faf099cd4ae0e1341863f3a",
+      "bytes": 12750,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_64/outputs/actual_output.txt",
+      "source_sha256": "ae17a484060e4342aba14a566ab076c0900740e77faf099cd4ae0e1341863f3a",
+      "source_bytes": 12750,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_64/vectors/numeric_samples.json",
+      "sha256": "f09228d4547426011ef49949413d566e993b76f2fe66d9dbe36452b2b48f6cfd",
+      "bytes": 10929,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_64/vectors/numeric_samples.json",
+      "source_sha256": "f09228d4547426011ef49949413d566e993b76f2fe66d9dbe36452b2b48f6cfd",
+      "source_bytes": 10929,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_64/vectors/lmb_accesses.json",
+      "sha256": "3841592b0987cc2fd211c21526c4016c63c5711fbd4464b95e2e014441b283b5",
+      "bytes": 16007,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_64/vectors/lmb_accesses.json",
+      "source_sha256": "3841592b0987cc2fd211c21526c4016c63c5711fbd4464b95e2e014441b283b5",
+      "source_bytes": 16007,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_64/vectors/operations.json",
+      "sha256": "c2f5c98baffffd8a7f3a22abc306671b898d704a349cec8d1e560f05fcd4e90b",
+      "bytes": 45596,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_64/vectors/operations.json",
+      "source_sha256": "c2f5c98baffffd8a7f3a22abc306671b898d704a349cec8d1e560f05fcd4e90b",
+      "source_bytes": 45596,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_64/vectors/expected_output.txt",
+      "sha256": "ae17a484060e4342aba14a566ab076c0900740e77faf099cd4ae0e1341863f3a",
+      "bytes": 12750,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_64/vectors/expected_output.txt",
+      "source_sha256": "ae17a484060e4342aba14a566ab076c0900740e77faf099cd4ae0e1341863f3a",
+      "source_bytes": 12750,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_64/ip_metadata.json",
+      "sha256": "8aea7c753c496c52932bd2cfd20445611f1ca5b7b245089b30ebae39763eff0d",
+      "bytes": 29081,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_64/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci",
+      "source_sha256": "9375c59865d4af11c703b053c8cd412d595db1eb59c0d918b7e0ae70c3826270",
+      "source_bytes": 18441,
+      "mode": "xci_metadata"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_64/logs/create_ip.process.log",
+      "sha256": "a6743f254ec1d936c5e7cab46f4dea9a9dcc8c507a02247007bb773de001d1cd",
+      "bytes": 1958,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_64/create_ip.process.log",
+      "source_sha256": "c896160923b342cb84e2e0e5300bfd09b64ac05598f3e09a1a3bf41554cc363b",
+      "source_bytes": 1974,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_64/logs/create_ip.invocation.json",
+      "sha256": "5add9cf671c0e1a518c2da1839d07e7951296566b1a2a94ed0e0b9acc89b9969",
+      "bytes": 1364,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_64/create_ip.invocation.json",
+      "source_sha256": "66f627bd1f34bffc391d1de696fb6e966ca0d1b0cc13750da7ddaeec8357a3fc",
+      "source_bytes": 1428,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_64/logs/sim_selfcheck.process.log",
+      "sha256": "04a89e16cd99e715dd64851466714068c740bbf6de2d7c4d8d105eef7ffadf45",
+      "bytes": 11195,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_64/sim_selfcheck.process.log",
+      "source_sha256": "3e1422e9155d5f82fe7e6248da430e560ac60801d096ec8053432eb64a80b955",
+      "source_bytes": 11355,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_64/logs/sim_selfcheck.invocation.json",
+      "sha256": "a691589ee4dd9c2398ddbccbb1262a5cd2c23a378dc3a1db0593e2a88510328c",
+      "bytes": 1263,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_64/sim_selfcheck.invocation.json",
+      "source_sha256": "d59b5aa67869f35763c054becb39e115620f019b8c8b5d6e417eac80aef20089",
+      "source_bytes": 1339,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_64/logs/generate_testbench.log",
+      "sha256": "8360c21edf3f330280990a4f4bd8d4308a87c1dae577bdf77f9077e5c54b9c98",
+      "bytes": 337,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_64/generate_testbench.log",
+      "source_sha256": "cc54687abb750c6c8e01d445cbbcd64cf554250531c4bd59e1d19dfcb69e88c1",
+      "source_bytes": 361,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_standard_40/tb/tb_axi_lmb_selfcheck.vhd",
+      "sha256": "47e07c1c45da7fcac1655d78079697afa4a7a5889fedf286a9247e8a6c187332",
+      "bytes": 50739,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40/tb/tb_axi_lmb_selfcheck.vhd",
+      "source_sha256": "5115e5b6331a618caee475da9feeff614cdbbe27bfb97241fc7be926b155e9da",
+      "source_bytes": 50751,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_standard_40/manifest.json",
+      "sha256": "3d9d9598df4793dfcf585e0b403c8e87d82fe9fd9af8ccc38b97cc7b55339f33",
+      "bytes": 13094,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40/manifest.json",
+      "source_sha256": "92a1b685b25c18989d498f59ac26cea5d9adfa692369285512a61e5b1665252d",
+      "source_bytes": 13178,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_standard_40/outputs/actual_output.txt",
+      "sha256": "b060a14fd041039e37654911636066294b91ee5da17eaf81b9621ace994c0545",
+      "bytes": 6150,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40/outputs/actual_output.txt",
+      "source_sha256": "b060a14fd041039e37654911636066294b91ee5da17eaf81b9621ace994c0545",
+      "source_bytes": 6150,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_standard_40/vectors/numeric_samples.json",
+      "sha256": "7d162b412147d0f526eee95d761d64be772d0e5721ac82039702bd2ae4fd6dbc",
+      "bytes": 10050,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40/vectors/numeric_samples.json",
+      "source_sha256": "7d162b412147d0f526eee95d761d64be772d0e5721ac82039702bd2ae4fd6dbc",
+      "source_bytes": 10050,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_standard_40/vectors/lmb_accesses.json",
+      "sha256": "1b566dbf1f4ee13099e92a48f58dcc3c760c0a131a9abaf1c840c4cb76e62e1f",
+      "bytes": 14948,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40/vectors/lmb_accesses.json",
+      "source_sha256": "1b566dbf1f4ee13099e92a48f58dcc3c760c0a131a9abaf1c840c4cb76e62e1f",
+      "source_bytes": 14948,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_standard_40/vectors/operations.json",
+      "sha256": "8b24a65f1553230c7aefe98e57e320a5cbaeedc371389bcc7add4b49ed7e73ae",
+      "bytes": 44269,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40/vectors/operations.json",
+      "source_sha256": "8b24a65f1553230c7aefe98e57e320a5cbaeedc371389bcc7add4b49ed7e73ae",
+      "source_bytes": 44269,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_standard_40/vectors/expected_output.txt",
+      "sha256": "b060a14fd041039e37654911636066294b91ee5da17eaf81b9621ace994c0545",
+      "bytes": 6150,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40/vectors/expected_output.txt",
+      "source_sha256": "b060a14fd041039e37654911636066294b91ee5da17eaf81b9621ace994c0545",
+      "source_bytes": 6150,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_standard_40/ip_metadata.json",
+      "sha256": "e5d1d88329d11f0b5a81e21a6dc87fdf70de3a6f2b4089529fb7c47690c12cc3",
+      "bytes": 29073,
+      "source": "runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci",
+      "source_sha256": "9b2c080e3c8733a12677cb610e92fd1fdc329e8721f5b9f9b2a3400cd6ef544a",
+      "source_bytes": 18433,
+      "mode": "xci_metadata"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_standard_40/logs/create_ip.process.log",
+      "sha256": "a0895ac8c7f3db0eccc677518f426a99a3ad69970693881c13b40353c853bcf0",
+      "bytes": 1958,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40/create_ip.process.log",
+      "source_sha256": "5916824c9eb80a50b146c9ef9b00a3fa5ab6edc86fd17cbe219959a2c694e234",
+      "source_bytes": 1974,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_standard_40/logs/create_ip.invocation.json",
+      "sha256": "1decb2fdb60c11691bfdba437af48fea523bcdc5c303ed5a467e4796ac19e121",
+      "bytes": 1399,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40/create_ip.invocation.json",
+      "source_sha256": "bcd2c31e9eb346002d6ee7e830c9111e462c1432cb0395b713e4bdf13116b901",
+      "source_bytes": 1463,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_standard_40/logs/sim_selfcheck.process.log",
+      "sha256": "b88b2e3f06fe8861481486b5e619a0d818f61f22fe35abdac917b27748250108",
+      "bytes": 11294,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40/sim_selfcheck.process.log",
+      "source_sha256": "c8f45b02ccfc8b4bf5330cfb3cd67bb42783da850aba6ffbd1e86e5c7bd65769",
+      "source_bytes": 11454,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_standard_40/logs/sim_selfcheck.invocation.json",
+      "sha256": "add224eb807b685da38a93fbad1fa4216050f0b40f3a7a21b2fc8f50d1e63937",
+      "bytes": 1308,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40/sim_selfcheck.invocation.json",
+      "source_sha256": "dbc740705a146c4bcef4a218a1175f0cc7fd3bd2d13b56183df7077d98c3e36e",
+      "source_bytes": 1384,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge_pause_standard_40/logs/generate_testbench.log",
+      "sha256": "81d9691f782a82eb2ee231619024d9d881d1da45de0f668e4d01945c02dc6d64",
+      "bytes": 355,
+      "source": "runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40/generate_testbench.log",
+      "source_sha256": "ac7dc4e9227a11ba21ab8fac87316063ce7bc62dc6dba75ef8445580868dcc64",
+      "source_bytes": 379,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-21-05_UTC+0800_3848c404/standard/settings.json",
+      "sha256": "8a430dbeac6fdc1ba98ae3c52de125d48a3968b1cc348a4c174cf97a311d5bf5",
+      "bytes": 226,
+      "source": "runs/framework/protocol_review/2026.1/2026-09-23_16-21-05_UTC+0800_3848c404/axi_lmb_bridge/standard/settings.json",
+      "source_sha256": "8a430dbeac6fdc1ba98ae3c52de125d48a3968b1cc348a4c174cf97a311d5bf5",
+      "source_bytes": 226,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-21-05_UTC+0800_3848c404/standard/observations.json",
+      "sha256": "f99707b3961c288c6ab0fe38e155a763d7e0b0f92308fb9e26053cbf37ad4701",
+      "bytes": 873,
+      "source": "runs/framework/protocol_review/2026.1/2026-09-23_16-21-05_UTC+0800_3848c404/axi_lmb_bridge/standard/observations.json",
+      "source_sha256": "f99707b3961c288c6ab0fe38e155a763d7e0b0f92308fb9e26053cbf37ad4701",
+      "source_bytes": 873,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-21-05_UTC+0800_3848c404/standard/tb_axi_lmb_selfcheck.vhd",
+      "sha256": "ff9561e1ba5f0da4bce8f55d21a8c3575accf4848bfbb809e4117dbddb8dffb6",
+      "bytes": 19158,
+      "source": "runs/framework/protocol_review/2026.1/2026-09-23_16-21-05_UTC+0800_3848c404/axi_lmb_bridge/standard/tb_axi_lmb_selfcheck.vhd",
+      "source_sha256": "036a054b3485d4ffa6e77448e48f05b22577d47998cc99c618cc000bdec51017",
+      "source_bytes": 19170,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-21-05_UTC+0800_3848c404/standard/operations.json",
+      "sha256": "1b8a4015af7774c07cbf987f3dd5be83877368d15c418c73eea50f975b6061b6",
+      "bytes": 1553,
+      "source": "runs/framework/protocol_review/2026.1/2026-09-23_16-21-05_UTC+0800_3848c404/axi_lmb_bridge/standard/operations.json",
+      "source_sha256": "1b8a4015af7774c07cbf987f3dd5be83877368d15c418c73eea50f975b6061b6",
+      "source_bytes": 1553,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-21-05_UTC+0800_3848c404/standard/actual.txt",
+      "sha256": "4613c41b888a07e5ee2e51cffc8afe8bdace7917a70379d40847e6286e88b2eb",
+      "bytes": 228,
+      "source": "runs/framework/protocol_review/2026.1/2026-09-23_16-21-05_UTC+0800_3848c404/axi_lmb_bridge/standard/actual.txt",
+      "source_sha256": "4613c41b888a07e5ee2e51cffc8afe8bdace7917a70379d40847e6286e88b2eb",
+      "source_bytes": 228,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-21-05_UTC+0800_3848c404/standard/ip_metadata.json",
+      "sha256": "408e8ce335d568994abf09ae8ad4d041e9399f27537f53afacc798c596ed664d",
+      "bytes": 28854,
+      "source": "runs/framework/protocol_review/2026.1/2026-09-23_16-21-05_UTC+0800_3848c404/axi_lmb_bridge/standard/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci",
+      "source_sha256": "60bfca034a1e7b589932083999e8775296599092b75f885991113cb9fb559ad9",
+      "source_bytes": 18298,
+      "mode": "xci_metadata"
+    },
+    {
+      "path": "2026-09-23_16-21-05_UTC+0800_3848c404/standard/logs/create.process.log",
+      "sha256": "bd459f62da2d7c68caaf494bf37bf11793c387d7a27d9a31fdc7e9b658f4300f",
+      "bytes": 1958,
+      "source": "runs/logs/framework/protocol_review/2026.1/2026-09-23_16-21-05_UTC+0800_3848c404/axi_lmb_bridge/standard/create.process.log",
+      "source_sha256": "a594133ce9aabe538b487790e8b04f4398577c11fac9062914738a35d17631ce",
+      "source_bytes": 1974,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-21-05_UTC+0800_3848c404/standard/logs/create.invocation.json",
+      "sha256": "79a0c813f25cc63c77f121e4c4e21ad4a6e05c93b8b85311c9917cade58d693e",
+      "bytes": 1359,
+      "source": "runs/logs/framework/protocol_review/2026.1/2026-09-23_16-21-05_UTC+0800_3848c404/axi_lmb_bridge/standard/create.invocation.json",
+      "source_sha256": "d1a08b12a9025d6fb1f39011b0ace0594ad46c2796e56fe1ef3af1733f6f0fc8",
+      "source_bytes": 1423,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-21-05_UTC+0800_3848c404/standard/logs/simulate.process.log",
+      "sha256": "020658c32ec12e040b7f355ff6b6c5194ee63a382a26a4e82c48ccf63c264381",
+      "bytes": 11202,
+      "source": "runs/logs/framework/protocol_review/2026.1/2026-09-23_16-21-05_UTC+0800_3848c404/axi_lmb_bridge/standard/simulate.process.log",
+      "source_sha256": "4e6f3e8cbabd32eedd1488c4750e0b8fc4858d7aa5bd9820b7d64d8bb549dd09",
+      "source_bytes": 11362,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-21-05_UTC+0800_3848c404/standard/logs/simulate.invocation.json",
+      "sha256": "bfc311329972d46d2e472dfeb90efaa8e6d5ad9ca139ede2cd1142ba4996a511",
+      "bytes": 1251,
+      "source": "runs/logs/framework/protocol_review/2026.1/2026-09-23_16-21-05_UTC+0800_3848c404/axi_lmb_bridge/standard/simulate.invocation.json",
+      "source_sha256": "7549796e05d6ce788627bbcff1a8cef6b89b2cb9f9f0e6f24c1fa9eb20fae7f5",
+      "source_bytes": 1327,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-21-05_UTC+0800_3848c404/frequency/settings.json",
+      "sha256": "8af43078f5b734c7959afaa6c1ed587450834cc710be443ed51692564f896dc0",
+      "bytes": 226,
+      "source": "runs/framework/protocol_review/2026.1/2026-09-23_16-21-05_UTC+0800_3848c404/axi_lmb_bridge/frequency/settings.json",
+      "source_sha256": "8af43078f5b734c7959afaa6c1ed587450834cc710be443ed51692564f896dc0",
+      "source_bytes": 226,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-21-05_UTC+0800_3848c404/frequency/observations.json",
+      "sha256": "f99707b3961c288c6ab0fe38e155a763d7e0b0f92308fb9e26053cbf37ad4701",
+      "bytes": 873,
+      "source": "runs/framework/protocol_review/2026.1/2026-09-23_16-21-05_UTC+0800_3848c404/axi_lmb_bridge/frequency/observations.json",
+      "source_sha256": "f99707b3961c288c6ab0fe38e155a763d7e0b0f92308fb9e26053cbf37ad4701",
+      "source_bytes": 873,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-21-05_UTC+0800_3848c404/frequency/tb_axi_lmb_selfcheck.vhd",
+      "sha256": "715cef1e397cc14533d191e8701f74d8f5bdd6f294870d3ce436c263b49ff08b",
+      "bytes": 19159,
+      "source": "runs/framework/protocol_review/2026.1/2026-09-23_16-21-05_UTC+0800_3848c404/axi_lmb_bridge/frequency/tb_axi_lmb_selfcheck.vhd",
+      "source_sha256": "6e8d56b09969c379a0c52dd017f7ac533f90e770479d67a5e8e32990f1f3cd4e",
+      "source_bytes": 19171,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-21-05_UTC+0800_3848c404/frequency/operations.json",
+      "sha256": "1b8a4015af7774c07cbf987f3dd5be83877368d15c418c73eea50f975b6061b6",
+      "bytes": 1553,
+      "source": "runs/framework/protocol_review/2026.1/2026-09-23_16-21-05_UTC+0800_3848c404/axi_lmb_bridge/frequency/operations.json",
+      "source_sha256": "1b8a4015af7774c07cbf987f3dd5be83877368d15c418c73eea50f975b6061b6",
+      "source_bytes": 1553,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-21-05_UTC+0800_3848c404/frequency/actual.txt",
+      "sha256": "4613c41b888a07e5ee2e51cffc8afe8bdace7917a70379d40847e6286e88b2eb",
+      "bytes": 228,
+      "source": "runs/framework/protocol_review/2026.1/2026-09-23_16-21-05_UTC+0800_3848c404/axi_lmb_bridge/frequency/actual.txt",
+      "source_sha256": "4613c41b888a07e5ee2e51cffc8afe8bdace7917a70379d40847e6286e88b2eb",
+      "source_bytes": 228,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-21-05_UTC+0800_3848c404/frequency/ip_metadata.json",
+      "sha256": "5dab42ea4be5b6ef96963dc74cbffdb10aca0cd220999a3b085f4f72a653def8",
+      "bytes": 28855,
+      "source": "runs/framework/protocol_review/2026.1/2026-09-23_16-21-05_UTC+0800_3848c404/axi_lmb_bridge/frequency/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci",
+      "source_sha256": "4d886b3833434ad34eb26b7bba830af6116a72666e444d104c7b9e3ff6c603d4",
+      "source_bytes": 18299,
+      "mode": "xci_metadata"
+    },
+    {
+      "path": "2026-09-23_16-21-05_UTC+0800_3848c404/frequency/logs/create.process.log",
+      "sha256": "98dfe38cb72e498f6ccc33d042843f287e6f7aa18c9c44c810e51a0bb24468f1",
+      "bytes": 1958,
+      "source": "runs/logs/framework/protocol_review/2026.1/2026-09-23_16-21-05_UTC+0800_3848c404/axi_lmb_bridge/frequency/create.process.log",
+      "source_sha256": "dc96577c85a8813f4186e7b910c52be4d886e59816fe758f0f4d258ced924c42",
+      "source_bytes": 1974,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-21-05_UTC+0800_3848c404/frequency/logs/create.invocation.json",
+      "sha256": "79251f77efaeaa6edef60bbb7f9530a4e864b0b14309763b0aba06a1e6df6448",
+      "bytes": 1363,
+      "source": "runs/logs/framework/protocol_review/2026.1/2026-09-23_16-21-05_UTC+0800_3848c404/axi_lmb_bridge/frequency/create.invocation.json",
+      "source_sha256": "cd68452301c1bff2e50973ef8d6cffb9a01a2cf326868e2a67586223497dda21",
+      "source_bytes": 1427,
+      "mode": "json"
+    },
+    {
+      "path": "2026-09-23_16-21-05_UTC+0800_3848c404/frequency/logs/simulate.process.log",
+      "sha256": "a4d79922fd73f162bf8ed62980714e323ddd4b06673b41ea18eb3275410b154e",
+      "bytes": 11226,
+      "source": "runs/logs/framework/protocol_review/2026.1/2026-09-23_16-21-05_UTC+0800_3848c404/axi_lmb_bridge/frequency/simulate.process.log",
+      "source_sha256": "06a4bd3f98c8968f61e54d755508a15192b0fd3e8abce3d3870da4b2223da543",
+      "source_bytes": 11386,
+      "mode": "text"
+    },
+    {
+      "path": "2026-09-23_16-21-05_UTC+0800_3848c404/frequency/logs/simulate.invocation.json",
+      "sha256": "0b77cfb0132f1b1a0a5f824a66063ad93d98704b5d7735a04dc6c71a7c4c5b0f",
+      "bytes": 1256,
+      "source": "runs/logs/framework/protocol_review/2026.1/2026-09-23_16-21-05_UTC+0800_3848c404/axi_lmb_bridge/frequency/simulate.invocation.json",
+      "source_sha256": "d892b89fda66f1e82946361cd7dad72a6c8e3f015911ba85c80388b00838b99c",
+      "source_bytes": 1332,
+      "mode": "json"
+    }
+  ]
+}

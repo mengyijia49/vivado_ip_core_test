@@ -1,0 +1,4 @@
+TESTBENCH_GENERATION_STATUS: PASS
+testbench=<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_32_full/tb/tb_axis_protocol_checker.vhd
+vectors=32
+manifest=<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_32_full/manifest.json

@@ -1,0 +1,4 @@
+TESTBENCH_GENERATION_STATUS: PASS
+testbench=<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_64/tb/tb_axi_lmb_selfcheck.vhd
+vectors=150
+manifest=<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_64/manifest.json

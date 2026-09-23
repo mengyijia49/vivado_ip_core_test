@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "case_id": "axis_pc_128_partial",
+  "ip_type": "axis_protocol_checker",
+  "vendor": "xilinx.com",
+  "ip_name": "axis_protocol_checker",
+  "configured_parameters": {
+    "data_bytes": 16,
+    "tid_width": 0,
+    "tdest_width": 8,
+    "tuser_width": 16,
+    "has_tready": true,
+    "has_tstrb": false,
+    "has_tkeep": true,
+    "has_tlast": true,
+    "has_aclken": false,
+    "has_system_reset": false,
+    "max_waits": 64
+  },
+  "generated_ip": {
+    "component_reference": "xilinx.com:ip:axis_protocol_checker:2.0",
+    "ports": {
+      "aclk": [
+        {
+          "direction": "in"
+        }
+      ],
+      "aresetn": [
+        {
+          "direction": "in"
+        }
+      ],
+      "pc_axis_tvalid": [
+        {
+          "direction": "in"
+        }
+      ],
+      "pc_axis_tready": [
+        {
+          "direction": "in",
+          "driver_value": "0x1"
+        }
+      ],
+      "pc_axis_tdata": [
+        {
+          "direction": "in",
+          "size_left": "127",
+          "size_right": "0",
+          "driver_value": "0x00000000000000000000000000000000"
+        }
+      ],
+      "pc_axis_tkeep": [
+        {
+          "direction": "in",
+          "size_left": "15",
+          "size_right": "0",
+          "driver_value": "0xFFFF"
+        }
+      ],
+      "pc_axis_tlast": [
+        {
+          "direction": "in",
+          "driver_value": "0x1"
+        }
+      ],
+      "pc_axis_tdest": [
+        {
+          "direction": "in",
+          "size_left": "7",
+          "size_right": "0",
+          "driver_value": "0x0"
+        }
+      ],
+      "pc_axis_tuser": [
+        {
+          "direction": "in",
+          "size_left": "15",
+          "size_right": "0",
+          "driver_value": "0x0"
+        }
+      ],
+      "pc_asserted": [
+        {
+          "direction": "out"
+        }
+      ],
+      "pc_status": [
+        {
+          "direction": "out",
+          "size_left": "31",
+          "size_right": "0"
+        }
+      ]
+    },
+    "model_parameters": {
+      "C_AXIS_TDATA_WIDTH": "128",
+      "C_AXIS_TID_WIDTH": "1",
+      "C_AXIS_TDEST_WIDTH": "8",
+      "C_AXIS_TUSER_WIDTH": "16",
+      "C_AXIS_SIGNAL_SET": "0b00000000000000000000000011011011",
+      "C_PC_MAXWAITS": "64",
+      "C_PC_MESSAGE_LEVEL": "0",
+      "C_PC_HAS_SYSTEM_RESET": "0",
+      "C_ENABLE_CONTROL": "0",
+      "C_PC_STATUS_WIDTH": "32",
+      "C_ENABLE_MARK_DEBUG": "0"
+    }
+  },
+  "output_layout": {
+    "encoding": "binary_msb_first",
+    "fields": [
+      {
+        "name": "pc_status",
+        "width": 32
+      }
+    ]
+  },
+  "verification": {
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": 20261174,
+    "case_budget": 24,
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "boundary_mode": "basic",
+    "timing_mode": "bursts",
+    "max_gap_cycles": 8,
+    "burst_length": 8,
+    "input_order": "generated",
+    "schedule": {
+      "checked_transaction_count": 24,
+      "comparison_kind": "axis_protocol_checker_exact_status_bits",
+      "reference_sequence_events": {
+        "legal": 3,
+        "tvalid_after_reset": 3,
+        "tdata_changed": 3,
+        "tvalid_dropped": 3,
+        "tdest_changed": 3,
+        "tkeep_changed": 3,
+        "tlast_changed": 2,
+        "tuser_changed": 2,
+        "max_wait_exceeded": 2
+      },
+      "sequence_coverage": "reset_stability_valid_wait_and_keep_strb_rules"
+    }
+  },
+  "artifacts": {
+    "testbench": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axis_protocol_checker/axis_pc_128_partial/tb/tb_axis_protocol_checker.vhd",
+    "input_vectors": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axis_protocol_checker/axis_pc_128_partial/vectors/protocol_scenarios.json",
+    "expected_output": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axis_protocol_checker/axis_pc_128_partial/vectors/expected_output.txt",
+    "actual_output": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axis_protocol_checker/axis_pc_128_partial/outputs/actual_output.txt",
+    "xci": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axis_protocol_checker/axis_pc_128_partial/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci"
+  },
+  "artifact_sha256": {
+    "testbench": "eb03ae419a9f712c7c8bea27cb4e19eebc544b732b18431e1bc1d0a1026b5df4",
+    "input_vectors": "4a3a0b85b396b7d1a76372561dd53680e3bbaec12dfcd6b00d287c81250964b3",
+    "expected_output": "67bb6c3826bf5603cc099193449321f9bb9e79314c29075e9b866bfc75fa01e1",
+    "xci": "852f73152bb9aa981949c846447be296a0723481b76ea4ea6b10969604de066c"
+  }
+}

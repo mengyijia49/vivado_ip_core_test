@@ -1,0 +1,789 @@
+[
+  {
+    "case_id": "axi_lmb_bridge_standard_32",
+    "stage": "create_ip",
+    "status": "PASS",
+    "ip_type": "axi_lmb_bridge",
+    "parameters": {
+      "address_width": 32,
+      "data_width": 32,
+      "id_width": 1,
+      "lmb_protocol": "Standard",
+      "protection": false,
+      "use_pause": false
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20260960",
+    "case_budget": "64",
+    "coverage_targets": [
+      "port_boundaries"
+    ],
+    "metrics": {
+      "elapsed_seconds": 4.762080112937838,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axi_lmb_bridge/axi_lmb_bridge_standard_32",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_standard_32/create_ip/create_ip.log"
+  },
+  {
+    "case_id": "axi_lmb_bridge_standard_32",
+    "stage": "generate_testbench",
+    "status": "PASS",
+    "ip_type": "axi_lmb_bridge",
+    "parameters": {
+      "address_width": 32,
+      "data_width": 32,
+      "id_width": 1,
+      "lmb_protocol": "Standard",
+      "protection": false,
+      "use_pause": false
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20260960",
+    "case_budget": "64",
+    "coverage_targets": [
+      "port_boundaries"
+    ],
+    "metrics": {
+      "checked_transaction_count": 150,
+      "comparison_kind": "axi4_burst_and_lmb_access_sequence",
+      "coverage_model": "input_bins:1.0",
+      "covered_targets": [
+        "port_boundaries"
+      ],
+      "directed_count": 42,
+      "elapsed_seconds": 0.0040342791471630335,
+      "generated_count": 64,
+      "input_space_fraction": 3.3881317890172014e-21,
+      "input_space_size": 18889465931478580854784,
+      "lmb_access_count": 137,
+      "missing_targets": [],
+      "operation_count": 143,
+      "reference_sequence_events": {
+        "backpressured_responses": 92,
+        "beats_1": 137,
+        "beats_2": 2,
+        "beats_4": 4,
+        "burst_fixed": 2,
+        "burst_increment": 139,
+        "burst_wrap": 2,
+        "read_address_error": 1,
+        "read_normal": 69,
+        "read_uncorrectable_error": 1,
+        "suppressed_zero_strobe": 20,
+        "w_before_aw": 33,
+        "waited_transactions": 80,
+        "write_address_error": 1,
+        "write_normal": 70,
+        "write_uncorrectable_error": 1
+      },
+      "sequence_coverage": "directed_legal_bursts_and_generated_single_beats",
+      "strategy": "directed_random",
+      "strategy_version": "1.0",
+      "target_coverage": {
+        "port_boundaries": {
+          "fraction": 1.0,
+          "hit_bins": [
+            "sample_address:0",
+            "sample_address:1",
+            "sample_address:2147483647",
+            "sample_address:4294967294",
+            "sample_address:4294967295",
+            "sample_data:0",
+            "sample_data:1",
+            "sample_data:2147483647",
+            "sample_data:4294967294",
+            "sample_data:4294967295",
+            "sample_id:0",
+            "sample_id:1",
+            "sample_prot:0",
+            "sample_prot:1",
+            "sample_prot:3",
+            "sample_prot:6",
+            "sample_prot:7",
+            "sample_strobe:0",
+            "sample_strobe:1",
+            "sample_strobe:14",
+            "sample_strobe:15",
+            "sample_strobe:7",
+            "sample_wait:0",
+            "sample_wait:1",
+            "sample_wait:2",
+            "sample_wait:3"
+          ],
+          "hit_count": 26,
+          "missing_bins": [],
+          "total_count": 26
+        }
+      },
+      "unique_count": 64
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axi_lmb_bridge/axi_lmb_bridge_standard_32",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_standard_32/generate_testbench/generate_testbench.log"
+  },
+  {
+    "case_id": "axi_lmb_bridge_standard_32",
+    "stage": "sim_selfcheck",
+    "status": "PASS",
+    "ip_type": "axi_lmb_bridge",
+    "parameters": {
+      "address_width": 32,
+      "data_width": 32,
+      "id_width": 1,
+      "lmb_protocol": "Standard",
+      "protection": false,
+      "use_pause": false
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20260960",
+    "case_budget": "64",
+    "coverage_targets": [
+      "port_boundaries"
+    ],
+    "metrics": {
+      "actual_output_sha256": "70926b7f46c856d2842d310c4e47ffc3a65c793d0c6397176776a4e16d715fe5",
+      "elapsed_seconds": 14.378658779896796,
+      "output_count": 150,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axi_lmb_bridge/axi_lmb_bridge_standard_32",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_standard_32/sim_selfcheck/sim_selfcheck.log"
+  },
+  {
+    "case_id": "axi_lmb_bridge_protected_64",
+    "stage": "create_ip",
+    "status": "PASS",
+    "ip_type": "axi_lmb_bridge",
+    "parameters": {
+      "address_width": 32,
+      "data_width": 64,
+      "id_width": 4,
+      "lmb_protocol": "Standard",
+      "protection": true,
+      "use_pause": false
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20260961",
+    "case_budget": "64",
+    "coverage_targets": [
+      "port_boundaries"
+    ],
+    "metrics": {
+      "elapsed_seconds": 4.689594516996294,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axi_lmb_bridge/axi_lmb_bridge_protected_64",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_protected_64/create_ip/create_ip.log"
+  },
+  {
+    "case_id": "axi_lmb_bridge_protected_64",
+    "stage": "generate_testbench",
+    "status": "PASS",
+    "ip_type": "axi_lmb_bridge",
+    "parameters": {
+      "address_width": 32,
+      "data_width": 64,
+      "id_width": 4,
+      "lmb_protocol": "Standard",
+      "protection": true,
+      "use_pause": false
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20260961",
+    "case_budget": "64",
+    "coverage_targets": [
+      "port_boundaries"
+    ],
+    "metrics": {
+      "checked_transaction_count": 150,
+      "comparison_kind": "axi4_burst_and_lmb_access_sequence",
+      "coverage_model": "input_bins:1.0",
+      "covered_targets": [
+        "port_boundaries"
+      ],
+      "directed_count": 48,
+      "elapsed_seconds": 0.003886569058522582,
+      "generated_count": 64,
+      "input_space_fraction": 6.162975822039155e-33,
+      "input_space_size": 10384593717069655257060992658440192,
+      "lmb_access_count": 135,
+      "missing_targets": [],
+      "operation_count": 143,
+      "reference_sequence_events": {
+        "backpressured_responses": 92,
+        "beats_1": 137,
+        "beats_2": 2,
+        "beats_4": 4,
+        "burst_fixed": 2,
+        "burst_increment": 139,
+        "burst_wrap": 2,
+        "read_address_error": 1,
+        "read_normal": 69,
+        "read_uncorrectable_error": 1,
+        "suppressed_zero_strobe": 22,
+        "w_before_aw": 33,
+        "waited_transactions": 78,
+        "write_address_error": 1,
+        "write_normal": 70,
+        "write_uncorrectable_error": 1
+      },
+      "sequence_coverage": "directed_legal_bursts_and_generated_single_beats",
+      "strategy": "directed_random",
+      "strategy_version": "1.0",
+      "target_coverage": {
+        "port_boundaries": {
+          "fraction": 1.0,
+          "hit_bins": [
+            "sample_address:0",
+            "sample_address:1",
+            "sample_address:2147483647",
+            "sample_address:4294967294",
+            "sample_address:4294967295",
+            "sample_data:0",
+            "sample_data:1",
+            "sample_data:18446744073709551614",
+            "sample_data:18446744073709551615",
+            "sample_data:9223372036854775807",
+            "sample_id:0",
+            "sample_id:1",
+            "sample_id:14",
+            "sample_id:15",
+            "sample_id:7",
+            "sample_prot:0",
+            "sample_prot:1",
+            "sample_prot:3",
+            "sample_prot:6",
+            "sample_prot:7",
+            "sample_strobe:0",
+            "sample_strobe:1",
+            "sample_strobe:127",
+            "sample_strobe:254",
+            "sample_strobe:255",
+            "sample_wait:0",
+            "sample_wait:1",
+            "sample_wait:2",
+            "sample_wait:3"
+          ],
+          "hit_count": 29,
+          "missing_bins": [],
+          "total_count": 29
+        }
+      },
+      "unique_count": 64
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axi_lmb_bridge/axi_lmb_bridge_protected_64",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_protected_64/generate_testbench/generate_testbench.log"
+  },
+  {
+    "case_id": "axi_lmb_bridge_protected_64",
+    "stage": "sim_selfcheck",
+    "status": "PASS",
+    "ip_type": "axi_lmb_bridge",
+    "parameters": {
+      "address_width": 32,
+      "data_width": 64,
+      "id_width": 4,
+      "lmb_protocol": "Standard",
+      "protection": true,
+      "use_pause": false
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20260961",
+    "case_budget": "64",
+    "coverage_targets": [
+      "port_boundaries"
+    ],
+    "metrics": {
+      "actual_output_sha256": "fb498e0206dbdfbd9288384441de130a8c69185915143ff558c50130e16f69c9",
+      "elapsed_seconds": 14.432635874953121,
+      "output_count": 150,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axi_lmb_bridge/axi_lmb_bridge_protected_64",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_protected_64/sim_selfcheck/sim_selfcheck.log"
+  },
+  {
+    "case_id": "axi_lmb_bridge_frequency_40",
+    "stage": "create_ip",
+    "status": "PASS",
+    "ip_type": "axi_lmb_bridge",
+    "parameters": {
+      "address_width": 40,
+      "data_width": 32,
+      "id_width": 8,
+      "lmb_protocol": "Frequency",
+      "protection": true,
+      "use_pause": false
+    },
+    "strategy": "coverage_guided",
+    "strategy_version": "1.0",
+    "random_seed": "20260962",
+    "case_budget": "64",
+    "coverage_targets": [
+      "port_boundaries"
+    ],
+    "metrics": {
+      "elapsed_seconds": 4.6764571310486645,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axi_lmb_bridge/axi_lmb_bridge_frequency_40",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_frequency_40/create_ip/create_ip.log"
+  },
+  {
+    "case_id": "axi_lmb_bridge_frequency_40",
+    "stage": "generate_testbench",
+    "status": "PASS",
+    "ip_type": "axi_lmb_bridge",
+    "parameters": {
+      "address_width": 40,
+      "data_width": 32,
+      "id_width": 8,
+      "lmb_protocol": "Frequency",
+      "protection": true,
+      "use_pause": false
+    },
+    "strategy": "coverage_guided",
+    "strategy_version": "1.0",
+    "random_seed": "20260962",
+    "case_budget": "64",
+    "coverage_targets": [
+      "port_boundaries"
+    ],
+    "metrics": {
+      "checked_transaction_count": 150,
+      "comparison_kind": "axi4_burst_and_lmb_access_sequence",
+      "coverage_model": "input_bins:1.0",
+      "covered_targets": [
+        "port_boundaries"
+      ],
+      "directed_count": 48,
+      "elapsed_seconds": 0.14957997808232903,
+      "generated_count": 64,
+      "input_space_fraction": 1.0339757656912846e-25,
+      "input_space_size": 618970019642690137449562112,
+      "lmb_access_count": 133,
+      "missing_targets": [],
+      "operation_count": 143,
+      "reference_sequence_events": {
+        "backpressured_responses": 92,
+        "beats_1": 137,
+        "beats_2": 2,
+        "beats_4": 4,
+        "burst_fixed": 2,
+        "burst_increment": 139,
+        "burst_wrap": 2,
+        "read_address_error": 1,
+        "read_normal": 69,
+        "read_uncorrectable_error": 1,
+        "suppressed_zero_strobe": 24,
+        "w_before_aw": 33,
+        "waited_transactions": 79,
+        "write_address_error": 1,
+        "write_normal": 70,
+        "write_uncorrectable_error": 1
+      },
+      "sequence_coverage": "directed_legal_bursts_and_generated_single_beats",
+      "strategy": "coverage_guided",
+      "strategy_version": "1.0",
+      "target_coverage": {
+        "port_boundaries": {
+          "fraction": 1.0,
+          "hit_bins": [
+            "sample_address:0",
+            "sample_address:1",
+            "sample_address:1099511627774",
+            "sample_address:1099511627775",
+            "sample_address:549755813887",
+            "sample_data:0",
+            "sample_data:1",
+            "sample_data:2147483647",
+            "sample_data:4294967294",
+            "sample_data:4294967295",
+            "sample_id:0",
+            "sample_id:1",
+            "sample_id:127",
+            "sample_id:254",
+            "sample_id:255",
+            "sample_prot:0",
+            "sample_prot:1",
+            "sample_prot:3",
+            "sample_prot:6",
+            "sample_prot:7",
+            "sample_strobe:0",
+            "sample_strobe:1",
+            "sample_strobe:14",
+            "sample_strobe:15",
+            "sample_strobe:7",
+            "sample_wait:0",
+            "sample_wait:1",
+            "sample_wait:2",
+            "sample_wait:3"
+          ],
+          "hit_count": 29,
+          "missing_bins": [],
+          "total_count": 29
+        }
+      },
+      "unique_count": 64
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axi_lmb_bridge/axi_lmb_bridge_frequency_40",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_frequency_40/generate_testbench/generate_testbench.log"
+  },
+  {
+    "case_id": "axi_lmb_bridge_frequency_40",
+    "stage": "sim_selfcheck",
+    "status": "PASS",
+    "ip_type": "axi_lmb_bridge",
+    "parameters": {
+      "address_width": 40,
+      "data_width": 32,
+      "id_width": 8,
+      "lmb_protocol": "Frequency",
+      "protection": true,
+      "use_pause": false
+    },
+    "strategy": "coverage_guided",
+    "strategy_version": "1.0",
+    "random_seed": "20260962",
+    "case_budget": "64",
+    "coverage_targets": [
+      "port_boundaries"
+    ],
+    "metrics": {
+      "actual_output_sha256": "c3a835877db331ae1bfb6b809e3d32308183a3281cb1f3aea8bf22c8bd61c556",
+      "elapsed_seconds": 14.39345555799082,
+      "output_count": 150,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axi_lmb_bridge/axi_lmb_bridge_frequency_40",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_frequency_40/sim_selfcheck/sim_selfcheck.log"
+  },
+  {
+    "case_id": "axi_lmb_bridge_pause_64",
+    "stage": "create_ip",
+    "status": "PASS",
+    "ip_type": "axi_lmb_bridge",
+    "parameters": {
+      "address_width": 64,
+      "data_width": 64,
+      "id_width": 16,
+      "lmb_protocol": "Frequency",
+      "protection": true,
+      "use_pause": true
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20260963",
+    "case_budget": "64",
+    "coverage_targets": [
+      "port_boundaries"
+    ],
+    "metrics": {
+      "elapsed_seconds": 4.6893734249752015,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axi_lmb_bridge/axi_lmb_bridge_pause_64",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_64/create_ip/create_ip.log"
+  },
+  {
+    "case_id": "axi_lmb_bridge_pause_64",
+    "stage": "generate_testbench",
+    "status": "PASS",
+    "ip_type": "axi_lmb_bridge",
+    "parameters": {
+      "address_width": 64,
+      "data_width": 64,
+      "id_width": 16,
+      "lmb_protocol": "Frequency",
+      "protection": true,
+      "use_pause": true
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20260963",
+    "case_budget": "64",
+    "coverage_targets": [
+      "port_boundaries"
+    ],
+    "metrics": {
+      "checked_transaction_count": 150,
+      "comparison_kind": "axi4_burst_and_lmb_access_sequence",
+      "coverage_model": "input_bins:1.0",
+      "covered_targets": [
+        "port_boundaries"
+      ],
+      "directed_count": 48,
+      "elapsed_seconds": 0.004201703937724233,
+      "generated_count": 64,
+      "input_space_fraction": 3.503246160812043e-46,
+      "input_space_size": 182687704666362864775460604089535377456991567872,
+      "lmb_access_count": 135,
+      "missing_targets": [],
+      "operation_count": 143,
+      "reference_sequence_events": {
+        "backpressured_responses": 92,
+        "beats_1": 137,
+        "beats_2": 2,
+        "beats_4": 4,
+        "burst_fixed": 2,
+        "burst_increment": 139,
+        "burst_wrap": 2,
+        "read_address_error": 1,
+        "read_normal": 69,
+        "read_uncorrectable_error": 1,
+        "suppressed_zero_strobe": 22,
+        "w_before_aw": 33,
+        "waited_transactions": 77,
+        "write_address_error": 1,
+        "write_normal": 70,
+        "write_uncorrectable_error": 1
+      },
+      "sequence_coverage": "directed_legal_bursts_and_generated_single_beats",
+      "strategy": "directed_random",
+      "strategy_version": "1.0",
+      "target_coverage": {
+        "port_boundaries": {
+          "fraction": 1.0,
+          "hit_bins": [
+            "sample_address:0",
+            "sample_address:1",
+            "sample_address:18446744073709551614",
+            "sample_address:18446744073709551615",
+            "sample_address:9223372036854775807",
+            "sample_data:0",
+            "sample_data:1",
+            "sample_data:18446744073709551614",
+            "sample_data:18446744073709551615",
+            "sample_data:9223372036854775807",
+            "sample_id:0",
+            "sample_id:1",
+            "sample_id:32767",
+            "sample_id:65534",
+            "sample_id:65535",
+            "sample_prot:0",
+            "sample_prot:1",
+            "sample_prot:3",
+            "sample_prot:6",
+            "sample_prot:7",
+            "sample_strobe:0",
+            "sample_strobe:1",
+            "sample_strobe:127",
+            "sample_strobe:254",
+            "sample_strobe:255",
+            "sample_wait:0",
+            "sample_wait:1",
+            "sample_wait:2",
+            "sample_wait:3"
+          ],
+          "hit_count": 29,
+          "missing_bins": [],
+          "total_count": 29
+        }
+      },
+      "unique_count": 64
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axi_lmb_bridge/axi_lmb_bridge_pause_64",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_64/generate_testbench/generate_testbench.log"
+  },
+  {
+    "case_id": "axi_lmb_bridge_pause_64",
+    "stage": "sim_selfcheck",
+    "status": "PASS",
+    "ip_type": "axi_lmb_bridge",
+    "parameters": {
+      "address_width": 64,
+      "data_width": 64,
+      "id_width": 16,
+      "lmb_protocol": "Frequency",
+      "protection": true,
+      "use_pause": true
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20260963",
+    "case_budget": "64",
+    "coverage_targets": [
+      "port_boundaries"
+    ],
+    "metrics": {
+      "actual_output_sha256": "ae17a484060e4342aba14a566ab076c0900740e77faf099cd4ae0e1341863f3a",
+      "elapsed_seconds": 14.422009669011459,
+      "output_count": 150,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axi_lmb_bridge/axi_lmb_bridge_pause_64",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_64/sim_selfcheck/sim_selfcheck.log"
+  },
+  {
+    "case_id": "axi_lmb_bridge_pause_standard_40",
+    "stage": "create_ip",
+    "status": "PASS",
+    "ip_type": "axi_lmb_bridge",
+    "parameters": {
+      "address_width": 40,
+      "data_width": 32,
+      "id_width": 4,
+      "lmb_protocol": "Standard",
+      "protection": false,
+      "use_pause": true
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20260964",
+    "case_budget": "64",
+    "coverage_targets": [
+      "port_boundaries"
+    ],
+    "metrics": {
+      "elapsed_seconds": 4.70970715302974,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40/create_ip/create_ip.log"
+  },
+  {
+    "case_id": "axi_lmb_bridge_pause_standard_40",
+    "stage": "generate_testbench",
+    "status": "PASS",
+    "ip_type": "axi_lmb_bridge",
+    "parameters": {
+      "address_width": 40,
+      "data_width": 32,
+      "id_width": 4,
+      "lmb_protocol": "Standard",
+      "protection": false,
+      "use_pause": true
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20260964",
+    "case_budget": "64",
+    "coverage_targets": [
+      "port_boundaries"
+    ],
+    "metrics": {
+      "checked_transaction_count": 150,
+      "comparison_kind": "axi4_burst_and_lmb_access_sequence",
+      "coverage_model": "input_bins:1.0",
+      "covered_targets": [
+        "port_boundaries"
+      ],
+      "directed_count": 48,
+      "elapsed_seconds": 0.003933328203856945,
+      "generated_count": 64,
+      "input_space_fraction": 1.6543612251060553e-24,
+      "input_space_size": 38685626227668133590597632,
+      "lmb_access_count": 135,
+      "missing_targets": [],
+      "operation_count": 143,
+      "reference_sequence_events": {
+        "backpressured_responses": 92,
+        "beats_1": 137,
+        "beats_2": 2,
+        "beats_4": 4,
+        "burst_fixed": 2,
+        "burst_increment": 139,
+        "burst_wrap": 2,
+        "read_address_error": 1,
+        "read_normal": 69,
+        "read_uncorrectable_error": 1,
+        "suppressed_zero_strobe": 22,
+        "w_before_aw": 33,
+        "waited_transactions": 79,
+        "write_address_error": 1,
+        "write_normal": 70,
+        "write_uncorrectable_error": 1
+      },
+      "sequence_coverage": "directed_legal_bursts_and_generated_single_beats",
+      "strategy": "directed_random",
+      "strategy_version": "1.0",
+      "target_coverage": {
+        "port_boundaries": {
+          "fraction": 1.0,
+          "hit_bins": [
+            "sample_address:0",
+            "sample_address:1",
+            "sample_address:1099511627774",
+            "sample_address:1099511627775",
+            "sample_address:549755813887",
+            "sample_data:0",
+            "sample_data:1",
+            "sample_data:2147483647",
+            "sample_data:4294967294",
+            "sample_data:4294967295",
+            "sample_id:0",
+            "sample_id:1",
+            "sample_id:14",
+            "sample_id:15",
+            "sample_id:7",
+            "sample_prot:0",
+            "sample_prot:1",
+            "sample_prot:3",
+            "sample_prot:6",
+            "sample_prot:7",
+            "sample_strobe:0",
+            "sample_strobe:1",
+            "sample_strobe:14",
+            "sample_strobe:15",
+            "sample_strobe:7",
+            "sample_wait:0",
+            "sample_wait:1",
+            "sample_wait:2",
+            "sample_wait:3"
+          ],
+          "hit_count": 29,
+          "missing_bins": [],
+          "total_count": 29
+        }
+      },
+      "unique_count": 64
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40/generate_testbench/generate_testbench.log"
+  },
+  {
+    "case_id": "axi_lmb_bridge_pause_standard_40",
+    "stage": "sim_selfcheck",
+    "status": "PASS",
+    "ip_type": "axi_lmb_bridge",
+    "parameters": {
+      "address_width": 40,
+      "data_width": 32,
+      "id_width": 4,
+      "lmb_protocol": "Standard",
+      "protection": false,
+      "use_pause": true
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20260964",
+    "case_budget": "64",
+    "coverage_targets": [
+      "port_boundaries"
+    ],
+    "metrics": {
+      "actual_output_sha256": "b060a14fd041039e37654911636066294b91ee5da17eaf81b9621ace994c0545",
+      "elapsed_seconds": 14.408487271051854,
+      "output_count": 150,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40/sim_selfcheck/sim_selfcheck.log"
+  }
+]

@@ -1,0 +1,52 @@
+{
+  "classification": "UNTRIAGED",
+  "kind": "value_mismatch",
+  "output_index": 5,
+  "expected": "00000000000000000000000000001000",
+  "actual": "00000000000000000000000001001000",
+  "contains_unknown_bits": false,
+  "input_mapping_available": false,
+  "difference_summary": {
+    "schema_version": 1,
+    "grouping": "kind_phase_output_field_route:1.0",
+    "classification": "OBSERVATION_GROUPS_NOT_BUG_COUNTS",
+    "all_rows_visited": true,
+    "difference_rows": 3,
+    "artifact_issues": 0,
+    "difference_kind_counts": {
+      "value_mismatch": 3
+    },
+    "rows_without_input_mapping": 3,
+    "layout_issue_rows": {},
+    "group_limit": 256,
+    "retained_group_count": 1,
+    "groups_truncated": false,
+    "omitted_group_memberships": 0,
+    "groups": [
+      {
+        "kind": "value_mismatch",
+        "phase": "unmapped",
+        "output_field": "pc_status",
+        "count": 3,
+        "first_output_index": 5,
+        "last_output_index": 23,
+        "first_context": {
+          "phase": "unmapped",
+          "input_mapping_available": false
+        },
+        "first_difference": {
+          "kind": "value_mismatch",
+          "output_index": 5,
+          "expected": "00000000000000000000000000001000",
+          "actual": "00000000000000000000000001001000",
+          "contains_unknown_bits": false
+        },
+        "example_output_indices": [
+          5,
+          14,
+          23
+        ]
+      }
+    ]
+  }
+}

@@ -16,6 +16,7 @@ PASS 只表示本批测试未发现异常，失败也需要先区分环境、脚
 AXI-Stream 后端检查握手、顺序、侧带和回压保持。
 I2S Transmitter 检查 AXI-Lite 配置、AXI4-Stream 声道路由和 I2S 串行样本。
 AXI-Stream 协议检查器逐场景核对 32 位状态，覆盖复位、回压稳定性、有效保持、等待和字节限定。
+TSTRB 缺省时按协议等于 TKEEP，参考同时检查派生出的稳定性状态，不屏蔽 bit 6。
 启用独立系统复位时内部同步会错过 AXIS 复位释放边沿，不把该配置算作 bit0 规则覆盖。
 AXI Memory Initialization 检查初始化写 burst、完整地址和数据序列、响应等待、
 ACLKEN 暂停及初始化完成后的五通道透传。
@@ -46,7 +47,8 @@ Timer 尚未接入 PWM、级联和不停计数时的总线访问，不能把这�
 AHB-Lite 到 AXI Bridge 检查单拍读写、地址和保护属性、窄传输字节使能、错误响应和回压。
 当前未接入 AHB burst、超时触发和锁定传输，不能把这些功能算作已覆盖。
 AXI to LMB Bridge 检查 burst 地址、等待、错误响应、保护、Pause 和双侧回压。
-2026.1 全量运行中两组 AXI to LMB Bridge 配置有数据和响应差异，尚未独立复现。
+AXI to LMB Bridge 的 Frequency 读数据和读 UE 比 Ready 晚一拍，写 UE 仍同拍。
+此前两组差异来自测试端时序，修正后常用配置及固定请求对照通过，不计为 IP bug。
 GPIO 方向切换与未启用寄存器读回存在待确认差异，保留失败和独立 VHDL 记录。
 AXI INTC 的 ISR 写入丢失旧位已用独立 VHDL 复现，预编译库与原始 HDL 对照一致。
 INTC 已接入公共 AXI-Lite 流水线，另发现 ME 清零后 IRQ 保持异常，已有独立复现。

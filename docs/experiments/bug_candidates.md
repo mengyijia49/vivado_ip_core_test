@@ -1,6 +1,7 @@
 # 待确认问题
 
-截至 2026-09-22，Vivado 2026.1 行为仿真留下以下 13 条排查线索，
+截至 2026-09-23，原有 13 条线索中有 2 条已查明是测试框架问题，剩余 11 条待确认。
+这 11 条来自 Vivado 2026.1 行为仿真，
 厂商确认的 bug 仍为 0。每行写一种现象，不按 IP 种类计数；
 同一种差异在多个配置或输入下重复出现，也不重复计数。
 运行编号、原始结果和对照见[2026.1 观察记录](vivado_2026_observations.md)。
@@ -36,7 +37,7 @@ IP 核可以理解为厂商提供的现成电路模块。Vivado 按你选的参�
 
 |  | 现象 | 触发配置与结果 | 还需确认 | 确认? |
 | --- | --- | --- | --- | --- |
-| 1 | [复数乘法器](../ip/complex_multiplier/latency_issue.md) | `cmul_long_pipe`，手动延迟 55 拍；第 80 拍已见非零，测试预期第 134 拍 | 延迟定义和受支持参数范围 |  |
+| 1 | [复数乘法器](../ip/complex_multiplier/latency_issue.md) | `cmul_long_pipe` 首次发现；独立 240 拍观察中，54、55 拍配置的数据提前出现，但有效信号仍延迟；自动、4、16 拍正常 | 长延迟的数据与有效信号错位，内部原因和硬件表现尚未确认 |  |
 | 2 | [旧版 xlconcat](../ip/xlconcat/port_128_issue.md) | 128 路各 1 位，全 1 输入预期全 1，实际全 0；127 路及新版对照正常 | 旧版是否仍受支持 |  |
 | 3 | [TMR 投票器](../ip/tmr_voter/lockstep_issue.md) | 锁步加比较器，1 位和 17 位配置均在 XSim 展开时报端口宽度错误 | 参数组合支持范围；尚未运行功能输入 |  |
 | 4 | [AXI GPIO 第二通道](../ip/axi_gpio/register_issue.md) | 3 组单通道配置首次在未启用的 `GPIO2_TRI` 读回失败；独立 VHDL 读回 `0xFFFFFFFF`，手册要求 0 | 厂商如何解释这处读回差异 |  |
@@ -47,8 +48,6 @@ IP 核可以理解为厂商提供的现成电路模块。Vivado 按你选的参�
 | 9 | [FIR 全精度](../ip/fir_compiler/full_precision_issue.md) | 8 位输入、4 位系数；两组负系数 × 两种架构，共 4 组失败；`-128 × -8` 应为 +1024，实际 -1024 | 自动输出位宽规则；四组暂归一个问题 | :white_check_mark: |
 | 10 | [Mailbox TLAST](../ip/mailbox/tlast_issue.md) | 32 位 AXI4-Stream，4 组深度/存储组合均出现 `TLAST=1` 变 0 | 此模式是否承诺传递 TLAST |  |
 | 11 | [累加器](../ip/accumulator/ce_bypass_issue.md) | 8 位有符号输入、16 位输出；`CE=0、BYPASS=1` 时期望保持 1，实际变 0 | CE/BYPASS 优先级，可能是参考模型理解有误 |  |
-| 12 | [AXI to LMB Bridge](../ip/axi_lmb_bridge/data_issue.md) | 40/32 位和 64/64 位两组地址/数据宽度，在输出序号 3 起出现数据差异 | 尚无固定输入复现，先排查参考和时序 |  |
-| 13 | [AXIS Protocol Checker](../ip/axis_protocol_checker/partial_issue.md) | 128 位流、启用 TKEEP；期望只报 TKEEP 变化，实际还报了未启用的 TSTRB 变化 | 生成模型如何处理关闭的 TSTRB；尚无独立复现 |  |
 
 INTC、浮点乘法和 FIR 的独立 VHDL 复现不依赖 Python 参考模型。
 同一问题在多个位宽、延迟或种子下触发，只扩大影响范围，不增加 bug 数量。
@@ -63,6 +62,8 @@ INTC、浮点乘法和 FIR 的独立 VHDL 复现不依赖 Python 参考模型。
 
 ## 不计入的情况
 
+- [AXI to LMB Bridge](../ip/axi_lmb_bridge/data_issue.md)：测试端没有把 Frequency 模式的读数据和读 UE 延后一拍。修正后，原两组及全部 5 组常用配置通过，固定请求对照也通过。
+- [AXIS Protocol Checker](../ip/axis_protocol_checker/partial_issue.md)：TSTRB 缺省时等于 TKEEP，参考漏算了这个关系。独立 VHDL 对照符合该规则，修正参考后全部 6 组常用配置通过。
 - Timer 捕获回绕脉冲的遗漏是 Python 参考模型错误，已修复。
 - 大预算 AXI-Lite 仿真的超时常量越界是框架 VHDL 生成错误，已修复。
 - 浮点定向输入的窄 USER 通道长期为零是框架覆盖缺口，已修正，见[标签说明](../ip/floating_point/user_patterns.md)。

@@ -1,0 +1,669 @@
+[
+  {
+    "case_id": "axis_pc_minimal",
+    "stage": "create_ip",
+    "status": "PASS",
+    "ip_type": "axis_protocol_checker",
+    "parameters": {
+      "data_bytes": 1,
+      "has_aclken": false,
+      "has_system_reset": false,
+      "has_tkeep": false,
+      "has_tlast": false,
+      "has_tready": false,
+      "has_tstrb": false,
+      "max_waits": 0,
+      "tdest_width": 0,
+      "tid_width": 0,
+      "tuser_width": 0
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20261172",
+    "case_budget": "16",
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "metrics": {
+      "elapsed_seconds": 4.761881964979693,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axis_protocol_checker/axis_pc_minimal",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_minimal/create_ip/create_ip.log"
+  },
+  {
+    "case_id": "axis_pc_minimal",
+    "stage": "generate_testbench",
+    "status": "PASS",
+    "ip_type": "axis_protocol_checker",
+    "parameters": {
+      "data_bytes": 1,
+      "has_aclken": false,
+      "has_system_reset": false,
+      "has_tkeep": false,
+      "has_tlast": false,
+      "has_tready": false,
+      "has_tstrb": false,
+      "max_waits": 0,
+      "tdest_width": 0,
+      "tid_width": 0,
+      "tuser_width": 0
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20261172",
+    "case_budget": "16",
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "metrics": {
+      "checked_transaction_count": 16,
+      "comparison_kind": "axis_protocol_checker_exact_status_bits",
+      "elapsed_seconds": 0.001317688962444663,
+      "reference_sequence_events": {
+        "legal": 8,
+        "tvalid_after_reset": 8
+      },
+      "sequence_coverage": "reset_stability_valid_wait_and_keep_strb_rules"
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axis_protocol_checker/axis_pc_minimal",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_minimal/generate_testbench/generate_testbench.log"
+  },
+  {
+    "case_id": "axis_pc_minimal",
+    "stage": "sim_selfcheck",
+    "status": "PASS",
+    "ip_type": "axis_protocol_checker",
+    "parameters": {
+      "data_bytes": 1,
+      "has_aclken": false,
+      "has_system_reset": false,
+      "has_tkeep": false,
+      "has_tlast": false,
+      "has_tready": false,
+      "has_tstrb": false,
+      "max_waits": 0,
+      "tdest_width": 0,
+      "tid_width": 0,
+      "tuser_width": 0
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20261172",
+    "case_budget": "16",
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "metrics": {
+      "actual_output_sha256": "ac2e6d5deecc34031028336d12476af7dc5a87ebec4d6adfe74b5bdd3718da15",
+      "elapsed_seconds": 15.445493043167517,
+      "output_count": 16,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axis_protocol_checker/axis_pc_minimal",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_minimal/sim_selfcheck/sim_selfcheck.log"
+  },
+  {
+    "case_id": "axis_pc_32_full",
+    "stage": "create_ip",
+    "status": "PASS",
+    "ip_type": "axis_protocol_checker",
+    "parameters": {
+      "data_bytes": 4,
+      "has_aclken": true,
+      "has_system_reset": true,
+      "has_tkeep": true,
+      "has_tlast": true,
+      "has_tready": true,
+      "has_tstrb": true,
+      "max_waits": 16,
+      "tdest_width": 4,
+      "tid_width": 4,
+      "tuser_width": 8
+    },
+    "strategy": "coverage_guided",
+    "strategy_version": "1.0",
+    "random_seed": "20261173",
+    "case_budget": "32",
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "metrics": {
+      "elapsed_seconds": 4.672240136191249,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axis_protocol_checker/axis_pc_32_full",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_32_full/create_ip/create_ip.log"
+  },
+  {
+    "case_id": "axis_pc_32_full",
+    "stage": "generate_testbench",
+    "status": "PASS",
+    "ip_type": "axis_protocol_checker",
+    "parameters": {
+      "data_bytes": 4,
+      "has_aclken": true,
+      "has_system_reset": true,
+      "has_tkeep": true,
+      "has_tlast": true,
+      "has_tready": true,
+      "has_tstrb": true,
+      "max_waits": 16,
+      "tdest_width": 4,
+      "tid_width": 4,
+      "tuser_width": 8
+    },
+    "strategy": "coverage_guided",
+    "strategy_version": "1.0",
+    "random_seed": "20261173",
+    "case_budget": "32",
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "metrics": {
+      "checked_transaction_count": 32,
+      "comparison_kind": "axis_protocol_checker_exact_status_bits",
+      "elapsed_seconds": 0.0009519809391349554,
+      "reference_sequence_events": {
+        "aclken_pauses_wait_counter": 2,
+        "legal": 3,
+        "max_wait_exceeded": 2,
+        "tdata_changed": 3,
+        "tdest_changed": 3,
+        "tid_changed": 3,
+        "tkeep_changed": 3,
+        "tkeep_tstrb_conflict": 3,
+        "tlast_changed": 3,
+        "tstrb_changed": 2,
+        "tuser_changed": 2,
+        "tvalid_dropped": 3
+      },
+      "sequence_coverage": "reset_stability_valid_wait_and_keep_strb_rules"
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axis_protocol_checker/axis_pc_32_full",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_32_full/generate_testbench/generate_testbench.log"
+  },
+  {
+    "case_id": "axis_pc_32_full",
+    "stage": "sim_selfcheck",
+    "status": "PASS",
+    "ip_type": "axis_protocol_checker",
+    "parameters": {
+      "data_bytes": 4,
+      "has_aclken": true,
+      "has_system_reset": true,
+      "has_tkeep": true,
+      "has_tlast": true,
+      "has_tready": true,
+      "has_tstrb": true,
+      "max_waits": 16,
+      "tdest_width": 4,
+      "tid_width": 4,
+      "tuser_width": 8
+    },
+    "strategy": "coverage_guided",
+    "strategy_version": "1.0",
+    "random_seed": "20261173",
+    "case_budget": "32",
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "metrics": {
+      "actual_output_sha256": "27882a9de65698760bd7052c0bcc18b653b242c011c17f8ad914df9d0fe950c3",
+      "elapsed_seconds": 15.460226448951289,
+      "output_count": 32,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axis_protocol_checker/axis_pc_32_full",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_32_full/sim_selfcheck/sim_selfcheck.log"
+  },
+  {
+    "case_id": "axis_pc_128_partial",
+    "stage": "create_ip",
+    "status": "PASS",
+    "ip_type": "axis_protocol_checker",
+    "parameters": {
+      "data_bytes": 16,
+      "has_aclken": false,
+      "has_system_reset": false,
+      "has_tkeep": true,
+      "has_tlast": true,
+      "has_tready": true,
+      "has_tstrb": false,
+      "max_waits": 64,
+      "tdest_width": 8,
+      "tid_width": 0,
+      "tuser_width": 16
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20261174",
+    "case_budget": "24",
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "metrics": {
+      "elapsed_seconds": 4.773589577060193,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axis_protocol_checker/axis_pc_128_partial",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_128_partial/create_ip/create_ip.log"
+  },
+  {
+    "case_id": "axis_pc_128_partial",
+    "stage": "generate_testbench",
+    "status": "PASS",
+    "ip_type": "axis_protocol_checker",
+    "parameters": {
+      "data_bytes": 16,
+      "has_aclken": false,
+      "has_system_reset": false,
+      "has_tkeep": true,
+      "has_tlast": true,
+      "has_tready": true,
+      "has_tstrb": false,
+      "max_waits": 64,
+      "tdest_width": 8,
+      "tid_width": 0,
+      "tuser_width": 16
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20261174",
+    "case_budget": "24",
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "metrics": {
+      "checked_transaction_count": 24,
+      "comparison_kind": "axis_protocol_checker_exact_status_bits",
+      "elapsed_seconds": 0.001969696953892708,
+      "reference_sequence_events": {
+        "legal": 3,
+        "max_wait_exceeded": 2,
+        "tdata_changed": 3,
+        "tdest_changed": 3,
+        "tkeep_changed": 3,
+        "tlast_changed": 2,
+        "tuser_changed": 2,
+        "tvalid_after_reset": 3,
+        "tvalid_dropped": 3
+      },
+      "sequence_coverage": "reset_stability_valid_wait_and_keep_strb_rules"
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axis_protocol_checker/axis_pc_128_partial",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_128_partial/generate_testbench/generate_testbench.log"
+  },
+  {
+    "case_id": "axis_pc_128_partial",
+    "stage": "sim_selfcheck",
+    "status": "PASS",
+    "ip_type": "axis_protocol_checker",
+    "parameters": {
+      "data_bytes": 16,
+      "has_aclken": false,
+      "has_system_reset": false,
+      "has_tkeep": true,
+      "has_tlast": true,
+      "has_tready": true,
+      "has_tstrb": false,
+      "max_waits": 64,
+      "tdest_width": 8,
+      "tid_width": 0,
+      "tuser_width": 16
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20261174",
+    "case_budget": "24",
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "metrics": {
+      "actual_output_sha256": "2ff381c81e45b763807b9d3f0911c04660e31c26097f4999f7918e18df7a5746",
+      "elapsed_seconds": 15.979039991972968,
+      "output_count": 24,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axis_protocol_checker/axis_pc_128_partial",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_128_partial/sim_selfcheck/sim_selfcheck.log"
+  },
+  {
+    "case_id": "axis_pc_1024_full",
+    "stage": "create_ip",
+    "status": "PASS",
+    "ip_type": "axis_protocol_checker",
+    "parameters": {
+      "data_bytes": 128,
+      "has_aclken": true,
+      "has_system_reset": true,
+      "has_tkeep": true,
+      "has_tlast": true,
+      "has_tready": true,
+      "has_tstrb": true,
+      "max_waits": 256,
+      "tdest_width": 32,
+      "tid_width": 32,
+      "tuser_width": 128
+    },
+    "strategy": "coverage_guided",
+    "strategy_version": "1.0",
+    "random_seed": "20261175",
+    "case_budget": "32",
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "metrics": {
+      "elapsed_seconds": 5.405926672974601,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axis_protocol_checker/axis_pc_1024_full",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_1024_full/create_ip/create_ip.log"
+  },
+  {
+    "case_id": "axis_pc_1024_full",
+    "stage": "generate_testbench",
+    "status": "PASS",
+    "ip_type": "axis_protocol_checker",
+    "parameters": {
+      "data_bytes": 128,
+      "has_aclken": true,
+      "has_system_reset": true,
+      "has_tkeep": true,
+      "has_tlast": true,
+      "has_tready": true,
+      "has_tstrb": true,
+      "max_waits": 256,
+      "tdest_width": 32,
+      "tid_width": 32,
+      "tuser_width": 128
+    },
+    "strategy": "coverage_guided",
+    "strategy_version": "1.0",
+    "random_seed": "20261175",
+    "case_budget": "32",
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "metrics": {
+      "checked_transaction_count": 32,
+      "comparison_kind": "axis_protocol_checker_exact_status_bits",
+      "elapsed_seconds": 0.0008991369977593422,
+      "reference_sequence_events": {
+        "aclken_pauses_wait_counter": 2,
+        "legal": 3,
+        "max_wait_exceeded": 2,
+        "tdata_changed": 3,
+        "tdest_changed": 3,
+        "tid_changed": 3,
+        "tkeep_changed": 3,
+        "tkeep_tstrb_conflict": 3,
+        "tlast_changed": 3,
+        "tstrb_changed": 2,
+        "tuser_changed": 2,
+        "tvalid_dropped": 3
+      },
+      "sequence_coverage": "reset_stability_valid_wait_and_keep_strb_rules"
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axis_protocol_checker/axis_pc_1024_full",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_1024_full/generate_testbench/generate_testbench.log"
+  },
+  {
+    "case_id": "axis_pc_1024_full",
+    "stage": "sim_selfcheck",
+    "status": "PASS",
+    "ip_type": "axis_protocol_checker",
+    "parameters": {
+      "data_bytes": 128,
+      "has_aclken": true,
+      "has_system_reset": true,
+      "has_tkeep": true,
+      "has_tlast": true,
+      "has_tready": true,
+      "has_tstrb": true,
+      "max_waits": 256,
+      "tdest_width": 32,
+      "tid_width": 32,
+      "tuser_width": 128
+    },
+    "strategy": "coverage_guided",
+    "strategy_version": "1.0",
+    "random_seed": "20261175",
+    "case_budget": "32",
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "metrics": {
+      "actual_output_sha256": "27882a9de65698760bd7052c0bcc18b653b242c011c17f8ad914df9d0fe950c3",
+      "elapsed_seconds": 16.679999976884574,
+      "output_count": 32,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axis_protocol_checker/axis_pc_1024_full",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_1024_full/sim_selfcheck/sim_selfcheck.log"
+  },
+  {
+    "case_id": "axis_pc_strb_no_keep",
+    "stage": "create_ip",
+    "status": "PASS",
+    "ip_type": "axis_protocol_checker",
+    "parameters": {
+      "data_bytes": 4,
+      "has_aclken": true,
+      "has_system_reset": false,
+      "has_tkeep": false,
+      "has_tlast": false,
+      "has_tready": true,
+      "has_tstrb": true,
+      "max_waits": 0,
+      "tdest_width": 0,
+      "tid_width": 8,
+      "tuser_width": 0
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20261176",
+    "case_budget": "20",
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "metrics": {
+      "elapsed_seconds": 5.328228040132672,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axis_protocol_checker/axis_pc_strb_no_keep",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_strb_no_keep/create_ip/create_ip.log"
+  },
+  {
+    "case_id": "axis_pc_strb_no_keep",
+    "stage": "generate_testbench",
+    "status": "PASS",
+    "ip_type": "axis_protocol_checker",
+    "parameters": {
+      "data_bytes": 4,
+      "has_aclken": true,
+      "has_system_reset": false,
+      "has_tkeep": false,
+      "has_tlast": false,
+      "has_tready": true,
+      "has_tstrb": true,
+      "max_waits": 0,
+      "tdest_width": 0,
+      "tid_width": 8,
+      "tuser_width": 0
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20261176",
+    "case_budget": "20",
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "metrics": {
+      "checked_transaction_count": 20,
+      "comparison_kind": "axis_protocol_checker_exact_status_bits",
+      "elapsed_seconds": 0.0008843869436532259,
+      "reference_sequence_events": {
+        "legal": 4,
+        "tdata_changed": 3,
+        "tid_changed": 3,
+        "tstrb_changed": 3,
+        "tvalid_after_reset": 4,
+        "tvalid_dropped": 3
+      },
+      "sequence_coverage": "reset_stability_valid_wait_and_keep_strb_rules"
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axis_protocol_checker/axis_pc_strb_no_keep",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_strb_no_keep/generate_testbench/generate_testbench.log"
+  },
+  {
+    "case_id": "axis_pc_strb_no_keep",
+    "stage": "sim_selfcheck",
+    "status": "PASS",
+    "ip_type": "axis_protocol_checker",
+    "parameters": {
+      "data_bytes": 4,
+      "has_aclken": true,
+      "has_system_reset": false,
+      "has_tkeep": false,
+      "has_tlast": false,
+      "has_tready": true,
+      "has_tstrb": true,
+      "max_waits": 0,
+      "tdest_width": 0,
+      "tid_width": 8,
+      "tuser_width": 0
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20261176",
+    "case_budget": "20",
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "metrics": {
+      "actual_output_sha256": "854f5b376fef2a522e226555a4d31c5feb4d2199bf2ba9c75afe9515537e949e",
+      "elapsed_seconds": 16.743465710897,
+      "output_count": 20,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axis_protocol_checker/axis_pc_strb_no_keep",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_strb_no_keep/sim_selfcheck/sim_selfcheck.log"
+  },
+  {
+    "case_id": "axis_pc_no_ready_sidebands",
+    "stage": "create_ip",
+    "status": "PASS",
+    "ip_type": "axis_protocol_checker",
+    "parameters": {
+      "data_bytes": 16,
+      "has_aclken": false,
+      "has_system_reset": true,
+      "has_tkeep": true,
+      "has_tlast": true,
+      "has_tready": false,
+      "has_tstrb": true,
+      "max_waits": 256,
+      "tdest_width": 16,
+      "tid_width": 16,
+      "tuser_width": 16
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20261177",
+    "case_budget": "16",
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "metrics": {
+      "elapsed_seconds": 5.5505643610376865,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axis_protocol_checker/axis_pc_no_ready_sidebands",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_no_ready_sidebands/create_ip/create_ip.log"
+  },
+  {
+    "case_id": "axis_pc_no_ready_sidebands",
+    "stage": "generate_testbench",
+    "status": "PASS",
+    "ip_type": "axis_protocol_checker",
+    "parameters": {
+      "data_bytes": 16,
+      "has_aclken": false,
+      "has_system_reset": true,
+      "has_tkeep": true,
+      "has_tlast": true,
+      "has_tready": false,
+      "has_tstrb": true,
+      "max_waits": 256,
+      "tdest_width": 16,
+      "tid_width": 16,
+      "tuser_width": 16
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20261177",
+    "case_budget": "16",
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "metrics": {
+      "checked_transaction_count": 16,
+      "comparison_kind": "axis_protocol_checker_exact_status_bits",
+      "elapsed_seconds": 0.0008929499890655279,
+      "reference_sequence_events": {
+        "legal": 8,
+        "tkeep_tstrb_conflict": 8
+      },
+      "sequence_coverage": "reset_stability_valid_wait_and_keep_strb_rules"
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axis_protocol_checker/axis_pc_no_ready_sidebands",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_no_ready_sidebands/generate_testbench/generate_testbench.log"
+  },
+  {
+    "case_id": "axis_pc_no_ready_sidebands",
+    "stage": "sim_selfcheck",
+    "status": "PASS",
+    "ip_type": "axis_protocol_checker",
+    "parameters": {
+      "data_bytes": 16,
+      "has_aclken": false,
+      "has_system_reset": true,
+      "has_tkeep": true,
+      "has_tlast": true,
+      "has_tready": false,
+      "has_tstrb": true,
+      "max_waits": 256,
+      "tdest_width": 16,
+      "tid_width": 16,
+      "tuser_width": 16
+    },
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": "20261177",
+    "case_budget": "16",
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "metrics": {
+      "actual_output_sha256": "af3c0df3ffd71824f0158ad3f938086969bf7e21f009b692f865b91276658aaf",
+      "elapsed_seconds": 16.980631133075804,
+      "output_count": 16,
+      "returncode": 0,
+      "timed_out": false
+    },
+    "run_dir": "<REPOSITORY_ROOT>/runs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/cases/axis_protocol_checker/axis_pc_no_ready_sidebands",
+    "log_path": "<REPOSITORY_ROOT>/runs/logs/history/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_no_ready_sidebands/sim_selfcheck/sim_selfcheck.log"
+  }
+]

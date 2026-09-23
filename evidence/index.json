@@ -2,6 +2,9 @@
   "schema_version": 1,
   "issues": [
     "vivado_2026_1/observations",
-    "vivado_2026_1/full_regression"
+    "vivado_2026_1/full_regression",
+    "vivado_2026_1/complex_multiplier/latency_trace",
+    "vivado_2026_1/axi_lmb_bridge/protocol_review",
+    "vivado_2026_1/axis_protocol_checker/protocol_review"
   ]
 }

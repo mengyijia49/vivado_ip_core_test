@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "case_id": "axis_pc_32_full",
+  "ip_type": "axis_protocol_checker",
+  "vendor": "xilinx.com",
+  "ip_name": "axis_protocol_checker",
+  "configured_parameters": {
+    "data_bytes": 4,
+    "tid_width": 4,
+    "tdest_width": 4,
+    "tuser_width": 8,
+    "has_tready": true,
+    "has_tstrb": true,
+    "has_tkeep": true,
+    "has_tlast": true,
+    "has_aclken": true,
+    "has_system_reset": true,
+    "max_waits": 16
+  },
+  "generated_ip": {
+    "component_reference": "xilinx.com:ip:axis_protocol_checker:2.0",
+    "ports": {
+      "aclk": [
+        {
+          "direction": "in"
+        }
+      ],
+      "aresetn": [
+        {
+          "direction": "in"
+        }
+      ],
+      "system_resetn": [
+        {
+          "direction": "in",
+          "driver_value": "0x1"
+        }
+      ],
+      "aclken": [
+        {
+          "direction": "in",
+          "driver_value": "0x1"
+        }
+      ],
+      "pc_axis_tvalid": [
+        {
+          "direction": "in"
+        }
+      ],
+      "pc_axis_tready": [
+        {
+          "direction": "in",
+          "driver_value": "0x1"
+        }
+      ],
+      "pc_axis_tdata": [
+        {
+          "direction": "in",
+          "size_left": "31",
+          "size_right": "0",
+          "driver_value": "0x00000000"
+        }
+      ],
+      "pc_axis_tstrb": [
+        {
+          "direction": "in",
+          "size_left": "3",
+          "size_right": "0",
+          "driver_value": "0xF"
+        }
+      ],
+      "pc_axis_tkeep": [
+        {
+          "direction": "in",
+          "size_left": "3",
+          "size_right": "0",
+          "driver_value": "0xF"
+        }
+      ],
+      "pc_axis_tlast": [
+        {
+          "direction": "in",
+          "driver_value": "0x1"
+        }
+      ],
+      "pc_axis_tid": [
+        {
+          "direction": "in",
+          "size_left": "3",
+          "size_right": "0",
+          "driver_value": "0x0"
+        }
+      ],
+      "pc_axis_tdest": [
+        {
+          "direction": "in",
+          "size_left": "3",
+          "size_right": "0",
+          "driver_value": "0x0"
+        }
+      ],
+      "pc_axis_tuser": [
+        {
+          "direction": "in",
+          "size_left": "7",
+          "size_right": "0",
+          "driver_value": "0x0"
+        }
+      ],
+      "pc_asserted": [
+        {
+          "direction": "out"
+        }
+      ],
+      "pc_status": [
+        {
+          "direction": "out",
+          "size_left": "31",
+          "size_right": "0"
+        }
+      ]
+    },
+    "model_parameters": {
+      "C_AXIS_TDATA_WIDTH": "32",
+      "C_AXIS_TID_WIDTH": "4",
+      "C_AXIS_TDEST_WIDTH": "4",
+      "C_AXIS_TUSER_WIDTH": "8",
+      "C_AXIS_SIGNAL_SET": "0b00000000000000000000000011111111",
+      "C_PC_MAXWAITS": "16",
+      "C_PC_MESSAGE_LEVEL": "0",
+      "C_PC_HAS_SYSTEM_RESET": "1",
+      "C_ENABLE_CONTROL": "0",
+      "C_PC_STATUS_WIDTH": "32",
+      "C_ENABLE_MARK_DEBUG": "0"
+    }
+  },
+  "output_layout": {
+    "encoding": "binary_msb_first",
+    "fields": [
+      {
+        "name": "pc_status",
+        "width": 32
+      }
+    ]
+  },
+  "verification": {
+    "strategy": "coverage_guided",
+    "strategy_version": "1.0",
+    "random_seed": 20261173,
+    "case_budget": 32,
+    "coverage_targets": [
+      "protocol_rules"
+    ],
+    "boundary_mode": "systematic",
+    "timing_mode": "random_gaps",
+    "max_gap_cycles": 8,
+    "burst_length": 16,
+    "input_order": "generated",
+    "schedule": {
+      "checked_transaction_count": 32,
+      "comparison_kind": "axis_protocol_checker_exact_status_bits",
+      "reference_sequence_events": {
+        "legal": 3,
+        "tkeep_tstrb_conflict": 3,
+        "tdata_changed": 3,
+        "tvalid_dropped": 3,
+        "tid_changed": 3,
+        "tdest_changed": 3,
+        "tkeep_changed": 3,
+        "tlast_changed": 3,
+        "tstrb_changed": 2,
+        "tuser_changed": 2,
+        "max_wait_exceeded": 2,
+        "aclken_pauses_wait_counter": 2
+      },
+      "sequence_coverage": "reset_stability_valid_wait_and_keep_strb_rules"
+    }
+  },
+  "artifacts": {
+    "testbench": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_32_full/tb/tb_axis_protocol_checker.vhd",
+    "input_vectors": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_32_full/vectors/protocol_scenarios.json",
+    "expected_output": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_32_full/vectors/expected_output.txt",
+    "actual_output": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_32_full/outputs/actual_output.txt",
+    "xci": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axis_protocol_checker/axis_pc_32_full/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci"
+  },
+  "artifact_sha256": {
+    "testbench": "85b40ae3844d1c1e90a634ca138a32509a5a778638ec9f7c3130d372ed8177dd",
+    "input_vectors": "814d95208131a1445ffdf06cd36d54e2ee407d42c9df3320e7e9aa3ed5a265fa",
+    "expected_output": "27882a9de65698760bd7052c0bcc18b653b242c011c17f8ad914df9d0fe950c3",
+    "xci": "5878e383c4ac40e562907c3767a92f99c1d7873b7f6f4f3c50ecf28222af2895"
+  }
+}

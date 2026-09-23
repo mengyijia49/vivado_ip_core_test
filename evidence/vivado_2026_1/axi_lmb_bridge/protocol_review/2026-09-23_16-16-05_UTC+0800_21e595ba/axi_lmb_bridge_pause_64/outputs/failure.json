@@ -1,0 +1,74 @@
+{
+  "classification": "UNTRIAGED",
+  "kind": "value_mismatch",
+  "output_index": 3,
+  "expected": "100000000000000100100011100010110111001011011010010000011010100100010000111110000000",
+  "actual": "100000000000000100100101100011010111010011011100010000111010101100010010111110100000",
+  "contains_unknown_bits": false,
+  "input_mapping_available": false,
+  "difference_summary": {
+    "schema_version": 1,
+    "grouping": "kind_phase_output_field_route:1.0",
+    "classification": "OBSERVATION_GROUPS_NOT_BUG_COUNTS",
+    "all_rows_visited": true,
+    "difference_rows": 7,
+    "artifact_issues": 0,
+    "difference_kind_counts": {
+      "value_mismatch": 7
+    },
+    "rows_without_input_mapping": 7,
+    "layout_issue_rows": {},
+    "group_limit": 256,
+    "retained_group_count": 2,
+    "groups_truncated": false,
+    "omitted_group_memberships": 0,
+    "groups": [
+      {
+        "kind": "value_mismatch",
+        "phase": "unmapped",
+        "output_field": "data",
+        "count": 6,
+        "first_output_index": 3,
+        "last_output_index": 13,
+        "first_context": {
+          "phase": "unmapped",
+          "input_mapping_available": false
+        },
+        "first_difference": {
+          "kind": "value_mismatch",
+          "output_index": 3,
+          "expected": "100000000000000100100011100010110111001011011010010000011010100100010000111110000000",
+          "actual": "100000000000000100100101100011010111010011011100010000111010101100010010111110100000",
+          "contains_unknown_bits": false
+        },
+        "example_output_indices": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "kind": "value_mismatch",
+        "phase": "unmapped",
+        "output_field": "resp",
+        "count": 1,
+        "first_output_index": 19,
+        "last_output_index": 19,
+        "first_context": {
+          "phase": "unmapped",
+          "input_mapping_available": false
+        },
+        "first_difference": {
+          "kind": "value_mismatch",
+          "output_index": 19,
+          "expected": "100000000000001110001011111100110101101011000010001010011001000101111000111000000101",
+          "actual": "100000000000001110001011111100110101101011000010001010011001000101111000111000000001",
+          "contains_unknown_bits": false
+        },
+        "example_output_indices": [
+          19
+        ]
+      }
+    ]
+  }
+}

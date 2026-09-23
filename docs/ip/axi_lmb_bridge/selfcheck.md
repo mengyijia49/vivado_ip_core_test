@@ -29,11 +29,10 @@ Frequency 两种 LMB 协议、保护信号及 Pause。大矩阵把这些参数�
 
 ## 当前结果和限制
 
-Vivado 2026.1 已运行 5 组常用配置。478 组全量运行中的 `axi_lmb_bridge_frequency_40`、
-`axi_lmb_bridge_pause_64` 出现数据和响应文件差异，还没有独立 VHDL 对照。
-原始输入输出和失败摘要见
-[2026.1 全量运行记录](../../experiments/vivado_2026_full_regression.md)。
-目前不能判断差异来自 IP、testbench 还是参考模型。
+2026-09-23 在 Vivado 2026.1 上复测全部 5 组常用配置，15 个阶段均通过。
+此前两组 Frequency 配置的数据和响应差异来自测试端：读数据和读 UE 应比 Ready 晚一拍，
+旧模板没有做这个区分。修正后原输入、原期望值通过；Standard 和 Frequency 的固定请求
+对照也通过。这条已排除出 IP bug 候选，过程和日志见[排查记录](data_issue.md)。
 
 当前 FIFO 深度固定为 AW=2、W=8、AR=2、R=8，没有作为扫描参数。测试只发送合法 burst，
 没有覆盖多个未完成事务的全部交错次序，也没有做综合、实现或板级测试。

@@ -1,0 +1,36 @@
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 18-sep-2027.
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Wed Sep 23 16:17:53 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source <REPOSITORY_ROOT>/tcl/ip/axi_lmb_bridge/create_ip.tcl
+# set ip_vlnv "xilinx.com:ip:axi_lmb_bridge:1.0"
+# source [file join [file dirname [info script]] .. .. shared create_configured_ip.tcl]
+## if {[llength $argv] < 1 || [llength $argv] % 2 != 1} {
+##     error "Usage: run_dir CONFIG.name value ..."
+## }
+## set run_dir [file normalize [lindex $argv 0]]
+## create_project ip_test "$run_dir/proj" -part xc7a35tcsg324-1 -force
+## create_ip -vlnv $ip_vlnv -module_name dut_0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '<VIVADO_2026.1>/data/ip'.
+## set_property -dict [lrange $argv 1 end] [get_ips dut_0]
+## generate_target all [get_ips dut_0]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'dut_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'dut_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'dut_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'dut_0'...
+## export_ip_user_files -of_objects [get_ips dut_0] -no_script -sync -force
+## if {[info exists post_generate_hook]} {
+##     {*}$post_generate_hook $run_dir [get_ips dut_0]
+## }
+## puts "Configured IP generated successfully."
+Configured IP generated successfully.
+## exit 0
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 23 16:17:56 2026...

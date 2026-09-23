@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "issue": "vivado_2026_1.complex_multiplier_latency_trace",
+  "path_replacements": {
+    "/home/dpc/vivado_ip_auto_test": "<REPOSITORY_ROOT>",
+    "/data/Xilinx/2026.1": "<VIVADO_2026.1>"
+  },
+  "files": [
+    {
+      "source": "reports/history/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/summary.json",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/summary.json",
+      "mode": "json"
+    },
+    {
+      "source": "reports/history/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/auto.json",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/auto/observations.json",
+      "mode": "json"
+    },
+    {
+      "source": "runs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/auto/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/auto/ip_metadata.json",
+      "mode": "xci_metadata"
+    },
+    {
+      "source": "runs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/auto/tb_latency_trace.vhd",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/auto/tb_latency_trace.vhd",
+      "mode": "text"
+    },
+    {
+      "source": "runs/logs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/auto/create.process.log",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/auto/create.process.log",
+      "mode": "text"
+    },
+    {
+      "source": "runs/logs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/auto/create.invocation.json",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/auto/create.invocation.json",
+      "mode": "json"
+    },
+    {
+      "source": "runs/logs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/auto/simulate.process.log",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/auto/simulate.process.log",
+      "mode": "text"
+    },
+    {
+      "source": "runs/logs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/auto/simulate.invocation.json",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/auto/simulate.invocation.json",
+      "mode": "json"
+    },
+    {
+      "source": "reports/history/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_4.json",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_4/observations.json",
+      "mode": "json"
+    },
+    {
+      "source": "runs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_4/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_4/ip_metadata.json",
+      "mode": "xci_metadata"
+    },
+    {
+      "source": "runs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_4/tb_latency_trace.vhd",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_4/tb_latency_trace.vhd",
+      "mode": "text"
+    },
+    {
+      "source": "runs/logs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_4/create.process.log",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_4/create.process.log",
+      "mode": "text"
+    },
+    {
+      "source": "runs/logs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_4/create.invocation.json",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_4/create.invocation.json",
+      "mode": "json"
+    },
+    {
+      "source": "runs/logs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_4/simulate.process.log",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_4/simulate.process.log",
+      "mode": "text"
+    },
+    {
+      "source": "runs/logs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_4/simulate.invocation.json",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_4/simulate.invocation.json",
+      "mode": "json"
+    },
+    {
+      "source": "reports/history/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_16.json",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_16/observations.json",
+      "mode": "json"
+    },
+    {
+      "source": "runs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_16/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_16/ip_metadata.json",
+      "mode": "xci_metadata"
+    },
+    {
+      "source": "runs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_16/tb_latency_trace.vhd",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_16/tb_latency_trace.vhd",
+      "mode": "text"
+    },
+    {
+      "source": "runs/logs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_16/create.process.log",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_16/create.process.log",
+      "mode": "text"
+    },
+    {
+      "source": "runs/logs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_16/create.invocation.json",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_16/create.invocation.json",
+      "mode": "json"
+    },
+    {
+      "source": "runs/logs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_16/simulate.process.log",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_16/simulate.process.log",
+      "mode": "text"
+    },
+    {
+      "source": "runs/logs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_16/simulate.invocation.json",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_16/simulate.invocation.json",
+      "mode": "json"
+    },
+    {
+      "source": "reports/history/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_54.json",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_54/observations.json",
+      "mode": "json"
+    },
+    {
+      "source": "runs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_54/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_54/ip_metadata.json",
+      "mode": "xci_metadata"
+    },
+    {
+      "source": "runs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_54/tb_latency_trace.vhd",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_54/tb_latency_trace.vhd",
+      "mode": "text"
+    },
+    {
+      "source": "runs/logs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_54/create.process.log",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_54/create.process.log",
+      "mode": "text"
+    },
+    {
+      "source": "runs/logs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_54/create.invocation.json",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_54/create.invocation.json",
+      "mode": "json"
+    },
+    {
+      "source": "runs/logs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_54/simulate.process.log",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_54/simulate.process.log",
+      "mode": "text"
+    },
+    {
+      "source": "runs/logs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_54/simulate.invocation.json",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_54/simulate.invocation.json",
+      "mode": "json"
+    },
+    {
+      "source": "reports/history/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_55.json",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_55/observations.json",
+      "mode": "json"
+    },
+    {
+      "source": "runs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_55/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_55/ip_metadata.json",
+      "mode": "xci_metadata"
+    },
+    {
+      "source": "runs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_55/tb_latency_trace.vhd",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_55/tb_latency_trace.vhd",
+      "mode": "text"
+    },
+    {
+      "source": "runs/logs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_55/create.process.log",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_55/create.process.log",
+      "mode": "text"
+    },
+    {
+      "source": "runs/logs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_55/create.invocation.json",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_55/create.invocation.json",
+      "mode": "json"
+    },
+    {
+      "source": "runs/logs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_55/simulate.process.log",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_55/simulate.process.log",
+      "mode": "text"
+    },
+    {
+      "source": "runs/logs/framework/latency_trace/2026.1/2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_55/simulate.invocation.json",
+      "target": "2026-09-22_20-52-23_UTC+0800_7e46f713/complex_multiplier/latency_55/simulate.invocation.json",
+      "mode": "json"
+    }
+  ]
+}

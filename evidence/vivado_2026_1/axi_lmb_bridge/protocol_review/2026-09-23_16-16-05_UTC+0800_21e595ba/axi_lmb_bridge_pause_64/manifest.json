@@ -1,0 +1,526 @@
+{
+  "schema_version": 1,
+  "case_id": "axi_lmb_bridge_pause_64",
+  "ip_type": "axi_lmb_bridge",
+  "vendor": "xilinx.com",
+  "ip_name": "axi_lmb_bridge",
+  "configured_parameters": {
+    "data_width": 64,
+    "address_width": 64,
+    "id_width": 16,
+    "use_pause": true,
+    "lmb_protocol": "Frequency",
+    "protection": true
+  },
+  "generated_ip": {
+    "component_reference": "xilinx.com:ip:axi_lmb_bridge:1.0",
+    "ports": {
+      "Clk": [
+        {
+          "direction": "in"
+        }
+      ],
+      "Rst": [
+        {
+          "direction": "in"
+        }
+      ],
+      "Pause": [
+        {
+          "direction": "in",
+          "driver_value": "0"
+        }
+      ],
+      "Pause_Ack": [
+        {
+          "direction": "out"
+        }
+      ],
+      "S_AXI_AWID": [
+        {
+          "direction": "in",
+          "size_left": "15",
+          "size_right": "0",
+          "driver_value": "0"
+        }
+      ],
+      "S_AXI_AWADDR": [
+        {
+          "direction": "in",
+          "size_left": "63",
+          "size_right": "0",
+          "driver_value": "0"
+        }
+      ],
+      "S_AXI_AWLEN": [
+        {
+          "direction": "in",
+          "size_left": "7",
+          "size_right": "0",
+          "driver_value": "0"
+        }
+      ],
+      "S_AXI_AWSIZE": [
+        {
+          "direction": "in",
+          "size_left": "2",
+          "size_right": "0",
+          "driver_value": "0"
+        }
+      ],
+      "S_AXI_AWBURST": [
+        {
+          "direction": "in",
+          "size_left": "1",
+          "size_right": "0",
+          "driver_value": "0"
+        }
+      ],
+      "S_AXI_AWVALID": [
+        {
+          "direction": "in",
+          "driver_value": "0"
+        }
+      ],
+      "S_AXI_AWPROT": [
+        {
+          "direction": "in",
+          "size_left": "2",
+          "size_right": "0",
+          "driver_value": "0"
+        }
+      ],
+      "S_AXI_AWREADY": [
+        {
+          "direction": "out"
+        }
+      ],
+      "S_AXI_WDATA": [
+        {
+          "direction": "in",
+          "size_left": "63",
+          "size_right": "0",
+          "driver_value": "0"
+        }
+      ],
+      "S_AXI_WSTRB": [
+        {
+          "direction": "in",
+          "size_left": "7",
+          "size_right": "0",
+          "driver_value": "0"
+        }
+      ],
+      "S_AXI_WLAST": [
+        {
+          "direction": "in",
+          "driver_value": "0"
+        }
+      ],
+      "S_AXI_WVALID": [
+        {
+          "direction": "in",
+          "driver_value": "0"
+        }
+      ],
+      "S_AXI_WREADY": [
+        {
+          "direction": "out"
+        }
+      ],
+      "S_AXI_BRESP": [
+        {
+          "direction": "out",
+          "size_left": "1",
+          "size_right": "0"
+        }
+      ],
+      "S_AXI_BID": [
+        {
+          "direction": "out",
+          "size_left": "15",
+          "size_right": "0"
+        }
+      ],
+      "S_AXI_BVALID": [
+        {
+          "direction": "out"
+        }
+      ],
+      "S_AXI_BREADY": [
+        {
+          "direction": "in",
+          "driver_value": "0"
+        }
+      ],
+      "S_AXI_ARID": [
+        {
+          "direction": "in",
+          "size_left": "15",
+          "size_right": "0",
+          "driver_value": "0"
+        }
+      ],
+      "S_AXI_ARADDR": [
+        {
+          "direction": "in",
+          "size_left": "63",
+          "size_right": "0",
+          "driver_value": "0"
+        }
+      ],
+      "S_AXI_ARLEN": [
+        {
+          "direction": "in",
+          "size_left": "7",
+          "size_right": "0",
+          "driver_value": "0"
+        }
+      ],
+      "S_AXI_ARSIZE": [
+        {
+          "direction": "in",
+          "size_left": "2",
+          "size_right": "0",
+          "driver_value": "0"
+        }
+      ],
+      "S_AXI_ARBURST": [
+        {
+          "direction": "in",
+          "size_left": "1",
+          "size_right": "0",
+          "driver_value": "0"
+        }
+      ],
+      "S_AXI_ARVALID": [
+        {
+          "direction": "in",
+          "driver_value": "0"
+        }
+      ],
+      "S_AXI_ARPROT": [
+        {
+          "direction": "in",
+          "size_left": "2",
+          "size_right": "0",
+          "driver_value": "0"
+        }
+      ],
+      "S_AXI_ARREADY": [
+        {
+          "direction": "out"
+        }
+      ],
+      "S_AXI_RID": [
+        {
+          "direction": "out",
+          "size_left": "15",
+          "size_right": "0"
+        }
+      ],
+      "S_AXI_RDATA": [
+        {
+          "direction": "out",
+          "size_left": "63",
+          "size_right": "0"
+        }
+      ],
+      "S_AXI_RRESP": [
+        {
+          "direction": "out",
+          "size_left": "1",
+          "size_right": "0"
+        }
+      ],
+      "S_AXI_RLAST": [
+        {
+          "direction": "out"
+        }
+      ],
+      "S_AXI_RVALID": [
+        {
+          "direction": "out"
+        }
+      ],
+      "S_AXI_RREADY": [
+        {
+          "direction": "in",
+          "driver_value": "0"
+        }
+      ],
+      "M_ABus": [
+        {
+          "direction": "out",
+          "size_left": "0",
+          "size_right": "63"
+        }
+      ],
+      "M_Prot": [
+        {
+          "direction": "out",
+          "size_left": "0",
+          "size_right": "1"
+        }
+      ],
+      "LMB_ReadDBus": [
+        {
+          "direction": "in",
+          "size_left": "0",
+          "size_right": "63",
+          "driver_value": "0"
+        }
+      ],
+      "M_DBus": [
+        {
+          "direction": "out",
+          "size_left": "0",
+          "size_right": "63"
+        }
+      ],
+      "M_AddrStrobe": [
+        {
+          "direction": "out"
+        }
+      ],
+      "M_ReadStrobe": [
+        {
+          "direction": "out"
+        }
+      ],
+      "M_WriteStrobe": [
+        {
+          "direction": "out"
+        }
+      ],
+      "LMB_Ready": [
+        {
+          "direction": "in",
+          "driver_value": "0"
+        }
+      ],
+      "LMB_Wait": [
+        {
+          "direction": "in",
+          "driver_value": "0"
+        }
+      ],
+      "LMB_CE": [
+        {
+          "direction": "in",
+          "driver_value": "0"
+        }
+      ],
+      "LMB_UE": [
+        {
+          "direction": "in",
+          "driver_value": "0"
+        }
+      ],
+      "M_BE": [
+        {
+          "direction": "out",
+          "size_left": "0",
+          "size_right": "7"
+        }
+      ]
+    },
+    "model_parameters": {
+      "C_DATA_WIDTH": "64",
+      "C_ADDR_WIDTH": "64",
+      "C_AXI_AW_DEPTH": "2",
+      "C_AXI_W_DEPTH": "8",
+      "C_AXI_AR_DEPTH": "2",
+      "C_AXI_R_DEPTH": "8",
+      "C_AXI_ID_WIDTH": "16",
+      "C_USE_PAUSE": "1",
+      "C_LMB_PROTOCOL": "1",
+      "C_LMB_HAS_PROT": "1"
+    }
+  },
+  "output_layout": {
+    "encoding": "binary_msb_first",
+    "fields": [
+      {
+        "name": "kind",
+        "width": 1
+      },
+      {
+        "name": "id",
+        "width": 16
+      },
+      {
+        "name": "data",
+        "width": 64
+      },
+      {
+        "name": "resp",
+        "width": 2
+      },
+      {
+        "name": "last",
+        "width": 1
+      }
+    ]
+  },
+  "verification": {
+    "strategy": "directed_random",
+    "strategy_version": "1.0",
+    "random_seed": 20260963,
+    "case_budget": 64,
+    "coverage_targets": [
+      "port_boundaries"
+    ],
+    "boundary_mode": "basic",
+    "timing_mode": "random_gaps",
+    "max_gap_cycles": 12,
+    "burst_length": 8,
+    "input_order": "shuffled",
+    "generation": {
+      "strategy": "directed_random",
+      "strategy_version": "1.0",
+      "directed_count": 48,
+      "generated_count": 64,
+      "covered_targets": [
+        "port_boundaries"
+      ],
+      "missing_targets": [],
+      "coverage_model": "input_bins:1.0",
+      "unique_count": 64,
+      "input_space_size": 182687704666362864775460604089535377456991567872,
+      "input_space_fraction": 3.503246160812043e-46,
+      "target_coverage": {
+        "port_boundaries": {
+          "hit_bins": [
+            "sample_address:0",
+            "sample_address:1",
+            "sample_address:18446744073709551614",
+            "sample_address:18446744073709551615",
+            "sample_address:9223372036854775807",
+            "sample_data:0",
+            "sample_data:1",
+            "sample_data:18446744073709551614",
+            "sample_data:18446744073709551615",
+            "sample_data:9223372036854775807",
+            "sample_id:0",
+            "sample_id:1",
+            "sample_id:32767",
+            "sample_id:65534",
+            "sample_id:65535",
+            "sample_prot:0",
+            "sample_prot:1",
+            "sample_prot:3",
+            "sample_prot:6",
+            "sample_prot:7",
+            "sample_strobe:0",
+            "sample_strobe:1",
+            "sample_strobe:127",
+            "sample_strobe:254",
+            "sample_strobe:255",
+            "sample_wait:0",
+            "sample_wait:1",
+            "sample_wait:2",
+            "sample_wait:3"
+          ],
+          "missing_bins": [],
+          "hit_count": 29,
+          "total_count": 29,
+          "fraction": 1.0
+        }
+      }
+    },
+    "schedule": {
+      "strategy": "directed_random",
+      "strategy_version": "1.0",
+      "directed_count": 48,
+      "generated_count": 64,
+      "covered_targets": [
+        "port_boundaries"
+      ],
+      "missing_targets": [],
+      "coverage_model": "input_bins:1.0",
+      "unique_count": 64,
+      "input_space_size": 182687704666362864775460604089535377456991567872,
+      "input_space_fraction": 3.503246160812043e-46,
+      "target_coverage": {
+        "port_boundaries": {
+          "hit_bins": [
+            "sample_address:0",
+            "sample_address:1",
+            "sample_address:18446744073709551614",
+            "sample_address:18446744073709551615",
+            "sample_address:9223372036854775807",
+            "sample_data:0",
+            "sample_data:1",
+            "sample_data:18446744073709551614",
+            "sample_data:18446744073709551615",
+            "sample_data:9223372036854775807",
+            "sample_id:0",
+            "sample_id:1",
+            "sample_id:32767",
+            "sample_id:65534",
+            "sample_id:65535",
+            "sample_prot:0",
+            "sample_prot:1",
+            "sample_prot:3",
+            "sample_prot:6",
+            "sample_prot:7",
+            "sample_strobe:0",
+            "sample_strobe:1",
+            "sample_strobe:127",
+            "sample_strobe:254",
+            "sample_strobe:255",
+            "sample_wait:0",
+            "sample_wait:1",
+            "sample_wait:2",
+            "sample_wait:3"
+          ],
+          "missing_bins": [],
+          "hit_count": 29,
+          "total_count": 29,
+          "fraction": 1.0
+        }
+      },
+      "operation_count": 143,
+      "lmb_access_count": 135,
+      "checked_transaction_count": 150,
+      "comparison_kind": "axi4_burst_and_lmb_access_sequence",
+      "reference_sequence_events": {
+        "write_normal": 70,
+        "burst_increment": 139,
+        "beats_1": 137,
+        "read_normal": 69,
+        "backpressured_responses": 92,
+        "beats_4": 4,
+        "waited_transactions": 77,
+        "burst_fixed": 2,
+        "beats_2": 2,
+        "burst_wrap": 2,
+        "w_before_aw": 33,
+        "suppressed_zero_strobe": 22,
+        "write_address_error": 1,
+        "read_address_error": 1,
+        "write_uncorrectable_error": 1,
+        "read_uncorrectable_error": 1
+      },
+      "sequence_coverage": "directed_legal_bursts_and_generated_single_beats"
+    }
+  },
+  "artifacts": {
+    "testbench": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_pause_64/tb/tb_axi_lmb_selfcheck.vhd",
+    "input_vectors": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_pause_64/vectors/operations.json",
+    "expected_output": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_pause_64/vectors/expected_output.txt",
+    "actual_output": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_pause_64/outputs/actual_output.txt",
+    "accesses": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_pause_64/vectors/lmb_accesses.json",
+    "samples": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_pause_64/vectors/numeric_samples.json",
+    "xci": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-16-05_UTC+0800_21e595ba/axi_lmb_bridge/axi_lmb_bridge_pause_64/proj/ip_test.srcs/sources_1/ip/dut_0/dut_0.xci"
+  },
+  "artifact_sha256": {
+    "testbench": "c1f000c9f7f54e53e3cc3ea99c7589eb3c0dce7357b6850bcbf71db544ef1952",
+    "input_vectors": "c2f5c98baffffd8a7f3a22abc306671b898d704a349cec8d1e560f05fcd4e90b",
+    "expected_output": "ae17a484060e4342aba14a566ab076c0900740e77faf099cd4ae0e1341863f3a",
+    "accesses": "3841592b0987cc2fd211c21526c4016c63c5711fbd4464b95e2e014441b283b5",
+    "samples": "f09228d4547426011ef49949413d566e993b76f2fe66d9dbe36452b2b48f6cfd",
+    "xci": "9375c59865d4af11c703b053c8cd412d595db1eb59c0d918b7e0ae70c3826270"
+  }
+}

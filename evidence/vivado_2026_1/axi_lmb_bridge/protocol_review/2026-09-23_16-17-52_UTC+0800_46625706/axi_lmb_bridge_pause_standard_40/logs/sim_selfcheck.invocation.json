@@ -1,0 +1,27 @@
+{
+  "started_at": "2026-09-23T08:19:13.697005+00:00",
+  "command": [
+    "<VIVADO_2026.1>/Vivado/bin/vivado",
+    "-mode",
+    "batch",
+    "-journal",
+    "<REPOSITORY_ROOT>/runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40/sim_selfcheck.jou",
+    "-log",
+    "<REPOSITORY_ROOT>/runs/logs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40/sim_selfcheck.log",
+    "-source",
+    "<REPOSITORY_ROOT>/tcl/run_xsim_batch.tcl",
+    "-tclargs",
+    "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40/proj/ip_test.xpr",
+    "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40/tb/tb_axi_lmb_selfcheck.vhd",
+    "tb_axi_lmb_selfcheck",
+    "AXI_LMB_SELF_CHECK_STATUS: PASS",
+    "AXI_LMB_SELF_CHECK_STATUS: FAIL"
+  ],
+  "cwd": "<REPOSITORY_ROOT>/runs/batches/2026.1/2026-09-23_16-17-52_UTC+0800_46625706/axi_lmb_bridge/axi_lmb_bridge_pause_standard_40/work/sim_selfcheck",
+  "timeout_seconds": 600,
+  "state": "finished",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 14.408627266995609,
+  "finished_at": "2026-09-23T08:19:28.105710+00:00"
+}
