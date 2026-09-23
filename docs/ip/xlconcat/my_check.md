@@ -6,11 +6,11 @@ dut_0
 
 concat
 
-![image-20260922222231050](/home/dpc/.config/Typora/typora-user-images/image-20260922222231050.png)
+![image-20260922222231050](images/image-20260922222231050.png)
 
-![image-20260922222910477](/home/dpc/.config/Typora/typora-user-images/image-20260922222910477.png)
+![image-20260922222910477](images/image-20260922222910477.png)
 
-![image-20260922222258736](/home/dpc/.config/Typora/typora-user-images/image-20260922222258736.png)
+![image-20260922222258736](images/image-20260922222258736.png)
 
 ```
 foreach pin [get_bd_pins core/*] {
@@ -27,12 +27,12 @@ foreach pin [get_bd_pins core/*] {
   save_bd_design
 ```
 
-![image-20260922223032574](/home/dpc/.config/Typora/typora-user-images/image-20260922223032574.png)
+![image-20260922223032574](images/image-20260922223032574.png)
 
-![image-20260922222341332](/home/dpc/.config/Typora/typora-user-images/image-20260922222341332.png)
+![image-20260922222341332](images/image-20260922222341332.png)
 
-![image-20260922222357115](/home/dpc/.config/Typora/typora-user-images/image-20260922222357115.png)
+![image-20260922222357115](images/image-20260922222357115.png)
 
-![image-20260922223644696](/home/dpc/.config/Typora/typora-user-images/image-20260922223644696.png)
+![image-20260922223644696](images/image-20260922223644696.png)
 
-![image-20260922223805446](/home/dpc/.config/Typora/typora-user-images/image-20260922223805446.png)
+![image-20260922223805446](images/image-20260922223805446.png)

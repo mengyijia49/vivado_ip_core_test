@@ -1,4 +1,4 @@
-![image-20260923115309945](/home/dpc/.config/Typora/typora-user-images/image-20260923115309945.png)
+![image-20260923115309945](images/image-20260923115309945.png)
 
 fp_multiply_low_check
 
@@ -8,23 +8,23 @@ Floating-Point
 
 dut_0
 
-**![image-20260923115243504](/home/dpc/.config/Typora/typora-user-images/image-20260923115243504.png)**
+**![image-20260923115243504](images/image-20260923115243504.png)**
 
-![image-20260923115328413](/home/dpc/.config/Typora/typora-user-images/image-20260923115328413.png)
+![image-20260923115328413](images/image-20260923115328413.png)
 
-![image-20260923115356580](/home/dpc/.config/Typora/typora-user-images/image-20260923115356580.png)
+![image-20260923115356580](images/image-20260923115356580.png)
 
-![image-20260923115409822](/home/dpc/.config/Typora/typora-user-images/image-20260923115409822.png)
+![image-20260923115409822](images/image-20260923115409822.png)
 
 FLOATING_MULTIPLY_SAMPLE 1
 
 A=3FEFFFFFFFFFFFFE、B=3FF0000000000001
 
-![image-20260923120400310](/home/dpc/.config/Typora/typora-user-images/image-20260923120400310.png)
+![image-20260923120400310](images/image-20260923120400310.png)
 
-![image-20260923120721002](/home/dpc/.config/Typora/typora-user-images/image-20260923120721002.png)
+![image-20260923120721002](images/image-20260923120721002.png)
 
-![image-20260923120746518](/home/dpc/.config/Typora/typora-user-images/image-20260923120746518.png)
+![image-20260923120746518](images/image-20260923120746518.png)
 
 
 

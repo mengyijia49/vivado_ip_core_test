@@ -36,14 +36,14 @@ dut_0
 
 0x000000FF
 
-![image-20260923012300746](/home/dpc/.config/Typora/typora-user-images/image-20260923012300746.png)
+![image-20260923012300746](images/image-20260923012300746.png)
 
-![image-20260923012315277](/home/dpc/.config/Typora/typora-user-images/image-20260923012315277.png)
+![image-20260923012315277](images/image-20260923012315277.png)
 
-![image-20260923012327811](/home/dpc/.config/Typora/typora-user-images/image-20260923012327811.png)
+![image-20260923012327811](images/image-20260923012327811.png)
 
-![image-20260923110751245](/home/dpc/.config/Typora/typora-user-images/image-20260923110751245.png)
+![image-20260923110751245](images/image-20260923110751245.png)
 
-![image-20260923111030448](/home/dpc/.config/Typora/typora-user-images/image-20260923111030448.png)
+![image-20260923111030448](images/image-20260923111030448.png)
 
-![image-20260923111208175](/home/dpc/.config/Typora/typora-user-images/image-20260923111208175.png)
+![image-20260923111208175](images/image-20260923111208175.png)

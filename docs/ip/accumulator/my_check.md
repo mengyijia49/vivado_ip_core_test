@@ -1,4 +1,4 @@
-![image-20260923154256524](/home/dpc/.config/Typora/typora-user-images/image-20260923154256524.png)
+![image-20260923154256524](images/image-20260923154256524.png)
 
 accumulator_ce_check
 
@@ -10,15 +10,15 @@ dut_0
 
 
 
-![image-20260923154642894](/home/dpc/.config/Typora/typora-user-images/image-20260923154642894.png)
+![image-20260923154642894](images/image-20260923154642894.png)
 
-![image-20260923154700353](/home/dpc/.config/Typora/typora-user-images/image-20260923154700353.png)
+![image-20260923154700353](images/image-20260923154700353.png)
 
-![image-20260923154716443](/home/dpc/.config/Typora/typora-user-images/image-20260923154716443.png)
+![image-20260923154716443](images/image-20260923154716443.png)
 
-![image-20260923154731110](/home/dpc/.config/Typora/typora-user-images/image-20260923154731110.png)
+![image-20260923154731110](images/image-20260923154731110.png)
 
-![image-20260923154745991](/home/dpc/.config/Typora/typora-user-images/image-20260923154745991.png)
+![image-20260923154745991](images/image-20260923154745991.png)
 
 file actual_file
 
@@ -28,7 +28,7 @@ file actual_file : text open write_mode is "accumulator_manual_actual_output.txt
 
 
 
-![image-20260923160500295](/home/dpc/.config/Typora/typora-user-images/image-20260923160500295.png)
+![image-20260923160500295](images/image-20260923160500295.png)
 
 
 

@@ -1,4 +1,4 @@
-![image-20260923121926917](/home/dpc/.config/Typora/typora-user-images/image-20260923121926917.png)
+![image-20260923121926917](images/image-20260923121926917.png)
 
 mailbox_tlast_check
 
@@ -8,15 +8,15 @@ Mailbox
 
 dut_0
 
-![image-20260923121907751](/home/dpc/.config/Typora/typora-user-images/image-20260923121907751.png)
+![image-20260923121907751](images/image-20260923121907751.png)
 
-![image-20260923121946021](/home/dpc/.config/Typora/typora-user-images/image-20260923121946021.png)
+![image-20260923121946021](images/image-20260923121946021.png)
 
-![image-20260923122003058](/home/dpc/.config/Typora/typora-user-images/image-20260923122003058.png)
+![image-20260923122003058](images/image-20260923122003058.png)
 
-![image-20260923122015399](/home/dpc/.config/Typora/typora-user-images/image-20260923122015399.png)
+![image-20260923122015399](images/image-20260923122015399.png)
 
-![image-20260923122028180](/home/dpc/.config/Typora/typora-user-images/image-20260923122028180.png)
+![image-20260923122028180](images/image-20260923122028180.png)
 
 C_DEPTH
 
@@ -26,7 +26,7 @@ file actual_file : text open write_mode is "mailbox_manual_actual_output.txt";
 
 
 
-![image-20260923123840530](/home/dpc/.config/Typora/typora-user-images/image-20260923123840530.png)
+![image-20260923123840530](images/image-20260923123840530.png)
 
 
 

@@ -49,11 +49,11 @@
 
 4.   点击 OK，生成 Output Products。若出现 Generate Synth Checkpoint，取消勾选；不要启动综合。若已关掉生成窗口，可在 Sources 中右键 dut_0，选择 Generate Output Products。
 
-   ![image-20260922211656645](/home/dpc/.config/Typora/typora-user-images/image-20260922211656645.png)
+   ![image-20260922211656645](images/image-20260922211656645.png)
 
-   ![image-20260922211711642](/home/dpc/.config/Typora/typora-user-images/image-20260922211711642.png)
+   ![image-20260922211711642](images/image-20260922211711642.png)
 
-   ![image-20260922211725937](/home/dpc/.config/Typora/typora-user-images/image-20260922211725937.png)
+   ![image-20260922211725937](images/image-20260922211725937.png)
 
 ## 添加 testbench
 
@@ -97,22 +97,22 @@
 
 ────────────────  ──────────────────
 
-![image-20260922220539724](/home/dpc/.config/Typora/typora-user-images/image-20260922220539724.png)  
+![image-20260922220539724](images/image-20260922220539724.png)  
 
 这里 2×1 输出为 1 是配置的截断效果，不是本次问题。问题是这个 1 出现在错误的时间，而应该出现时却输出了零。 控制台搜索 CMPY_TRACE cycle=80 和 CMPY_TRACE cycle=134，也能核对同样的结果。
 
-![image-20260922220425506](/home/dpc/.config/Typora/typora-user-images/image-20260922220425506.png)
+![image-20260922220425506](images/image-20260922220425506.png)
 
-![image-20260922220654556](/home/dpc/.config/Typora/typora-user-images/image-20260922220654556.png)
+![image-20260922220654556](images/image-20260922220654556.png)
 
-![image-20260922220950641](/home/dpc/.config/Typora/typora-user-images/image-20260922220950641.png)
+![image-20260922220950641](images/image-20260922220950641.png)
 
 ## 改成 4 拍对照
 
 先保存 55 拍的参数截图、上述两处波形和控制台记录。然后关闭仿真，双击 dut_0，只把 Minimum Latency 从 55 改为 4，重新生成 Output Products，再重新启动行为仿真，不要只 Restart 旧快照。
   使用同一份 testbench，正常情况下 result=00000001 应在 第 83 拍、846 ns 的采样点出现，而不是第 80 拍。如果 4 拍正常、55 拍出现上面的差异，就复现了目前记录的问题。
 
-![image-20260922221328838](/home/dpc/.config/Typora/typora-user-images/image-20260922221328838.png)
+![image-20260922221328838](images/image-20260922221328838.png)
 
-![image-20260922221355423](/home/dpc/.config/Typora/typora-user-images/image-20260922221355423.png)
+![image-20260922221355423](images/image-20260922221355423.png)
 
